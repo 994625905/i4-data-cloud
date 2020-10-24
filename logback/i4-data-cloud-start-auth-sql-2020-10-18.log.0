@@ -1,0 +1,69 @@
+2020-10-18 13:19:34,867 [http-nio-9010-exec-4] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:19:34,870 [http-nio-9010-exec-4] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:19:34,873 [http-nio-9010-exec-4] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:19:39,458 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:19:39,458 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:19:39,459 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:20:53,813 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:20:53,813 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:20:53,815 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:21:04,754 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectOne 143 - ==>  Preparing: SELECT id,loginname,realname,phone,email,password,create_time,update_time,status,first_login FROM t_user WHERE phone = ? 
+2020-10-18 13:21:04,754 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectOne 143 - ==> Parameters: 13297030623(String)
+2020-10-18 13:21:04,756 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectOne 143 - <==      Total: 1
+2020-10-18 13:21:23,534 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectOne 143 - ==>  Preparing: SELECT id,loginname,realname,phone,email,password,create_time,update_time,status,first_login FROM t_user WHERE phone = ? AND loginname = ? 
+2020-10-18 13:21:23,535 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectOne 143 - ==> Parameters: 13297030623(String), admin(String)
+2020-10-18 13:21:23,536 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectOne 143 - <==      Total: 1
+2020-10-18 13:21:36,282 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectById 143 - ==>  Preparing: SELECT id,loginname,realname,phone,email,password,create_time,update_time,status,first_login FROM t_user WHERE id=? 
+2020-10-18 13:21:36,283 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectById 143 - ==> Parameters: 1(Integer)
+2020-10-18 13:21:36,284 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.selectById 143 - <==      Total: 1
+2020-10-18 13:21:36,285 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.updateById 143 - ==>  Preparing: UPDATE t_user SET loginname=?, realname=?, phone=?, email=?, password=?, create_time=?, update_time=?, status=?, first_login=? WHERE id=? 
+2020-10-18 13:21:36,286 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.updateById 143 - ==> Parameters: admin(String), 超级管理员(String), 13297030623(String), (String), e24f1540f4d0491092bc11b929254947(String), 1602394216(Long), 1602998496(Long), 3(Integer), 2(Integer), 1(Integer)
+2020-10-18 13:21:36,289 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.updateById 143 - <==    Updates: 1
+2020-10-18 13:22:32,625 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:22:32,627 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:22:32,630 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:22:34,138 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:22:34,139 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:22:34,140 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:22:40,191 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:22:40,192 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:22:40,193 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:24:30,166 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:24:30,166 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:24:30,167 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:27:32,354 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:27:32,356 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:27:32,359 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:28:10,289 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:28:10,290 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:28:10,292 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:28:42,690 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:28:42,690 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:28:42,691 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:29:08,985 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:29:08,985 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:29:08,986 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 13:29:40,249 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 13:29:40,250 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 13:29:40,252 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 17:05:04,106 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==>  Preparing: SELECT id,constant_name,constant_key,constant_value FROM t_system_constant 
+2020-10-18 17:05:04,126 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - ==> Parameters: 
+2020-10-18 17:05:04,146 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectList 143 - <==      Total: 8
+2020-10-18 17:05:38,290 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==>  Preparing: SELECT id,name,code,user_status,create_user_id,create_time,over_time,effect_time FROM t_invite_code WHERE code = ? AND over_time < ? 
+2020-10-18 17:05:38,292 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==> Parameters: 12(String), 1603011938(Long)
+2020-10-18 17:05:38,295 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - <==      Total: 0
+2020-10-18 17:05:42,491 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==>  Preparing: SELECT id,name,code,user_status,create_user_id,create_time,over_time,effect_time FROM t_invite_code WHERE code = ? AND over_time < ? 
+2020-10-18 17:05:42,492 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==> Parameters: 12(String), 1603011942(Long)
+2020-10-18 17:05:42,493 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - <==      Total: 0
+2020-10-18 17:05:51,242 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==>  Preparing: SELECT id,name,code,user_status,create_user_id,create_time,over_time,effect_time FROM t_invite_code WHERE code = ? AND over_time < ? 
+2020-10-18 17:05:51,243 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==> Parameters: 12(String), 1603011951(Long)
+2020-10-18 17:05:51,244 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - <==      Total: 0
+2020-10-18 17:07:25,344 [http-nio-9010-exec-10] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==>  Preparing: SELECT id,name,code,user_status,create_user_id,create_time,over_time,effect_time FROM t_invite_code WHERE code = ? AND over_time < ? 
+2020-10-18 17:07:25,346 [http-nio-9010-exec-10] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - ==> Parameters: 12(String), 1603012045(Long)
+2020-10-18 17:07:25,347 [http-nio-9010-exec-10] DEBUG cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectOne 143 - <==      Total: 0
+2020-10-18 17:08:25,966 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.login 143 - ==>  Preparing: select t.id as id, t.loginname as loginname, t.realname as realname, t.phone as phone, t.email as email, t.password as password, t.create_time as createTime, t.update_time as updateTime, FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr, FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr, t.status as status, t.first_login as firstLogin FROM t_user AS t where t.loginname = ? and t.password = ? 
+2020-10-18 17:08:25,967 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.login 143 - ==> Parameters: admin(String), e24f1540f4d0491092bc11b929254947(String)
+2020-10-18 17:08:25,971 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.UserMapper.login 143 - <==      Total: 1
+2020-10-18 17:08:25,983 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.UserInfoMapper.selectOne 143 - ==>  Preparing: SELECT id,user_id,gender,birthday,signature,headimage,country,province,city,area,detail_address,create_time,update_time FROM t_user_info WHERE user_id = ? 
+2020-10-18 17:08:25,984 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.UserInfoMapper.selectOne 143 - ==> Parameters: 1(Integer)
+2020-10-18 17:08:25,986 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.core.mapper.UserInfoMapper.selectOne 143 - <==      Total: 1

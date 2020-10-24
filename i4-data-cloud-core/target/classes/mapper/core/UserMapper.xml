@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.UserMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id,
+        t.loginname as loginname,
+        t.realname as realname, 
+        t.phone as phone, 
+        t.email as email, 
+        t.password as password, 
+        t.create_time as createTime, 
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+		FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr,
+        t.status as status,
+        t.first_login as firstLogin
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.UserDto"
+            resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.gender as gender,
+            u.birthday as birthday,
+            u.signature as signature,
+            u.headimage as headimage,
+            u.country as country,
+            u.province as province,
+            u.city as city,
+            u.area as area,
+            u.detail_address as detailAddress,
+            FROM_UNIXTIME(u.create_time,'%Y-%m-%d %T') as createTimeStrInfo,
+            FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo
+        FROM t_user AS t
+        left join t_user_info u on t.id = u.user_id
+        where 1=1
+        <if test="loginName != null and loginName != ''">
+            and (t.loginname = #{loginName} or t.realname = #{loginName})
+        </if>
+        order by t.create_time
+    </select>
+
+    <!--根据id查询详情-->
+    <select id="selectUserViewById" resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.gender as gender,
+            u.birthday as birthday,
+            u.signature as signature,
+            u.headimage as headimage,
+            u.country as country,
+            u.province as province,
+            u.city as city,
+            u.area as area,
+            u.detail_address as detailAddress,
+            FROM_UNIXTIME(u.create_time,'%Y-%m-%d %T') as createTimeStrInfo,
+            FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo
+        FROM t_user AS t
+        left join t_user_info u on t.id = u.user_id
+        where t.id = #{userId}
+    </select>
+
+    <select id="login" resultType="cn.i4.data.cloud.core.entity.model.UserModel">
+        select
+        <include refid="Base_Column_List" />
+        FROM t_user AS t
+        where t.loginname = #{loginName} and t.password = #{password}
+    </select>
+
+</mapper>

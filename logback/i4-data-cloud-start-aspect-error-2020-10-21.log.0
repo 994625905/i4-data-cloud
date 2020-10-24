@@ -1,0 +1,2 @@
+2020-10-21 19:51:16,391 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available: expected single matching bean but found 2: consumerService,testService
+2020-10-21 19:52:12,827 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available: expected single matching bean but found 2: consumerService,testService

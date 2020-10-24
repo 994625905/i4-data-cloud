@@ -1,0 +1,34 @@
+/**************************a标签的设置*****************************/
+.i4_a{
+    color: blue;
+}
+.i4_a_tableTitle{
+    color: green;
+}
+/******************条件搜索框****************/
+.search-fieldset{
+    border-color: #b5a5a5;
+    color: black;
+}
+.search-div{
+    margin-top: -7px;
+}
+.search-legend{
+    font-family: cursive;
+    font-style: italic;
+}
+.search-button{
+    background-color:black;
+    color: white;
+}
+/***************************底部主题****************************/
+.i4_div_bottom{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    /*background-color: #cbd3da;*/
+    background-color: #eeeeee;
+    color: black;
+    border: 1px solid;
+    z-index: 9999;
+}

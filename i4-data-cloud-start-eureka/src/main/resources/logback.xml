@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--控制台信息-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    	<encoder>
+        	<pattern>
+        		%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{100} - %msg%n
+        	</pattern>
+        </encoder>
+    </appender>
+
+    <!--控制台SQL-->
+    <property name="log.sql" value="%black(sql--) %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{100}) - %red(%msg%n)" />
+    <appender name="STDOUT_SQL" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log.sql}</pattern>
+        </encoder>
+    </appender>
+
+	<!-- 输出info日志 -->
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<filter class="ch.qos.logback.classic.filter.LevelFilter">
+        	<level>ERROR</level>
+        	<onMatch>DENY</onMatch>
+        	<onMismatch>ACCEPT</onMismatch>
+    	</filter>
+    	<encoder>
+        	<charset>UTF-8</charset>
+        	<pattern>%d [%thread] %-5level %logger{100} %line - %msg%n</pattern>
+    	</encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logback/i4-data-cloud-start-eureka-info-%d{yyyy-MM-dd}.log.%i</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <!--日志输出编码格式化-->
+
+    </appender>
+
+	<!-- 输出error日志 -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<!--如果只是想要 Error 级别的日志，那么需要过滤一下，默认是 info 级别的，ThresholdFilter-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+        	<charset>UTF-8</charset>
+        	<pattern>%d [%thread] %-5level %logger{100} %line - %msg%n</pattern>
+    	</encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logback/i4-data-cloud-start-eureka-error-%d{yyyy-MM-dd}.log.%i</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <!--日志输出编码格式化-->
+    </appender>
+
+    <!--sql日志-->
+    <appender name="SQL_File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d [%thread] %-5level %logger{100} %line - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logback/i4-data-cloud-start-eureka-sql-%d{yyyy-MM-dd}.log.%i</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+	<!--指定最基础的日志输出级别-->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+    <!--打印sql至sqlFile文件日志,name无法使用通配符……-->
+    <logger name="cn.i4.data.cloud.core.mapper" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT_SQL" />
+        <appender-ref ref="SQL_File" />
+    </logger>
+    <!--执行时间记录-->
+    <logger name="cn.i4.data.cloud.system.interceptors.SqlCostInterceptor" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT_SQL" />
+        <appender-ref ref="SQL_File" />
+    </logger>
+
+</configuration>

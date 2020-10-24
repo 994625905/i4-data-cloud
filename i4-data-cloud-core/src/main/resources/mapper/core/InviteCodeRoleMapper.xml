@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.invite_code_id as inviteCodeId, 
+        t.role_id as roleId
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.InviteCodeRoleDto"
+            resultType="cn.i4.data.cloud.core.entity.view.InviteCodeRoleView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_invite_code_role AS t
+
+    </select>
+
+</mapper>

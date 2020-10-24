@@ -1,0 +1,1 @@
+<#assign StaticServer="/i4-data-cloud-start-auth">

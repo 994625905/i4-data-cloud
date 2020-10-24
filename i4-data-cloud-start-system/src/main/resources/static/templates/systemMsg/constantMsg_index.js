@@ -1,0 +1,142 @@
+var layer,form;//声明组件
+
+layui.use(["layer","form"],()=>{
+
+    layer = layui.layer
+    form = layui.form
+    form.render()
+
+    /** 刷新缓存 */
+    $("#refreshCache").click(()=>{
+        Request.async(BasePath+"/systemMsg/constantMsg/refresh").then(res=>{
+            if(res){
+                Feng.success("成功刷新Redis缓存系统常量")
+            }
+        })
+    })
+
+    /** 登录背景页 */
+    $("#authLoginImage").click(()=>{
+        Feng.loadWindow("选择登录背景页",BasePath+"/materialMsg/imageSelect/index",null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#authLoginImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".authLoginImage").click(()=>{
+        uploadConstantImage("authLoginImage")
+    })
+
+    /** 网站logo */
+    $("#webLogoImage").click(()=>{
+        var p = "width=164&height=46&limitProp=1"
+        Feng.loadWindow("选择网站logo",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#webLogoImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".webLogoImage").click(()=>{
+        uploadConstantImage("webLogoImage")
+    })
+
+
+    /** 默认头像 */
+    $("#userHeadImage").click(()=>{
+        var p = "width=100&height=100&limitProp=1"
+        Feng.loadWindow("选择默认头像",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#userHeadImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".userHeadImage").click(()=>{
+        uploadConstantImage("userHeadImage")
+    })
+
+    /** 默认密码 */
+    $(".defaultPassword").click(()=>{
+        uploadConstantText("defaultPassword")
+    })
+
+
+
+    /** MySQL图标 */
+    $("#mysqlImage").click(()=>{
+        var p = "width=300&height=300&limitProp=1&fileSize=200"
+        Feng.loadWindow("选择MySQL图标",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#mysqlImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".mysqlImage").click(()=>{
+        uploadConstantImage("mysqlImage")
+    })
+
+    /** Oracle图标 */
+    $("#oracleImage").click(()=>{
+        var p = "width=300&height=300&limitProp=1&fileSize=200"
+        Feng.loadWindow("选择MySQL图标",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#oracleImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".oracleImage").click(()=>{
+        uploadConstantImage("oracleImage")
+    })
+
+    /** 文件上传的降级服务 */
+    $("#errorImage").click(()=>{
+        Feng.loadWindow("选择MySQL图标",BasePath+"/materialMsg/imageSelect/index",null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#errorImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".errorImage").click(()=>{
+        uploadConstantImage("errorImage")
+    })
+
+
+    /** 百度地图API */
+    $(".baiduMapApi").click(()=>{
+        uploadConstantText("baiduMapApi")
+    })
+
+})
+/************************************文本修改***********************************/
+function uploadConstantText(input){
+    Request.async(BasePath+"/systemMsg/constantMsg/update",{
+        value:$("input[name='"+input+"']").val(),
+        id:$("input[name='"+input+"_id']").val()
+    }).then(res=>{
+        Feng.success("保存成功")
+    })
+}
+/************************************图片修改***********************************/
+function uploadConstantImage(image){
+    Request.async(BasePath+"/systemMsg/constantMsg/update",{
+        value:$("#"+image).attr("src"),
+        id:$("input[name='"+image+"_id']").val()
+    }).then(res=>{
+        Feng.success("保存成功")
+    })
+}
+/************************************查看key***********************************/
+function findConstantKey(key){
+    Feng.msg(key)
+}

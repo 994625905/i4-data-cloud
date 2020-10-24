@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="i4-data-cloud-config" />
+        <module name="i4-data-cloud-base" />
+        <module name="i4-data-cloud-start-system" />
+        <module name="i4-data-cloud-start-gateway" />
+        <module name="i4-data-cloud-start-eureka" />
+        <module name="i4-data-cloud-mq" />
+        <module name="i4-data-cloud-start-autocode" />
+        <module name="i4-data-cloud-cache" />
+        <module name="i4-data-cloud-start-consumer" />
+        <module name="i4-data-cloud-core" />
+        <module name="i4-data-cloud-start-file" />
+        <module name="i4-data-cloud-start-aspect" />
+        <module name="i4-data-cloud-mongo" />
+        <module name="i4-data-cloud-start-auth" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="i4-data-cloud-config" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="i4-data-cloud" options="-parameters" />
+      <module name="i4-data-cloud-base" options="-parameters" />
+      <module name="i4-data-cloud-cache" options="-parameters" />
+      <module name="i4-data-cloud-config" options="-parameters" />
+      <module name="i4-data-cloud-core" options="-parameters" />
+      <module name="i4-data-cloud-mongo" options="-parameters" />
+      <module name="i4-data-cloud-mq" options="-parameters" />
+      <module name="i4-data-cloud-start-aspect" options="-parameters" />
+      <module name="i4-data-cloud-start-auth" options="-parameters" />
+      <module name="i4-data-cloud-start-autocode" options="-parameters" />
+      <module name="i4-data-cloud-start-consumer" options="-parameters" />
+      <module name="i4-data-cloud-start-eureka" options="-parameters" />
+      <module name="i4-data-cloud-start-file" options="-parameters" />
+      <module name="i4-data-cloud-start-gateway" options="-parameters" />
+      <module name="i4-data-cloud-start-system" options="-parameters" />
+    </option>
+  </component>
+</project>

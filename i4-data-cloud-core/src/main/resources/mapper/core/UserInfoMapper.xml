@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.UserInfoMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.gender as gender, 
+        t.birthday as birthday, 
+        t.signature as signature, 
+        t.headimage as headimage, 
+        t.country as country, 
+        t.province as province, 
+        t.city as city, 
+        t.area as area, 
+        t.detail_address as detailAddress, 
+        t.create_time as createTime, 
+        t.update_time as updateTime
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.UserInfoDto"
+            resultType="cn.i4.data.cloud.core.entity.view.UserInfoView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_user_info AS t
+
+    </select>
+
+</mapper>

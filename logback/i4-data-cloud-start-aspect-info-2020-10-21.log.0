@@ -1,0 +1,595 @@
+2020-10-21 14:59:42,325 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-21 14:59:42,368 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-21 14:59:42,877 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 655 - The following profiles are active: dev
+2020-10-21 14:59:43,396 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.aspect]' package. Please check your configuration.
+2020-10-21 14:59:43,453 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 14:59:43,456 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-21 14:59:43,473 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-21 14:59:43,670 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=6a810a0a-3c8a-3992-8c08-09e529d5c4af
+2020-10-21 14:59:44,180 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9013 (http)
+2020-10-21 14:59:44,188 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9013"]
+2020-10-21 14:59:44,188 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-21 14:59:44,188 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-21 14:59:44,273 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-aspect] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-21 14:59:44,273 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1381 ms
+2020-10-21 14:59:44,763 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 558 - Attempting to connect to: [127.0.0.1:5672]
+2020-10-21 14:59:44,795 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 511 - Created new connection: rabbitConnectionFactory#6594d49c:0/SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]
+2020-10-21 14:59:44,855 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 127 - 已成功开始监听RabbitMQ异步消息：queue[i4-data-cloud-requestLog-one] 
+2020-10-21 14:59:44,855 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 104 - RabbitMQ初始化交换机完毕：producersExchange[i4-data-cloud-system],consumersExchange[],delaysExchange[]
+2020-10-21 14:59:44,856 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 105 - RabbitMQ初始化队列完毕：producersQueue[i4-data-cloud-requestLog-one],consumersQueue[],delaysQueue[]
+2020-10-21 14:59:44,858 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 14:59:44,859 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":25,"week":"星期三","actionMethod":"loadTable","createTime":1603263366,"actionContent":"加载用户表格","ip":"127.0.0.1","moduleName":"系统管理--用户管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,859 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":25,"week":"星期三","actionMethod":"loadTable","createTime":1603263366,"actionContent":"加载用户表格","ip":"127.0.0.1","moduleName":"系统管理--用户管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,859 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 14:59:44,859 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 14:59:44,859 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 14:59:44,859 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":37,"week":"星期三","actionMethod":"loadTable","createTime":1603263371,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--角色管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":37,"week":"星期三","actionMethod":"loadTable","createTime":1603263371,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--角色管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":17,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603263375,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":17,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603263375,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 14:59:44,860 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603263433,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603263433,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":39,"week":"星期三","actionMethod":"loadTable","createTime":1603263566,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":39,"week":"星期三","actionMethod":"loadTable","createTime":1603263566,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 14:59:44,861 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 14:59:44,862 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 14:59:44,862 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":243,"week":"星期三","actionMethod":"createQRCode","createTime":1603263571,"loginname":"admin","actionContent":"生成二维码(流转base64)","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","userId":1,"actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,862 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":243,"week":"星期三","actionMethod":"createQRCode","createTime":1603263571,"loginname":"admin","actionContent":"生成二维码(流转base64)","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","userId":1,"actionName":"查看","action_success":1}]
+2020-10-21 14:59:44,862 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 14:59:44,862 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 14:59:44,862 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 14:59:44,865 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 14:59:44,866 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 14:59:44,869 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 14:59:44,870 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 14:59:45,038 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:59:45,297 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-21 14:59:45,377 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-21 14:59:45,561 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-21 14:59:45,708 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-21 14:59:45,846 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-21 14:59:45,969 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-21 14:59:45,997 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-21 14:59:46,048 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-21 14:59:46,049 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-21 14:59:46,151 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-21 14:59:46,151 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-21 14:59:46,394 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 14:59:46,469 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-21 14:59:46,470 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-21 14:59:46,470 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-21 14:59:46,470 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-21 14:59:46,470 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-21 14:59:46,470 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-21 14:59:46,470 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-21 14:59:46,686 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-21 14:59:46,688 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-21 14:59:46,690 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-21 14:59:46,693 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603263586692 with initial instances count: 3
+2020-10-21 14:59:46,694 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-ASPECT with eureka with status UP
+2020-10-21 14:59:46,695 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603263586695, current=UP, previous=STARTING]
+2020-10-21 14:59:46,697 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 14:59:46,700 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9013"]
+2020-10-21 14:59:46,899 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9013 (http) with context path '/i4-data-cloud-start-aspect'
+2020-10-21 14:59:46,899 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9013
+2020-10-21 14:59:46,908 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 14:59:47,005 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 61 - Started I4DataCloudStartAspectApplication in 5.059 seconds (JVM running for 6.131)
+2020-10-21 15:04:45,131 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 15:04:45,136 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":29,"week":"星期三","actionMethod":"getRole","createTime":1603263885,"loginname":"admin","actionContent":"获取角色列表","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","userId":1,"actionName":"查看","action_success":1}]
+2020-10-21 15:04:45,136 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":29,"week":"星期三","actionMethod":"getRole","createTime":1603263885,"loginname":"admin","actionContent":"获取角色列表","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","userId":1,"actionName":"查看","action_success":1}]
+2020-10-21 15:04:45,137 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 15:04:45,138 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 15:04:45,139 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 15:04:46,477 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:09:46,483 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:14:46,489 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:19:46,504 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:24:46,514 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:29:46,527 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:34:46,535 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:39:46,545 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:44:46,550 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:49:46,554 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:54:46,558 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 15:59:46,563 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:04:46,566 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:09:46,569 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:14:46,571 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:19:46,574 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:24:46,578 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:29:46,580 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:34:46,586 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:39:46,587 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:44:46,594 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:49:46,598 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:54:46,599 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 16:59:46,601 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:04:46,603 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:09:46,605 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:14:46,607 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:19:46,609 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:24:46,614 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:29:46,616 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:34:46,622 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:39:46,623 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:44:46,627 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:49:46,628 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:54:46,630 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 17:59:46,632 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:04:46,634 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:09:46,636 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:14:44,626 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:44,630 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadTable","createTime":1603275284,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:44,631 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadTable","createTime":1603275284,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:44,631 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:44,632 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:44,632 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:14:44,632 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:44,632 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":21,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275284,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:44,632 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":21,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275284,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:44,633 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:44,633 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:44,633 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:14:46,255 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:46,255 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":6,"week":"星期三","actionMethod":"loadTable","createTime":1603275286,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:46,255 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":6,"week":"星期三","actionMethod":"loadTable","createTime":1603275286,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:46,255 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:46,255 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:46,255 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:14:46,263 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:46,263 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":9,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275286,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:46,264 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":9,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275286,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:46,264 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:46,264 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:46,264 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:14:46,639 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:14:47,421 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:47,422 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":10,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275287,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:47,422 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":10,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275287,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:47,422 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:47,422 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:47,422 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:14:47,426 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:47,426 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":9,"week":"星期三","actionMethod":"loadTable","createTime":1603275287,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:47,426 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":9,"week":"星期三","actionMethod":"loadTable","createTime":1603275287,"actionContent":"加载表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:47,427 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:47,427 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:47,427 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:14:51,688 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 18:14:51,689 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":7,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275291,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:51,689 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":7,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603275291,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 18:14:51,689 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: SimpleConnection@36bf817b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55617]]
+2020-10-21 18:14:51,689 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 18:14:51,689 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 18:19:46,642 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:24:46,644 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:29:46,645 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:34:46,646 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:39:46,649 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:44:46,650 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:49:46,653 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:54:46,657 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 18:59:46,661 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:04:46,663 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:09:46,665 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:14:46,667 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:19:46,668 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:24:46,672 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:29:46,674 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:34:46,676 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:39:46,678 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:44:46,681 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:49:46,683 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:51:02,964 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-ASPECT with eureka with status DOWN
+2020-10-21 19:51:02,965 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603281062965, current=DOWN, previous=UP]
+2020-10-21 19:51:02,966 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 19:51:02,982 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 19:51:03,124 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-21 19:51:03,135 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 19:51:03,187 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-21 19:51:04,116 [SimpleAsyncTaskExecutor-1] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer 1436 - Restarting Consumer@72bac215: tags=[[amq.ctag-SpECik3-s41nAxfz-sr4lw]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4a9f1e5e Shared Rabbit Connection: null, acknowledgeMode=NONE local queue size=0
+2020-10-21 19:51:06,192 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-21 19:51:06,197 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - deregister  status: 200
+2020-10-21 19:51:06,206 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-21 19:51:13,827 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-21 19:51:13,862 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-21 19:51:14,321 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 655 - The following profiles are active: dev
+2020-10-21 19:51:14,837 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.aspect]' package. Please check your configuration.
+2020-10-21 19:51:14,897 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 19:51:14,899 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-21 19:51:14,917 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-21 19:51:15,113 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=0b6237a4-8614-3dc5-8761-4143b2656d2c
+2020-10-21 19:51:15,663 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9013 (http)
+2020-10-21 19:51:15,673 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9013"]
+2020-10-21 19:51:15,674 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-21 19:51:15,674 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-21 19:51:15,770 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-aspect] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-21 19:51:15,770 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1435 ms
+2020-10-21 19:51:16,314 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 558 - Attempting to connect to: [127.0.0.1:5672]
+2020-10-21 19:51:16,349 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 511 - Created new connection: rabbitConnectionFactory#504d32c5:0/SimpleConnection@6dd0dddd [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61760]
+2020-10-21 19:51:16,393 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 104 - RabbitMQ初始化交换机完毕：producersExchange[i4-data-cloud-system],consumersExchange[],delaysExchange[]
+2020-10-21 19:51:16,393 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 105 - RabbitMQ初始化队列完毕：producersQueue[i4-data-cloud-requestLog-one],consumersQueue[],delaysQueue[]
+2020-10-21 19:51:16,404 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 19:51:16,404 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 19:51:16,409 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 19:51:16,410 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 19:51:16,601 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 19:51:16,906 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-21 19:51:16,997 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-21 19:51:17,223 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-21 19:51:17,363 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-21 19:51:17,509 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-21 19:51:17,641 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-21 19:51:17,670 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-21 19:51:17,731 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-21 19:51:17,731 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-21 19:51:17,838 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-21 19:51:17,839 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-21 19:51:18,068 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:51:18,145 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-21 19:51:18,146 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-21 19:51:18,146 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-21 19:51:18,146 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-21 19:51:18,146 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-21 19:51:18,146 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-21 19:51:18,146 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-21 19:51:18,392 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-21 19:51:18,395 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-21 19:51:18,397 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-21 19:51:18,400 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603281078399 with initial instances count: 4
+2020-10-21 19:51:18,401 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-ASPECT with eureka with status UP
+2020-10-21 19:51:18,401 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603281078401, current=UP, previous=STARTING]
+2020-10-21 19:51:18,403 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 19:51:18,406 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9013"]
+2020-10-21 19:51:18,540 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9013 (http) with context path '/i4-data-cloud-start-aspect'
+2020-10-21 19:51:18,541 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9013
+2020-10-21 19:51:18,547 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 19:51:18,641 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 61 - Started I4DataCloudStartAspectApplication in 5.239 seconds (JVM running for 6.459)
+2020-10-21 19:51:47,088 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-ASPECT with eureka with status DOWN
+2020-10-21 19:51:47,088 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603281107088, current=DOWN, previous=UP]
+2020-10-21 19:51:47,088 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 19:51:47,092 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 19:51:47,214 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-21 19:51:47,214 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 19:51:47,240 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-21 19:51:50,244 [DiscoveryClient-0] WARN  com.netflix.discovery.TimedSupervisorTask 90 - task supervisor shutting down, can't accept the task
+2020-10-21 19:51:50,246 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-21 19:51:50,253 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - deregister  status: 200
+2020-10-21 19:51:50,265 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-21 19:52:10,364 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-21 19:52:10,396 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-21 19:52:10,847 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 655 - The following profiles are active: dev
+2020-10-21 19:52:11,367 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.aspect]' package. Please check your configuration.
+2020-10-21 19:52:11,428 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 19:52:11,430 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-21 19:52:11,448 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-21 19:52:11,649 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=0b6237a4-8614-3dc5-8761-4143b2656d2c
+2020-10-21 19:52:12,135 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9013 (http)
+2020-10-21 19:52:12,143 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9013"]
+2020-10-21 19:52:12,143 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-21 19:52:12,144 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-21 19:52:12,231 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-aspect] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-21 19:52:12,231 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1369 ms
+2020-10-21 19:52:12,743 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 558 - Attempting to connect to: [127.0.0.1:5672]
+2020-10-21 19:52:12,787 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 511 - Created new connection: rabbitConnectionFactory#6780fedf:0/SimpleConnection@589a91d2 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61856]
+2020-10-21 19:52:12,828 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 104 - RabbitMQ初始化交换机完毕：producersExchange[i4-data-cloud-system],consumersExchange[],delaysExchange[]
+2020-10-21 19:52:12,828 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 105 - RabbitMQ初始化队列完毕：producersQueue[i4-data-cloud-requestLog-one],consumersQueue[],delaysQueue[]
+2020-10-21 19:52:12,837 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 19:52:12,837 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 19:52:12,841 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 19:52:12,841 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 19:52:12,997 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 19:52:13,274 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-21 19:52:13,357 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-21 19:52:13,543 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-21 19:52:13,682 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-21 19:52:13,825 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-21 19:52:13,956 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-21 19:52:13,983 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-21 19:52:14,037 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-21 19:52:14,038 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-21 19:52:14,131 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-21 19:52:14,131 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-21 19:52:14,352 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:52:14,426 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-21 19:52:14,426 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-21 19:52:14,427 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-21 19:52:14,427 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-21 19:52:14,427 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-21 19:52:14,427 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-21 19:52:14,427 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-21 19:52:14,643 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-21 19:52:14,646 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-21 19:52:14,648 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-21 19:52:14,650 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603281134650 with initial instances count: 2
+2020-10-21 19:52:14,652 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-ASPECT with eureka with status UP
+2020-10-21 19:52:14,653 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603281134652, current=UP, previous=STARTING]
+2020-10-21 19:52:14,655 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 19:52:14,657 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9013"]
+2020-10-21 19:52:14,822 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9013 (http) with context path '/i4-data-cloud-start-aspect'
+2020-10-21 19:52:14,823 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9013
+2020-10-21 19:52:14,829 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 19:52:14,922 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 61 - Started I4DataCloudStartAspectApplication in 5.056 seconds (JVM running for 6.137)
+2020-10-21 19:52:59,529 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-ASPECT with eureka with status DOWN
+2020-10-21 19:52:59,529 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603281179529, current=DOWN, previous=UP]
+2020-10-21 19:52:59,530 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 19:52:59,533 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 19:52:59,654 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-21 19:52:59,654 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 19:52:59,679 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-21 19:53:02,681 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-21 19:53:02,685 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - deregister  status: 200
+2020-10-21 19:53:02,693 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-21 19:55:54,770 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-21 19:55:54,802 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-21 19:55:55,281 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 655 - The following profiles are active: dev
+2020-10-21 19:55:55,795 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.aspect]' package. Please check your configuration.
+2020-10-21 19:55:55,854 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 19:55:55,856 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-21 19:55:55,873 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-21 19:55:56,071 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=6a810a0a-3c8a-3992-8c08-09e529d5c4af
+2020-10-21 19:55:56,572 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9013 (http)
+2020-10-21 19:55:56,579 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9013"]
+2020-10-21 19:55:56,580 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-21 19:55:56,580 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-21 19:55:56,666 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-aspect] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-21 19:55:56,667 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1370 ms
+2020-10-21 19:55:57,148 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 558 - Attempting to connect to: [127.0.0.1:5672]
+2020-10-21 19:55:57,182 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 511 - Created new connection: rabbitConnectionFactory#399865f1:0/SimpleConnection@27c7801e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61940]
+2020-10-21 19:55:57,241 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 127 - 已成功开始监听RabbitMQ异步消息：queue[i4-data-cloud-requestLog-one] 
+2020-10-21 19:55:57,241 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 104 - RabbitMQ初始化交换机完毕：producersExchange[i4-data-cloud-system],consumersExchange[],delaysExchange[]
+2020-10-21 19:55:57,242 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 105 - RabbitMQ初始化队列完毕：producersQueue[i4-data-cloud-requestLog-one],consumersQueue[],delaysQueue[]
+2020-10-21 19:55:57,244 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 19:55:57,245 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":11,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603281088,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 19:55:57,245 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":11,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603281088,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 19:55:57,245 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@72120b89 Shared Rabbit Connection: SimpleConnection@27c7801e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61940]]
+2020-10-21 19:55:57,246 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 19:55:57,246 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 19:55:57,251 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 19:55:57,252 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 19:55:57,255 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 19:55:57,255 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 19:55:57,415 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 19:55:57,682 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-21 19:55:57,771 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-21 19:55:57,971 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-21 19:55:58,114 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-21 19:55:58,257 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-21 19:55:58,379 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-21 19:55:58,406 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-21 19:55:58,457 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-21 19:55:58,457 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-21 19:55:58,554 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-21 19:55:58,554 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-21 19:55:58,775 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 19:55:58,852 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-21 19:55:58,852 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-21 19:55:58,852 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-21 19:55:58,852 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-21 19:55:58,853 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-21 19:55:58,853 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-21 19:55:58,853 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-21 19:55:59,079 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-21 19:55:59,081 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-21 19:55:59,083 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-21 19:55:59,086 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603281359085 with initial instances count: 3
+2020-10-21 19:55:59,088 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-ASPECT with eureka with status UP
+2020-10-21 19:55:59,088 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603281359088, current=UP, previous=STARTING]
+2020-10-21 19:55:59,090 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 19:55:59,093 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9013"]
+2020-10-21 19:55:59,219 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9013 (http) with context path '/i4-data-cloud-start-aspect'
+2020-10-21 19:55:59,220 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9013
+2020-10-21 19:55:59,226 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 19:55:59,317 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 61 - Started I4DataCloudStartAspectApplication in 4.933 seconds (JVM running for 6.132)
+2020-10-21 19:56:24,835 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 19:56:24,835 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":127,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603281384,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 19:56:24,835 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":127,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603281384,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 19:56:24,836 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@72120b89 Shared Rabbit Connection: SimpleConnection@27c7801e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61940]]
+2020-10-21 19:56:24,836 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 19:56:24,836 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:00:58,856 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:05:58,859 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:10:58,867 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:11:19,724 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-ASPECT with eureka with status DOWN
+2020-10-21 20:11:19,726 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603282279726, current=DOWN, previous=UP]
+2020-10-21 20:11:19,728 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 20:11:19,747 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 20:11:19,889 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-21 20:11:19,890 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 20:11:19,932 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-21 20:11:20,692 [SimpleAsyncTaskExecutor-1] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer 1436 - Restarting Consumer@1002c425: tags=[[amq.ctag-hUNGPdJ-fUtyjUrzizkgEQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@72120b89 Shared Rabbit Connection: null, acknowledgeMode=NONE local queue size=0
+2020-10-21 20:11:22,936 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-21 20:11:22,941 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - deregister  status: 200
+2020-10-21 20:11:22,952 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-21 20:11:32,217 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-21 20:11:32,268 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-21 20:11:32,784 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 655 - The following profiles are active: dev
+2020-10-21 20:11:33,471 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.aspect]' package. Please check your configuration.
+2020-10-21 20:11:33,538 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 20:11:33,541 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-21 20:11:33,558 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-21 20:11:33,757 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=6a810a0a-3c8a-3992-8c08-09e529d5c4af
+2020-10-21 20:11:34,253 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9013 (http)
+2020-10-21 20:11:34,261 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9013"]
+2020-10-21 20:11:34,261 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-21 20:11:34,261 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-21 20:11:34,348 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-aspect] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-21 20:11:34,348 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1544 ms
+2020-10-21 20:11:34,885 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 558 - Attempting to connect to: [127.0.0.1:5672]
+2020-10-21 20:11:34,927 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 511 - Created new connection: rabbitConnectionFactory#65c8cb1d:0/SimpleConnection@4124ad55 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62309]
+2020-10-21 20:11:34,995 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 127 - 已成功开始监听RabbitMQ异步消息：queue[i4-data-cloud-requestLog-one] 
+2020-10-21 20:11:34,995 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 104 - RabbitMQ初始化交换机完毕：producersExchange[i4-data-cloud-system],consumersExchange[],delaysExchange[]
+2020-10-21 20:11:34,995 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 105 - RabbitMQ初始化队列完毕：producersQueue[i4-data-cloud-requestLog-one],consumersQueue[],delaysQueue[]
+2020-10-21 20:11:35,004 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 20:11:35,005 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 20:11:35,009 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 20:11:35,009 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 20:11:35,193 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 20:11:35,444 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-21 20:11:35,524 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-21 20:11:35,705 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-21 20:11:35,846 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-21 20:11:36,001 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-21 20:11:36,130 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-21 20:11:36,157 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-21 20:11:36,211 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-21 20:11:36,211 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-21 20:11:36,301 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-21 20:11:36,301 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-21 20:11:36,527 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-21 20:11:36,605 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-21 20:11:36,834 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-21 20:11:36,836 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-21 20:11:36,838 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-21 20:11:36,841 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603282296840 with initial instances count: 3
+2020-10-21 20:11:36,843 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-ASPECT with eureka with status UP
+2020-10-21 20:11:36,844 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603282296844, current=UP, previous=STARTING]
+2020-10-21 20:11:36,845 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 20:11:36,848 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9013"]
+2020-10-21 20:11:37,026 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9013 (http) with context path '/i4-data-cloud-start-aspect'
+2020-10-21 20:11:37,027 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9013
+2020-10-21 20:11:37,031 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 20:11:37,130 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 61 - Started I4DataCloudStartAspectApplication in 5.314 seconds (JVM running for 6.447)
+2020-10-21 20:11:57,549 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:11:57,550 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":21,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282317,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:11:57,550 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":21,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282317,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:11:57,550 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2964f4c9 Shared Rabbit Connection: SimpleConnection@4124ad55 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62309]]
+2020-10-21 20:11:57,550 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:11:57,550 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:13:27,158 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:13:27,158 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":15,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282407,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:13:27,159 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":15,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282407,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:13:27,159 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2964f4c9 Shared Rabbit Connection: SimpleConnection@4124ad55 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62309]]
+2020-10-21 20:13:27,159 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:13:27,159 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:13:50,919 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:13:50,920 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282430,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:13:50,920 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282430,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:13:50,920 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2964f4c9 Shared Rabbit Connection: SimpleConnection@4124ad55 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62309]]
+2020-10-21 20:13:50,920 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:13:50,920 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:13:54,035 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:13:54,036 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":7,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282434,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:13:54,036 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":7,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282434,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:13:54,036 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2964f4c9 Shared Rabbit Connection: SimpleConnection@4124ad55 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62309]]
+2020-10-21 20:13:54,036 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:13:54,036 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:13:59,794 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-ASPECT with eureka with status DOWN
+2020-10-21 20:13:59,794 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603282439794, current=DOWN, previous=UP]
+2020-10-21 20:13:59,794 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 20:13:59,799 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 20:13:59,920 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-21 20:13:59,920 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 20:13:59,945 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-21 20:14:00,045 [SimpleAsyncTaskExecutor-1] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer 1436 - Restarting Consumer@1b7d250f: tags=[[amq.ctag--uRbdKGbQSjF87BJvQs5aA]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2964f4c9 Shared Rabbit Connection: null, acknowledgeMode=NONE local queue size=0
+2020-10-21 20:14:02,947 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-21 20:14:02,951 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - deregister  status: 200
+2020-10-21 20:14:02,958 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-21 20:16:34,733 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-21 20:16:34,775 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-21 20:16:35,240 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 655 - The following profiles are active: dev
+2020-10-21 20:16:35,731 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.aspect]' package. Please check your configuration.
+2020-10-21 20:16:35,790 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 20:16:35,791 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-21 20:16:35,809 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-21 20:16:36,008 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=6a810a0a-3c8a-3992-8c08-09e529d5c4af
+2020-10-21 20:16:36,524 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9013 (http)
+2020-10-21 20:16:36,531 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9013"]
+2020-10-21 20:16:36,532 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-21 20:16:36,532 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-21 20:16:36,619 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-aspect] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-21 20:16:36,619 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1364 ms
+2020-10-21 20:16:37,146 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 558 - Attempting to connect to: [127.0.0.1:5672]
+2020-10-21 20:16:37,186 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory 511 - Created new connection: rabbitConnectionFactory#3402c2f8:0/SimpleConnection@10dd42af [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62438]
+2020-10-21 20:16:37,249 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 127 - 已成功开始监听RabbitMQ异步消息：queue[i4-data-cloud-requestLog-one] 
+2020-10-21 20:16:37,249 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 104 - RabbitMQ初始化交换机完毕：producersExchange[i4-data-cloud-system],consumersExchange[],delaysExchange[]
+2020-10-21 20:16:37,249 [restartedMain] INFO  cn.i4.data.cloud.mq.rabbit.config.InitConfig 105 - RabbitMQ初始化队列完毕：producersQueue[i4-data-cloud-requestLog-one],consumersQueue[],delaysQueue[]
+2020-10-21 20:16:37,252 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:16:37,253 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":16,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282446,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:16:37,253 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":16,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282446,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:16:37,253 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@8b4fcc0 Shared Rabbit Connection: SimpleConnection@10dd42af [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62438]]
+2020-10-21 20:16:37,254 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:16:37,254 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:16:37,261 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 20:16:37,261 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 20:16:37,266 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-21 20:16:37,266 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-21 20:16:37,422 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 20:16:37,676 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-21 20:16:37,761 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-21 20:16:37,940 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-21 20:16:38,077 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-21 20:16:38,214 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-21 20:16:38,332 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-21 20:16:38,359 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-21 20:16:38,410 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-21 20:16:38,410 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-21 20:16:38,505 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-21 20:16:38,506 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-21 20:16:38,726 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:16:38,800 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-21 20:16:38,801 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-21 20:16:38,801 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-21 20:16:38,801 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-21 20:16:38,801 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-21 20:16:38,801 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-21 20:16:38,801 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-21 20:16:39,045 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-21 20:16:39,048 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-21 20:16:39,050 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-21 20:16:39,052 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603282599052 with initial instances count: 3
+2020-10-21 20:16:39,054 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-ASPECT with eureka with status UP
+2020-10-21 20:16:39,054 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603282599054, current=UP, previous=STARTING]
+2020-10-21 20:16:39,056 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 20:16:39,058 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9013"]
+2020-10-21 20:16:39,230 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9013 (http) with context path '/i4-data-cloud-start-aspect'
+2020-10-21 20:16:39,231 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9013
+2020-10-21 20:16:39,235 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 20:16:39,331 [restartedMain] INFO  cn.i4.data.cloud.aspect.I4DataCloudStartAspectApplication 61 - Started I4DataCloudStartAspectApplication in 4.969 seconds (JVM running for 6.096)
+2020-10-21 20:16:55,331 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:16:55,331 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282615,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:16:55,331 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":13,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282615,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:16:55,332 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@8b4fcc0 Shared Rabbit Connection: SimpleConnection@10dd42af [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62438]]
+2020-10-21 20:16:55,332 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:16:55,332 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:17:18,056 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 53 - ===============消费者接收到RabbitMQ消息========================
+2020-10-21 20:17:18,056 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 58 - 队列：[i4-data-cloud-requestLog-one]，内容：[{"actionType":4,"actionTime":16,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282638,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:17:18,056 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 31 - msg:[{"actionType":4,"actionTime":16,"week":"星期三","actionMethod":"loadMenuTable","createTime":1603282638,"actionContent":"加载菜单表格","ip":"127.0.0.1","moduleName":"系统管理--菜单管理","actionName":"查看","action_success":1}]
+2020-10-21 20:17:18,056 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 32 - channel:[Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@8b4fcc0 Shared Rabbit Connection: SimpleConnection@10dd42af [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62438]]
+2020-10-21 20:17:18,056 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.aspect.core.ConsumerService 33 - queue:[i4-data-cloud-requestLog-one]
+2020-10-21 20:17:18,057 [SimpleAsyncTaskExecutor-1] INFO  cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler 85 - =================已消费,自动签收=========================
+2020-10-21 20:21:38,807 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:26:38,815 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:31:38,818 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-21 20:36:30,489 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-ASPECT with eureka with status DOWN
+2020-10-21 20:36:30,490 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603283790490, current=DOWN, previous=UP]
+2020-10-21 20:36:30,491 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013: registering service...
+2020-10-21 20:36:30,504 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - registration status: 204
+2020-10-21 20:36:30,651 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-21 20:36:30,652 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 20:36:30,692 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-21 20:36:30,711 [SimpleAsyncTaskExecutor-1] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer 1436 - Restarting Consumer@289a5f02: tags=[[amq.ctag-BHp2Jbd9EIoFl4xkKbpbxg]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@8b4fcc0 Shared Rabbit Connection: null, acknowledgeMode=NONE local queue size=0
+2020-10-21 20:36:33,703 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-21 20:36:33,715 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-ASPECT/localhost:9013 - deregister  status: 200
+2020-10-21 20:36:33,745 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient

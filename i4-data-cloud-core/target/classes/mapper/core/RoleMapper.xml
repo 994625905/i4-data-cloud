@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.RoleMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.name as name, 
+        t.describe_info as describeInfo,
+        t.create_time as createTime, 
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+		FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.RoleDto"
+            resultType="cn.i4.data.cloud.core.entity.view.RoleView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_role AS t
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time
+        </if>
+    </select>
+
+    <!--根据用户ID查所拥有的的角色-->
+    <select id="selectRolesByUserId" resultType="cn.i4.data.cloud.core.entity.view.RoleView">
+        select
+        <include refid="Base_Column_List" />
+        FROM t_role AS t
+        where t.id in (select u.role_id from t_user_role u where u.user_id = #{userId})
+    </select>
+
+</mapper>
