@@ -90,5 +90,5 @@ public class AuthorizeFilter implements GlobalFilter {
         response.setStatusCode(HttpStatus.UNAUTHORIZED);
         response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
         return response.writeWith(Mono.just(dataBuffer));
-    };
+    }
 }

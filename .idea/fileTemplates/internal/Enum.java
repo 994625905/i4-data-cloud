@@ -2,8 +2,8 @@
 #parse("File Header.java")
 
 /**
- * @author ${USER}
- * @title: ${PRODUCT_NAME}
+ * @author wangjc
+ * @title: ${NAME}
  * @projectName ${PROJECT_NAME}
  * @description: TODO
  * @date ${DATE}-${TIME}
