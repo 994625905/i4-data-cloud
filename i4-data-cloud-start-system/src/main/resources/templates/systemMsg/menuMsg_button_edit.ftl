@@ -5,7 +5,7 @@
     <form class="layui-form">
         <br>
         <div class="layui-form-item">
-            <label class="layui-form-label">所属按钮：</label>
+            <label class="layui-form-label">所属菜单：</label>
             <div class="layui-input-block">
                 <input readonly value="${pMenu.name!}" class="layui-input">
                 <input type="hidden" value="${pMenu.id!}" name="parentId" class="layui-input">
@@ -38,6 +38,7 @@
                 <input type="number" value="${menu.sort!}" name="sort" lay-verify="required" placeholder="默认自增升序" class="layui-input">
             </div>
         </div>
+        <input type="hidden" name="id" value="${menu.id}">
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>

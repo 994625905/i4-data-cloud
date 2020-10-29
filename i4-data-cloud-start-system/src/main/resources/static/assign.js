@@ -1,6 +1,6 @@
-var BasePath = "/i4-data-cloud-start-system";
+const BasePath = "/i4-data-cloud-start-system";
 
-var LAYOUT_SIZE = {
+const LAYOUT_SIZE = {
     /** 标准宽高 */
     BASE_WIDTH(){
         return $(window).width()*0.8+"px";
@@ -24,12 +24,16 @@ var LAYOUT_SIZE = {
     }
 }
 /******************************table列宽度*********************************************/
-var TABLE_COL_WIDTH = {
+const TABLE_COL_WIDTH = {
+    one_Cols(num = 2){//值一个列多字
+        return 25*num
+    },
+    text:320,//文本宽度
     date:170,//日期宽度
     number_min:60,
     number_max:90,
     tool(num = 1){//操作列宽
-        return 80*num
+        return 85*num
     },
 }
 /******************************layui全局配置第三方插件使用*****************/

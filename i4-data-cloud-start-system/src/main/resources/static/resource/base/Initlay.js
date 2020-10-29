@@ -52,6 +52,9 @@ var Initlay = {
             // contentType: 'application/json',
             cols:cols,
             method:"post",
+            headers:{
+                authorization:BaseCookie.getStr("authorization"),//设置请求头
+            },
             totalRow:disTotalRow,//是否开启合计
             toolbar:disToolbar,
             defaultToolbar:[

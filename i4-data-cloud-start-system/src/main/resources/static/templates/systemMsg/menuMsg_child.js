@@ -70,15 +70,15 @@ layui.use(["layer","table"],()=>{
 function loadMenuTable(){
     var tabCols = [[
         {field:"name",title:"菜单",templet(d){
-            return "<a class='i4_a' onclick='loadMenuByPid(\""+d.id+"\",\""+d.name+"\")'>"+d.name+"</a>";
+            return "<a class='i4_a' onclick='loadButtonByPid(\""+d.id+"\",\""+d.name+"\")'>"+d.name+"</a>";
         }},
-        {field:'url',title: '链接',width:250},
-        {field:'permission',title: '权限标识',width:250},
-        {field:'sort',title: '排序'},
+        {field:'url',title: '链接'},
+        {field:'permission',title: '权限标识'},
+        {field:'sort',title: '排序',width: TABLE_COL_WIDTH.number_max},
         {field:'createTimeStr',title: '创建时间',width:TABLE_COL_WIDTH.date},
         {field:'updateTimeStr',title: '修改时间',width:TABLE_COL_WIDTH.date},
-        {field:'status',title: '状态',align:"center",toolbar:"#statusTool"},
-        {field:'id',title: '操作',align:"center",toolbar:"#tool"}
+        {field:'status',title: '状态',align:"center",toolbar:"#statusTool",width: TABLE_COL_WIDTH.tool(1)},
+        {field:'id',title: '操作',align:"center",toolbar:"#tool",width: TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender = Initlay.initTable("#menuTable",BasePath+"/systemMsg/menuMsg/loadMenuTable",tabCols,"#toolbar",param)
 }
@@ -87,6 +87,6 @@ function refresh(){
     Initlay.reloadTable(tableRender);
 }
 /*******************详情页*****************/
-function loadMenuByPid(id,name){
-    Feng.loadWindow(name+"：按钮列表",BasePath+"/systemMsg/menuMsg/detailById?id="+id)
+function loadButtonByPid(id,name){
+    Feng.loadWindow(name+"：按钮列表",BasePath+"/systemMsg/menuMsg/detailButtonById?id="+id)
 }

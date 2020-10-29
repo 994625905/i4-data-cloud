@@ -9,15 +9,16 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
  * View
  * @author wangjc
- * @date 2020-10-11 13:42:24
+ * @date 2020-10-25 17:37:12
  */
 public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 
-	private static final long serialVersionUID = 1602394944896L;
+	private static final long serialVersionUID = 1603618632362L;
 
 	public AutocodeDatasourceView(AutocodeDatasourceModel model) {
 		this.id = model.getId();
 		this.datasourceName = model.getDatasourceName();
+		this.dataSourceCover = model.getDataSourceCover();
 		this.datasourceUrl = model.getDatasourceUrl();
 		this.databaseName = model.getDatabaseName();
 		this.driverclassName = model.getDriverclassName();
@@ -42,10 +43,16 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 	private Integer id;
 
 	/**
-	 * 数据源名称（不可重复）
+	 * 数据源名称
 	 */
 	@TableField("datasource_name")
 	private String datasourceName;
+
+	/**
+	 * 数据源封面
+	 */
+	@TableField("dataSource_cover")
+	private String dataSourceCover;
 
 	/**
 	 * 数据源链接
@@ -78,7 +85,7 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 	private String authUser;
 
 	/**
-	 * 
+	 * 授权的用户密码
 	 */
 	@TableField("auth_password")
 	private String authPassword;
@@ -102,13 +109,13 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 	private String defaultLocal;
 
 	/**
-	 * 
+	 * 添加时间
 	 */
 	@TableField("create_time")
 	private Long createTime;
 
 	/**
-	 * 
+	 * 修改时间
 	 */
 	@TableField("update_time")
 	private Long updateTime;
@@ -128,6 +135,14 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 
 	public String getDatasourceName() {
 		return this.datasourceName;
+	}
+
+	public String getDataSourceCover() {
+		return dataSourceCover;
+	}
+
+	public void setDataSourceCover(String dataSourceCover) {
+		this.dataSourceCover = dataSourceCover;
 	}
 
 	public void setDatasourceUrl(String datasourceUrl) {

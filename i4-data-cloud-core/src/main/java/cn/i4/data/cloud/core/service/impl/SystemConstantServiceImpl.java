@@ -36,13 +36,12 @@ public class SystemConstantServiceImpl extends BaseServiceImpl<SystemConstantMap
 	@Override
 	public Map<String, Object> getSystemConstant() {
 		List<SystemConstantModel> list = this.mapper.selectList(null);
-		Map<String,Object> map = new HashMap<String, Object>(){{
-			for(SystemConstantModel model:list){
-				put(model.getConstantKey()+"_id",model.getId());
-				put(model.getConstantKey(),model.getConstantValue());
-				put(model.getConstantKey()+"_name",model.getConstantName());
-			}
-		}};
+		Map<String,Object> map = new HashMap<>();
+		for(SystemConstantModel model:list){
+			map.put(model.getConstantKey()+"_id",model.getId());
+			map.put(model.getConstantKey(),model.getConstantValue());
+			map.put(model.getConstantKey()+"_name",model.getConstantName());
+		}
 		return map;
 	}
 

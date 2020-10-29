@@ -1,13 +1,20 @@
 package cn.i4.data.cloud.consumer.core;
 
+import cn.i4.data.cloud.core.entity.model.LogLimitModel;
+import cn.i4.data.cloud.core.entity.model.LogRequestModel;
+import cn.i4.data.cloud.core.service.ILogLimitService;
+import cn.i4.data.cloud.core.service.ILogRequestService;
+import cn.i4.data.cloud.mq.rabbit.config.RabbitMqConstant;
 import cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler;
+import com.alibaba.fastjson.JSONObject;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * 消费者的service，在i4-data-cloud-mq中自动加载
+ * 消费者的service，在i4-data-cloud-mq中自动加载，部署多个consumer就是负载均衡
  * @author wangjc
  * @title: ConsumerService
  * @projectName i4-data-cloud
@@ -19,6 +26,11 @@ public class ConsumerService extends ConsumerHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(ConsumerService.class);
 
+    @Autowired
+    private ILogRequestService iLogRequestService;
+    @Autowired
+    private ILogLimitService iLogLimitService;
+
     /**
      * 返回值为是否正常处理
      * @param msg
@@ -28,9 +40,19 @@ public class ConsumerService extends ConsumerHandler {
      */
     @Override
     public Boolean handleMessage(String msg, Channel channel, String queue) {
-        logger.info("msg:[{}]",msg);
-        logger.info("channel:[{}]",channel);
-        logger.info("queue:[{}]",queue);
+
+        /** 接口请求日志 */
+        if(RabbitMqConstant.QUEUE.REQUEST_LOG_ONE.equals(queue)){
+            LogRequestModel model = JSONObject.parseObject(msg,LogRequestModel.class);
+            iLogRequestService.save(model);
+        }
+
+        /** 接口限流日志 */
+        if(RabbitMqConstant.QUEUE.REQUEST_LIMIT_ONE.equals(queue)){
+            LogLimitModel model = JSONObject.parseObject(msg, LogLimitModel.class);
+            iLogLimitService.save(model);
+        }
+
         return true;
     }
 }

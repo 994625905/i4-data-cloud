@@ -21,6 +21,7 @@ public class SetRabbitmqQueueModel extends BaseModel<SetRabbitmqQueueModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -68,8 +69,8 @@ public class SetRabbitmqQueueModel extends BaseModel<SetRabbitmqQueueModel> {
     /**
     * 路由key，绑定队列到交换机的
     */
-    @TableField("routingKey")
-    private String routingkey;
+    @TableField("routing_key")
+    private String routingKey;
 
     /**
     * 创建时间
@@ -77,6 +78,11 @@ public class SetRabbitmqQueueModel extends BaseModel<SetRabbitmqQueueModel> {
     @TableField("create_time")
     private Long createTime;
 
+    /**
+     * 修改时间
+     */
+    @TableField("update_time")
+    private Long updateTime;
 
     public void setId(Integer id) {
     this.id = id;
@@ -142,12 +148,12 @@ public class SetRabbitmqQueueModel extends BaseModel<SetRabbitmqQueueModel> {
     return this.exclusive;
     }
 
-    public void setRoutingkey(String routingkey) {
-    this.routingkey = routingkey;
+    public String getRoutingKey() {
+        return routingKey;
     }
 
-    public String getRoutingkey() {
-    return this.routingkey;
+    public void setRoutingKey(String routingKey) {
+        this.routingKey = routingKey;
     }
 
     public void setCreateTime(Long createTime) {
@@ -158,4 +164,11 @@ public class SetRabbitmqQueueModel extends BaseModel<SetRabbitmqQueueModel> {
     return this.createTime;
     }
 
+    public Long getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
+    }
 }

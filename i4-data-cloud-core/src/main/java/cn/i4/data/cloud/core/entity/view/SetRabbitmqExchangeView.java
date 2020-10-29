@@ -1,9 +1,12 @@
 package cn.i4.data.cloud.core.entity.view;
 
 import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import cn.i4.data.cloud.base.entity.view.BaseView;
 import cn.i4.data.cloud.core.entity.model.SetRabbitmqExchangeModel;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
@@ -21,8 +24,11 @@ public class SetRabbitmqExchangeView extends BaseView<SetRabbitmqExchangeView> {
 		this.name = model.getName();
 		this.describeInfo = model.getDescribeInfo();
 		this.durable = model.getDurable();
+		this.type = model.getType();
+		this.isAck = model.getIsAck();
 		this.autoDelete = model.getAutoDelete();
 		this.createTime = model.getCreateTime();
+		this.updateTime = model.getUpdateTime();
 	}
 
 	public SetRabbitmqExchangeView() {
@@ -33,6 +39,7 @@ public class SetRabbitmqExchangeView extends BaseView<SetRabbitmqExchangeView> {
 	 * 
 	 */
 	@TableField("id")
+	@TableId(type = IdType.AUTO)
 	private Integer id;
 
 	/**
@@ -66,11 +73,35 @@ public class SetRabbitmqExchangeView extends BaseView<SetRabbitmqExchangeView> {
 	private Integer autoDelete;
 
 	/**
+	 * 类型，1直连direct，2主题topic，3广播fanout，4延时delay
+	 */
+	@TableField("type")
+	private Integer type;
+
+	/**
+	 * 消息监听的消息处理方式，1true，0false，默认手动
+	 */
+	@TableField("is_ack")
+	private Integer isAck;
+
+	/**
 	 * 创建时间
 	 */
 	@TableField("create_time")
 	private Long createTime;
+	private String createTimeStr;
 
+	/**
+	 * 更新时间
+	 */
+	@TableField("update_time")
+	private Long updateTime;
+	private String updateTimeStr;
+
+	/**
+	 * 创建用户
+	 */
+	private String realName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -120,6 +151,22 @@ public class SetRabbitmqExchangeView extends BaseView<SetRabbitmqExchangeView> {
 		return this.autoDelete;
 	}
 
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
+	}
+
+	public Integer getIsAck() {
+		return isAck;
+	}
+
+	public void setIsAck(Integer isAck) {
+		this.isAck = isAck;
+	}
+
 	public void setCreateTime(Long createTime) {
 		this.createTime = createTime;
 	}
@@ -128,4 +175,35 @@ public class SetRabbitmqExchangeView extends BaseView<SetRabbitmqExchangeView> {
 		return this.createTime;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public Long getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Long updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
 }

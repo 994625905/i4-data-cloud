@@ -37,21 +37,17 @@ public class FileMicroserviceImpl implements FileMicroservice {
     public ActionResult<Map<String, Object>> upload(MultipartFile file) {
         logger.error("upload服务降级处理");
 
-        String json = redisService.get(RedisConstant.KEY.SYSTEM_CONSTANT, String.class);
-        Map<String,Object> map;
-        if(json == null){
+        Map<String,Object> map = redisService.get(RedisConstant.KEY.SYSTEM_CONSTANT, Map.class);
+        if(map == null){
             map = iSystemConstantService.getSystemConstant();
-            redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, JSONObject.toJSONString(map),RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
-        }else{
-            map = JSONObject.parseObject(json,Map.class);
+            redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, map,RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
         }
-
-        return ActionResult.ok(new HashMap<String, Object>(){{
-            put("fileName",map.get("errorImage_name"));
-            put("fileUrl",map.get("errorImage"));
-            put("fileSuffix","jpg");
-            put("fileSize","30");
-        }});
+        Map<String,Object> res = new HashMap<>();
+        res.put("fileName",map.get("errorImage_name"));
+        res.put("fileUrl",map.get("errorImage"));
+        res.put("fileSuffix","jpg");
+        res.put("fileSize","30");
+        return ActionResult.ok(res);
     }
 
     @Override

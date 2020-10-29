@@ -21,6 +21,7 @@ public class SetRabbitmqExchangeModel extends BaseModel<SetRabbitmqExchangeModel
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -54,11 +55,28 @@ public class SetRabbitmqExchangeModel extends BaseModel<SetRabbitmqExchangeModel
     private Integer autoDelete;
 
     /**
+     * 类型，1直连direct，2主题topic，3广播fanout，4延时delay
+     */
+    @TableField("type")
+    private Integer type;
+
+    /**
+     * 消息监听的消息处理方式，1true，0false，默认手动
+     */
+    @TableField("is_ack")
+    private Integer isAck;
+
+    /**
     * 创建时间
     */
     @TableField("create_time")
     private Long createTime;
 
+    /**
+     * 更新时间
+     */
+    @TableField("update_time")
+    private Long updateTime;
 
     public void setId(Integer id) {
     this.id = id;
@@ -116,4 +134,27 @@ public class SetRabbitmqExchangeModel extends BaseModel<SetRabbitmqExchangeModel
     return this.createTime;
     }
 
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Integer getIsAck() {
+        return isAck;
+    }
+
+    public void setIsAck(Integer isAck) {
+        this.isAck = isAck;
+    }
+
+    public Long getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
+    }
 }

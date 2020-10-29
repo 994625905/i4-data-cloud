@@ -52,6 +52,35 @@ var UploadFile = {
     },
 
     /**
+     * 图片选择页面
+     * @param title
+     * @param imageElem
+     * @param width
+     * @param height
+     * @param limit
+     * @param size
+     */
+    imageSelect:function(title,imageElem,width,height,limit ,size){
+        var p = "?type=1"
+        if(width){
+            p += "&width="+width;
+        }if(height){
+            p += "&height="+height;
+        }if(limit){
+            p += "&limitProp="+limit;
+        }if(size){
+            p += "&fileSize="+size;
+        }
+        Feng.loadWindow(title,BasePath+"/materialMsg/imageSelect/index"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $(imageElem).attr("src",res)
+                }
+            })
+        })
+    },
+
+    /**
      * 上传图片(layui提供的默认文件类型为图片)
      * @param elem 点击的dom触发上传
      * @param callback 回调

@@ -11,12 +11,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
 * Model
 * @author wangjc
-* @date 2020-10-11 13:42:24
+* @date 2020-10-25 17:37:12
 */
 @TableName("t_autocode_datasource")
 public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> {
 
-    private static final long serialVersionUID = 1602394944521L;
+    private static final long serialVersionUID = 1603618632059L;
     /**
     * 
     */
@@ -25,10 +25,16 @@ public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> 
     private Integer id;
 
     /**
-    * 数据源名称（不可重复）
+    * 数据源名称
     */
     @TableField("datasource_name")
     private String datasourceName;
+
+    /**
+     * 数据源封面
+     */
+    @TableField("dataSource_cover")
+    private String dataSourceCover;
 
     /**
     * 数据源链接
@@ -61,7 +67,7 @@ public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> 
     private String authUser;
 
     /**
-    * 
+    * 授权的用户密码
     */
     @TableField("auth_password")
     private String authPassword;
@@ -85,13 +91,13 @@ public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> 
     private String defaultLocal;
 
     /**
-    * 
+    * 添加时间
     */
     @TableField("create_time")
     private Long createTime;
 
     /**
-    * 
+    * 修改时间
     */
     @TableField("update_time")
     private Long updateTime;
@@ -111,6 +117,14 @@ public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> 
 
     public String getDatasourceName() {
     return this.datasourceName;
+    }
+
+    public String getDataSourceCover() {
+        return dataSourceCover;
+    }
+
+    public void setDataSourceCover(String dataSourceCover) {
+        this.dataSourceCover = dataSourceCover;
     }
 
     public void setDatasourceUrl(String datasourceUrl) {

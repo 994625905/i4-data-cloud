@@ -118,6 +118,19 @@ public class SystemMsgController extends WebBaseController {
     }
 
     /**
+     * 菜单按钮的详情页
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/menuMsg/detailButtonById")
+    public ModelAndView menuMsgDetailButtonById(MenuButtonDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/systemMsg/menuMsg_button", request);
+        view.addObject("pid",dto.getId());
+        return view;
+    }
+
+    /**
      * 加载角色管理首页
      * @param request
      * @return

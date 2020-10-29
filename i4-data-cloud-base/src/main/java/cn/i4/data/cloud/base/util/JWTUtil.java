@@ -40,7 +40,7 @@ public class JWTUtil {
 
     public static Integer getUserId(){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return getUserId(request,"Authorization");
+        return getUserId(request,"authorization");
     }
 
     /**
@@ -55,7 +55,7 @@ public class JWTUtil {
 
     public static String getUserName(){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return getUserName(request,"Authorization");
+        return getUserName(request,"authorization");
     }
 
     /**

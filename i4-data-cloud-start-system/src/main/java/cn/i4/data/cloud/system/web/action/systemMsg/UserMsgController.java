@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
@@ -58,6 +59,7 @@ public class UserMsgController extends WebBaseController {
      */
     @PostMapping(value = "/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载用户表格",type = RequestType.SELECT)
+    @RequestLimit(name = "加载用户表格",key = "loadTable")
     public ActionResult<IPage<UserView>> loadTable(UserDto dto){
         IPage<UserView> res = iUserService.selectPage(dto);
         return ActionResult.ok(res);

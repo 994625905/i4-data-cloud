@@ -19,9 +19,6 @@ layui.use(["layer","table"],()=>{
         if(obj.event == "refresh"){
             refresh()
         }
-        if(obj.event == "share"){
-
-        }
     })
 
     /** 操作列 */
@@ -68,14 +65,14 @@ layui.use(["layer","table"],()=>{
 /*******************加载菜单表格********************/
 function loadMenuTable(){
     var tabCols = [[
-        {field:"name",title:"按钮"},
+        {field:"name",title:"按钮",width: TABLE_COL_WIDTH.date},
         {field:'url',title: '链接'},
         {field:'permission',title: '权限标识'},
-        {field:'sort',title: '排序'},
-        {field:'createTimeStr',title: '创建时间'},
-        {field:'updateTimeStr',title: '修改时间'},
-        {field:'status',title: '状态',align:"center",toolbar:"#statusTool"},
-        {field:'id',title: '操作',align:"center",toolbar:"#tool"}
+        {field:'sort',title: '排序',width: TABLE_COL_WIDTH.number_min},
+        {field:'createTimeStr',title: '创建时间',width:TABLE_COL_WIDTH.date},
+        {field:'updateTimeStr',title: '修改时间',width:TABLE_COL_WIDTH.date},
+        {field:'status',title: '状态',align:"center",toolbar:"#statusTool",width:TABLE_COL_WIDTH.tool(1)},
+        {fixed:'right',title: '操作',align:"center",toolbar:"#tool",width:TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender = Initlay.initTable("#menuTable",BasePath+"/systemMsg/menuMsg/loadMenuTable",tabCols,"#toolbar",param)
 }

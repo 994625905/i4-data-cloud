@@ -11,7 +11,7 @@ import cn.i4.data.cloud.core.entity.view.AutocodeDatasourceView;
 /**
 * Mapper
 * @author wangjc
-* @date 2020-10-11 13:42:24
+* @date 2020-10-25 17:37:12
 */
 public interface AutocodeDatasourceMapper extends BaseIMapper<AutocodeDatasourceModel> {
 

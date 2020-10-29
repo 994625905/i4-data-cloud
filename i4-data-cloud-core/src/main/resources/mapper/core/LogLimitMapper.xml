@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.LogLimitMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.name as name, 
+        t.period as period, 
+        t.count as count, 
+        t.prefix as prefix, 
+        t.limit_key as limitKey,
+        t.request_path as requestPath,
+        t.type as type, 
+        t.type_content as typeContent, 
+        t.create_time as createTime
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.LogLimitDto"
+            resultType="cn.i4.data.cloud.core.entity.view.LogLimitView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_log_limit AS t
+
+    </select>
+
+</mapper>

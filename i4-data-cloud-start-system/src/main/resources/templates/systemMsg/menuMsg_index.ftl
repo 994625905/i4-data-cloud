@@ -27,8 +27,8 @@
 </script>
 <!--操作列-->
 <script type="text/html" id="tool">
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit"><i class="layui-icon" title="编辑">&#xe642;</i></a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon" title="删除">&#xe640;</i></a>
+    <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="edit"><i class="layui-icon" title="编辑">&#xe642;</i></a>
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete"><i class="layui-icon" title="删除">&#xe640;</i></a>
 </script>
 
 <script type="text/javascript" src="${StaticServer}/templates/systemMsg/menuMsg_index.js?v=1.0"></script>

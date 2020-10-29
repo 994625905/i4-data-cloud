@@ -72,7 +72,7 @@ function loadMenuTable(){
             return "<a class='i4_a' onclick='loadMenuByPid(\""+d.id+"\",\""+d.name+"\")'>"+d.name+"</a>";
         }},
         {field:'url',title: '链接',width:250},
-        {field:'permission',title: '权限标识',width:250},
+        {field:'permission',title: '权限标识',width:300},
         {field:'sort',title: '排序'},
         {field:'icon',title: '图标',templet(d) {return "<i class='iconfont "+d.icon+"'></i>";}},
         {field:'createTimeStr',title: '创建时间',width:TABLE_COL_WIDTH.date},

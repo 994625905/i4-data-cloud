@@ -17,28 +17,35 @@ public interface ProduceService {
      * @param exchangeName
      * @return
      */
-    DirectExchange createDirectExchange(String exchangeName);
+    DirectExchange createDirectExchange(String exchangeName, Boolean durable, Boolean autoDelete);
 
     /**
      * 创建主题交换机
      * @param exchangeName
      * @return
      */
-    TopicExchange createTopicExchange(String exchangeName);
+    TopicExchange createTopicExchange(String exchangeName, Boolean durable, Boolean autoDelete);
+
+    /**
+     * 创建广播交换机
+     * @param exchangeName
+     * @return
+     */
+    FanoutExchange createFanoutExchange(String exchangeName, Boolean durable, Boolean autoDelete);
 
     /**
      * 创建队列
      * @param queueName
      * @return
      */
-    Queue createQueue(String queueName);
+    Queue createQueue(String queueName, Boolean durable, Boolean exclusive, Boolean autoDelete);
 
     /**
      * 将队列绑定到直连交换机上
      * @param directExchange
      * @param queue
      */
-    void bindQueueToDirectExchange(DirectExchange directExchange,Queue queue);
+    void bindQueueToDirectExchange(DirectExchange directExchange,Queue queue,String routingKey);
 
     /**
      * 将队列绑定到主题交换机
@@ -47,6 +54,14 @@ public interface ProduceService {
      * @param routingKey
      */
     void bindQueueToTopicExchange(TopicExchange topicExchange,Queue queue,String routingKey);
+
+    /**
+     * 将队列绑定到广播交换机
+     * @param fanoutExchange
+     * @param queue
+     * @param routingKey
+     */
+    void bindQueueToFanoutExchange(FanoutExchange fanoutExchange,Queue queue);
 
     /**
      * 创建延时队列
@@ -66,18 +81,25 @@ public interface ProduceService {
      * 绑定延时队列到交换机上
      * @param customExchange
      * @param queue
-     * @param name
+     * @param routingKey
      * @return
      */
-    Binding bindDelayQueueToCustomExchange(CustomExchange customExchange,Queue queue,String name);
+    Binding bindDelayQueueToCustomExchange(CustomExchange customExchange,Queue queue,String routingKey);
 
     /**
-     * 发送消息到交换机上
+     * 发送消息到交换机上，发送普通消息，直连交换机好理解，如果是主题交换机的话，routingKey带有正则表达式的匹配特性
      * @param exchangeName
      * @param routeKey
      * @param msg
      */
     void sendMessage(String exchangeName, String routeKey, String msg);
+
+    /**
+     * 发送消息到交换机上，广播交换机，没有路由
+     * @param exchangeName
+     * @param msg
+     */
+    void senMessage(String exchangeName,String msg);
 
     /**
      * 发送延时消息到交换机上

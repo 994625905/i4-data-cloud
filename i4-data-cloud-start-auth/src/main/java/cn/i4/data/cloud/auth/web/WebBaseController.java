@@ -46,15 +46,14 @@ public class WebBaseController extends BaseController {
      * @return
      */
     protected Map<String,Object> getSystemConstant(){
-        String json = redisService.get(RedisConstant.KEY.SYSTEM_CONSTANT, String.class);
-        if(json == null){
-            Map<String,Object> map = iSystemConstantService.getSystemConstant();
-            redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, JSONObject.toJSONString(map),RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
-            return map;
+        Map<String,Object> map = redisService.get(RedisConstant.KEY.SYSTEM_CONSTANT, Map.class);
+        if(map == null){
+            map = iSystemConstantService.getSystemConstant();
+            redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, map,RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
         }else{
             redisService.expire(RedisConstant.KEY.SYSTEM_CONSTANT,RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
-            return JSONObject.parseObject(json,Map.class);
         }
+        return map;
     }
 
 

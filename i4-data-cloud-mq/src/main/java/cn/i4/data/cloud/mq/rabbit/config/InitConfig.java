@@ -1,15 +1,17 @@
 package cn.i4.data.cloud.mq.rabbit.config;
 
+import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.util.SpringBeanUtil;
 import cn.i4.data.cloud.base.util.StringUtil;
+import cn.i4.data.cloud.cache.service.RedisService;
+import cn.i4.data.cloud.core.entity.model.SetRabbitmqExchangeModel;
+import cn.i4.data.cloud.core.entity.model.SetRabbitmqQueueModel;
 import cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler;
 import cn.i4.data.cloud.mq.rabbit.producer.ProduceService;
+import com.alibaba.fastjson.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.amqp.core.AcknowledgeMode;
-import org.springframework.amqp.core.CustomExchange;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
@@ -18,6 +20,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * 初始化配置，生成交换机和队列，bean的优先级设置最低
@@ -37,72 +41,97 @@ public class InitConfig {
     private ProduceService produceService;
     @Autowired
     private ConnectionFactory connectionFactory;
-
-    /**
-     * 生产者，消费者，延时时长：（多个队列就逗号隔开）
-     * 确认机制
-     */
-    @Value("${i4.data.cloud.mq.rabbit.producersExchange}")
-    private String producersExchange;
-    @Value("${i4.data.cloud.mq.rabbit.producersQueue}")
-    private String producersQueue;
-    @Value("${i4.data.cloud.mq.rabbit.consumersExchange}")
-    private String consumersExchange;
-    @Value("${i4.data.cloud.mq.rabbit.consumersQueue}")
-    private String consumersQueue;
-    @Value("${i4.data.cloud.mq.rabbit.delaysExchange}")
-    private String delaysExchange;
-    @Value("${i4.data.cloud.mq.rabbit.delaysQueue}")
-    private String delaysQueue;
-    @Value("${i4.data.cloud.mq.rabbit.isAck}")
-    private String isAckStr;
+    @Autowired
+    private RedisService redisService;
 
     @Bean
     public void init(){
-        Boolean isAck = false;//默认手动
-        if(!StringUtil.isNullOrEmpty(this.isAckStr) && isAckStr.equals("true")){
-            isAck = true;
+        /** 获取交换机配置 */
+        String exchangeCache = redisService.get(RedisConstant.KEY.RABBITMQ_EXCHANGE,String.class);
+        if(StringUtil.isNullOrEmpty(exchangeCache)){
+            logger.error("缓存中交换机配置为null，请手动刷新Redis");
+            return;
         }
-        // 生产端初始化交换机
-        if(!StringUtil.isNullOrEmpty(this.producersExchange)){
-            DirectExchange directExchange = produceService.createDirectExchange(this.producersExchange);
+        List<SetRabbitmqExchangeModel> exchangeList = JSONArray.parseArray(exchangeCache,SetRabbitmqExchangeModel.class);
 
-            // 初始化队列
-            if(!StringUtil.isNullOrEmpty(this.producersQueue)){
-                for(String queueName:this.producersQueue.split(",")){
-                    Queue queue = produceService.createQueue(queueName);
-                    produceService.bindQueueToDirectExchange(directExchange,queue);
-                    this.addMessageListener(queueName,isAck);
+        /** 获取队列配置 */
+        String queueCache = redisService.get(RedisConstant.KEY.RABBITMQ_QUEUE,String.class);
+        if(StringUtil.isNullOrEmpty(queueCache)){
+            logger.error("缓存中队列配置为null，请手动刷新Redis");
+            return;
+        }
+        List<SetRabbitmqQueueModel> queueList = JSONArray.parseArray(queueCache,SetRabbitmqQueueModel.class);
+
+        /** 逐次匹配并绑定交换机/队列 */
+        for(SetRabbitmqExchangeModel exchangeModel:exchangeList){
+
+            /** 直连交换机 */
+            if(exchangeModel.getType().intValue() == RabbitMqConstant.EXCHANGE_TYPE.DIRECT){
+                DirectExchange directExchange = produceService.createDirectExchange(exchangeModel.getName(), RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                logger.info("RabbitMQ初始化创建直连交换机完毕：名称[{}]，持久化[{}]，自动删除[{}]",exchangeModel.getName(),RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                for (SetRabbitmqQueueModel queueModel:queueList){
+                    /** 匹配条件，绑定，设置监听 */
+                    if(exchangeModel.getId().intValue() == queueModel.getExchangeId().intValue()){
+                        Queue queue = produceService.createQueue(queueModel.getName(), RabbitMqConstant.getDurable(queueModel.getDurable()),
+                                        RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()));
+                        produceService.bindQueueToDirectExchange(directExchange,queue,queueModel.getRoutingKey());
+                        logger.info("RabbitMQ初始化创建队列完毕，名称[{}]，持久化[{}]，排他性[{}],自动删除[{}]，绑定交换机[{}]",queueModel.getName(),
+                                RabbitMqConstant.getDurable(queueModel.getDurable()), RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()), exchangeModel.getName());
+                        this.addMessageListener(queueModel.getName(),RabbitMqConstant.getIsAck(exchangeModel.getIsAck()));
+                    }
+                }
+            }
+
+            /** 主题交换机 */
+            if(exchangeModel.getType().intValue() == RabbitMqConstant.EXCHANGE_TYPE.TOPIC){
+                TopicExchange topicExchange = produceService.createTopicExchange(exchangeModel.getName(), RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                logger.info("RabbitMQ初始化创建主题交换机完毕：名称[{}]，持久化[{}]，自动删除[{}]",exchangeModel.getName(),RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                for (SetRabbitmqQueueModel queueModel:queueList){
+                    /** 匹配条件，绑定，设置监听 */
+                    if(exchangeModel.getId().intValue() == queueModel.getExchangeId().intValue()){
+                        Queue queue = produceService.createQueue(queueModel.getName(), RabbitMqConstant.getDurable(queueModel.getDurable()),
+                                        RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()));
+                        produceService.bindQueueToTopicExchange(topicExchange,queue,queueModel.getRoutingKey());
+                        logger.info("RabbitMQ初始化创建队列完毕，名称[{}]，持久化[{}]，排他性[{}],自动删除[{}]，绑定交换机[{}]",queueModel.getName(),
+                                RabbitMqConstant.getDurable(queueModel.getDurable()), RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()), exchangeModel.getName());
+                        this.addMessageListener(queueModel.getName(),RabbitMqConstant.getIsAck(exchangeModel.getIsAck()));
+                    }
+                }
+            }
+
+            /** 广播交换机 */
+            if(exchangeModel.getType().intValue() == RabbitMqConstant.EXCHANGE_TYPE.FANOUT){
+                FanoutExchange fanoutExchange = produceService.createFanoutExchange(exchangeModel.getName(), RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                logger.info("RabbitMQ初始化创建广播交换机完毕：名称[{}]，持久化[{}]，自动删除[{}]",exchangeModel.getName(),RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                for (SetRabbitmqQueueModel queueModel:queueList){
+                    /** 匹配条件，绑定，设置监听 */
+                    if(exchangeModel.getId().intValue() == queueModel.getExchangeId().intValue()){
+                        Queue queue = produceService.createQueue(queueModel.getName(), RabbitMqConstant.getDurable(queueModel.getDurable()),
+                                        RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()));
+                        produceService.bindQueueToFanoutExchange(fanoutExchange,queue);
+                        logger.info("RabbitMQ初始化创建队列完毕，名称[{}]，持久化[{}]，排他性[{}],自动删除[{}]，绑定交换机[{}]",queueModel.getName(),
+                                RabbitMqConstant.getDurable(queueModel.getDurable()), RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()), exchangeModel.getName());
+                        this.addMessageListener(queueModel.getName(),RabbitMqConstant.getIsAck(exchangeModel.getIsAck()));
+                    }
+                }
+            }
+
+            /** 延时交换机 */
+            if(exchangeModel.getType().intValue() == RabbitMqConstant.EXCHANGE_TYPE.DELAY){
+                CustomExchange customExchange = produceService.createCustomExchange(exchangeModel.getName());
+                logger.info("RabbitMQ初始化创建延时交换机完毕：名称[{}]，持久化[{}]，自动删除[{}]",exchangeModel.getName(),RabbitMqConstant.getDurable(exchangeModel.getDurable()), RabbitMqConstant.getAutoDelete(exchangeModel.getAutoDelete()));
+                for (SetRabbitmqQueueModel queueModel:queueList){
+                    /** 匹配条件，绑定，设置监听 */
+                    if(exchangeModel.getId().intValue() == queueModel.getExchangeId().intValue()){
+                        Queue delayQueue = produceService.createDelayQueue(queueModel.getName());
+                        produceService.bindDelayQueueToCustomExchange(customExchange,delayQueue,queueModel.getRoutingKey());
+                        logger.info("RabbitMQ初始化创建队列完毕，名称[{}]，持久化[{}]，排他性[{}],自动删除[{}]，绑定交换机[{}]",queueModel.getName(),
+                                RabbitMqConstant.getDurable(queueModel.getDurable()), RabbitMqConstant.getExclusive(queueModel.getExclusive()), RabbitMqConstant.getAutoDelete(queueModel.getAutoDelete()), exchangeModel.getName());
+                        this.addMessageListener(queueModel.getName(),RabbitMqConstant.getIsAck(exchangeModel.getIsAck()));
+                    }
                 }
             }
         }
-        // 消费端初始化交换机
-        if(!StringUtil.isNullOrEmpty(this.consumersExchange)){
-            DirectExchange directExchange = produceService.createDirectExchange(this.consumersExchange);
-
-            // 初始化队列
-            if(!StringUtil.isNullOrEmpty(this.consumersQueue)){
-                for(String queueName:this.consumersQueue.split(",")){
-                    Queue queue = produceService.createQueue(queueName);
-                    produceService.bindQueueToDirectExchange(directExchange,queue);
-                    this.addMessageListener(queueName,isAck);
-                }
-            }
-        }
-        // 延时初始化交换机
-        if(!StringUtil.isNullOrEmpty(this.delaysExchange)){
-            CustomExchange customExchange = produceService.createCustomExchange(this.delaysExchange);
-
-            if(!StringUtil.isNullOrEmpty(this.delaysQueue)){
-                for(String queueName:this.delaysQueue.split(",")){
-                    Queue delayQueue = produceService.createDelayQueue(queueName);
-                    produceService.bindDelayQueueToCustomExchange(customExchange, delayQueue, queueName);
-                    addMessageListener(queueName, isAck);
-                }
-            }
-        }
-        logger.info("RabbitMQ初始化交换机完毕：producersExchange[{}],consumersExchange[{}],delaysExchange[{}]",this.producersExchange,this.consumersExchange,this.delaysExchange);
-        logger.info("RabbitMQ初始化队列完毕：producersQueue[{}],consumersQueue[{}],delaysQueue[{}]",this.producersQueue,this.consumersQueue,this.delaysQueue);
     }
 
     /**
@@ -131,7 +160,6 @@ public class InitConfig {
         }catch (Exception e){
             logger.error(e.getMessage());
             logger.error("该应用下缺乏对应的消息监听器");
-            e.printStackTrace();
         }
     }
 }

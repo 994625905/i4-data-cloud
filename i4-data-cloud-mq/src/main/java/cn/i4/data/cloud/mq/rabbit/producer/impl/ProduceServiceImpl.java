@@ -33,11 +33,11 @@ public class ProduceServiceImpl implements ProduceService {
      * @return
      */
     @Override
-    public DirectExchange createDirectExchange(String exchangeName) {
+    public DirectExchange createDirectExchange(String exchangeName, Boolean durable, Boolean autoDelete) {
         /**
          * 1.durable=true ，交换机的持久化！rabbitmq重启的时候不需要创建新的交换机，
          */
-        DirectExchange directExchange = new DirectExchange(exchangeName,true,false);
+        DirectExchange directExchange = new DirectExchange(exchangeName,durable,autoDelete);
         this.rabbitAdmin.declareExchange(directExchange);
         return directExchange;
     }
@@ -48,18 +48,25 @@ public class ProduceServiceImpl implements ProduceService {
      * @return
      */
     @Override
-    public TopicExchange createTopicExchange(String exchangeName) {
-        TopicExchange topicExchange = new TopicExchange(exchangeName,true,false);
+    public TopicExchange createTopicExchange(String exchangeName, Boolean durable, Boolean autoDelete) {
+        TopicExchange topicExchange = new TopicExchange(exchangeName,durable,autoDelete);
         this.rabbitAdmin.declareExchange(topicExchange);
         return topicExchange;
     }
 
     @Override
-    public Queue createQueue(String queueName) {
+    public FanoutExchange createFanoutExchange(String exchangeName, Boolean durable, Boolean autoDelete) {
+        FanoutExchange fanoutExchange = new FanoutExchange(exchangeName,durable,autoDelete);
+        this.rabbitAdmin.declareExchange(fanoutExchange);
+        return fanoutExchange;
+    }
+
+    @Override
+    public Queue createQueue(String queueName, Boolean durable, Boolean exclusive, Boolean autoDelete) {
         /**
          * exclusive：排他性，独有
          */
-        Queue queue = new Queue(queueName, true, false, false);
+        Queue queue = new Queue(queueName, durable, exclusive, autoDelete);
         this.rabbitAdmin.declareQueue(queue);
         return queue;
     }
@@ -70,14 +77,20 @@ public class ProduceServiceImpl implements ProduceService {
      * @param queue
      */
     @Override
-    public void bindQueueToDirectExchange(DirectExchange directExchange, Queue queue) {
-        Binding binding = BindingBuilder.bind(queue).to(directExchange).withQueueName();
+    public void bindQueueToDirectExchange(DirectExchange directExchange, Queue queue,String routingKey) {
+        Binding binding = BindingBuilder.bind(queue).to(directExchange).with(routingKey);
         this.rabbitAdmin.declareBinding(binding);
     }
 
     @Override
     public void bindQueueToTopicExchange(TopicExchange topicExchange, Queue queue,String routingKey) {
         Binding binding = BindingBuilder.bind(queue).to(topicExchange).with(routingKey);
+        this.rabbitAdmin.declareBinding(binding);
+    }
+
+    @Override
+    public void bindQueueToFanoutExchange(FanoutExchange fanoutExchange, Queue queue) {
+        Binding binding = BindingBuilder.bind(queue).to(fanoutExchange);
         this.rabbitAdmin.declareBinding(binding);
     }
 
@@ -108,21 +121,26 @@ public class ProduceServiceImpl implements ProduceService {
     }
 
     @Override
-    public Binding bindDelayQueueToCustomExchange(CustomExchange customExchange, Queue queue, String name) {
-        Binding bind = BindingBuilder.bind(queue).to(customExchange).with(name).noargs();
+    public Binding bindDelayQueueToCustomExchange(CustomExchange customExchange, Queue queue, String routingKey) {
+        Binding bind = BindingBuilder.bind(queue).to(customExchange).with(routingKey).noargs();
         this.rabbitAdmin.declareBinding(bind);
         return bind;
     }
 
     /**
-     * 发送普通消息
+     * 发送普通消息，直连交换机好理解，如果是主题交换机的话，routingKey带有正则表达式的匹配特性
      * @param exchangeName
-     * @param routeKey：上述的交换机与队列绑定默认是按照队列名称绑定的
+     * @param routeKey：上述的交换机与队列绑定默认是按照队列名称绑定的。
      * @param msg
      */
     @Override
     public void sendMessage(String exchangeName,String routeKey, String msg) {
         this.rabbitTemplate.send(exchangeName,routeKey,new Message(msg.getBytes(),new MessageProperties()));
+    }
+
+    @Override
+    public void senMessage(String exchangeName, String msg) {
+        this.rabbitTemplate.send(exchangeName,null,new Message(msg.getBytes(),new MessageProperties()));
     }
 
     /**

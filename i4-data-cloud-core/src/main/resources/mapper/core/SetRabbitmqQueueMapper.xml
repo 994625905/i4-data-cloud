@@ -13,16 +13,23 @@
         t.durable as durable, 
         t.auto_delete as autoDelete, 
         t.exclusive as exclusive, 
-        t.routingKey as routingkey, 
-        t.create_time as createTime
+        t.routing_key as routingKey,
+        t.create_time as createTime,
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+        FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.SetRabbitmqQueueDto"
             resultType="cn.i4.data.cloud.core.entity.view.SetRabbitmqQueueView">
         SELECT
-        <include refid="Base_Column_List" />
+            <include refid="Base_Column_List" />,
+            u.realname as realName,
+            e.name as exchangeName
         FROM t_set_rabbitmq_queue AS t
-
+        left join t_user u on u.id = t.user_id
+        left join t_set_rabbitmq_exchange e on e.id = t.exchange_id
+        order by t.create_time,t.exchange_id
     </select>
 
 </mapper>

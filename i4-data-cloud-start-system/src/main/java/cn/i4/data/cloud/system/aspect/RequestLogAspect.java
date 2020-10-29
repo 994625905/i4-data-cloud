@@ -5,6 +5,7 @@ import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.JWTUtil;
 import cn.i4.data.cloud.base.util.StringUtil;
+import cn.i4.data.cloud.mq.rabbit.config.RabbitMqConstant;
 import cn.i4.data.cloud.mq.rabbit.producer.ProduceService;
 import com.alibaba.fastjson.JSONObject;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,10 +42,6 @@ public class RequestLogAspect extends BaseAspectSupport{
     private static final Integer ACTION_SUCCESS = 1;//请求成功
     @Autowired
     private ProduceService produceService;
-    @Value("${i4.data.cloud.mq.rabbit.producersExchange}")
-    private String systemExchange;
-    @Value("${i4.data.cloud.mq.rabbit.requestLogQueue}")
-    private String requestLogQueue;
 
 
     /**
@@ -66,14 +64,15 @@ public class RequestLogAspect extends BaseAspectSupport{
         Map<String,Object> map = new HashMap<String, Object>(){{
             put("createTime",System.currentTimeMillis()/1000L);
             put("week", DateUtil.dayOfWeekEnum(new Date()).toChinese());
-            put("userId", JWTUtil.getUserId());
-            put("loginname",JWTUtil.getUserName());
         }};
 
-        /** 获取IP */
+        /** 获取IP,用户id */
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if(servletRequestAttributes != null){
-            map.put("ip",servletRequestAttributes.getRequest().getRemoteAddr());
+            HttpServletRequest request = servletRequestAttributes.getRequest();
+            map.put("requestIp",this.getIpAddr(request));
+            map.put("userId", JWTUtil.getUserId(request,"authorization"));
+            map.put("loginName",JWTUtil.getUserName(request,"authorization"));
         }
 
         /**注解参数*/
@@ -108,7 +107,7 @@ public class RequestLogAspect extends BaseAspectSupport{
             return ActionResult.error();
         }finally {
             /** 发送数据到消息队列，以待入库 */
-            produceService.sendMessage(this.systemExchange,this.requestLogQueue,JSONObject.toJSONString(map));
+            produceService.sendMessage(RabbitMqConstant.EXCHANGE_NAME.REQUEST,RabbitMqConstant.ROUTING_KEY.REQUEST_LOG_ONE,JSONObject.toJSONString(map));
         }
     }
 

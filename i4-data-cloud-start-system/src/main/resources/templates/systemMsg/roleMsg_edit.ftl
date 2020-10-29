@@ -70,7 +70,7 @@
                                                                     <div class="layui-col-xs10">
                                                                         <!--二级菜单下的按钮（要求菜单只细化到二级）-->
                                                                         <#list child.child as button>
-                                                                            <button class="layui-btn layui-btn-sm layui-btn-primary menu" parent-id="${button.parentId}" data-id="${button.id}">${button.name}</button>
+                                                                            <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="${child.parentId}" parent-id="${button.parentId}" data-id="${button.id}">${button.name}</button>
                                                                         </#list>
                                                                     </div>
                                                                 </div>
@@ -78,7 +78,7 @@
                                                         </div>
                                                     </div>
                                                 <#else>
-                                                    <button class="layui-btn layui-btn-sm layui-btn-primary menu" parent-id="${child.parentId}" data-id="${child.id}">${child.name}</button>
+                                                    <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="" parent-id="${child.parentId}" data-id="${child.id}">${child.name}</button>
                                                 </#if>
                                             </#list>
                                         </div>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     <#else>
-                        <button class="layui-btn layui-btn-sm layui-btn-primary menu" parent-id="${menu.parentId}" data-id="${menu.id}">${menu.name}</button>
+                        <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="" parent-id="${menu.parentId}" data-id="${menu.id}">${menu.name}</button>
                     </#if>
                 </#list>
             </div>

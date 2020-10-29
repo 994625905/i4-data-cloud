@@ -45,7 +45,7 @@ public class ConstantMsgController extends WebBaseController {
         if(modify){
             /** 更新缓存 */
             Map<String,Object> map = iSystemConstantService.getSystemConstant();
-            redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, JSONObject.toJSONString(map),RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
+            redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, map,RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
             return ActionResult.ok(modify);
         }else{
             return ActionResult.error("更新系统常量失败");
@@ -61,7 +61,7 @@ public class ConstantMsgController extends WebBaseController {
     public ActionResult<Boolean> refresh(){
 
         Map<String,Object> map = iSystemConstantService.getSystemConstant();
-        redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, JSONObject.toJSONString(map),RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
+        redisService.set(RedisConstant.KEY.SYSTEM_CONSTANT, map,RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
         return ActionResult.ok(true);
     }
 

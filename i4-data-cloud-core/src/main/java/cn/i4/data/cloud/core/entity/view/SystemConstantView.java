@@ -1,9 +1,12 @@
 package cn.i4.data.cloud.core.entity.view;
 
 import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import cn.i4.data.cloud.base.entity.view.BaseView;
 import cn.i4.data.cloud.core.entity.model.SystemConstantModel;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
@@ -30,6 +33,7 @@ public class SystemConstantView extends BaseView<SystemConstantView> {
 	 * 
 	 */
 	@TableField("id")
+	@TableId(type = IdType.AUTO)
 	private Integer id;
 
 	/**

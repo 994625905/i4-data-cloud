@@ -10,16 +10,23 @@
         t.name as name, 
         t.describe_info as describeInfo, 
         t.durable as durable, 
-        t.auto_delete as autoDelete, 
-        t.create_time as createTime
+        t.auto_delete as autoDelete,
+        t.type as type,
+        t.is_ack as isAck,
+        t.create_time as createTime,
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+        FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.SetRabbitmqExchangeDto"
             resultType="cn.i4.data.cloud.core.entity.view.SetRabbitmqExchangeView">
         SELECT
-        <include refid="Base_Column_List" />
+            <include refid="Base_Column_List" />,
+            u.realname as realName
         FROM t_set_rabbitmq_exchange AS t
-
+        left join t_user u on t.create_user_id = u.id
+        order by t.create_time
     </select>
 
 </mapper>

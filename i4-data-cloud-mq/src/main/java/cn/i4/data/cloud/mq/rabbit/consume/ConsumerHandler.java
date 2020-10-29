@@ -55,7 +55,7 @@ public abstract class ConsumerHandler implements ChannelAwareMessageListener {
             long deliveryTag = message.getMessageProperties().getDeliveryTag();
             String queue = message.getMessageProperties().getConsumerQueue();
             String msg = new String(message.getBody());
-            logger.info("队列：[{}]，内容：[{}]",queue,msg);
+            logger.debug("队列：[{}]，内容：[{}]",queue,msg);
 
             // 具体业务执行处理
             Boolean handleResult = this.handleMessage(msg, channel, queue);
@@ -82,13 +82,13 @@ public abstract class ConsumerHandler implements ChannelAwareMessageListener {
                     // 手动签收 todo
                     channel.basicAck(deliveryTag,false);
                 }else{
-                    logger.info("=================已消费,自动签收=========================");
+                    logger.debug("=================已消费,自动签收=========================");
                 }
             }else{
-                logger.info("=========================消费异常，业务可能出错============================");
+                logger.debug("=========================消费异常，业务可能出错============================");
             }
         }catch (Exception e){
-            logger.info("=========================确认消息异常============================");
+            logger.error("=========================确认消息异常============================");
             e.printStackTrace();
         }
     }

@@ -4990,3 +4990,44 @@ javax.servlet.ServletException: Cannot expose request attribute 'request' becaus
 2020-10-24 13:46:24,966 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
 2020-10-24 13:46:48,482 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
 2020-10-24 13:46:49,097 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 16:56:44,033 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 16:56:44,788 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 16:56:44,788 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 16:58:11,828 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 16:58:13,274 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 16:58:13,274 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:00:44,836 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:00:45,541 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:00:45,542 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:13:32,368 [http-nio-9011-exec-8] ERROR cn.i4.data.cloud.system.aspect.RequestLogAspect 105 - insert
+2020-10-24 17:13:32,369 [http-nio-9011-exec-8] ERROR cn.i4.data.cloud.system.aspect.RequestLogAspect 106 - null
+2020-10-24 17:13:59,498 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:14:00,150 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:14:00,151 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:22:21,847 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:22:22,510 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:22:22,510 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:27:28,077 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:27:28,743 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:27:28,744 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:41:09,654 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:41:10,289 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:41:10,289 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:51:20,101 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:51:20,763 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:51:20,763 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:51:28,169 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:51:28,798 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:51:28,798 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:51:47,756 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:51:48,389 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:51:48,389 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 17:52:50,830 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 17:52:51,510 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 17:52:51,510 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 18:19:08,427 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 18:19:09,123 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 132 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 18:19:09,124 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 133 - 该应用下缺乏对应的消息监听器
+2020-10-24 18:21:45,986 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-24 18:21:46,651 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 144 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-24 18:21:46,652 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 145 - 该应用下缺乏对应的消息监听器

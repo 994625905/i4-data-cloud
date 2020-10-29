@@ -11,22 +11,22 @@ layui.use(["layer","form","element"],()=>{
 
     /** 全选按钮（测试是否会多次添加class） */
     $(".all").click(function(){
-        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").addClass("layui-btn-danger");
+        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").addClass("layui-btn-normal");
     });
 
     /** 反选 */
     $(".reverse").click(function(){
-        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").toggleClass("layui-btn-danger");
+        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").toggleClass("layui-btn-normal");
     });
 
     /** 不选 */
     $(".clear").click(function(){
-        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").removeClass("layui-btn-danger");
+        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").removeClass("layui-btn-normal");
     });
 
     /** 具体菜单按钮 */
     $(".menu").click(function(){
-        $(this).toggleClass("layui-btn-danger");
+        $(this).toggleClass("layui-btn-normal");
     });
 
     /** 验证项 */
@@ -46,7 +46,7 @@ layui.use(["layer","form","element"],()=>{
     /** 提交项 */
     form.on("submit(save)",obj=>{
         var menuIdArray = [];
-        $.each($("button.layui-btn-danger.menu"),function(i,o){
+        $.each($("button.layui-btn-normal.menu"),function(i,o){
             menuIdArray.push($(o).attr("parent-id"))
             menuIdArray.push($(o).attr("data-id"))
         })

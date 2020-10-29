@@ -6,7 +6,8 @@
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         t.id as id, 
-        t.datasource_name as datasourceName, 
+        t.datasource_name as datasourceName,
+        t.dataSource_cover as dataSourceCover,
         t.datasource_url as datasourceUrl, 
         t.database_name as databaseName, 
         t.driverclass_name as driverclassName, 

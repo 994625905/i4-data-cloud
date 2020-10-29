@@ -1,9 +1,12 @@
 package cn.i4.data.cloud.core.entity.view;
 
 import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import cn.i4.data.cloud.base.entity.view.BaseView;
 import cn.i4.data.cloud.core.entity.model.SetRabbitmqQueueModel;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
@@ -24,8 +27,9 @@ public class SetRabbitmqQueueView extends BaseView<SetRabbitmqQueueView> {
 		this.durable = model.getDurable();
 		this.autoDelete = model.getAutoDelete();
 		this.exclusive = model.getExclusive();
-		this.routingkey = model.getRoutingkey();
+		this.routingKey = model.getRoutingKey();
 		this.createTime = model.getCreateTime();
+		this.updateTime = model.getUpdateTime();
 	}
 
 	public SetRabbitmqQueueView() {
@@ -83,16 +87,33 @@ public class SetRabbitmqQueueView extends BaseView<SetRabbitmqQueueView> {
 	/**
 	 * 路由key，绑定队列到交换机的
 	 */
-	@TableField("routingKey")
-	private String routingkey;
+	@TableField("routing_key")
+	private String routingKey;
 
 	/**
 	 * 创建时间
 	 */
 	@TableField("create_time")
 	private Long createTime;
+	private String createTimeStr;
 
-	
+	/**
+	 * 修改时间
+	 */
+	@TableField("update_time")
+	private Long updateTime;
+	private String updateTimeStr;
+
+	/**
+	 * 绑定队列
+	 */
+	private String exchangeName;
+
+	/**
+	 * 创建人
+	 */
+	private String realName;
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -157,12 +178,12 @@ public class SetRabbitmqQueueView extends BaseView<SetRabbitmqQueueView> {
 		return this.exclusive;
 	}
 
-	public void setRoutingkey(String routingkey) {
-		this.routingkey = routingkey;
+	public String getRoutingKey() {
+		return routingKey;
 	}
 
-	public String getRoutingkey() {
-		return this.routingkey;
+	public void setRoutingKey(String routingKey) {
+		this.routingKey = routingKey;
 	}
 
 	public void setCreateTime(Long createTime) {
@@ -173,4 +194,43 @@ public class SetRabbitmqQueueView extends BaseView<SetRabbitmqQueueView> {
 		return this.createTime;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public Long getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Long updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public String getExchangeName() {
+		return exchangeName;
+	}
+
+	public void setExchangeName(String exchangeName) {
+		this.exchangeName = exchangeName;
+	}
 }

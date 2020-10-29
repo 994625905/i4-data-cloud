@@ -19,6 +19,8 @@ public class RedisConstant {
         String LOGIN_USER_INFO_PREFIX = "i4-data-cloud-login-user_info_";//登录用户的info
         String LOGIN_USER_ROLE_MENU_PREFIX = "i4-data-cloud-user-role-menu_";//登陆用户的权限菜单
         String SYSTEM_CONSTANT = "i4-data-cloud-system-constant";//系统常量
+        String RABBITMQ_EXCHANGE = "i4-data-cloud-rabbitmq-exchange";//系统的rabbitMQ配置，交换机，不过期
+        String RABBITMQ_QUEUE = "i4-data-cloud-rabbitmq-queue";//系统的rabbitMQ配置，队列，不过期
     }
 
     /**
