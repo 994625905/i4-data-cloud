@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.LogRequestMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.login_name as loginName, 
+        t.request_ip as requestIp, 
+        t.week as week, 
+        t.create_time as createTime, 
+        t.module_name as moduleName, 
+        t.action_content as actionContent, 
+        t.action_method as actionMethod, 
+        t.action_type as actionType, 
+        t.action_name as actionName, 
+        t.action_exception as actionException, 
+        t.action_time as actionTime, 
+        t.action_result as actionResult
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.LogRequestDto"
+            resultType="cn.i4.data.cloud.core.entity.view.LogRequestView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_log_request AS t
+
+    </select>
+
+</mapper>
