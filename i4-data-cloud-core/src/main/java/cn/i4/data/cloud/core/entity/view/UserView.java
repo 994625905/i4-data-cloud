@@ -216,6 +216,11 @@ public class UserView extends BaseView<UserView> {
 	private String createTimeStrInfo;
 	private String updateTimeStrInfo;
 
+	/**
+	 * 所属部门
+	 */
+	private String departmentName;
+
 	public String getCreateTimeStr() {
 		return createTimeStr;
 	}
@@ -318,5 +323,13 @@ public class UserView extends BaseView<UserView> {
 
 	public void setUpdateTimeStrInfo(String updateTimeStrInfo) {
 		this.updateTimeStrInfo = updateTimeStrInfo;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 }

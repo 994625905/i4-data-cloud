@@ -21,6 +21,7 @@ public class DepartmentModel extends BaseModel<DepartmentModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

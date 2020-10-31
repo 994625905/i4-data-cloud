@@ -32,6 +32,9 @@ public class UserDto extends BaseDto<UserView> {
     private UserInfoModel userInfo;
     private List<Integer> roleList;
 
+    /** 部门名称 */
+    private Integer departmentId;
+
     public Integer getCode() {
         return code;
     }
@@ -118,5 +121,13 @@ public class UserDto extends BaseDto<UserView> {
 
     public void setRoleList(List<Integer> roleList) {
         this.roleList = roleList;
+    }
+
+    public Integer getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Integer departmentId) {
+        this.departmentId = departmentId;
     }
 }

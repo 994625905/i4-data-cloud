@@ -22,7 +22,8 @@
         SELECT
             <include refid="Base_Column_List" />,
             u.realname as createUserName,
-            (select group_concat(r.name) from t_role r where r.id in (select role_id from t_invite_code_role where invite_code_id = t.id)) as roleNames
+            (select group_concat(r.name) from t_role r where r.id in (select role_id from t_invite_code_role where invite_code_id = t.id)) as roleNames,
+            (select d.name from t_department d where d.id = (select a.department_id from t_invite_code_department a where a.invite_code_id = t.id)) as departmentName
         FROM t_invite_code AS t
         left join t_user u on t.create_user_id = u.id
         where 1=1

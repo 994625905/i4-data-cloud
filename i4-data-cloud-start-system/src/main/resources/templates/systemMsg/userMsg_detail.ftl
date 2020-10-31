@@ -19,7 +19,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">用户头像：</label>
                         <div class="layui-input-inline">
-                            <img src="${detail.headimage}" style="max-width: 100px">
+                            <img src="${detail.headimage!}" style="max-width: 100px">
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">登陆名称：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.loginname}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.loginname!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">真实姓名：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.realname}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.realname!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">生日：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.birthday}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.birthday!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">联系电话：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.phone}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.phone!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">电子邮箱：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.email}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.email!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">个性签名：</label>
                         <div class="layui-input-inline" style="width: 700px">
-                            <input class="layui-input text-muted border-white" value="${detail.signature}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.signature!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">地址信息：</label>
                         <div class="layui-input-inline" style="width: 700px">
-                            <input class="layui-input text-muted border-white" value="${detail.country}，${detail.province}，${detail.city}，${detail.area}，${detail.detailAddress}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.country!}，${detail.province!}，${detail.city!}，${detail.area!}，${detail.detailAddress!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">创建时间：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.createTimeStr}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.createTimeStr!}" readonly>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,15 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">最后修改时间：</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input text-muted border-white" value="${detail.updateTimeStrInfo}" readonly>
+                            <input class="layui-input text-muted border-white" value="${detail.updateTimeStrInfo!}" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">所属部门：</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input text-muted border-white" value="<#if department??>${department.name}<#else>暂无</#if>" readonly>
                         </div>
                     </div>
                 </div>
@@ -140,7 +148,7 @@
                             <div class="pl-1 flex align-center justify-start" style="line-height: 1.3;height: 38px">
                                 <#if roleList??>
                                     <#list roleList as role>
-                                        <label class="layui-btn search-button layui-btn-xs" title="角色名称">${role.name}</label>
+                                        <label class="layui-btn search-button layui-btn-xs" title="角色名称">${role.name!}</label>
                                     </#list>
                                 </#if>
                             </div>

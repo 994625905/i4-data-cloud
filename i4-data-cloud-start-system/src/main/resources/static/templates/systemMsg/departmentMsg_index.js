@@ -32,7 +32,7 @@ layui.use(["layer","form","table"],()=>{
                     Feng.success("新增成功");
                     refresh()
                 })
-            })
+            },"420px","300px")
         }
     })
 
@@ -55,7 +55,7 @@ layui.use(["layer","form","table"],()=>{
                     Feng.success("修改成功");
                     refresh()
                 })
-            })
+            },"420px","300px")
         }
         if(obj.event == "delete"){
             Feng.confirm("确定删除"+obj.data.name+"吗？",()=>{
@@ -75,8 +75,8 @@ function loadTable(){
     var tabCols = [[
         {field:"name",title:"部门名称"},
         {field:"describeInfo",title:"描述信息"},
-        {field:"createTimeStr",title:"创建时间"},
-        {fixed:'right',title: '操作',align:"center",toolbar:"#tool"}
+        {field:"createTimeStr",title:"创建时间",width:TABLE_COL_WIDTH.date},
+        {fixed:'right',title: '操作',align:"center",toolbar:"#tool",width: TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender = Initlay.initTable("#departmentTable",BasePath+"/systemMsg/departmentMsg/loadTable",tabCols,"#toolbar",param)
 }

@@ -68,21 +68,22 @@
         <div class="flex flex-column align-center justify-center" id="content">
             <span class="font-small my-1">{{name}}</span>
             {{if userStatus ==1}}
-                <label class="layui-btn layui-btn-normal layui-btn-sm">实习</label>
+                <label class="layui-btn layui-btn-normal layui-btn-sm">用户状态：实习</label>
             {{else if userStatus ==2}}
-                <label class="layui-btn layui-btn-warm layui-btn-sm">试用</label>
+                <label class="layui-btn layui-btn-warm layui-btn-sm">用户状态：试用</label>
             {{else if userStatus ==3}}
-                <label class="layui-btn layui-btn-sm">正式</label>
+                <label class="layui-btn layui-btn-sm">用户状态：正式</label>
             {{else if userStatus ==4}}
-                <label class="layui-btn layui-btn-primary layui-btn-sm">休假</label>
+                <label class="layui-btn layui-btn-primary layui-btn-sm">用户状态：休假</label>
             {{else if userStatus ==5}}
-                <label class="layui-btn layui-btn-disabled layui-btn-sm">离职</label>
+                <label class="layui-btn layui-btn-disabled layui-btn-sm">用户状态：离职</label>
             {{else if userStatus ==6}}
-                <label class="layui-btn layui-btn-danger layui-btn-sm">其他</label>
+                <label class="layui-btn layui-btn-danger layui-btn-sm">用户状态：其他</label>
             {{/if}}
-            <img src="data:image/png;base64,{{encode}}" style="max-width: 300px" title="{{code}} 角色：[{{roleNames}}]">
+            <img src="data:image/png;base64,{{encode}}" style="max-width: 300px" title="{{code}}">
             <span class="font-weight-bold font">{{code}}</span>
-            <span class="text-light-muted my-2 font-smaller">角色：[{{roleNames}}]</span>
+            <span class="text-light-muted my-2 font-smaller">所属部门：[{{departmentName}}]</span>
+            <span class="text-light-muted my-2 font-smaller">携带角色：[{{roleNames}}]</span>
         </div>
         <div class="layui-form-item">
             {{if status}}

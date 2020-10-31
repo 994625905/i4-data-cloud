@@ -89,6 +89,18 @@
         <div class="layui-form-mid layui-word-aux">下拉选择切换</div>
     </div>
 </script>
+<script type="text/html" id="changeDepartment">
+    <div class="layui-inline">
+        <label class="layui-form-label">选择部门：</label>
+        <div class="layui-input-inline" >
+            <select name="department" class="layui-input" style="width: 150px">
+                {{each list as department}}
+                    <option value="{{department.id}}" {{ if department.id == departmentName}}selected{{/if}}>{{department.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</script>
 <!--用户角色-->
 <script type="text/html" id="userRole">
     <div class="layui-card">

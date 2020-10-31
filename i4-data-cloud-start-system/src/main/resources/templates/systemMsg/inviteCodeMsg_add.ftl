@@ -33,6 +33,16 @@
                             <div class="layui-form-item">
                                 <input name="overTime" id="overTime" class="layui-input" lay-verify="required" placeholder="有效结束时间" readonly>
                             </div>
+                            <div class="layui-form-item">
+                                <select id="departmentId" class="layui-input" >
+                                    <#if departmentList??>
+                                        <#list departmentList as department>
+                                            <option value="${department.id}" >${department.name}</option>
+                                        </#list>
+                                    </#if>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux">携带部门</div>
+                            </div>
                             <div class="layui-form-item" id="inviteRoleDiv">
                                 <div class="layui-form-mid layui-word-aux">携带角色</div>
                             </div>

@@ -22,4 +22,10 @@ public interface DepartmentMapper extends BaseIMapper<DepartmentModel> {
     */
     IPage<DepartmentView> selectPage(DepartmentDto dto);
 
+    /**
+     * 根据用户id获取所属的部门
+     * @param userId
+     * @return
+     */
+    DepartmentView getByUserId(@Param("userId") Integer userId);
 }

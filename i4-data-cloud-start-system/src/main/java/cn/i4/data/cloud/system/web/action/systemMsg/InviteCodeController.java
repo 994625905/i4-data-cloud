@@ -10,10 +10,12 @@ import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.RandomUtil;
 import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.core.entity.dto.InviteCodeDto;
+import cn.i4.data.cloud.core.entity.model.InviteCodeDepartmentModel;
 import cn.i4.data.cloud.core.entity.model.InviteCodeModel;
 import cn.i4.data.cloud.core.entity.model.InviteCodeRoleModel;
 import cn.i4.data.cloud.core.entity.model.RoleModel;
 import cn.i4.data.cloud.core.entity.view.InviteCodeView;
+import cn.i4.data.cloud.core.service.IInviteCodeDepartmentService;
 import cn.i4.data.cloud.core.service.IInviteCodeRoleService;
 import cn.i4.data.cloud.core.service.IInviteCodeService;
 import cn.i4.data.cloud.core.service.IRoleService;
@@ -28,6 +30,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -56,6 +59,8 @@ public class InviteCodeController extends WebBaseController {
     private IInviteCodeService iInviteCodeService;
     @Autowired
     private IInviteCodeRoleService iInviteCodeRoleService;
+    @Autowired
+    private IInviteCodeDepartmentService iInviteCodeDepartmentService;
     @Autowired
     private IRoleService iRoleService;
     @Value("${spring.servlet.multipart.location}")
@@ -94,10 +99,18 @@ public class InviteCodeController extends WebBaseController {
         remove = iInviteCodeRoleService.remove(new QueryWrapper<InviteCodeRoleModel>() {{
             eq("invite_code_id", dto.getId());
         }});
-        if(remove){
-            return ActionResult.ok(remove);
+        if(!remove){
+            return ActionResult.error("删除邀请权限失败");
         }
-        return ActionResult.error("删除邀请权限失败");
+
+        /** 级联删除部门 */
+        remove = iInviteCodeDepartmentService.remove(new QueryWrapper<InviteCodeDepartmentModel>() {{
+            eq("invite_code_id", dto.getId());
+        }});
+        if(!remove){
+            return ActionResult.error("删除邀请部门失败");
+        }
+        return ActionResult.ok(remove);
     }
 
     /**
@@ -155,10 +168,22 @@ public class InviteCodeController extends WebBaseController {
         if(!save){
             return ActionResult.error("携带角色权限配置失败！");
         }
+
+        /** 保存携带的部门 */
+        InviteCodeDepartmentModel departmentModel = new InviteCodeDepartmentModel();
+        departmentModel.setDepartmentId(dto.getDepartmentId());
+        departmentModel.setInviteCodeId(model.getId());
+        save = iInviteCodeDepartmentService.save(departmentModel) && save;
+        if(!save){
+            return ActionResult.error("携带部门配置失败");
+        }
+
         /** 返回邀请码和携带的角色 */
         return ActionResult.ok(new HashMap<String, Object>(){{
             put("codeName",model.getName());
             put("code",model.getCode());
+            put("codeId",model.getId());
+            put("departmentName",iInviteCodeDepartmentService.selectDeploymentByid(dto.getDepartmentId()).getName());
             put("roleList",iRoleService.selectRolesByIds(dto.getRoleList()));
         }});
     }
@@ -171,7 +196,10 @@ public class InviteCodeController extends WebBaseController {
      */
     @PostMapping(value = "/createQRCode")
     @RequestLog(module = MODULE_NAME,content = "生成二维码(流转base64)",type = RequestType.SELECT)
-    public ActionResult<String> createQRCode(String code,String roleNames,HttpServletRequest request){
+    public ActionResult<String> createQRCode(Integer id,String roleNames,String departmentName,HttpServletRequest request){
+
+        InviteCodeModel model = iInviteCodeService.getById(id);
+
         ByteArrayOutputStream os = null;
         InputStream is = null;
         File logo = null;
@@ -181,12 +209,14 @@ public class InviteCodeController extends WebBaseController {
             // 设置边距，既二维码和背景之间的边距
             config.setMargin(3);
             // 设置背景色（灰色）
-//            config.setBackColor(Color.GRAY.getRGB());
+            if(model.getOverTime() < System.currentTimeMillis()/1000L){
+                config.setBackColor(Color.GRAY.getRGB());
+            }
             // 设置中心logo
             logo = this.getHeadImage(this.getUserInfo(request).getHeadimage());
             config.setImg(logo);
 
-            BufferedImage image = QrCodeUtil.generate(code + "[角色："+roleNames+"]", config);
+            BufferedImage image = QrCodeUtil.generate(model.getCode() + "，[部门："+departmentName+"]，[角色："+roleNames+"]", config);
 
             /** 转输入 */
             os = new ByteArrayOutputStream();

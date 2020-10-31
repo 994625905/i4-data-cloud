@@ -9,7 +9,9 @@
         t.name as name, 
         t.describe_info as describeInfo, 
         t.create_time as createTime, 
-        t.update_time as updateTime
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+		FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.DepartmentDto"
@@ -17,7 +19,20 @@
         SELECT
         <include refid="Base_Column_List" />
         FROM t_department AS t
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
 
+    <!--根据用户id获取所属的部门-->
+    <select id="getByUserId" resultType="cn.i4.data.cloud.core.entity.view.DepartmentView">
+        select
+        <include refid="Base_Column_List" />
+        from t_department as t
+        where t.id = (select u.department_id from t_user_department u where u.user_id = #{userId})
     </select>
 
 </mapper>

@@ -35,7 +35,8 @@ layui.use(["layer","form","laydate"],()=>{
                 ...obj.field,
                 overTime:BaseDate.dateStrToTimeStamp(obj.field.overTime)
             },
-            roleList:getRole()
+            roleList:getRole(),
+            departmentId:$("#departmentId").val()
         }
         if(param.roleList.length < 1){
             return Feng.error("必须勾选携带的角色")
@@ -51,12 +52,15 @@ layui.use(["layer","form","laydate"],()=>{
                 })
                 return temp
             })()
-            loadORCode(codeName,code,roleNames)
+            loadORCode(codeName,code,res.codeId,res.departmentName,roleNames)
+
+            /** 刷新父页面表格 */
+            parent.refresh()
 
             /** 刷新二维码 */
             $(".refresh").show()
             $(".refresh").click(()=>{
-                loadORCode(codeName,code,roleNames)
+                loadORCode(codeName,code,res.codeId,res.departmentName,roleNames)
             })
         })
         return false
@@ -71,8 +75,12 @@ function getRole(){
     return list
 }
 /***********************生成二维码***********************/
-function loadORCode(codeName,code,roleNames){
-    Request.async(BasePath+"/systemMsg/inviteCode/createQRCode",{code:code,roleNames:roleNames}).then(res=>{{
+function loadORCode(codeName,code,codeId,departmentName,roleNames){
+    Request.async(BasePath+"/systemMsg/inviteCode/createQRCode",{
+        id:codeId,
+        departmentName:departmentName,
+        roleNames:roleNames
+    }).then(res=>{{
         var content = template("showQRCode",{encode:res,code:code,roleNames:roleNames,name:codeName})
         $("#content").html(content)
     }})

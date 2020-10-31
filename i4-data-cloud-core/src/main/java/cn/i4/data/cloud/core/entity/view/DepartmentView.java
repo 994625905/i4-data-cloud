@@ -50,13 +50,14 @@ public class DepartmentView extends BaseView<DepartmentView> {
 	 */
 	@TableField("create_time")
 	private Long createTime;
+	private String createTimeStr;
 
 	/**
 	 * 更新时间
 	 */
 	@TableField("update_time")
 	private Long updateTime;
-
+	private String updateTimeStr;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -98,4 +99,19 @@ public class DepartmentView extends BaseView<DepartmentView> {
 		return this.updateTime;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
 }

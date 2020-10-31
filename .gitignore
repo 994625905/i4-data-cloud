@@ -1,3 +1,6 @@
 *.class
 /target/
 logback/
+*.log.0
+.classpath
+.project

@@ -30,4 +30,9 @@ public class DepartmentServiceImpl extends BaseServiceImpl<DepartmentMapper,Depa
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public DepartmentView getByUserId(Integer userId) {
+		return mapper.getByUserId(userId);
+	}
+
 }

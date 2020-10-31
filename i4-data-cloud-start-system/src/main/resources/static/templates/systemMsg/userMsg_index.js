@@ -97,7 +97,8 @@ function loadTable(){
         {field:"gender",title:"性别",templet(d){return d.gender == "1"?"男":(d.gender == "2"?"女":"未知")}},
         {field:"phone",title:"联系电话"},
         {field:"email",title:"电子邮件"},
-        {field:'status',title: '状态',align:"center",toolbar:"#statusTool"},
+        {field:"departmentName",title:"所属部门",width:TABLE_COL_WIDTH.tool(2) ,templet(d){return "<label class='layui-btn layui-btn-sm layui-btn-primary' onclick='changeDepartment(\""+d.departmentName+"\","+d.id+")'>"+d.departmentName+"</label>"}},
+        {field:'status',title: '状态',align:"center",toolbar:"#statusTool",width: TABLE_COL_WIDTH.tool(1)},
         {fixed:'right',title: '操作',align:"center",toolbar:"#tool",width:TABLE_COL_WIDTH.tool(3)}
     ]]
     tableRender = Initlay.initTable("#userTable",BasePath+"/systemMsg/userMsg/loadTable",tabCols,"#toolbar",param)
@@ -109,6 +110,20 @@ function showHeadImage(name,id,headimage){
         pid:id,
         src:headimage
     }])
+}
+function changeDepartment(departmentName,userId){
+    Request.async(BasePath+"/systemMsg/departmentMsg/getList").then(res=>{
+        Feng.infoDetail("设置部门",template("changeDepartment",{list:res,departmentName:departmentName}),null,index=>{
+            Request.async(BasePath+"/systemMsg/userMsg/changeDepartment",{
+                userId:userId,
+                departmentId:$("select[name='department']").val()
+            }).then(r=>{
+                layer.close(index)
+                Feng.success("设置部门成功")
+                refresh()
+            })
+        },"420px","240px",5);
+    })
 }
 /*************************刷新************************/
 function refresh(){

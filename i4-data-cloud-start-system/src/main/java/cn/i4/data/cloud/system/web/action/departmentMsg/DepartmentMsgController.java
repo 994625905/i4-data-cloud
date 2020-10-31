@@ -12,8 +12,11 @@ import cn.i4.data.cloud.system.web.WebBaseController;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * 系统管理--部门管理的控制层
@@ -72,7 +75,7 @@ public class DepartmentMsgController extends WebBaseController {
     @PostMapping(value = "/insert")
     @RequestLog(module = MODULE_NAME,content = "新增部门",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增部门",key = KEY_PREFIX+"/insert")
-    public ActionResult<Boolean> insert(DepartmentDto dto){
+    public ActionResult<Boolean> insert(@RequestBody DepartmentDto dto){
         DepartmentModel model = dto.getModel();
         model.setCreateTime(System.currentTimeMillis()/1000L);
 
@@ -91,7 +94,7 @@ public class DepartmentMsgController extends WebBaseController {
     @PostMapping(value = "/update")
     @RequestLog(module = MODULE_NAME,content = "修改部门",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改部门",key = KEY_PREFIX+"/update")
-    public ActionResult<Boolean> update(DepartmentDto dto){
+    public ActionResult<Boolean> update(@RequestBody DepartmentDto dto){
         DepartmentModel model = dto.getModel();
         model.setUpdateTime(System.currentTimeMillis()/1000L);
 
@@ -100,6 +103,18 @@ public class DepartmentMsgController extends WebBaseController {
             return ActionResult.error("修改失败");
         }
         return ActionResult.ok(true);
+    }
+
+    /**
+     * 获取所有的部门列表
+     * @return
+     */
+    @PostMapping(value = "/getList")
+    @RequestLog(module = MODULE_NAME,content = "获取所有的部门列表",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"--获取所有的部门列表",key = KEY_PREFIX+"/getList")
+    public ActionResult<List<DepartmentModel>> getList(){
+        List<DepartmentModel> list = iDepartmentService.list();
+        return ActionResult.ok(list);
     }
 
 }

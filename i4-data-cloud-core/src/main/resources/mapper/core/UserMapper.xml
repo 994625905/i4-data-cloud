@@ -33,7 +33,8 @@
             u.area as area,
             u.detail_address as detailAddress,
             FROM_UNIXTIME(u.create_time,'%Y-%m-%d %T') as createTimeStrInfo,
-            FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo
+            FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo,
+            (select d.name from t_department d where d.id = (select a.department_id from t_user_department a where a.user_id = t.id)) as departmentName
         FROM t_user AS t
         left join t_user_info u on t.id = u.user_id
         where 1=1

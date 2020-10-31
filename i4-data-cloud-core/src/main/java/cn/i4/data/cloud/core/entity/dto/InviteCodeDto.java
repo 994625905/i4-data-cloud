@@ -20,6 +20,7 @@ public class InviteCodeDto extends BaseDto<InviteCodeView> {
 
     private InviteCodeModel model;
     private List<Integer> roleList;
+    private Integer departmentId;
 
     public Integer getId() {
         return id;
@@ -51,5 +52,13 @@ public class InviteCodeDto extends BaseDto<InviteCodeView> {
 
     public void setRoleList(List<Integer> roleList) {
         this.roleList = roleList;
+    }
+
+    public Integer getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Integer departmentId) {
+        this.departmentId = departmentId;
     }
 }

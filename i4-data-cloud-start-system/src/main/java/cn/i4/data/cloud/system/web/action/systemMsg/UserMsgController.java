@@ -4,6 +4,7 @@ import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.MD5Util;
 import cn.i4.data.cloud.core.entity.dto.UserDto;
@@ -13,10 +14,7 @@ import cn.i4.data.cloud.core.entity.model.UserModel;
 import cn.i4.data.cloud.core.entity.model.UserRoleModel;
 import cn.i4.data.cloud.core.entity.view.RoleView;
 import cn.i4.data.cloud.core.entity.view.UserView;
-import cn.i4.data.cloud.core.service.IRoleService;
-import cn.i4.data.cloud.core.service.IUserInfoService;
-import cn.i4.data.cloud.core.service.IUserRoleService;
-import cn.i4.data.cloud.core.service.IUserService;
+import cn.i4.data.cloud.core.service.*;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -42,6 +40,7 @@ import java.util.Map;
 public class UserMsgController extends WebBaseController {
 
     private static final String MODULE_NAME = "系统管理--用户管理";
+    private static final String KEY_PREFIX = "/systemMsg/userMsg";
 
     @Autowired
     private IUserService iUserService;
@@ -51,6 +50,8 @@ public class UserMsgController extends WebBaseController {
     private IRoleService iRoleService;
     @Autowired
     private IUserRoleService iUserRoleService;
+    @Autowired
+    private IUserDepartmentService iUserDepartmentService;
 
     /**
      * 加载用户表格
@@ -215,6 +216,23 @@ public class UserMsgController extends WebBaseController {
             return ActionResult.ok(save);
         }
         return ActionResult.error("批量添加用户角色失败，请检查数据库连接是否正常");
+    }
+
+    /**
+     * 设置部门
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/changeDepartment")
+    @RequestLog(module = MODULE_NAME,content = "设置部门",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"/设置部门",key = KEY_PREFIX+"/changeDepartment")
+    public ActionResult<Boolean> changeDepartment(UserDto dto){
+        try {
+            Boolean res = iUserDepartmentService.changeDepartment(dto.getUserId(),dto.getDepartmentId());
+            return ActionResult.ok(res);
+        } catch (CommonException e) {
+            return ActionResult.error(e.getMessage());
+        }
     }
 
 }

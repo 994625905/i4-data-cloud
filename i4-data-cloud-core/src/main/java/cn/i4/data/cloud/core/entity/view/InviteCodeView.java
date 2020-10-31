@@ -85,6 +85,7 @@ public class InviteCodeView extends BaseView<InviteCodeView> {
 	 */
 	private String createUserName;
 	private String roleNames;
+	private String departmentName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -180,5 +181,13 @@ public class InviteCodeView extends BaseView<InviteCodeView> {
 
 	public void setRoleNames(String roleNames) {
 		this.roleNames = roleNames;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 }

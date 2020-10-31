@@ -20,4 +20,10 @@ public interface IDepartmentService extends BaseService<DepartmentModel> {
     */
     IPage<DepartmentView> selectPage(DepartmentDto dto);
 
+    /**
+     * 根据用户id获取所属的部门
+     * @param userId
+     * @return
+     */
+    DepartmentView getByUserId(Integer userId);
 }

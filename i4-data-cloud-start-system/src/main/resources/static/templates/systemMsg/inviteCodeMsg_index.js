@@ -35,7 +35,8 @@ layui.use(["layer","table"],()=>{
     table.on("tool(inviteCodeTable)",obj=>{
         if(obj.event == "detail"){
             Request.async(BasePath+"/systemMsg/inviteCode/createQRCode",{
-                code:obj.data.code,
+                id:obj.data.id,
+                departmentName:obj.data.departmentName,
                 roleNames:obj.data.roleNames
             }).then(res=>{
                 var contentInfo = template("showQRCode",{
@@ -43,6 +44,7 @@ layui.use(["layer","table"],()=>{
                     userStatus:obj.data.userStatus,
                     name:obj.data.name,
                     code:obj.data.code,
+                    departmentName:obj.data.departmentName,
                     encode:res,
                     roleNames:obj.data.roleNames
                 })
@@ -66,6 +68,7 @@ function loadTable(){
         {field:"name",title:"名称"},
         {field:"code",title:"邀请码"},
         {field:"userStatus",title:"邀请用户状态",templet:"#statusTool",sort:true},
+        {field:"departmentName",title:"邀请部门"},
         {field:"createUserName",title:"创建用户"},
         {field:"createTimeStr",title:"创建时间",width:TABLE_COL_WIDTH.date,sort:true},
         {field:"effectTime",title:"有效时间",width: TABLE_COL_WIDTH.date,templet(d){

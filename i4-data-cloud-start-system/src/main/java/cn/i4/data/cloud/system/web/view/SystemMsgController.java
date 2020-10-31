@@ -6,6 +6,7 @@ import cn.i4.data.cloud.core.entity.dto.UserDto;
 import cn.i4.data.cloud.core.entity.model.MenuButtonModel;
 import cn.i4.data.cloud.core.entity.view.MenuButtonView;
 import cn.i4.data.cloud.core.entity.view.UserView;
+import cn.i4.data.cloud.core.service.IDepartmentService;
 import cn.i4.data.cloud.core.service.IRoleService;
 import cn.i4.data.cloud.core.service.IUserService;
 import cn.i4.data.cloud.system.web.WebBaseController;
@@ -33,6 +34,8 @@ public class SystemMsgController extends WebBaseController {
     private IRoleService iRoleService;
     @Autowired
     private IUserService iUserService;
+    @Autowired
+    private IDepartmentService iDepartmentService;
 
     /**
      * 加载菜单管理首页
@@ -192,6 +195,7 @@ public class SystemMsgController extends WebBaseController {
         UserView detail = iUserService.selectById(dto.getUserId());
         view.addObject("detail",detail);
         view.addObject("roleList",iRoleService.selectRolesByUserId(dto.getUserId()));
+        view.addObject("department",iDepartmentService.getByUserId(dto.getUserId()));
         return view;
     }
 
@@ -225,6 +229,7 @@ public class SystemMsgController extends WebBaseController {
     @RequestMapping(value = "/inviteCode/addPage")
     public ModelAndView inviteCodeMsgAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/inviteCodeMsg_add", request);
+        view.addObject("departmentList",iDepartmentService.list());
         return view;
     }
 
