@@ -1,0 +1,364 @@
+2020-10-29 09:05:22,906 [http-nio-9011-exec-6] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - java.lang.Integer cannot be cast to java.lang.String
+2020-10-29 09:05:48,149 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in cn.i4.data.cloud.system.aspect.RequestLimitAspect required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+2020-10-29 09:06:06,897 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in cn.i4.data.cloud.system.aspect.RequestLimitAspect required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+2020-10-29 09:06:49,037 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 09:06:51,085 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 09:06:51,085 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 09:06:51,087 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 09:06:51,087 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 09:07:21,994 [http-nio-9011-exec-2] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:3: user_script:3: attempt to compare nil with number 
+2020-10-29 09:58:34,432 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 09:58:35,391 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 09:58:35,391 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 09:58:35,393 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 09:58:35,393 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 09:58:47,297 [http-nio-9011-exec-2] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:8: ERR value is not an integer or out of range 
+2020-10-29 10:02:19,461 [http-nio-9011-exec-3] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:3: user_script:3: attempt to compare nil with number 
+2020-10-29 10:02:41,552 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 10:02:42,488 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 10:02:42,489 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 10:02:42,490 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 10:02:42,490 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 10:02:49,694 [http-nio-9011-exec-2] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 135 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:3: user_script:3: attempt to compare nil with number 
+2020-10-29 10:03:07,326 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 10:03:08,166 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 10:03:08,166 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 10:03:08,168 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 10:03:08,168 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 10:03:32,904 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 10:03:33,777 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 10:03:33,778 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 10:03:33,779 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 10:03:33,779 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 10:03:40,700 [http-nio-9011-exec-1] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 136 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:3: user_script:3: attempt to compare nil with number 
+2020-10-29 11:03:31,926 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 11:03:32,757 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 11:03:32,757 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 11:03:32,758 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 11:03:32,758 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 11:05:14,946 [http-nio-9011-exec-2] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_aace51b7cc586eeba6175340f416aed3794a86c9): @user_script:4: user_script:4: attempt to compare nil with number 
+2020-10-29 11:41:56,078 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 11:41:56,936 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 11:41:56,936 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 11:41:56,937 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 11:41:56,937 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 11:42:58,770 [http-nio-9011-exec-1] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_12bf642cb413a91570533451f95dfb3f2df0b41f): @user_script:19: @user_script: 19: Lua redis() command arguments must be strings or integers 
+2020-10-29 13:39:33,024 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 13:39:33,918 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 13:39:33,918 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 13:39:33,920 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 13:39:33,920 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 13:39:49,396 [http-nio-9011-exec-2] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_12bf642cb413a91570533451f95dfb3f2df0b41f): @user_script:19: @user_script: 19: Lua redis() command arguments must be strings or integers 
+2020-10-29 13:41:57,858 [http-nio-9011-exec-4] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_12bf642cb413a91570533451f95dfb3f2df0b41f): @user_script:19: @user_script: 19: Lua redis() command arguments must be strings or integers 
+2020-10-29 14:01:50,443 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:01:52,729 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:03:18,472 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:03:19,418 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:11:56,631 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:11:57,576 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:20:12,637 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:20:13,624 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:20:40,044 [http-nio-9011-exec-3] ERROR o.a.c.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-system].[dispatcherServlet] 175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/i4-data-cloud-start-system] threw exception [Request processing failed; nested exception is org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1615)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1077)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:348)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:29)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:120)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:710)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:68)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3570)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:335)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:61)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:228)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:53)
+	at cn.i4.data.cloud.cache.service.impl.RedisServiceImpl.get(RedisServiceImpl.java:204)
+	at cn.i4.data.cloud.system.web.WebBaseController.getSystemConstant(WebBaseController.java:82)
+	at cn.i4.data.cloud.system.web.WebBaseController.getModelAndView(WebBaseController.java:50)
+	at cn.i4.data.cloud.system.web.view.SystemMsgController.userMsgIndex(SystemMsgController.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-29 14:21:40,726 [http-nio-9011-exec-4] ERROR o.a.c.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-system].[dispatcherServlet] 175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/i4-data-cloud-start-system] threw exception [Request processing failed; nested exception is org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1615)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1077)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:348)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:29)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:120)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:710)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:68)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3570)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:335)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:61)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:228)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:53)
+	at cn.i4.data.cloud.cache.service.impl.RedisServiceImpl.get(RedisServiceImpl.java:204)
+	at cn.i4.data.cloud.system.web.WebBaseController.getSystemConstant(WebBaseController.java:82)
+	at cn.i4.data.cloud.system.web.WebBaseController.getModelAndView(WebBaseController.java:50)
+	at cn.i4.data.cloud.system.web.view.SystemMsgController.userMsgIndex(SystemMsgController.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-29 14:22:32,255 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:22:34,244 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:27:01,673 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:27:02,651 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:27:27,228 [http-nio-9011-exec-2] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - null
+2020-10-29 14:27:59,253 [http-nio-9011-exec-4] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - null
+2020-10-29 14:28:17,440 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:28:18,451 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:28:26,739 [http-nio-9011-exec-8] ERROR o.a.c.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-system].[dispatcherServlet] 175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/i4-data-cloud-start-system] threw exception [Request processing failed; nested exception is org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1` (no Creators, like default constructor, exist): no default constructor found
+ at [Source: (byte[])"["cn.i4.data.cloud.core.service.impl.SystemConstantServiceImpl$1",{"mysqlImage_name":"MySQL图标","oracleImage_id":6,"defaultPassword_name":"初始化用户的默认密码","authLoginImage_id":1,"defaultPassword_id":4,"mysqlImage_id":5,"oracleImage_name":"Oracle图标","baiduMapApi":"key","errorImage_name":"文件上传的降级处理图片","oracleImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-ToviAXMGWAACUzKN_nZY938.jpg","mysqlImage":"http://192.168.1.7/group1/M00/00/00/wKgBB1-Toy6AJ7-LAA"[truncated 662 bytes]; line: 1, column: 67]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1615)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1077)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:348)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:29)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:120)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:710)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:68)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3570)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:335)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:61)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:228)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:53)
+	at cn.i4.data.cloud.cache.service.impl.RedisServiceImpl.get(RedisServiceImpl.java:204)
+	at cn.i4.data.cloud.system.web.WebBaseController.getSystemConstant(WebBaseController.java:82)
+	at cn.i4.data.cloud.system.web.WebBaseController.getModelAndView(WebBaseController.java:50)
+	at cn.i4.data.cloud.system.web.view.SystemMsgController.userMsgIndex(SystemMsgController.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-29 14:37:05,195 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:37:47,116 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:37:49,098 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 52 - 缓存中交换机配置为null，请手动刷新Redis
+2020-10-29 14:47:39,036 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 14:47:40,415 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 14:47:40,415 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 14:47:40,417 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 14:47:40,417 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 15:17:53,584 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 15:17:54,755 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 15:17:54,756 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 15:17:54,757 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 15:17:54,757 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 16:31:59,769 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 16:32:01,111 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 16:32:01,111 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 16:32:01,113 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 16:32:01,114 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 17:15:08,229 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 17:15:14,382 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 17:15:14,382 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 17:15:14,384 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 17:15:14,384 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 20:42:44,392 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-29 20:42:46,600 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 20:42:46,600 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-29 20:42:46,601 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-29 20:42:46,602 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器

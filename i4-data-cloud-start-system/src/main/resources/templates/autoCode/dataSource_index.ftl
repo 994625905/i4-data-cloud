@@ -9,6 +9,7 @@
             <div class="layui-inline">
                 <button type="button" class="layui-btn layui-btn-sm layui-btn-danger addDataSource">添加</button>
             </div>
+            --视图也可以被当做表格生成对应的代码，但无法做DML操作--
         </div>
         <div class="layui-card-body">
             <div class="layui-row layui-col-space10" id="content"></div>

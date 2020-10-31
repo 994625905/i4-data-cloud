@@ -1,0 +1,291 @@
+2020-10-28 11:10:13,156 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 11:10:14,390 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 11:10:14,391 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 11:16:28,246 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 11:16:29,577 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 11:16:29,578 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 11:38:32,424 [rabbitConnectionFactory1] ERROR org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl 931 - Failed to process publisher confirm
+java.util.concurrent.RejectedExecutionException: Task org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl$$Lambda$1067/1517316886@599af7c3 rejected from java.util.concurrent.ThreadPoolExecutor@575d1280[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl.doHandleConfirm(PublisherCallbackChannelImpl.java:1008)
+	at org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl.doProcessAck(PublisherCallbackChannelImpl.java:960)
+	at org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl.processAck(PublisherCallbackChannelImpl.java:928)
+	at org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl.generateNacksForPendingAcks(PublisherCallbackChannelImpl.java:832)
+	at org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl.lambda$shutdownCompleted$0(PublisherCallbackChannelImpl.java:821)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-28 11:38:37,308 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 11:38:38,295 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 11:38:38,296 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 11:39:38,665 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 11:39:40,062 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 11:39:40,062 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 11:40:10,837 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 11:40:11,882 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 11:40:11,882 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 11:45:33,986 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 11:45:35,570 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 11:45:35,570 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 17:42:24,383 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 17:42:25,468 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 17:42:25,468 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 20:23:51,900 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 20:23:52,256 [restartedMain] ERROR org.springframework.boot.SpringApplication 837 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileMicroserviceImpl': Unsatisfied dependency expressed through field 'iSystemConstantService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantMapper' defined in file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\cn\i4\data\cloud\core\mapper\SystemConstantMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at cn.i4.data.cloud.system.I4DataCloudStartSystemApplication.main(I4DataCloudStartSystemApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantMapper' defined in file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\cn\i4\data\cloud\core\mapper\SystemConstantMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantMapper' defined in file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\cn\i4\data\cloud\core\mapper\SystemConstantMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1524)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1509)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:594)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:433)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:627)
+	at cn.i4.data.cloud.core.config.DataSourceConfig.sqlSessionFactory(DataSourceConfig.java:47)
+	at cn.i4.data.cloud.core.config.DataSourceConfig$$EnhancerBySpringCGLIB$$e4d601db.CGLIB$sqlSessionFactory$1(<generated>)
+	at cn.i4.data.cloud.core.config.DataSourceConfig$$EnhancerBySpringCGLIB$$e4d601db$$FastClassBySpringCGLIB$$e00af5d8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at cn.i4.data.cloud.core.config.DataSourceConfig$$EnhancerBySpringCGLIB$$e4d601db.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:592)
+	... 76 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:76)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 82 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 84 common frames omitted
+2020-10-28 20:52:47,945 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 20:52:48,239 [restartedMain] ERROR org.springframework.boot.SpringApplication 837 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileMicroserviceImpl': Unsatisfied dependency expressed through field 'iSystemConstantService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantMapper' defined in file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\cn\i4\data\cloud\core\mapper\SystemConstantMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at cn.i4.data.cloud.system.I4DataCloudStartSystemApplication.main(I4DataCloudStartSystemApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantMapper' defined in file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\cn\i4\data\cloud\core\mapper\SystemConstantMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'systemConstantMapper' defined in file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\cn\i4\data\cloud\core\mapper\SystemConstantMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1524)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/i4/data/cloud/core/config/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1509)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:594)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:433)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:627)
+	at cn.i4.data.cloud.core.config.DataSourceConfig.sqlSessionFactory(DataSourceConfig.java:47)
+	at cn.i4.data.cloud.core.config.DataSourceConfig$$EnhancerBySpringCGLIB$$e4d601db.CGLIB$sqlSessionFactory$1(<generated>)
+	at cn.i4.data.cloud.core.config.DataSourceConfig$$EnhancerBySpringCGLIB$$e4d601db$$FastClassBySpringCGLIB$$e00af5d8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at cn.i4.data.cloud.core.config.DataSourceConfig$$EnhancerBySpringCGLIB$$e4d601db.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\WorkSpace\idea\i4-data-cloud\i4-data-cloud-core\target\classes\mapper\core\LogLimitMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:592)
+	... 76 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:76)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.i4.data.cloud.core.entity.dto.LogLimitDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 82 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.i4.data.cloud.core.entity.dto.LogLimitDto
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 84 common frames omitted
+2020-10-28 20:56:10,131 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 20:56:12,250 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 20:56:12,251 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:00:59,175 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 21:01:00,177 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 21:01:00,177 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:01:00,192 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 21:01:00,192 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:01:09,001 [http-nio-9011-exec-3] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 139 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:8: ERR value is not an integer or out of range 
+2020-10-28 21:02:53,176 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 21:02:54,026 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 21:02:54,026 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:02:54,028 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 21:02:54,028 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:02:59,026 [http-nio-9011-exec-1] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR Error running script (call to f_953804d07099a2cd2aed5c4d9808174147ed9abb): @user_script:8: ERR value is not an integer or out of range 
+2020-10-28 21:04:23,063 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
+2020-10-28 21:04:24,265 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 21:04:24,265 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:04:24,277 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 161 - No qualifying bean of type 'cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler' available
+2020-10-28 21:04:24,277 [restartedMain] ERROR cn.i4.data.cloud.mq.rabbit.config.InitConfig 162 - 该应用下缺乏对应的消息监听器
+2020-10-28 21:04:34,161 [http-nio-9011-exec-4] ERROR cn.i4.data.cloud.system.aspect.RequestLimitAspect 134 - java.lang.Integer cannot be cast to java.lang.String

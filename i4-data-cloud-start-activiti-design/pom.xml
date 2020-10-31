@@ -2,12 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<artifactId>i4-data-cloud</artifactId>
+		<groupId>cn.i4.data.cloud</groupId>
+		<version>1.0-SNAPSHOT</version>
 	</parent>
+
 	<groupId>cn.i4.data.cloud</groupId>
 	<artifactId>i4-data-cloud-start-activiti-design</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -19,14 +20,22 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<!-- 启用 -->
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<!--模板引擎-->
@@ -45,27 +54,6 @@
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>fop</artifactId>
 			<version>2.3</version>
-		</dependency>
-
-		<!--数据驱动-->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>6.0.4</version>
-		</dependency>
-
-		<!-- druid数据源 -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>1.1.8</version>
-		</dependency>
-
-		<!--mybatis_plus-->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.1.2</version>
 		</dependency>
 
 		<!--org.w3c.dom.ElementTraversal-->
@@ -133,6 +121,12 @@
 			</exclusions>
 		</dependency>
 
+		<!--引用base-->
+		<dependency>
+			<groupId>cn.i4.data.cloud</groupId>
+			<artifactId>i4-data-cloud-base</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 

@@ -1,0 +1,438 @@
+2020-10-31 13:35:36,668 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-31 13:35:36,706 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\com\sun\xml\bind\jaxb-impl\2.1.13\jaxb-impl-2.1.13.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/activation.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jsr173_1.0_api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb1-impl.jar
+2020-10-31 13:35:36,706 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\xalan\2.7.1\xalan-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xercesImpl.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xml-apis.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/serializer.jar
+2020-10-31 13:35:36,706 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/serializer/2.7.1/xml-apis.jar
+2020-10-31 13:35:36,707 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-31 13:35:37,169 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-31 13:35:37,813 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-31 13:35:37,816 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-31 13:35:37,842 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-10-31 13:35:38,061 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=b5c48665-1381-3b6b-becf-fecd889296da
+2020-10-31 13:35:38,112 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-31 13:35:38,609 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-31 13:35:38,617 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-31 13:35:38,618 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-31 13:35:38,618 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 13:35:38,712 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-31 13:35:38,713 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1527 ms
+2020-10-31 13:35:38,756 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-31 13:35:39,432 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-31 13:35:39,639 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,681 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,712 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,740 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,767 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,800 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,834 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogLimitMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,870 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,922 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,952 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:39,982 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,014 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,044 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,071 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,098 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,126 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,151 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,160 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReDeployProcdefModel.
+2020-10-31 13:35:40,181 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReDeployProcdefMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,187 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReModelModel.
+2020-10-31 13:35:40,209 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReModelMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:35:40,372 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-31 13:35:40,576 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:35:40,577 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:35:40,581 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:35:40,581 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:35:40,711 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:35:41,115 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-31 13:35:41,213 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 13:35:41,322 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-31 13:35:41,354 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-31 13:35:41,630 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-31 13:35:41,630 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-31 13:35:41,761 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-31 13:35:41,762 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-31 13:35:42,295 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 13:35:42,383 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-31 13:35:42,384 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-31 13:35:42,384 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-31 13:35:42,385 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-31 13:35:42,385 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-31 13:35:42,385 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-31 13:35:42,386 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-31 13:35:42,828 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-31 13:35:42,831 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-31 13:35:42,835 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 13:35:42,839 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1604122542837 with initial instances count: 2
+2020-10-31 13:35:42,840 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-31 13:35:42,841 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1604122542841, current=UP, previous=STARTING]
+2020-10-31 13:35:42,844 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 13:35:42,848 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-31 13:35:42,889 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-31 13:35:42,890 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-31 13:35:42,906 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-31 13:35:43,020 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 6.741 seconds (JVM running for 8.086)
+2020-10-31 13:40:42,392 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 13:42:37,259 [Thread-2] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-31 13:42:37,259 [Thread-2] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1604122957259, current=DOWN, previous=UP]
+2020-10-31 13:42:37,259 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 13:42:37,267 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-31 13:42:37,377 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:42:37,387 [Thread-2] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-31 13:42:37,406 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-31 13:42:40,415 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-31 13:42:40,431 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - deregister  status: 200
+2020-10-31 13:42:40,439 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-31 13:42:40,899 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-31 13:42:41,237 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-31 13:42:41,237 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-31 13:42:41,242 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-10-31 13:42:41,325 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=b5c48665-1381-3b6b-becf-fecd889296da
+2020-10-31 13:42:41,337 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-31 13:42:41,458 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-31 13:42:41,459 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-31 13:42:41,459 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-31 13:42:41,459 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 13:42:41,478 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-31 13:42:41,478 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 574 ms
+2020-10-31 13:42:41,491 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-31 13:42:41,609 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-2} inited
+2020-10-31 13:42:41,643 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,676 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,704 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,738 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,782 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,820 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,856 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogLimitMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,886 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,922 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,955 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:41,986 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,033 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,079 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,115 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,146 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,178 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,210 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,220 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReDeployProcdefModel.
+2020-10-31 13:42:42,243 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReDeployProcdefMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,251 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReModelModel.
+2020-10-31 13:42:42,278 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReModelMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:42:42,344 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-31 13:42:42,496 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:42:42,497 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:42:42,562 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:42:42,776 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-31 13:42:42,866 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 13:42:42,914 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-31 13:42:42,915 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-31 13:42:42,919 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-31 13:42:42,919 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-31 13:42:42,919 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-31 13:42:42,920 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-31 13:42:43,016 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 13:42:43,017 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-31 13:42:43,018 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-31 13:42:43,018 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-31 13:42:43,018 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-31 13:42:43,018 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-31 13:42:43,018 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-31 13:42:43,018 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-31 13:42:43,096 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-31 13:42:43,097 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-31 13:42:43,097 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 13:42:43,098 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1604122963098 with initial instances count: 4
+2020-10-31 13:42:43,099 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-31 13:42:43,099 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1604122963099, current=UP, previous=STARTING]
+2020-10-31 13:42:43,099 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 13:42:43,100 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-31 13:42:43,103 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-31 13:42:43,103 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-31 13:42:43,112 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-31 13:42:43,193 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 2.58 seconds (JVM running for 428.258)
+2020-10-31 13:42:43,195 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-31 13:47:43,040 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 13:51:42,064 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-31 13:51:42,065 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1604123502065, current=DOWN, previous=UP]
+2020-10-31 13:51:42,065 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 13:51:42,182 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:51:42,188 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-2} closed
+2020-10-31 13:51:42,190 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-31 13:51:45,200 [DiscoveryClient-0] WARN  com.netflix.discovery.TimedSupervisorTask 90 - task supervisor shutting down, can't accept the task
+2020-10-31 13:51:45,200 [DiscoveryClient-1] WARN  com.netflix.discovery.TimedSupervisorTask 90 - task supervisor shutting down, can't accept the task
+2020-10-31 13:51:45,207 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-31 13:51:46,124 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:47,600 [DiscoveryClient-CacheRefreshExecutor-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:47,615 [DiscoveryClient-HeartbeatExecutor-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:49,272 [SpringContextShutdownHook] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:50,173 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:50,174 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.DiscoveryClient 875 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-31 13:51:50,174 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.InstanceInfoReplicator 125 - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-31 13:51:51,638 [DiscoveryClient-CacheRefreshExecutor-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:51,686 [DiscoveryClient-HeartbeatExecutor-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:53,304 [SpringContextShutdownHook] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 13:51:53,309 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-31 13:53:34,619 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-31 13:53:34,658 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\com\sun\xml\bind\jaxb-impl\2.1.13\jaxb-impl-2.1.13.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/activation.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jsr173_1.0_api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb1-impl.jar
+2020-10-31 13:53:34,658 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\xalan\2.7.1\xalan-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xercesImpl.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xml-apis.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/serializer.jar
+2020-10-31 13:53:34,658 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/serializer/2.7.1/xml-apis.jar
+2020-10-31 13:53:34,658 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-31 13:53:35,117 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-31 13:53:35,764 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-31 13:53:35,767 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-31 13:53:35,792 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-10-31 13:53:36,024 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=b5c48665-1381-3b6b-becf-fecd889296da
+2020-10-31 13:53:36,075 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-31 13:53:36,573 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-31 13:53:36,582 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-31 13:53:36,582 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-31 13:53:36,583 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 13:53:36,678 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-31 13:53:36,678 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1544 ms
+2020-10-31 13:53:36,727 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-31 13:53:37,404 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-31 13:53:37,582 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,620 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,651 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,678 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,709 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,737 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,767 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogLimitMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,800 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,844 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,883 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,914 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,944 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,971 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:37,996 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:38,022 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:38,050 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:38,075 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:38,084 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReDeployProcdefModel.
+2020-10-31 13:53:38,103 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReDeployProcdefMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:38,111 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReModelModel.
+2020-10-31 13:53:38,129 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReModelMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 13:53:38,271 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-31 13:53:38,474 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:53:38,474 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:53:38,478 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:53:38,478 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:53:38,604 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:53:38,980 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-31 13:53:39,079 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 13:53:39,209 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-31 13:53:39,239 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-31 13:53:39,432 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-31 13:53:39,432 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-31 13:53:39,527 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-31 13:53:39,527 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-31 13:53:39,908 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 13:53:39,972 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-31 13:53:39,972 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-31 13:53:39,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-31 13:53:39,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-31 13:53:39,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-31 13:53:39,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-31 13:53:39,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-31 13:53:40,141 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-31 13:53:40,143 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-31 13:53:40,145 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 13:53:40,149 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1604123620148 with initial instances count: 0
+2020-10-31 13:53:40,150 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-31 13:53:40,151 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1604123620151, current=UP, previous=STARTING]
+2020-10-31 13:53:40,153 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 13:53:40,153 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-31 13:53:40,181 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-31 13:53:40,182 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-31 13:53:40,232 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-31 13:53:40,272 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 6.064 seconds (JVM running for 7.475)
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: false
+2020-10-31 13:54:10,151 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-31 13:54:10,183 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-31 13:58:39,990 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:03:39,998 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:08:40,004 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:13:40,006 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:18:40,019 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:23:40,024 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:28:40,038 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:33:40,046 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:38:40,055 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:43:40,063 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:48:40,075 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:53:40,087 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 14:58:40,094 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:03:40,100 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:08:40,103 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:13:40,106 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:18:40,117 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:23:40,124 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:28:40,129 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:33:40,144 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:38:40,145 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:42:37,698 [Thread-2] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-31 15:42:37,698 [Thread-2] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1604130157698, current=DOWN, previous=UP]
+2020-10-31 15:42:37,699 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 15:42:37,710 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-31 15:42:37,869 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 15:42:37,903 [Thread-2] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-31 15:42:37,946 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-31 15:42:40,964 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-31 15:42:40,979 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - deregister  status: 200
+2020-10-31 15:42:40,989 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-31 15:42:43,876 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-31 15:42:44,221 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-31 15:42:44,221 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-31 15:42:44,226 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-31 15:42:44,310 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=ec817427-318d-3b94-96f4-b7d5ce045f21
+2020-10-31 15:42:44,323 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-31 15:42:44,455 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-31 15:42:44,456 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-31 15:42:44,456 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-31 15:42:44,456 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 15:42:44,475 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-31 15:42:44,475 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 592 ms
+2020-10-31 15:42:44,490 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-31 15:42:44,611 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-2} inited
+2020-10-31 15:42:44,644 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,679 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.DepartmentMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,714 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,740 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,765 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,790 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,815 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,840 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogLimitMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,865 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,896 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,924 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,947 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,972 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:44,996 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,021 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,056 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,081 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,103 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,109 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReDeployProcdefModel.
+2020-10-31 15:42:45,133 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReDeployProcdefMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,146 [restartedMain] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper 285 - Warn: Could not find @TableId in Class: cn.i4.data.cloud.core.entity.model.VActReModelModel.
+2020-10-31 15:42:45,164 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.VActReModelMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-31 15:42:45,223 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-31 15:42:45,357 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 15:42:45,358 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 15:42:45,413 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 15:42:45,608 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-31 15:42:45,694 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 15:42:45,740 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-31 15:42:45,742 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-31 15:42:45,747 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-31 15:42:45,748 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-31 15:42:45,748 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-31 15:42:45,748 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-31 15:42:45,849 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-31 15:42:45,850 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-31 15:42:45,851 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-31 15:42:45,851 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-31 15:42:45,851 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-31 15:42:45,851 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-31 15:42:45,852 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-31 15:42:45,852 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-31 15:42:45,934 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-31 15:42:45,935 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-31 15:42:45,935 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-31 15:42:45,936 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1604130165936 with initial instances count: 6
+2020-10-31 15:42:45,937 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-31 15:42:45,937 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1604130165937, current=UP, previous=STARTING]
+2020-10-31 15:42:45,938 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 15:42:45,939 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-31 15:42:45,941 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-31 15:42:45,942 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-31 15:42:45,945 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-31 15:42:46,022 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 4.782 seconds (JVM running for 6553.225)
+2020-10-31 15:42:46,026 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-31 15:43:33,712 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-31 15:43:33,712 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1604130213712, current=DOWN, previous=UP]
+2020-10-31 15:43:33,713 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-31 15:43:33,838 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 15:43:33,842 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-2} closed
+2020-10-31 15:43:33,844 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-31 15:43:36,859 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-31 15:43:37,756 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 15:43:40,921 [SpringContextShutdownHook] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 15:43:41,834 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 15:43:41,834 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.DiscoveryClient 875 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-31 15:43:41,834 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.InstanceInfoReplicator 125 - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-31 15:43:44,979 [SpringContextShutdownHook] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-31 15:43:44,983 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient

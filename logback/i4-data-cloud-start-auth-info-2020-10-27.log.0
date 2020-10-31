@@ -1,0 +1,708 @@
+2020-10-27 00:03:05,921 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:08:05,931 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:13:05,942 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:18:05,943 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:23:05,959 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:28:05,962 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:33:05,967 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:38:05,982 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:43:05,986 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:48:05,988 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:53:05,989 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 00:58:06,004 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:03:06,014 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:08:06,027 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:13:06,038 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:18:06,044 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:23:06,054 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:28:06,062 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:33:06,066 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:38:06,075 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:43:06,095 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:48:06,102 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:53:06,115 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 01:58:06,123 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:03:06,132 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:08:06,141 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:13:06,146 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:18:06,160 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:23:06,171 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:28:06,183 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:33:06,184 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:38:06,190 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:43:06,205 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:48:06,207 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:53:06,218 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 02:58:06,221 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:03:06,230 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:08:06,240 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:13:06,248 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:18:06,259 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:23:06,265 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:28:06,281 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:33:06,296 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:38:06,306 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:43:06,307 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:48:06,315 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:53:06,328 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 03:58:06,340 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:03:06,341 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:08:06,356 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:13:06,357 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:18:06,360 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:23:06,366 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:28:06,376 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:33:06,383 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:38:06,399 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:43:06,415 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:48:06,419 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:53:06,434 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 04:58:06,448 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:03:06,455 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:08:06,460 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:13:06,467 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:18:06,471 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:23:06,477 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:28:06,489 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:33:06,491 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:38:06,497 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:43:06,500 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:48:06,514 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:53:06,523 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 05:58:06,527 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:03:06,538 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:08:06,540 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:13:06,552 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:18:06,562 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:23:06,562 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:28:06,576 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:33:06,585 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:38:06,593 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:43:06,597 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:48:06,608 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:53:06,616 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 06:58:06,618 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:03:06,629 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:08:06,631 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:13:06,636 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:18:06,637 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:23:06,648 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:28:06,660 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:33:06,666 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:38:06,675 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:43:06,680 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:48:06,683 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:53:06,693 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 07:58:06,701 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:03:06,713 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:08:06,721 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:13:06,724 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:18:06,725 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:23:06,734 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:28:06,737 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:33:06,749 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:38:06,760 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:43:06,774 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:48:06,776 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:53:06,782 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 08:58:06,798 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:03:06,807 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:04:53,522 [Thread-36] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-27 09:04:53,526 [Thread-36] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603760693526, current=DOWN, previous=UP]
+2020-10-27 09:04:53,529 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 09:04:53,549 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 09:04:53,692 [Thread-36] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 09:04:53,706 [Thread-36] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-3} closed
+2020-10-27 09:04:53,885 [Thread-36] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 09:04:56,893 [Thread-36] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 09:04:56,947 [Thread-36] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - deregister  status: 200
+2020-10-27 09:04:56,960 [Thread-36] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 09:04:58,100 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-27 09:04:58,440 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-27 09:04:58,440 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-27 09:04:58,446 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-27 09:04:58,524 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=228e7c4d-c42a-3e47-8a07-55d2397a2b53
+2020-10-27 09:04:58,535 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 09:04:58,676 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-27 09:04:58,677 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-27 09:04:58,677 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 09:04:58,677 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 09:04:58,698 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 09:04:58,698 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 593 ms
+2020-10-27 09:04:58,719 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-27 09:04:58,834 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-4} inited
+2020-10-27 09:04:58,863 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:58,904 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:58,926 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:58,947 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:58,969 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:58,995 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,026 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,053 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,074 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,101 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,131 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,152 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,174 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,198 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,255 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,284 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 09:04:59,356 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 58 - LiveReload server is running on port 35729
+2020-10-27 09:04:59,489 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 09:04:59,489 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 09:04:59,545 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 09:04:59,741 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 09:04:59,818 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 09:04:59,856 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 09:04:59,858 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 09:04:59,859 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 09:04:59,859 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 09:04:59,859 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 09:04:59,859 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 09:04:59,973 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:04:59,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 09:04:59,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 09:04:59,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 09:04:59,973 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 09:04:59,974 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 09:04:59,974 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 09:04:59,974 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 09:05:00,056 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 09:05:00,057 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 09:05:00,057 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 09:05:00,057 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603760700057 with initial instances count: 3
+2020-10-27 09:05:00,058 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-27 09:05:00,058 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603760700058, current=UP, previous=STARTING]
+2020-10-27 09:05:00,059 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 09:05:00,061 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-27 09:05:00,063 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-27 09:05:00,063 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-27 09:05:00,074 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 09:05:00,135 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 2.322 seconds (JVM running for 142625.096)
+2020-10-27 09:05:00,137 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 09:09:59,988 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:14:59,990 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:19:59,997 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:25:00,011 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:30:00,015 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:35:00,028 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:40:00,043 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:45:00,050 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:50:00,057 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 09:55:00,066 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:00:00,076 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:05:00,079 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:10:00,094 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:15:00,103 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:20:00,112 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:25:00,117 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:30:00,123 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:35:00,127 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:40:00,134 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:45:00,145 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:50:00,154 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:55:00,164 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:58:11,355 [Thread-44] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-27 10:58:11,358 [Thread-44] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603767491358, current=DOWN, previous=UP]
+2020-10-27 10:58:11,360 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 10:58:11,376 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 10:58:11,500 [Thread-44] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 10:58:11,508 [Thread-44] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-4} closed
+2020-10-27 10:58:11,513 [Thread-44] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 10:58:14,519 [Thread-44] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 10:58:14,534 [Thread-44] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - deregister  status: 200
+2020-10-27 10:58:14,540 [Thread-44] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 10:58:15,138 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-27 10:58:15,450 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-27 10:58:15,450 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-27 10:58:15,455 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-10-27 10:58:15,524 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=228e7c4d-c42a-3e47-8a07-55d2397a2b53
+2020-10-27 10:58:15,534 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 10:58:15,659 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-27 10:58:15,659 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-27 10:58:15,660 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 10:58:15,660 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 10:58:15,679 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 10:58:15,679 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 537 ms
+2020-10-27 10:58:15,701 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-27 10:58:15,835 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-5} inited
+2020-10-27 10:58:15,862 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:15,930 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:15,975 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:15,995 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,019 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,048 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,082 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,113 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,135 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,174 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,211 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,239 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,266 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,291 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,326 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,361 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 10:58:16,421 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 58 - LiveReload server is running on port 35729
+2020-10-27 10:58:16,557 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 10:58:16,557 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 10:58:16,617 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 10:58:16,818 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 10:58:16,900 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 10:58:16,947 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 10:58:16,949 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 10:58:16,950 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 10:58:16,950 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 10:58:16,950 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 10:58:16,950 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 10:58:17,066 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 10:58:17,067 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 10:58:17,150 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 10:58:17,151 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 10:58:17,151 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 10:58:17,152 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603767497152 with initial instances count: 4
+2020-10-27 10:58:17,153 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-27 10:58:17,153 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603767497153, current=UP, previous=STARTING]
+2020-10-27 10:58:17,154 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 10:58:17,155 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-27 10:58:17,157 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-27 10:58:17,158 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-27 10:58:17,160 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 10:58:17,239 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 2.348 seconds (JVM running for 149422.199)
+2020-10-27 10:58:17,241 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 11:03:17,109 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:08:17,124 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:13:17,131 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:18:17,133 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:23:17,148 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:28:17,154 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:33:17,160 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:38:17,167 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:43:17,170 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:48:17,174 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:53:17,177 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 11:58:17,190 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:03:17,193 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:08:17,201 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:13:17,217 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:18:17,220 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:23:17,235 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:28:17,252 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:33:17,258 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:38:17,270 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:43:17,281 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:48:17,298 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:53:17,301 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 12:58:17,311 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:03:17,324 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:08:17,326 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:13:17,330 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:18:17,340 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:23:17,349 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:28:17,362 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:33:17,369 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:38:17,382 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:43:17,397 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:48:17,413 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:53:17,423 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 13:58:17,437 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:03:17,445 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:08:17,451 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:13:17,456 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:18:17,461 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:23:17,476 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:28:17,484 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:33:17,501 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:38:17,513 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:43:17,522 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:48:17,533 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:53:17,539 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 14:58:17,548 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:03:17,555 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:08:17,570 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:13:17,576 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:18:17,586 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:23:17,601 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:28:17,614 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:33:17,616 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:38:17,622 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:39:59,216 [Thread-52] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-27 15:39:59,217 [Thread-52] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603784399217, current=DOWN, previous=UP]
+2020-10-27 15:39:59,219 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 15:39:59,238 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 15:39:59,406 [Thread-52] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 15:39:59,417 [Thread-52] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-5} closed
+2020-10-27 15:39:59,420 [Thread-52] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 15:40:02,436 [Thread-52] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 15:40:02,440 [DiscoveryClient-1] WARN  com.netflix.discovery.TimedSupervisorTask 90 - task supervisor shutting down, can't accept the task
+2020-10-27 15:40:02,453 [Thread-52] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - deregister  status: 200
+2020-10-27 15:40:02,458 [Thread-52] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 15:40:02,969 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-27 15:40:03,338 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-27 15:40:03,338 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-27 15:40:03,343 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-10-27 15:40:03,425 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=228e7c4d-c42a-3e47-8a07-55d2397a2b53
+2020-10-27 15:40:03,435 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 15:40:03,570 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-27 15:40:03,570 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-27 15:40:03,571 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 15:40:03,571 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 15:40:03,589 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 15:40:03,589 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 615 ms
+2020-10-27 15:40:03,611 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-27 15:40:03,729 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-6} inited
+2020-10-27 15:40:03,759 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:03,802 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:03,828 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:03,855 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:03,927 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:03,984 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,038 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,074 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,101 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,129 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,164 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,190 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,216 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,244 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,277 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,310 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 15:40:04,374 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 58 - LiveReload server is running on port 35729
+2020-10-27 15:40:04,487 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 15:40:04,487 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 15:40:04,566 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 15:40:04,815 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 15:40:04,902 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 15:40:04,954 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 15:40:04,956 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 15:40:04,958 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 15:40:04,958 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 15:40:04,958 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 15:40:04,958 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 15:40:05,061 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 15:40:05,062 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 15:40:05,154 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 15:40:05,154 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 15:40:05,164 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 15:40:05,164 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603784405164 with initial instances count: 5
+2020-10-27 15:40:05,165 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-27 15:40:05,165 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603784405165, current=UP, previous=STARTING]
+2020-10-27 15:40:05,166 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-27 15:40:05,168 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-27 15:40:05,169 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-27 15:40:05,183 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 15:40:05,196 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 15:40:05,246 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 2.546 seconds (JVM running for 166330.207)
+2020-10-27 15:40:05,248 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 15:45:05,126 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:50:05,133 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:55:05,147 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:00:05,153 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:05:05,165 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:10:05,173 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:15:05,187 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:20:05,194 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:25:05,207 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:30:05,220 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:33:40,852 [Thread-60] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-27 16:33:40,853 [Thread-60] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603787620852, current=DOWN, previous=UP]
+2020-10-27 16:33:40,854 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 16:33:40,871 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 16:33:40,985 [Thread-60] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 16:33:40,992 [Thread-60] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-6} closed
+2020-10-27 16:33:40,997 [Thread-60] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 16:33:44,008 [Thread-60] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 16:33:44,021 [Thread-60] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - deregister  status: 200
+2020-10-27 16:33:44,033 [Thread-60] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 16:33:44,593 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-27 16:33:44,928 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-27 16:33:44,928 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-27 16:33:44,933 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-10-27 16:33:45,009 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=228e7c4d-c42a-3e47-8a07-55d2397a2b53
+2020-10-27 16:33:45,017 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 16:33:45,143 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-27 16:33:45,143 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-27 16:33:45,143 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 16:33:45,144 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 16:33:45,161 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 16:33:45,161 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 564 ms
+2020-10-27 16:33:45,183 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-27 16:33:45,275 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-7} inited
+2020-10-27 16:33:45,308 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,348 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,393 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,427 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,453 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,480 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,519 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,552 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,584 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,609 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,642 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,681 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,708 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,745 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,782 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,821 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 16:33:45,884 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 58 - LiveReload server is running on port 35729
+2020-10-27 16:33:46,002 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 16:33:46,002 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 16:33:46,072 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 16:33:46,309 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 16:33:46,408 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 16:33:46,452 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 16:33:46,453 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 16:33:46,454 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 16:33:46,454 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 16:33:46,454 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 16:33:46,455 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 16:33:46,553 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:33:46,554 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 16:33:46,554 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 16:33:46,554 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 16:33:46,554 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 16:33:46,554 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 16:33:46,555 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 16:33:46,555 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 16:33:46,637 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 16:33:46,638 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 16:33:46,639 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 16:33:46,639 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603787626639 with initial instances count: 5
+2020-10-27 16:33:46,640 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-27 16:33:46,640 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603787626640, current=UP, previous=STARTING]
+2020-10-27 16:33:46,641 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 16:33:46,642 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-27 16:33:46,644 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-27 16:33:46,645 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-27 16:33:46,659 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 16:33:46,719 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 2.456 seconds (JVM running for 169551.679)
+2020-10-27 16:33:46,722 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 16:37:47,431 [http-nio-9010-exec-8] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 16:37:47,431 [http-nio-9010-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 16:37:47,437 [http-nio-9010-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 6 ms
+2020-10-27 16:37:47,490 [http-nio-9010-exec-8] DEBUG cn.i4.data.cloud.auth.web.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
+2020-10-27 16:37:55,748 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [4ms ] 
+2020-10-27 16:37:55,766 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [8ms ] 
+2020-10-27 16:37:55,774 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.auth.web.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
+2020-10-27 16:38:46,566 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:43:46,574 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:48:46,587 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:53:46,603 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:58:46,616 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:03:46,621 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:08:46,626 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:13:46,629 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:18:46,635 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:23:46,640 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:28:46,646 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:33:46,648 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:38:46,657 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:43:46,668 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:48:46,675 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:53:46,687 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:58:46,703 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:03:46,707 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:08:46,719 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:13:46,736 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:18:46,745 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:23:46,749 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:28:46,757 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:33:46,766 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:38:46,768 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:43:46,774 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:48:46,780 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:53:46,787 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:58:46,790 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:03:46,800 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:08:46,814 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:13:46,817 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:18:46,825 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:23:46,839 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:28:46,845 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:33:46,860 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:38:46,868 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:43:46,880 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:48:46,897 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:53:46,904 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:58:46,911 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:03:46,920 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:08:46,928 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:13:46,942 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:14:05,907 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
+2020-10-27 20:14:05,908 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603800845908, current=DOWN, previous=UP]
+2020-10-27 20:14:05,910 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 20:14:05,940 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: org.apache.http.NoHttpResponseException: localhost:9001 failed to respond
+2020-10-27 20:14:05,956 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: org.apache.http.NoHttpResponseException: localhost:9001 failed to respond
+2020-10-27 20:14:05,958 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.DiscoveryClient 875 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-27 20:14:05,959 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.InstanceInfoReplicator 125 - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-27 20:14:06,084 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:14:06,092 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-7} closed
+2020-10-27 20:14:06,255 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 20:14:09,272 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 20:14:13,365 [SpringContextShutdownHook] WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient 130 - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-10-27 20:14:13,371 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 20:22:13,030 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-27 20:22:13,067 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\com\sun\xml\bind\jaxb-impl\2.1.13\jaxb-impl-2.1.13.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/activation.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jsr173_1.0_api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb1-impl.jar
+2020-10-27 20:22:13,067 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\xalan\2.7.1\xalan-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xercesImpl.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xml-apis.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/serializer.jar
+2020-10-27 20:22:13,068 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/serializer/2.7.1/xml-apis.jar
+2020-10-27 20:22:13,068 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 20:22:13,552 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 655 - The following profiles are active: dev
+2020-10-27 20:22:14,392 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-27 20:22:14,394 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-27 20:22:14,426 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 187 - Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-10-27 20:22:14,740 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=228e7c4d-c42a-3e47-8a07-55d2397a2b53
+2020-10-27 20:22:14,830 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 335 - Bean 'cn.i4.data.cloud.auth.microservice.FileMicroservice' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 20:22:15,425 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9010 (http)
+2020-10-27 20:22:15,440 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9010"]
+2020-10-27 20:22:15,441 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 20:22:15,441 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 20:22:15,554 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 20:22:15,554 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1984 ms
+2020-10-27 20:22:15,605 [restartedMain] DEBUG cn.i4.data.cloud.auth.filter.AuthLoginFilter 30 - 过滤器初始化：[ApplicationFilterConfig[name=ReportFilter, filterClass=cn.i4.data.cloud.auth.filter.AuthLoginFilter]]
+2020-10-27 20:22:16,402 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-27 20:22:16,702 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:16,773 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.FileMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:16,822 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:16,866 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.InviteCodeRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:16,920 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:16,965 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogAutocodeTableMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,022 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.LogRequestMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,086 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.MenuButtonMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,133 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,183 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.RoleMenuMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,227 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqExchangeMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,283 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SetRabbitmqQueueMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,349 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.SystemConstantMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,403 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserInfoMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,462 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,517 [restartedMain] WARN  com.baomidou.mybatisplus.core.injector.AbstractMethod 306 - [cn.i4.data.cloud.core.mapper.UserRoleMapper.selectPage] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectPage]
+2020-10-27 20:22:17,918 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 20:22:18,372 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:22:18,372 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:22:18,381 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:22:18,382 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:22:18,720 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:22:19,491 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 20:22:19,632 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 20:22:19,821 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 20:22:19,879 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 20:22:20,286 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 20:22:20,286 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 20:22:20,521 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 20:22:20,521 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 20:22:21,176 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:22:21,297 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:22:21,298 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:22:21,298 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:22:21,298 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:22:21,298 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:22:21,298 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 20:22:21,298 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:22:21,574 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:22:21,576 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 20:22:21,579 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 20:22:21,584 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603801341583 with initial instances count: 0
+2020-10-27 20:22:21,586 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTH with eureka with status UP
+2020-10-27 20:22:21,589 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603801341589, current=UP, previous=STARTING]
+2020-10-27 20:22:21,595 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9010"]
+2020-10-27 20:22:21,595 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
+2020-10-27 20:22:21,726 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9010 (http) with context path '/i4-data-cloud-start-auth'
+2020-10-27 20:22:21,727 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9010
+2020-10-27 20:22:21,796 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010 - registration status: 204
+2020-10-27 20:22:21,878 [restartedMain] INFO  cn.i4.data.cloud.auth.I4DataCloudStartAuthApplication 61 - Started I4DataCloudStartAuthApplication in 9.241 seconds (JVM running for 10.512)
+2020-10-27 20:22:51,589 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:22:51,590 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:22:51,591 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:22:51,592 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:22:51,592 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:22:51,593 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: false
+2020-10-27 20:22:51,593 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:22:51,656 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:27:21,304 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:32:21,318 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:37:21,324 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:42:21,341 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:47:21,342 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:52:21,346 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:57:21,360 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:02:21,368 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:07:21,369 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:12:21,381 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:17:21,398 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:22:21,408 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:27:21,410 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:32:21,414 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:37:21,424 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:42:21,431 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:47:21,432 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:52:21,447 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:57:21,450 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:02:21,456 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:07:21,458 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:12:21,459 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:17:21,467 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:22:21,470 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:27:21,477 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:32:21,479 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:37:21,492 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:42:21,503 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:47:21,520 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:52:21,534 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:57:21,535 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:02:21,538 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:07:21,545 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:12:21,559 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:17:21,564 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:22:21,577 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:27:21,587 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:32:21,602 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:37:21,612 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:42:21,621 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:47:21,628 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:52:21,632 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:57:21,640 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration

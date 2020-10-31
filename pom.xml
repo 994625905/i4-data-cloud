@@ -18,6 +18,7 @@
         <module>i4-data-cloud-mongo</module>
         <module>i4-data-cloud-cache</module>
         <module>i4-data-cloud-mq</module>
+        <module>i4-data-cloud-start-activiti-design</module>
         <module>i4-data-cloud-start-aspect</module>
         <module>i4-data-cloud-start-autocode</module>
         <module>i4-data-cloud-start-auth</module>

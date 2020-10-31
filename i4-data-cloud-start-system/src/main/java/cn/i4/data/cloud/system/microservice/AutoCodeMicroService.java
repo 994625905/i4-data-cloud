@@ -20,9 +20,9 @@ import java.util.List;
 public interface AutoCodeMicroService {
 
     @PostMapping(value = "/autoCode/getTableListBySource")
-    ActionResult<List<String>> getTableListBySource(@RequestParam String driverClass, @RequestParam String dataSourceUrl, @RequestParam String user, @RequestParam String password);
+    public ActionResult<List<String>> getTableListBySource(@RequestParam String driverClass, @RequestParam String dataSourceUrl, @RequestParam String user, @RequestParam String password);
 
     @PostMapping(value = "/autoCode/create")
-    ActionResult<Boolean> create(@RequestParam String driverClass, @RequestParam String dataSourceUrl, @RequestParam String user, @RequestParam String password,
+    public ActionResult<Boolean> create(@RequestParam String driverClass, @RequestParam String dataSourceUrl, @RequestParam String user, @RequestParam String password,
                                    @RequestParam String author,@RequestParam String packagePrefix,@RequestParam String localDir,@RequestParam List<String> tableList);
 }

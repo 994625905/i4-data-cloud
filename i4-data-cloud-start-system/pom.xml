@@ -67,6 +67,13 @@
             <version>4.0.5</version>
         </dependency>
 
+        <!--shiro权限控制-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+
         <!--base-->
         <dependency>
             <groupId>cn.i4.data.cloud</groupId>

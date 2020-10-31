@@ -239,4 +239,15 @@ public class SystemMsgController extends WebBaseController {
         return view;
     }
 
+    /**
+     * 加载部门管理首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/departmentMsg/index")
+    public ModelAndView departmentMsgIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/systemMsg/departmentMsg_index", request);
+        return view;
+    }
+
 }

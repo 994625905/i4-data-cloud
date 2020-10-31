@@ -47,20 +47,18 @@ public class InitConfig {
     @Bean
     public void init(){
         /** 获取交换机配置 */
-        String exchangeCache = redisService.get(RedisConstant.KEY.RABBITMQ_EXCHANGE,String.class);
-        if(StringUtil.isNullOrEmpty(exchangeCache)){
+        List<SetRabbitmqExchangeModel> exchangeList = redisService.get(RedisConstant.KEY.RABBITMQ_EXCHANGE,List.class);
+        if(exchangeList == null){
             logger.error("缓存中交换机配置为null，请手动刷新Redis");
             return;
         }
-        List<SetRabbitmqExchangeModel> exchangeList = JSONArray.parseArray(exchangeCache,SetRabbitmqExchangeModel.class);
 
         /** 获取队列配置 */
-        String queueCache = redisService.get(RedisConstant.KEY.RABBITMQ_QUEUE,String.class);
-        if(StringUtil.isNullOrEmpty(queueCache)){
+        List<SetRabbitmqQueueModel> queueList = redisService.get(RedisConstant.KEY.RABBITMQ_QUEUE,List.class);
+        if(queueList == null){
             logger.error("缓存中队列配置为null，请手动刷新Redis");
             return;
         }
-        List<SetRabbitmqQueueModel> queueList = JSONArray.parseArray(queueCache,SetRabbitmqQueueModel.class);
 
         /** 逐次匹配并绑定交换机/队列 */
         for(SetRabbitmqExchangeModel exchangeModel:exchangeList){

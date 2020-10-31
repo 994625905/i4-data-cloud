@@ -1,0 +1,325 @@
+2020-10-31 13:34:38,942 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-31 13:34:39,438 [main] INFO  cn.i4.data.cloud.eureka.I4DataCloudStartEurekaApplication 655 - The following profiles are active: dev
+2020-10-31 13:34:40,046 [main] WARN  org.springframework.boot.actuate.endpoint.EndpointId 155 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-31 13:34:40,151 [main] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=36251292-81df-3e80-96a9-51db15a76d5b
+2020-10-31 13:34:40,403 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9001 (http)
+2020-10-31 13:34:40,410 [main] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9001"]
+2020-10-31 13:34:40,411 [main] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-31 13:34:40,411 [main] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 13:34:40,494 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-31 13:34:40,495 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1045 ms
+2020-10-31 13:34:40,554 [main] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:34:40,554 [main] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:34:40,561 [main] INFO  com.netflix.config.DynamicPropertyFactory 281 - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@335f5c69
+2020-10-31 13:34:40,910 [main] INFO  com.sun.jersey.server.impl.application.WebApplicationImpl 815 - Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2020-10-31 13:34:40,964 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-31 13:34:40,964 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-31 13:34:41,054 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-31 13:34:41,054 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-31 13:34:41,533 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e7d0db2, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b5b8730, org.springframework.security.web.header.HeaderWriterFilter@67a38, org.springframework.security.web.csrf.CsrfFilter@5615f82d, org.springframework.security.web.authentication.logout.LogoutFilter@31183ee2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e0163cb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6f9a3325, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4a41caed, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@115ef673, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@321c2a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bcedb06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b4fd7d, org.springframework.security.web.session.SessionManagementFilter@31b650e9, org.springframework.security.web.access.ExceptionTranslationFilter@878feb2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11170228]
+2020-10-31 13:34:41,543 [main] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:34:41,544 [main] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:34:41,654 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:34:42,151 [main] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-31 13:34:42,167 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 13:34:42,206 [main] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-31 13:34:42,228 [main] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-31 13:34:42,228 [main] INFO  com.netflix.discovery.DiscoveryClient 374 - Client configured to neither register nor query for data.
+2020-10-31 13:34:42,233 [main] INFO  com.netflix.discovery.DiscoveryClient 389 - Discovery Client initialized at timestamp 1604122482232 with initial instances count: 0
+2020-10-31 13:34:42,261 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext 66 - Initializing ...
+2020-10-31 13:34:42,263 [main] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 13:34:42,277 [main] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 153 - Finished initializing remote region registries. All known remote regions: []
+2020-10-31 13:34:42,278 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext 73 - Initialized
+2020-10-31 13:34:42,287 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver 58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-31 13:34:42,344 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-EUREKA with eureka with status UP
+2020-10-31 13:34:42,345 [main] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9001"]
+2020-10-31 13:34:42,345 [Thread-18] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 110 - Setting the eureka configuration..
+2020-10-31 13:34:42,346 [Thread-18] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 115 - Eureka data center value eureka.datacenter is not set, defaulting to default
+2020-10-31 13:34:42,346 [Thread-18] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 129 - Eureka environment value eureka.environment is not set, defaulting to test
+2020-10-31 13:34:42,355 [Thread-18] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 188 - isAws returned false
+2020-10-31 13:34:42,355 [Thread-18] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 153 - Initialized server context
+2020-10-31 13:34:42,356 [Thread-18] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 242 - Got 1 instances from neighboring DS node
+2020-10-31 13:34:42,356 [Thread-18] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 243 - Renew threshold is: 1
+2020-10-31 13:34:42,356 [Thread-18] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 254 - Changing status to UP
+2020-10-31 13:34:42,365 [Thread-18] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration 72 - Started Eureka Server
+2020-10-31 13:34:42,369 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9001 (http) with context path ''
+2020-10-31 13:34:42,370 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9001
+2020-10-31 13:34:42,456 [main] INFO  cn.i4.data.cloud.eureka.I4DataCloudStartEurekaApplication 61 - Started I4DataCloudStartEurekaApplication in 3.957 seconds (JVM running for 4.915)
+2020-10-31 13:34:42,905 [RMI TCP Connection(1)-192.168.1.202] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 13:34:42,905 [RMI TCP Connection(1)-192.168.1.202] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-31 13:34:42,911 [RMI TCP Connection(1)-192.168.1.202] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 6 ms
+2020-10-31 13:35:01,858 [http-nio-9001-exec-1] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 13:35:09,022 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 13:35:42,363 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 0ms
+2020-10-31 13:35:42,905 [http-nio-9001-exec-9] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTH/localhost:9010 with status UP (replication=false)
+2020-10-31 13:35:49,611 [http-nio-9001-exec-1] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 with status UP (replication=false)
+2020-10-31 13:36:42,377 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 13:37:42,385 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 13:38:42,396 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 13:39:05,004 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status DOWN (replication=false)
+2020-10-31 13:39:08,144 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 (replication=false)
+2020-10-31 13:39:42,407 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 13:40:30,267 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 13:40:42,422 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 13:41:42,425 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 13:42:36,995 [http-nio-9001-exec-1] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 13:42:37,264 [http-nio-9001-exec-3] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTH/localhost:9010 with status DOWN (replication=false)
+2020-10-31 13:42:37,580 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 with status DOWN (replication=false)
+2020-10-31 13:42:40,276 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 13:42:40,430 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-AUTH/localhost:9010 (replication=false)
+2020-10-31 13:42:40,855 [http-nio-9001-exec-9] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 (replication=false)
+2020-10-31 13:42:42,437 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 13:42:43,111 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTH/localhost:9010 with status UP (replication=false)
+2020-10-31 13:42:43,380 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 with status UP (replication=false)
+2020-10-31 13:42:43,730 [http-nio-9001-exec-10] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 13:43:42,451 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 13:43:52,914 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status DOWN (replication=false)
+2020-10-31 13:43:56,043 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 (replication=false)
+2020-10-31 13:44:21,668 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 13:44:42,271 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 13:44:42,460 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 9ms
+2020-10-31 13:45:42,469 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 13:46:42,473 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 13:47:42,479 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 13:48:42,490 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 10ms
+2020-10-31 13:49:42,292 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 13:49:42,497 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 13:50:42,503 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 13:51:41,867 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-EUREKA with eureka with status DOWN
+2020-10-31 13:51:41,984 [SpringContextShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext 79 - Shutting down ...
+2020-10-31 13:51:41,997 [SpringContextShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext 84 - Shut down
+2020-10-31 13:51:42,001 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:51:42,003 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-31 13:51:42,004 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-31 13:53:11,242 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-31 13:53:11,729 [main] INFO  cn.i4.data.cloud.eureka.I4DataCloudStartEurekaApplication 655 - The following profiles are active: dev
+2020-10-31 13:53:12,328 [main] WARN  org.springframework.boot.actuate.endpoint.EndpointId 155 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-10-31 13:53:12,432 [main] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=36251292-81df-3e80-96a9-51db15a76d5b
+2020-10-31 13:53:12,681 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9001 (http)
+2020-10-31 13:53:12,689 [main] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9001"]
+2020-10-31 13:53:12,689 [main] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-31 13:53:12,689 [main] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-31 13:53:12,774 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-31 13:53:12,774 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1033 ms
+2020-10-31 13:53:12,835 [main] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:53:12,835 [main] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:53:12,843 [main] INFO  com.netflix.config.DynamicPropertyFactory 281 - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@531ec978
+2020-10-31 13:53:13,181 [main] INFO  com.sun.jersey.server.impl.application.WebApplicationImpl 815 - Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2020-10-31 13:53:13,232 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-31 13:53:13,233 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-31 13:53:13,316 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-31 13:53:13,317 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-31 13:53:13,788 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75f8d9b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@26f480c6, org.springframework.security.web.header.HeaderWriterFilter@7404aff2, org.springframework.security.web.csrf.CsrfFilter@38c55a8a, org.springframework.security.web.authentication.logout.LogoutFilter@688d2a5d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13d10057, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@417446d9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4f7ae05, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1468e880, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7747cc1b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@615c4ea4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e23ee0e, org.springframework.security.web.session.SessionManagementFilter@56a09a5c, org.springframework.security.web.access.ExceptionTranslationFilter@4a41caed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50bb1c1f]
+2020-10-31 13:53:13,798 [main] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-31 13:53:13,798 [main] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-31 13:53:13,896 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-31 13:53:14,415 [main] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-31 13:53:14,430 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-31 13:53:14,462 [main] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-31 13:53:14,482 [main] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-31 13:53:14,482 [main] INFO  com.netflix.discovery.DiscoveryClient 374 - Client configured to neither register nor query for data.
+2020-10-31 13:53:14,487 [main] INFO  com.netflix.discovery.DiscoveryClient 389 - Discovery Client initialized at timestamp 1604123594486 with initial instances count: 0
+2020-10-31 13:53:14,513 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext 66 - Initializing ...
+2020-10-31 13:53:14,515 [main] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 13:53:14,527 [main] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 153 - Finished initializing remote region registries. All known remote regions: []
+2020-10-31 13:53:14,528 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext 73 - Initialized
+2020-10-31 13:53:14,537 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver 58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-31 13:53:14,595 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-EUREKA with eureka with status UP
+2020-10-31 13:53:14,597 [main] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9001"]
+2020-10-31 13:53:14,597 [Thread-17] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 110 - Setting the eureka configuration..
+2020-10-31 13:53:14,598 [Thread-17] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 115 - Eureka data center value eureka.datacenter is not set, defaulting to default
+2020-10-31 13:53:14,598 [Thread-17] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 129 - Eureka environment value eureka.environment is not set, defaulting to test
+2020-10-31 13:53:14,606 [Thread-17] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 188 - isAws returned false
+2020-10-31 13:53:14,606 [Thread-17] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap 153 - Initialized server context
+2020-10-31 13:53:14,607 [Thread-17] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 242 - Got 1 instances from neighboring DS node
+2020-10-31 13:53:14,607 [Thread-17] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 243 - Renew threshold is: 1
+2020-10-31 13:53:14,607 [Thread-17] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 254 - Changing status to UP
+2020-10-31 13:53:14,613 [Thread-17] INFO  org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration 72 - Started Eureka Server
+2020-10-31 13:53:14,618 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9001 (http) with context path ''
+2020-10-31 13:53:14,619 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9001
+2020-10-31 13:53:14,704 [main] INFO  cn.i4.data.cloud.eureka.I4DataCloudStartEurekaApplication 61 - Started I4DataCloudStartEurekaApplication in 3.877 seconds (JVM running for 4.737)
+2020-10-31 13:53:15,278 [RMI TCP Connection(3)-192.168.1.202] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-31 13:53:15,278 [RMI TCP Connection(3)-192.168.1.202] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-31 13:53:15,283 [RMI TCP Connection(3)-192.168.1.202] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 5 ms
+2020-10-31 13:53:32,392 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 with status UP (replication=false)
+2020-10-31 13:53:40,231 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTH/localhost:9010 with status UP (replication=false)
+2020-10-31 13:53:47,995 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-FILE/localhost:9012 with status UP (replication=false)
+2020-10-31 13:53:55,103 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 with status UP (replication=false)
+2020-10-31 13:53:58,142 [http-nio-9001-exec-10] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 13:54:05,869 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 13:54:14,621 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 0ms
+2020-10-31 13:55:14,633 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 13:56:14,647 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 13:57:14,653 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 13:58:14,658 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 13:59:14,659 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 0ms
+2020-10-31 14:00:14,672 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 14:01:14,675 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 14:02:14,677 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 14:03:14,522 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 14:03:14,679 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 1ms
+2020-10-31 14:04:14,691 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 14:05:06,614 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status DOWN (replication=false)
+2020-10-31 14:05:09,761 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 (replication=false)
+2020-10-31 14:05:11,587 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 14:05:14,699 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 14:05:22,653 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status DOWN (replication=false)
+2020-10-31 14:05:25,782 [http-nio-9001-exec-9] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 (replication=false)
+2020-10-31 14:05:27,522 [http-nio-9001-exec-10] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 14:06:14,711 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 14:07:14,716 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:07:41,028 [http-nio-9001-exec-10] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 14:07:44,344 [http-nio-9001-exec-3] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 14:07:57,593 [http-nio-9001-exec-8] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 14:08:14,532 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 14:08:14,720 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:09:14,734 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 14:10:14,748 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 14:11:14,753 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 14:12:14,760 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:13:14,527 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 14:13:14,764 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 14:14:14,765 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 1ms
+2020-10-31 14:15:14,771 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 14:16:14,778 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:16:32,928 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 14:16:36,210 [http-nio-9001-exec-3] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 14:16:49,547 [http-nio-9001-exec-1] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 14:17:14,782 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:18:14,787 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 14:19:14,799 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 14:20:14,802 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 14:21:14,806 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:22:14,812 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:23:14,535 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 14:23:14,535 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 14:23:14,817 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:24:14,826 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 9ms
+2020-10-31 14:25:14,841 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 14:26:14,853 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 14:27:14,863 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 10ms
+2020-10-31 14:28:14,875 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 14:29:14,888 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 14:29:18,967 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 14:29:22,257 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 14:29:27,649 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status DOWN (replication=false)
+2020-10-31 14:29:30,774 [http-nio-9001-exec-8] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 (replication=false)
+2020-10-31 14:29:54,787 [http-nio-9001-exec-8] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI/localhost:9016 with status UP (replication=false)
+2020-10-31 14:30:14,889 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 0ms
+2020-10-31 14:30:18,158 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 14:31:14,901 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 14:32:14,908 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 14:33:14,540 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 14:33:14,916 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 14:34:14,921 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:35:14,928 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 14:36:14,941 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 14:37:14,953 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 14:37:17,064 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI/localhost:9016 with status DOWN (replication=false)
+2020-10-31 14:37:19,442 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 14:37:20,204 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI/localhost:9016 (replication=false)
+2020-10-31 14:37:22,727 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 14:37:34,102 [http-nio-9001-exec-9] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 14:38:07,986 [http-nio-9001-exec-1] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 14:38:14,545 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 14:38:14,956 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 14:39:14,959 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 14:40:14,973 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 14:41:14,978 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 14:42:14,978 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 0ms
+2020-10-31 14:42:35,404 [http-nio-9001-exec-10] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 14:42:38,745 [http-nio-9001-exec-6] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 14:42:41,889 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 14:43:14,543 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 14:43:14,984 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:43:27,587 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status DOWN (replication=false)
+2020-10-31 14:43:30,732 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 (replication=false)
+2020-10-31 14:44:14,987 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 14:44:31,186 [http-nio-9001-exec-10] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 14:44:34,433 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 14:44:56,058 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-ACTIVITI-DESIGN/localhost:9016 with status UP (replication=false)
+2020-10-31 14:45:13,599 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 14:45:14,991 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 14:46:15,000 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 9ms
+2020-10-31 14:47:15,009 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 14:48:15,017 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 14:49:15,024 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 14:50:15,031 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:51:15,045 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 14:52:15,057 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 14:53:14,549 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 14:53:14,550 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 14:53:15,070 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 14:54:15,082 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 14:55:15,096 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 14:56:15,107 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 11ms
+2020-10-31 14:57:15,114 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:58:15,120 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 6ms
+2020-10-31 14:59:15,127 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 15:00:15,131 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 15:01:15,134 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 15:02:15,150 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 15ms
+2020-10-31 15:03:14,554 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 15:03:15,155 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:04:15,164 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 15:05:15,169 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 15:06:15,181 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 15:07:15,184 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 15:08:14,554 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 15:08:15,185 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 1ms
+2020-10-31 15:09:15,191 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:10:15,195 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 15:11:15,210 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 15:12:15,215 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 15:13:14,561 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 15:13:15,222 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 15:14:15,238 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 15ms
+2020-10-31 15:15:15,240 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 15:16:15,242 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 1ms
+2020-10-31 15:17:15,246 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 15:18:15,252 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:19:15,255 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 15:20:15,260 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:21:15,274 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 13ms
+2020-10-31 15:22:15,279 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:23:14,566 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 15:23:14,567 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 15:23:15,288 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 15:24:15,296 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 15:25:15,301 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 15:26:15,310 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 9ms
+2020-10-31 15:27:15,318 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 7ms
+2020-10-31 15:28:15,320 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 1ms
+2020-10-31 15:29:15,332 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 12ms
+2020-10-31 15:30:15,336 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 3ms
+2020-10-31 15:31:15,346 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 10ms
+2020-10-31 15:32:15,347 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 0ms
+2020-10-31 15:33:14,581 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 15:33:15,352 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:34:15,367 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 14ms
+2020-10-31 15:35:15,369 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 2ms
+2020-10-31 15:36:15,374 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 4ms
+2020-10-31 15:37:15,380 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:38:14,575 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl 534 - Current renewal threshold is : 0
+2020-10-31 15:38:15,381 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 1ms
+2020-10-31 15:39:15,387 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 5ms
+2020-10-31 15:40:15,396 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 9ms
+2020-10-31 15:41:15,407 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 10ms
+2020-10-31 15:42:15,417 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 10ms
+2020-10-31 15:42:37,475 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 with status DOWN (replication=false)
+2020-10-31 15:42:37,583 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status DOWN (replication=false)
+2020-10-31 15:42:37,709 [http-nio-9001-exec-4] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTH/localhost:9010 with status DOWN (replication=false)
+2020-10-31 15:42:40,979 [http-nio-9001-exec-3] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-AUTH/localhost:9010 (replication=false)
+2020-10-31 15:42:40,979 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 (replication=false)
+2020-10-31 15:42:41,456 [http-nio-9001-exec-2] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 328 - Cancelled instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 (replication=false)
+2020-10-31 15:42:43,981 [http-nio-9001-exec-8] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-CONSUMER/localhost:9014 with status UP (replication=false)
+2020-10-31 15:42:45,944 [http-nio-9001-exec-5] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-AUTH/localhost:9010 with status UP (replication=false)
+2020-10-31 15:42:53,575 [http-nio-9001-exec-7] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 266 - Registered instance I4-DATA-CLOUD-START-SYSTEM/localhost:9011 with status UP (replication=false)
+2020-10-31 15:43:14,586 [Eureka-PeerNodesUpdater] WARN  com.netflix.eureka.cluster.PeerEurekaNodes 155 - The replica size seems to be empty. Check the route 53 DNS Registry
+2020-10-31 15:43:15,425 [Eureka-EvictionTimer] INFO  com.netflix.eureka.registry.AbstractInstanceRegistry 1247 - Running the evict task with compensationTime 8ms
+2020-10-31 15:43:33,594 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-EUREKA with eureka with status DOWN
+2020-10-31 15:43:33,722 [SpringContextShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext 79 - Shutting down ...
+2020-10-31 15:43:33,741 [SpringContextShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext 84 - Shut down
+2020-10-31 15:43:33,747 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-31 15:43:33,752 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-31 15:43:33,756 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient

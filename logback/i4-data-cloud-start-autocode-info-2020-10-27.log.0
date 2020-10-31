@@ -1,0 +1,859 @@
+2020-10-27 15:35:14,353 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-27 15:35:14,391 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 15:35:14,827 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 15:35:15,233 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 15:35:15,440 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=7b434e3d-9f83-3d58-af48-d68762c05bce
+2020-10-27 15:35:15,860 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 15:35:15,868 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 15:35:15,869 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 15:35:15,869 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 15:35:15,975 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 15:35:15,975 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 1134 ms
+2020-10-27 15:35:16,064 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 15:35:16,064 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 15:35:16,068 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 15:35:16,068 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 15:35:16,198 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 15:35:16,461 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-27 15:35:16,548 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 15:35:16,639 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 15:35:16,748 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 15:35:16,868 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 15:35:16,955 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 15:35:16,987 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 15:35:17,199 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 15:35:17,199 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 15:35:17,294 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 15:35:17,294 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 15:35:17,516 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:35:17,580 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 15:35:17,580 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 15:35:17,580 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 15:35:17,580 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 15:35:17,581 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 15:35:17,581 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 15:35:17,581 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 15:35:17,807 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 15:35:17,810 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 15:35:17,813 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 15:35:17,817 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603784117815 with initial instances count: 4
+2020-10-27 15:35:17,818 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 15:35:17,819 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603784117819, current=UP, previous=STARTING]
+2020-10-27 15:35:17,821 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 15:35:17,823 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 15:35:17,847 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 15:35:17,848 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 15:35:17,859 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 15:35:17,922 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 3.962 seconds (JVM running for 5.386)
+2020-10-27 15:40:17,590 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:45:17,599 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:50:17,604 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 15:55:17,609 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:00:17,611 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:05:17,618 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:10:17,629 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:15:17,646 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:20:17,649 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:25:17,650 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:30:17,667 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:35:17,676 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:38:08,669 [http-nio-9015-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 16:38:08,669 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 16:38:08,686 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 16 ms
+2020-10-27 16:39:46,315 [Thread-2] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 16:39:46,315 [Thread-2] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603787986315, current=DOWN, previous=UP]
+2020-10-27 16:39:46,316 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 16:39:46,327 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 16:39:46,451 [Thread-2] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-27 16:39:46,451 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 16:39:46,454 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 16:39:49,464 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 16:39:49,478 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 16:39:49,489 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 16:39:49,874 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 16:39:50,072 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 16:39:50,137 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=7b434e3d-9f83-3d58-af48-d68762c05bce
+2020-10-27 16:39:50,241 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 16:39:50,242 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 16:39:50,242 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 16:39:50,242 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 16:39:50,257 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 16:39:50,257 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 379 ms
+2020-10-27 16:39:50,273 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 16:39:50,274 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 16:39:50,318 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 16:39:50,384 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-2} inited
+2020-10-27 16:39:50,389 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 16:39:50,421 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 16:39:50,504 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 16:39:50,594 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 16:39:50,628 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 16:39:50,630 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 16:39:50,631 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 16:39:50,631 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 16:39:50,631 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 16:39:50,631 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 16:39:50,735 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:39:50,739 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 16:39:50,739 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 16:39:50,740 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 16:39:50,740 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 16:39:50,740 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 16:39:50,740 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 16:39:50,740 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 16:39:50,820 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 16:39:50,821 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 16:39:50,822 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 16:39:50,823 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603787990823 with initial instances count: 5
+2020-10-27 16:39:50,824 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 16:39:50,825 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603787990825, current=UP, previous=STARTING]
+2020-10-27 16:39:50,825 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 16:39:50,826 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 16:39:50,829 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 16:39:50,829 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 16:39:50,842 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 16:39:50,907 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 1.279 seconds (JVM running for 3878.37)
+2020-10-27 16:39:50,909 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 16:40:06,839 [http-nio-9015-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 16:40:06,840 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 16:40:06,844 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 4 ms
+2020-10-27 16:40:40,841 [Thread-22] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 16:40:40,842 [Thread-22] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603788040842, current=DOWN, previous=UP]
+2020-10-27 16:40:40,842 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 16:40:40,851 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 16:40:40,950 [Thread-22] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-2} closed
+2020-10-27 16:40:40,950 [Thread-22] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 16:40:40,951 [Thread-22] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 16:40:43,957 [Thread-22] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 16:40:43,973 [Thread-22] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 16:40:43,992 [Thread-22] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 16:40:44,423 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 16:40:44,606 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 16:40:44,659 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=7b434e3d-9f83-3d58-af48-d68762c05bce
+2020-10-27 16:40:44,748 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 16:40:44,749 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 16:40:44,749 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 16:40:44,749 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 16:40:44,763 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 16:40:44,764 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 337 ms
+2020-10-27 16:40:44,777 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 16:40:44,777 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 16:40:44,819 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 16:40:44,874 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-3} inited
+2020-10-27 16:40:44,880 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 16:40:44,904 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 16:40:44,986 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 16:40:45,068 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 16:40:45,091 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 16:40:45,093 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 16:40:45,094 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 16:40:45,094 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 16:40:45,094 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 16:40:45,094 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 16:40:45,183 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:40:45,183 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 16:40:45,184 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 16:40:45,184 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 16:40:45,184 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 16:40:45,184 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 16:40:45,184 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 16:40:45,185 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 16:40:45,263 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 16:40:45,264 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 16:40:45,265 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 16:40:45,265 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603788045265 with initial instances count: 5
+2020-10-27 16:40:45,266 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 16:40:45,266 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603788045266, current=UP, previous=STARTING]
+2020-10-27 16:40:45,267 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 16:40:45,268 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 16:40:45,270 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 16:40:45,270 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 16:40:45,281 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 16:40:45,345 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 1.16 seconds (JVM running for 3932.808)
+2020-10-27 16:40:45,347 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 16:42:48,878 [http-nio-9015-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 16:42:48,878 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 16:42:48,882 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 4 ms
+2020-10-27 16:45:45,195 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:50:45,200 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 16:55:45,207 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:00:45,213 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:05:45,224 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:10:45,238 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:15:45,250 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:20:45,259 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:25:45,266 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:30:45,271 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:35:45,279 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:40:45,280 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:45:45,295 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:50:45,297 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 17:55:45,303 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:00:45,305 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:05:45,320 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:10:45,324 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:15:45,336 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:20:45,345 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:25:45,362 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:30:45,375 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:35:45,378 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:40:45,381 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:45:45,391 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:50:45,400 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 18:55:45,401 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:00:45,408 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:05:45,412 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:10:45,422 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:15:45,425 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 19:17:48,927 [Thread-30] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 19:17:48,927 [Thread-30] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603797468927, current=DOWN, previous=UP]
+2020-10-27 19:17:48,928 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 19:17:48,952 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 19:17:49,042 [Thread-30] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-3} closed
+2020-10-27 19:17:49,042 [Thread-30] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 19:17:49,043 [Thread-30] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 19:17:52,051 [Thread-30] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 19:17:52,065 [Thread-30] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 19:17:52,080 [Thread-30] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 19:17:52,521 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 19:17:52,536 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext 559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication]; nested exception is java.io.FileNotFoundException: class path resource [freemarker/template/TemplateDirectiveModel.class] cannot be opened because it does not exist
+2020-10-27 20:22:18,820 [background-preinit] INFO  org.hibernate.validator.internal.util.Version 21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-10-27 20:22:18,852 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\com\sun\xml\bind\jaxb-impl\2.1.13\jaxb-impl-2.1.13.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/activation.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jsr173_1.0_api.jar,file:/D:/wangjcsoft/mavenlib/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb1-impl.jar
+2020-10-27 20:22:18,852 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\xalan\2.7.1\xalan-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xercesImpl.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/xml-apis.jar,file:/D:/wangjcsoft/mavenlib/repository/xalan/xalan/2.7.1/serializer.jar
+2020-10-27 20:22:18,853 [restartedMain] INFO  org.springframework.boot.devtools.restart.ChangeableUrls 225 - The Class-Path manifest attribute in D:\wangjcsoft\mavenlib\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar referenced one or more files that do not exist: file:/D:/wangjcsoft/mavenlib/repository/xalan/serializer/2.7.1/xml-apis.jar
+2020-10-27 20:22:18,853 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor 225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 20:22:19,727 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 20:22:20,574 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 20:22:20,958 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=fb2776b0-3aef-3b52-9c12-e675fa1fb9b2
+2020-10-27 20:22:21,800 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 20:22:21,814 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:22:21,814 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 20:22:21,815 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 20:22:21,969 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 20:22:21,970 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 2215 ms
+2020-10-27 20:22:22,126 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:22:22,127 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:22:22,131 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:22:22,131 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:22:22,301 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:22:22,700 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-1} inited
+2020-10-27 20:22:22,807 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 20:22:22,901 [restartedMain] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration 67 - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-27 20:22:22,990 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 20:22:23,121 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 20:22:23,252 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 20:22:23,351 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 20:22:23,386 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 20:22:23,598 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 20:22:23,598 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 20:22:23,712 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 20:22:23,713 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 20:22:23,970 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:22:24,037 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:22:24,038 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:22:24,038 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:22:24,038 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:22:24,038 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:22:24,038 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 20:22:24,039 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:22:24,226 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:22:24,228 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 20:22:24,231 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 20:22:24,234 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603801344233 with initial instances count: 0
+2020-10-27 20:22:24,236 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 20:22:24,237 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603801344237, current=UP, previous=STARTING]
+2020-10-27 20:22:24,238 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:22:24,241 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:22:24,268 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 20:22:24,269 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 20:22:24,312 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:22:24,347 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 6.264 seconds (JVM running for 7.854)
+2020-10-27 20:22:54,311 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:22:54,312 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:22:54,312 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:22:54,312 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:22:54,312 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:22:54,312 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: false
+2020-10-27 20:22:54,312 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:22:54,360 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:23:28,006 [http-nio-9015-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 20:23:28,007 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 20:23:28,011 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 4 ms
+2020-10-27 20:27:24,046 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:30:50,346 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[j]表集合开始
+2020-10-27 20:30:50,404 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_autocode_datasource]
+2020-10-27 20:30:50,404 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[j]表[t_autocode_datasource]分析开始.
+2020-10-27 20:30:50,436 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:30:50,436 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_name]comment[数据源名称]
+2020-10-27 20:30:50,436 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_url]comment[数据源链接]
+2020-10-27 20:30:50,436 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[database_name]comment[数据库名称]
+2020-10-27 20:30:50,436 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_name]comment[驱动名称]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_type]comment[驱动类型（MySQL，Oracle……）]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_user]comment[授权的用户名]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_password]comment[授权的用户密码]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_author]comment[生成代码的默认作者]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_package_prefix]comment[默认的包前缀]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_local]comment[默认存放的地址]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[添加时间]
+2020-10-27 20:30:50,437 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[update_time]comment[修改时间]
+2020-10-27 20:30:50,438 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[j]表[t_autocode_datasource]分析结束.
+2020-10-27 20:30:50,448 [http-nio-9015-exec-4] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_autocode_datasource
+2020-10-27 20:32:24,060 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:34:03,867 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[j]表集合开始
+2020-10-27 20:34:03,924 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:34:03,925 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[j]表[t_file]分析开始.
+2020-10-27 20:34:03,939 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:34:03,939 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:34:03,939 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:34:03,939 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:34:03,939 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:34:03,939 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:34:03,940 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[j]表[t_file]分析结束.
+2020-10-27 20:34:03,948 [http-nio-9015-exec-10] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:34:35,598 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[j]表集合开始
+2020-10-27 20:34:35,664 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:34:35,664 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[j]表[t_file]分析开始.
+2020-10-27 20:34:35,678 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:34:35,678 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:34:35,679 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:34:35,680 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:34:35,680 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:34:35,680 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[j]表[t_file]分析结束.
+2020-10-27 20:34:35,687 [http-nio-9015-exec-8] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:36:08,589 [Thread-2] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 20:36:08,590 [Thread-2] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603802168590, current=DOWN, previous=UP]
+2020-10-27 20:36:08,590 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:36:08,596 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:36:08,719 [Thread-2] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-1} closed
+2020-10-27 20:36:08,719 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:36:08,721 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 20:36:11,725 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 20:36:11,741 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 20:36:11,749 [Thread-2] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 20:36:12,113 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 20:36:12,308 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 20:36:12,365 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=fb2776b0-3aef-3b52-9c12-e675fa1fb9b2
+2020-10-27 20:36:12,465 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 20:36:12,466 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:36:12,466 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 20:36:12,466 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 20:36:12,482 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 20:36:12,482 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 365 ms
+2020-10-27 20:36:12,499 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:36:12,499 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:36:12,544 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:36:12,607 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-2} inited
+2020-10-27 20:36:12,614 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 20:36:12,626 [restartedMain] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration 67 - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-27 20:36:12,643 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 20:36:12,725 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 20:36:12,811 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 20:36:12,841 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 20:36:12,843 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 20:36:12,847 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 20:36:12,847 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 20:36:12,847 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 20:36:12,848 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 20:36:12,943 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:36:12,943 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:36:12,944 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:36:12,944 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:36:12,944 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:36:12,944 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:36:12,945 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 20:36:12,945 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:36:13,022 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:36:13,023 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 20:36:13,024 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 20:36:13,024 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603802173024 with initial instances count: 5
+2020-10-27 20:36:13,025 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 20:36:13,026 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603802173026, current=UP, previous=STARTING]
+2020-10-27 20:36:13,026 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:36:13,027 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:36:13,030 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 20:36:13,030 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 20:36:13,042 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:36:13,100 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 1.228 seconds (JVM running for 836.608)
+2020-10-27 20:36:13,102 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 20:36:17,485 [http-nio-9015-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 20:36:17,485 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 20:36:17,490 [http-nio-9015-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 4 ms
+2020-10-27 20:36:52,178 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:36:52,251 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:36:52,252 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_file]分析开始.
+2020-10-27 20:36:52,274 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:36:52,275 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_user_id]，类型[INT]
+2020-10-27 20:36:52,276 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[name]，类型[VARCHAR]
+2020-10-27 20:36:52,276 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[cover]，类型[VARCHAR]
+2020-10-27 20:36:52,276 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[url]，类型[VARCHAR]
+2020-10-27 20:36:52,277 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[suffix]，类型[VARCHAR]
+2020-10-27 20:36:52,277 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[type]，类型[TINYINT]
+2020-10-27 20:36:52,278 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[size]，类型[FLOAT]
+2020-10-27 20:36:52,278 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[width]，类型[INT]
+2020-10-27 20:36:52,279 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[height]，类型[DOUBLE]
+2020-10-27 20:36:52,279 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[status]，类型[TINYINT]
+2020-10-27 20:36:52,279 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[description]，类型[VARCHAR]
+2020-10-27 20:36:52,279 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:36:52,288 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:36:52,289 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:36:52,289 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:36:52,289 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:36:52,290 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:36:52,291 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:36:52,291 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_file]分析结束.
+2020-10-27 20:36:52,299 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:37:45,428 [Thread-26] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 20:37:45,428 [Thread-26] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603802265428, current=DOWN, previous=UP]
+2020-10-27 20:37:45,428 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:37:45,444 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:37:45,551 [Thread-26] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-2} closed
+2020-10-27 20:37:45,551 [Thread-26] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:37:45,552 [Thread-26] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 20:37:48,565 [Thread-26] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 20:37:48,580 [Thread-26] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 20:37:48,592 [Thread-26] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 20:37:49,015 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 20:37:49,205 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 20:37:49,257 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=fb2776b0-3aef-3b52-9c12-e675fa1fb9b2
+2020-10-27 20:37:49,357 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 20:37:49,357 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:37:49,357 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 20:37:49,358 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 20:37:49,373 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 20:37:49,374 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 355 ms
+2020-10-27 20:37:49,391 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:37:49,391 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:37:49,437 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:37:49,499 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-3} inited
+2020-10-27 20:37:49,505 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 20:37:49,516 [restartedMain] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration 67 - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-27 20:37:49,533 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 20:37:49,613 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 20:37:49,694 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 20:37:49,714 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 20:37:49,715 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 20:37:49,716 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 20:37:49,716 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 20:37:49,717 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 20:37:49,717 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 20:37:49,810 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:37:49,811 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:37:49,811 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:37:49,812 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:37:49,812 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:37:49,812 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:37:49,812 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 20:37:49,813 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:37:49,889 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:37:49,890 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 20:37:49,890 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 20:37:49,891 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603802269891 with initial instances count: 5
+2020-10-27 20:37:49,892 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 20:37:49,892 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603802269892, current=UP, previous=STARTING]
+2020-10-27 20:37:49,892 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:37:49,893 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:37:49,896 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 20:37:49,896 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 20:37:49,910 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:37:49,968 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 1.19 seconds (JVM running for 933.475)
+2020-10-27 20:37:49,969 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 20:38:00,421 [http-nio-9015-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 20:38:00,421 [http-nio-9015-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 20:38:00,425 [http-nio-9015-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 4 ms
+2020-10-27 20:38:07,990 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:38:08,057 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:38:08,058 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_file]分析开始.
+2020-10-27 20:38:08,073 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_user_id]，类型[INT]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[name]，类型[VARCHAR]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[cover]，类型[VARCHAR]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[url]，类型[VARCHAR]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[suffix]，类型[VARCHAR]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[type]，类型[TINYINT]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[size]，类型[FLOAT]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[width]，类型[INT]
+2020-10-27 20:38:08,074 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[height]，类型[DOUBLE]
+2020-10-27 20:38:08,075 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[status]，类型[TINYINT]
+2020-10-27 20:38:08,075 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[description]，类型[VARCHAR]
+2020-10-27 20:38:08,075 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:38:08,082 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:38:08,083 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:38:08,084 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:38:08,084 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:38:08,084 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_file]分析结束.
+2020-10-27 20:38:08,084 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:41:43,416 [Thread-34] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 20:41:43,417 [Thread-34] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603802503417, current=DOWN, previous=UP]
+2020-10-27 20:41:43,417 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:41:43,423 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:41:43,571 [Thread-34] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-3} closed
+2020-10-27 20:41:43,572 [Thread-34] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:41:43,573 [Thread-34] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 20:41:46,586 [Thread-34] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 20:41:46,601 [Thread-34] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 20:41:46,607 [Thread-34] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 20:41:46,976 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 20:41:47,166 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 20:41:47,224 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=fb2776b0-3aef-3b52-9c12-e675fa1fb9b2
+2020-10-27 20:41:47,328 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 20:41:47,328 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:41:47,328 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 20:41:47,328 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 20:41:47,344 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 20:41:47,344 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 365 ms
+2020-10-27 20:41:47,359 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:41:47,359 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:41:47,399 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:41:47,457 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-4} inited
+2020-10-27 20:41:47,462 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 20:41:47,474 [restartedMain] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration 67 - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-27 20:41:47,492 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 20:41:47,574 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 20:41:47,659 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 20:41:47,683 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 20:41:47,684 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 20:41:47,685 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 20:41:47,685 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 20:41:47,686 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 20:41:47,686 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 20:41:47,779 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 20:41:47,780 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:41:47,858 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:41:47,859 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 20:41:47,860 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 20:41:47,860 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603802507860 with initial instances count: 5
+2020-10-27 20:41:47,861 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 20:41:47,861 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603802507861, current=UP, previous=STARTING]
+2020-10-27 20:41:47,862 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:41:47,863 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:41:47,865 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 20:41:47,865 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 20:41:47,870 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:41:47,936 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 1.195 seconds (JVM running for 1171.444)
+2020-10-27 20:41:47,938 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 20:41:54,182 [http-nio-9015-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 20:41:54,182 [http-nio-9015-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 20:41:54,186 [http-nio-9015-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 3 ms
+2020-10-27 20:41:54,253 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:41:54,305 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:41:54,305 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_file]分析开始.
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_user_id]，类型[INT]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[name]，类型[VARCHAR]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[cover]，类型[VARCHAR]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[url]，类型[VARCHAR]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[suffix]，类型[VARCHAR]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[type]，类型[TINYINT]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[size]，类型[FLOAT]
+2020-10-27 20:41:54,322 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[width]，类型[INT]
+2020-10-27 20:41:54,323 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[height]，类型[DOUBLE]
+2020-10-27 20:41:54,323 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[status]，类型[TINYINT]
+2020-10-27 20:41:54,323 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[description]，类型[VARCHAR]
+2020-10-27 20:41:54,323 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:41:54,331 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:41:54,331 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:41:54,331 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:41:54,331 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:41:54,331 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:41:54,331 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:41:54,332 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_file]分析结束.
+2020-10-27 20:42:14,085 [http-nio-9015-exec-3] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:42:17,488 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:42:17,546 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:42:17,546 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_file]分析开始.
+2020-10-27 20:42:17,558 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:42:17,558 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_user_id]，类型[INT]
+2020-10-27 20:42:17,558 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[name]，类型[VARCHAR]
+2020-10-27 20:42:17,558 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[cover]，类型[VARCHAR]
+2020-10-27 20:42:17,558 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[url]，类型[VARCHAR]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[suffix]，类型[VARCHAR]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[type]，类型[TINYINT]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[size]，类型[FLOAT]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[width]，类型[INT]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[height]，类型[DOUBLE]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[status]，类型[TINYINT]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[description]，类型[VARCHAR]
+2020-10-27 20:42:17,559 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:42:17,565 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:42:17,565 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:42:17,565 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:42:17,566 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:42:17,567 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:42:17,567 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:42:17,567 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:42:17,567 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_file]分析结束.
+2020-10-27 20:42:30,703 [http-nio-9015-exec-1] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:42:45,357 [Thread-42] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status DOWN
+2020-10-27 20:42:45,358 [Thread-42] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603802565358, current=DOWN, previous=UP]
+2020-10-27 20:42:45,358 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:42:45,377 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:42:45,489 [Thread-42] INFO  com.alibaba.druid.pool.DruidDataSource 1818 - {dataSource-4} closed
+2020-10-27 20:42:45,489 [Thread-42] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:42:45,490 [Thread-42] INFO  com.netflix.discovery.DiscoveryClient 932 - Shutting down DiscoveryClient ...
+2020-10-27 20:42:48,503 [Thread-42] INFO  com.netflix.discovery.DiscoveryClient 968 - Unregistering ...
+2020-10-27 20:42:48,520 [Thread-42] INFO  com.netflix.discovery.DiscoveryClient 970 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - deregister  status: 200
+2020-10-27 20:42:48,526 [Thread-42] INFO  com.netflix.discovery.DiscoveryClient 957 - Completed shut down of DiscoveryClient
+2020-10-27 20:42:48,906 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 655 - The following profiles are active: dev
+2020-10-27 20:42:49,084 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner 44 - No MyBatis mapper was found in '[cn.i4.data.cloud.autocode]' package. Please check your configuration.
+2020-10-27 20:42:49,136 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope 295 - BeanFactory id=fb2776b0-3aef-3b52-9c12-e675fa1fb9b2
+2020-10-27 20:42:49,241 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 - Tomcat initialized with port(s): 9015 (http)
+2020-10-27 20:42:49,242 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:42:49,242 [restartedMain] INFO  org.apache.catalina.core.StandardService 173 - Starting service [Tomcat]
+2020-10-27 20:42:49,242 [restartedMain] INFO  org.apache.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 20:42:49,258 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring embedded WebApplicationContext
+2020-10-27 20:42:49,258 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 - Root WebApplicationContext: initialization completed in 349 ms
+2020-10-27 20:42:49,274 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource 121 - No URLs will be polled as dynamic configuration sources.
+2020-10-27 20:42:49,275 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-10-27 20:42:49,314 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor 181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 20:42:49,372 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource 923 - {dataSource-5} inited
+2020-10-27 20:42:49,378 [restartedMain] WARN  com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 44 - Can't find class in '[com.baomidou.xx.entity.enums]' package. Please check your configuration.
+2020-10-27 20:42:49,389 [restartedMain] WARN  org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration 67 - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-27 20:42:49,408 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 61 - Unable to start LiveReload server
+2020-10-27 20:42:49,490 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration 78 - Eureka HTTP Client uses Jersey
+2020-10-27 20:42:49,573 [restartedMain] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger 86 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-10-27 20:42:49,591 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 72 - Setting initial instance status as: STARTING
+2020-10-27 20:42:49,592 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 371 - Initializing Eureka in region us-east-1
+2020-10-27 20:42:49,593 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 70 - Using JSON encoding codec LegacyJacksonJson
+2020-10-27 20:42:49,593 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 71 - Using JSON decoding codec LegacyJacksonJson
+2020-10-27 20:42:49,593 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 80 - Using XML encoding codec XStreamXml
+2020-10-27 20:42:49,593 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider 81 - Using XML decoding codec XStreamXml
+2020-10-27 20:42:49,682 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:42:49,683 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1004 - Disable delta property : false
+2020-10-27 20:42:49,683 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1005 - Single vip registry refresh property : null
+2020-10-27 20:42:49,683 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1006 - Force full registry fetch : false
+2020-10-27 20:42:49,683 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1007 - Application is null : false
+2020-10-27 20:42:49,683 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1008 - Registered Applications size is zero : true
+2020-10-27 20:42:49,684 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1010 - Application version is -1: true
+2020-10-27 20:42:49,684 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1093 - Getting all instance registry info from the eureka server
+2020-10-27 20:42:49,760 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1102 - The response status is 200
+2020-10-27 20:42:49,761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1317 - Starting heartbeat executor: renew interval is: 30
+2020-10-27 20:42:49,761 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator 60 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-10-27 20:42:49,761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 491 - Discovery Client initialized at timestamp 1603802569761 with initial instances count: 5
+2020-10-27 20:42:49,762 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 41 - Registering application I4-DATA-CLOUD-START-AUTOCODE with eureka with status UP
+2020-10-27 20:42:49,762 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient 1353 - Saw local status change event StatusChangeEvent [timestamp=1603802569762, current=UP, previous=STARTING]
+2020-10-27 20:42:49,763 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015: registering service...
+2020-10-27 20:42:49,764 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-9015"]
+2020-10-27 20:42:49,766 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 - Tomcat started on port(s): 9015 (http) with context path ''
+2020-10-27 20:42:49,766 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 145 - Updating port to 9015
+2020-10-27 20:42:49,770 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 879 - DiscoveryClient_I4-DATA-CLOUD-START-AUTOCODE/localhost:9015 - registration status: 204
+2020-10-27 20:42:49,836 [restartedMain] INFO  cn.i4.data.cloud.autocode.I4DataCloudStartAutocodeApplication 61 - Started I4DataCloudStartAutocodeApplication in 1.166 seconds (JVM running for 1233.344)
+2020-10-27 20:42:49,838 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener 63 - Condition evaluation unchanged
+2020-10-27 20:43:03,917 [http-nio-9015-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 20:43:03,917 [http-nio-9015-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
+2020-10-27 20:43:03,921 [http-nio-9015-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 4 ms
+2020-10-27 20:43:21,838 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:43:21,897 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_autocode_datasource]
+2020-10-27 20:43:21,897 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_file]
+2020-10-27 20:43:21,897 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_autocode_datasource]分析开始.
+2020-10-27 20:43:21,914 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:43:21,914 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[datasource_name]，类型[VARCHAR]
+2020-10-27 20:43:21,914 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[datasource_url]，类型[VARCHAR]
+2020-10-27 20:43:21,914 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[database_name]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[driverclass_name]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[driverclass_type]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[auth_user]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[auth_password]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_author]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_package_prefix]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_local]，类型[VARCHAR]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:43:21,915 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[update_time]，类型[BIGINT]
+2020-10-27 20:43:21,923 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:43:21,923 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_name]comment[数据源名称]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_url]comment[数据源链接]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[database_name]comment[数据库名称]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_name]comment[驱动名称]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_type]comment[驱动类型（MySQL，Oracle……）]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_user]comment[授权的用户名]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_password]comment[授权的用户密码]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_author]comment[生成代码的默认作者]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_package_prefix]comment[默认的包前缀]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_local]comment[默认存放的地址]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[添加时间]
+2020-10-27 20:43:21,924 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[update_time]comment[修改时间]
+2020-10-27 20:43:21,925 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_autocode_datasource]分析结束.
+2020-10-27 20:43:21,932 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 119 - TABLE[t_autocode_datasource] COMMENT[]
+2020-10-27 20:43:21,932 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_file]分析开始.
+2020-10-27 20:43:21,947 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:43:21,947 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_user_id]，类型[INT]
+2020-10-27 20:43:21,947 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[name]，类型[VARCHAR]
+2020-10-27 20:43:21,947 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[cover]，类型[VARCHAR]
+2020-10-27 20:43:21,947 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[url]，类型[VARCHAR]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[suffix]，类型[VARCHAR]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[type]，类型[TINYINT]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[size]，类型[FLOAT]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[width]，类型[INT]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[height]，类型[DOUBLE]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[status]，类型[TINYINT]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[description]，类型[VARCHAR]
+2020-10-27 20:43:21,948 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:43:21,955 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_user_id]comment[创建用户]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[name]comment[]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[cover]comment[封面，一般用于展示的信息]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[url]comment[在线链接]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[suffix]comment[后缀]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[type]comment[1图片 2音频 3视频 4文档 5其他]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[size]comment[文件大小(单位：KB，上传有大小限制)]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[width]comment[图片宽度]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[height]comment[图片高度]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[status]comment[1正常，0禁用]
+2020-10-27 20:43:21,956 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[description]comment[描述]
+2020-10-27 20:43:21,957 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[create_time]
+2020-10-27 20:43:21,957 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_file]分析结束.
+2020-10-27 20:43:21,964 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 119 - TABLE[t_file] COMMENT[]
+2020-10-27 20:43:21,964 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_autocode_datasource
+2020-10-27 20:43:22,013 [http-nio-9015-exec-2] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_file
+2020-10-27 20:45:23,467 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:45:23,523 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_autocode_datasource]
+2020-10-27 20:45:23,523 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_autocode_datasource]分析开始.
+2020-10-27 20:45:23,536 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:45:23,536 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[datasource_name]，类型[VARCHAR]
+2020-10-27 20:45:23,536 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[datasource_url]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[database_name]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[driverclass_name]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[driverclass_type]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[auth_user]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[auth_password]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_author]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_package_prefix]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_local]，类型[VARCHAR]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:45:23,537 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[update_time]，类型[BIGINT]
+2020-10-27 20:45:23,544 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:45:23,544 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_name]comment[数据源名称]
+2020-10-27 20:45:23,544 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_url]comment[数据源链接]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[database_name]comment[数据库名称]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_name]comment[驱动名称]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_type]comment[驱动类型（MySQL，Oracle……）]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_user]comment[授权的用户名]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_password]comment[授权的用户密码]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_author]comment[生成代码的默认作者]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_package_prefix]comment[默认的包前缀]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_local]comment[默认存放的地址]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[添加时间]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[update_time]comment[修改时间]
+2020-10-27 20:45:23,545 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_autocode_datasource]分析结束.
+2020-10-27 20:45:23,552 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 119 - TABLE[t_autocode_datasource] COMMENT[]
+2020-10-27 20:45:23,552 [http-nio-9015-exec-5] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_autocode_datasource
+2020-10-27 20:45:25,558 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 59 - 获取数据库[i4_system]表集合开始
+2020-10-27 20:45:25,612 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 74 - Tables : [t_autocode_datasource]
+2020-10-27 20:45:25,612 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 84 - 数据库[i4_system]表[t_autocode_datasource]分析开始.
+2020-10-27 20:45:25,628 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[id]，类型[INT]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[datasource_name]，类型[VARCHAR]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[datasource_url]，类型[VARCHAR]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[database_name]，类型[VARCHAR]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[driverclass_name]，类型[VARCHAR]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[driverclass_type]，类型[VARCHAR]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[auth_user]，类型[VARCHAR]
+2020-10-27 20:45:25,629 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[auth_password]，类型[VARCHAR]
+2020-10-27 20:45:25,630 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_author]，类型[VARCHAR]
+2020-10-27 20:45:25,630 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_package_prefix]，类型[VARCHAR]
+2020-10-27 20:45:25,630 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[default_local]，类型[VARCHAR]
+2020-10-27 20:45:25,630 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[create_time]，类型[BIGINT]
+2020-10-27 20:45:25,630 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 95 - 列[update_time]，类型[BIGINT]
+2020-10-27 20:45:25,638 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[id]comment[]
+2020-10-27 20:45:25,638 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_name]comment[数据源名称]
+2020-10-27 20:45:25,638 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[datasource_url]comment[数据源链接]
+2020-10-27 20:45:25,638 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[database_name]comment[数据库名称]
+2020-10-27 20:45:25,638 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_name]comment[驱动名称]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[driverclass_type]comment[驱动类型（MySQL，Oracle……）]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_user]comment[授权的用户名]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[auth_password]comment[授权的用户密码]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_author]comment[生成代码的默认作者]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_package_prefix]comment[默认的包前缀]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[default_local]comment[默认存放的地址]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[create_time]comment[添加时间]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 105 - Filed[update_time]comment[修改时间]
+2020-10-27 20:45:25,639 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 111 - 数据库[i4_system]表[t_autocode_datasource]分析结束.
+2020-10-27 20:45:25,647 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.util.DataBaseUtil 119 - TABLE[t_autocode_datasource] COMMENT[]
+2020-10-27 20:45:25,647 [http-nio-9015-exec-6] INFO  cn.i4.data.cloud.autocode.core.DataBaseCore 38 - t_autocode_datasource
+2020-10-27 20:47:49,699 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:52:49,703 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 20:57:49,717 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:02:49,729 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:07:49,743 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:12:49,756 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:17:49,769 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:22:49,779 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:27:49,783 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:32:49,789 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:37:49,795 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:42:49,810 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:47:49,811 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:52:49,825 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 21:57:49,830 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:02:49,843 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:07:49,851 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:12:49,854 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:17:49,861 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:22:49,877 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:27:49,891 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:32:49,905 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:37:49,914 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:42:49,929 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:47:49,931 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:52:49,945 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 22:57:49,954 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:02:49,966 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:07:49,978 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:12:49,981 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:17:49,992 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:22:50,001 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:27:50,013 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:32:50,020 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:37:50,036 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:42:50,042 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:47:50,054 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:52:50,058 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
+2020-10-27 23:57:50,065 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
