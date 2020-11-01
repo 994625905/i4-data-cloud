@@ -21,5 +21,5 @@
 var ACTIVITI = ACTIVITI || {};
 
 ACTIVITI.CONFIG = {
-	'contextRoot' : '/i4-data-cloud-start-activiti-design/activiti',
+	'contextRoot' : '/activiti',
 };

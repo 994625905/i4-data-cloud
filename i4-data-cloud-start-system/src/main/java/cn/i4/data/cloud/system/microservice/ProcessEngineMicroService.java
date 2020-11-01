@@ -95,7 +95,7 @@ public interface ProcessEngineMicroService {
      * @return
      */
     @PostMapping(value = "/processEngine/viewImage")
-    public ActionResult<InputStream> viewImage(@RequestParam String processDefId);
+    public ActionResult<byte[]> viewImage(@RequestParam String processDefId);
 
     /**
      * 获取图片流程的输入流
@@ -104,7 +104,7 @@ public interface ProcessEngineMicroService {
      * @return
      */
     @PostMapping(value = "/processEngine/viewImageByDeploymentId")
-    public ActionResult<InputStream> viewImageByDeploymentId(@RequestParam String deploymentId,@RequestParam String imageName);
+    public ActionResult<byte[]> viewImageByDeploymentId(@RequestParam String deploymentId,@RequestParam String imageName);
 
     /**
      * 直接驳回，即拒绝办理，挂起当前流程实例，冻结状态,可以激活

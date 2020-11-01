@@ -1,8 +1,5 @@
 <@override name="body">
 <title>爱思数据云平台·流程引擎/流程模型</title>
-<style>
-    .layui-table-cell{ height: auto; white-space: normal; }
-</style>
 <body>
 <br>
     <div class="layui-fluid">

@@ -21,6 +21,7 @@
                 <div class="layui-col-sm12 p-2">
                     <div id="tables" class="mb-1 ml-15"></div>
                 </div>
+                <div class="layui-form-mid layui-word-aux">如果获取数据表的结果集失败，可以尝试一下替换驱动试试</div>
                 <hr>
                 <div class="layui-col-sm12">
                     <form class="layui-form">

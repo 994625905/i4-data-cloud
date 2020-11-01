@@ -1,8 +1,5 @@
 <@override name="body">
 <title>爱思数据云平台·消息队列/交换机管理</title>
-<style>
-    .layui-table-cell{ height: auto; white-space: normal; }
-</style>
 <body>
 <br>
     <div class="layui-fluid">

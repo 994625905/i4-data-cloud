@@ -54,7 +54,7 @@
                     <div class="layui-input-block">
                         <input name="driverclassName" value="${dataSource.driverclassName!}" lay-verify="driverclassName" placeholder="请输入有效的驱动名称" class="layui-input">
                     </div>
-                    <div class="layui-form-mid layui-word-aux">类似于MySQL的：com.mysql.jdbc.Driver，或者您也可以改为其他的驱动类，但目前只提供MySQL的处理逻辑吧，配置代码写起来好麻烦。。</div>
+                    <div class="layui-form-mid layui-word-aux">MySQL驱动推荐使用：com.mysql.cj.jdbc.Driver，或者您也可以改为其他（com.mysql.jdbc.Driver），但目前只提供MySQL的处理逻辑吧。。</div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">驱动类型：</label>

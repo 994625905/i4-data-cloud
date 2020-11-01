@@ -58,12 +58,12 @@ public class ProcessEngineMicroServiceImpl implements ProcessEngineMicroService 
     }
 
     @Override
-    public ActionResult<InputStream> viewImage(String processDefId) {
+    public ActionResult<byte[]> viewImage(String processDefId) {
         return ActionResult.error("降级处理：根据流程定义的id获取流程图输入流");
     }
 
     @Override
-    public ActionResult<InputStream> viewImageByDeploymentId(String deploymentId, String imageName) {
+    public ActionResult<byte[]> viewImageByDeploymentId(String deploymentId, String imageName) {
         return ActionResult.error("降级处理：获取图片流程的输入流失败");
     }
 

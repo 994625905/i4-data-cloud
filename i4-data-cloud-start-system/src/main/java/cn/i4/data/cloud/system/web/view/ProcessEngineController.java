@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
@@ -80,12 +81,12 @@ public class ProcessEngineController extends WebBaseController {
      */
     @RequestMapping(value = "/deployMsg/imageio")
     public void imageio(VActReDeployProcdefDto dto,HttpServletRequest request, HttpServletResponse response){
-        ActionResult<InputStream> result = processEngineMicroService.viewImage(dto.getProcdefId());
+        ActionResult<byte[]> result = processEngineMicroService.viewImage(dto.getProcdefId());
         if(result.getCode() != 200){
             return;
         }
         /** 边读边写 */
-        InputStream in = result.getResult();
+        ByteArrayInputStream in = new ByteArrayInputStream(result.getResult());
         OutputStream os = null;
         try {
             int count = 0;

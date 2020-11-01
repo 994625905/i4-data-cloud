@@ -139,19 +139,19 @@ function loadImageTable(){
     var tabCols = [[
         {field:"url",title:"图片",align:"center",templet:"#imageUrl"},
         {field:"name",title:"名称"},
-        {field:"suffix",title:"后缀类型"},
-        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" }},
-        {field:"suffix",title:"分辨率（宽*高）",templet(d){
+        {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
+        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
+        {field:"suffix",title:"分辨率（宽*高）",width: TABLE_COL_WIDTH.normal,templet(d){
             if(d.width && d.height){
                 return d.width+" * "+d.height
             }
             return "分辨率未知"
         }},
         {field:"description",title:"描述信息"},
-        {field:"createTimeStr",title:"上传时间",sort:true},
+        {field:"createTimeStr",title:"上传时间",sort:true,width: TABLE_COL_WIDTH.date},
         {field:"realname",title:"上传用户"},
-        {field:"status",title:"状态",align:"center",toolbar: "#statusTool"},
-        {fixed:"right",title:"操作",align:"center",toolbar:"#operate"}
+        {field:"status",title:"状态",align:"center",toolbar: "#statusTool",width:TABLE_COL_WIDTH.tool(1)},
+        {fixed:"right",title:"操作",align:"center",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender_image = Initlay.initTable("#fileTable_image",BasePath+"/materialMsg/fileFind/loadTable",tabCols,"#toolbar",param)
 }
@@ -160,13 +160,13 @@ function loadAudioTable(){
     var tabCols = [[
         {field:"cover",title:"音频(封面)",align:"center",templet:"#imageUrl"},
         {field:"name",title:"名称"},
-        {field:"suffix",title:"后缀类型"},
-        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" }},
+        {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
+        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
         {field:"description",title:"描述信息"},
-        {field:"createTimeStr",title:"上传时间",sort:true},
+        {field:"createTimeStr",title:"上传时间",sort:true,width: TABLE_COL_WIDTH.date},
         {field:"realname",title:"上传用户"},
-        {field:"status",title:"状态",align:"center",toolbar: "#statusTool"},
-        {fixed:"right",title:"操作",align:"center",toolbar:"#operate"}
+        {field:"status",title:"状态",align:"center",toolbar: "#statusTool",width:TABLE_COL_WIDTH.tool(1)},
+        {fixed:"right",title:"操作",align:"center",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender_audio = Initlay.initTable("#fileTable_audio",BasePath+"/materialMsg/fileFind/loadTable",tabCols,"#toolbar",param)
 }
@@ -175,13 +175,13 @@ function loadVideoTable(){
     var tabCols = [[
         {field:"cover",title:"视频(封面)",align:"center",templet:"#imageUrl"},
         {field:"name",title:"名称"},
-        {field:"suffix",title:"后缀类型"},
-        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" }},
+        {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.date},
+        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
         {field:"description",title:"描述信息"},
-        {field:"createTimeStr",title:"上传时间",sort:true},
+        {field:"createTimeStr",title:"上传时间",sort:true,width: TABLE_COL_WIDTH.date},
         {field:"realname",title:"上传用户"},
-        {field:"status",title:"状态",align:"center",toolbar: "#statusTool"},
-        {fixed:"right",title:"操作",align:"center",toolbar:"#operate"}
+        {field:"status",title:"状态",align:"center",toolbar: "#statusTool",width:TABLE_COL_WIDTH.tool(1)},
+        {fixed:"right",title:"操作",align:"center",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender_video = Initlay.initTable("#fileTable_video",BasePath+"/materialMsg/fileFind/loadTable",tabCols,"#toolbar",param)
 }
@@ -190,13 +190,13 @@ function loadDocTable(){
     var tabCols = [[
         {field:"cover",title:"文档(封面)",align:"center",templet:"#imageUrl"},
         {field:"name",title:"名称"},
-        {field:"suffix",title:"后缀类型"},
-        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" }},
+        {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
+        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
         {field:"description",title:"描述信息"},
-        {field:"createTimeStr",title:"上传时间",sort:true},
+        {field:"createTimeStr",title:"上传时间",sort:true,width: TABLE_COL_WIDTH.date},
         {field:"realname",title:"上传用户"},
-        {field:"status",title:"状态",align:"center",toolbar: "#statusTool"},
-        {fixed:"right",title:"操作",align:"center",toolbar:"#operate"}
+        {field:"status",title:"状态",align:"center",toolbar: "#statusTool",width:TABLE_COL_WIDTH.tool(1)},
+        {fixed:"right",title:"操作",align:"center",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender_doc = Initlay.initTable("#fileTable_doc",BasePath+"/materialMsg/fileFind/loadTable",tabCols,"#toolbar",param)
 }
@@ -205,13 +205,13 @@ function loadOtherTable(){
     var tabCols = [[
         {field:"cover",title:"封面(封面)",align:"center",templet:"#imageUrl"},
         {field:"name",title:"名称"},
-        {field:"suffix",title:"后缀类型"},
-        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" }},
+        {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
+        {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
         {field:"description",title:"描述信息"},
-        {field:"createTimeStr",title:"上传时间",sort:true},
+        {field:"createTimeStr",title:"上传时间",sort:true,width: TABLE_COL_WIDTH.date},
         {field:"realname",title:"上传用户"},
-        {field:"status",title:"状态",align:"center",toolbar: "#statusTool"},
-        {fixed:"right",title:"操作",align:"center",toolbar:"#operate"}
+        {field:"status",title:"状态",align:"center",toolbar: "#statusTool",width:TABLE_COL_WIDTH.tool(1)},
+        {fixed:"right",title:"操作",align:"center",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)}
     ]]
     tableRender_other = Initlay.initTable("#fileTable_other",BasePath+"/materialMsg/fileFind/loadTable",tabCols,"#toolbar",param)
 }

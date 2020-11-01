@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="${StaticServer}/resource/base/defined.css">
 
     <!--引入iconfont资源库-->
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2121546_tioeqq3g13g.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2121546_x3wefswjr3r.css">
 
     <@block name="body" >base_body_content</@block>
 

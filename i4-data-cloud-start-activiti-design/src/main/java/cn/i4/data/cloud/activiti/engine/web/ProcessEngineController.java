@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
@@ -74,6 +76,7 @@ public class ProcessEngineController extends BaseController {
      * @param cascade
      * @return
      */
+    @PostMapping(value = "/deleteProcessDeploymentById")
     public ActionResult<Boolean> deleteProcessDeploymentById(@RequestParam String deploymentId,@RequestParam Boolean cascade){
         try {
             Boolean res = this.processEngineService.deleteProcessDeploymentById(deploymentId, cascade);
@@ -180,14 +183,34 @@ public class ProcessEngineController extends BaseController {
      * @return
      */
     @PostMapping(value = "/viewImage")
-    public ActionResult<InputStream> viewImage(@RequestParam String processDefId){
+    public ActionResult<byte[]> viewImage(@RequestParam String processDefId){
+        InputStream inputStream = null;
+        ByteArrayOutputStream bos = null;
         try {
-            InputStream inputStream = this.processEngineService.viewImage(processDefId);
-            return ActionResult.ok(inputStream);
+            inputStream = this.processEngineService.viewImage(processDefId);
+
+            /** 通过输出流将数据写到数组 */
+            bos = new ByteArrayOutputStream();
+            byte[] bt = new byte[1024];
+            int len = -1;
+            while ((len = inputStream.read(bt)) != -1){
+                bos.write(bt,0,len);
+            }
+
+            byte[] res = bos.toByteArray();
+            return ActionResult.ok(res);
         }catch (Exception e){
             logger.error(e.getMessage());
             e.printStackTrace();
             return ActionResult.error("根据流程定义的id获取流程图输入流失败");
+        }finally {
+            try {
+                inputStream.close();
+                bos.flush();
+                bos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -198,14 +221,34 @@ public class ProcessEngineController extends BaseController {
      * @return
      */
     @PostMapping(value = "/viewImageByDeploymentId")
-    public ActionResult<InputStream> viewImageByDeploymentId(@RequestParam String deploymentId,@RequestParam String imageName){
+    public ActionResult<byte[]> viewImageByDeploymentId(@RequestParam String deploymentId,@RequestParam String imageName){
+        InputStream inputStream = null;
+        ByteArrayOutputStream bos = null;
         try {
-            InputStream inputStream = this.processEngineService.viewImage(deploymentId, imageName);
-            return ActionResult.ok(inputStream);
+            inputStream = this.processEngineService.viewImage(deploymentId, imageName);
+
+            /** 通过输出流将数据写到数组 */
+            bos = new ByteArrayOutputStream();
+            byte[] bt = new byte[1024];
+            int len = -1;
+            while ((len = inputStream.read(bt)) != -1){
+                bos.write(bt,0,len);
+            }
+
+            byte[] res = bos.toByteArray();
+            return ActionResult.ok(res);
         }catch (Exception e){
             logger.error(e.getMessage());
             e.printStackTrace();
             return ActionResult.error("获取图片流程的输入流失败");
+        }finally {
+            try {
+                inputStream.close();
+                bos.flush();
+                bos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

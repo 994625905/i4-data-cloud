@@ -67,6 +67,8 @@ public class DataSourceMsgController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "新增数据源",type = RequestType.INSERT)
     public ActionResult<Boolean> insert(@RequestBody AutocodeDatasourceDto dto, HttpServletRequest request){
         AutocodeDatasourceModel model = dto.getModel();
+        model.setAuthUser(DesUtil.enc(model.getAuthUser()));
+        model.setAuthPassword(DesUtil.enc(model.getAuthPassword()));
         model.setCreateTime(System.currentTimeMillis()/1000L);
 
         boolean save = iAutocodeDatasourceService.save(model);

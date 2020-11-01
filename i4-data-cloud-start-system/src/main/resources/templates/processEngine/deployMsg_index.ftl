@@ -23,7 +23,7 @@
 <!--操作列-->
 <script type="text/html" id="operate">
     <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete">删除</a>
-    <a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="queue">查流程图</a>
+    <a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="image">查流程图</a>
 </script>
     <script type="text/javascript" src="${StaticServer}/templates/processEngine/deployMsg_index.js?v=1.0"></script>
 </@override>

@@ -35,7 +35,7 @@ layui.use(["layer","table"],()=>{
             })
         }
         if(obj.event == "image"){
-            Feng.loadWindow(obj.data.procdefName+"-》流程图",BasePath+"/processEngine/deployMsg/processImage",LAYOUT_SIZE.SM_HEIGHT(),LAYOUT_SIZE.SM_WIDTH())
+            Feng.loadWindow(obj.data.procdefName+"-》流程图",BasePath+"/processEngine/deployMsg/processImage?procdefId="+obj.data.procdefId,LAYOUT_SIZE.SM_HEIGHT(),LAYOUT_SIZE.SM_WIDTH())
         }
     })
 
