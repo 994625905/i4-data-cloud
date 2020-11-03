@@ -22,7 +22,6 @@ public class LeaveProcessView extends BaseView<LeaveProcessView> {
 		this.deploymentId = model.getDeploymentId();
 		this.processInstanceId = model.getProcessInstanceId();
 		this.userId = model.getUserId();
-		this.receiveUserId = model.getReceiveUserId();
 		this.status = model.getStatus();
 		this.applyTime = model.getApplyTime();
 		this.comment = model.getComment();
@@ -67,12 +66,6 @@ public class LeaveProcessView extends BaseView<LeaveProcessView> {
 	 */
 	@TableField("user_id")
 	private Integer userId;
-
-	/**
-	 * 当前流程的待办者，流程走完就置空
-	 */
-	@TableField("receive_user_id")
-	private Integer receiveUserId;
 
 	/**
 	 * 0审批中，1已通过，2未通过
@@ -139,14 +132,6 @@ public class LeaveProcessView extends BaseView<LeaveProcessView> {
 
 	public Integer getUserId() {
 		return this.userId;
-	}
-
-	public void setReceiveUserId(Integer receiveUserId) {
-		this.receiveUserId = receiveUserId;
-	}
-
-	public Integer getReceiveUserId() {
-		return this.receiveUserId;
 	}
 
 	public void setStatus(Integer status) {

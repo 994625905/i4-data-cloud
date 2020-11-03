@@ -16,6 +16,10 @@ public class VActReDeployProcdefDto extends BaseDto<VActReDeployProcdefView> {
 
     private String deploymentId;
 
+    private String processInstanceId;
+
+    private Integer receiveUserId;
+
     private String imgName;
 
     public String getDeploymentId() {
@@ -40,5 +44,21 @@ public class VActReDeployProcdefDto extends BaseDto<VActReDeployProcdefView> {
 
     public void setImgName(String imgName) {
         this.imgName = imgName;
+    }
+
+    public String getProcessInstanceId() {
+        return processInstanceId;
+    }
+
+    public void setProcessInstanceId(String processInstanceId) {
+        this.processInstanceId = processInstanceId;
+    }
+
+    public Integer getReceiveUserId() {
+        return receiveUserId;
+    }
+
+    public void setReceiveUserId(Integer receiveUserId) {
+        this.receiveUserId = receiveUserId;
     }
 }

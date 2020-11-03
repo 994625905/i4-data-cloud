@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Map;
 
 /**
  * 流程引擎的视图页面
@@ -71,6 +72,23 @@ public class ProcessEngineController extends WebBaseController {
     public ModelAndView processImage(VActReDeployProcdefDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/processEngine/deployMsg_image", request);
         view.addObject("param",dto);
+        return view;
+    }
+
+    /**
+     * 加载流程任务的图片，显示当前待办节点
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/deployMsg/processTaskImage")
+    public ModelAndView processTaskImage(VActReDeployProcdefDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/processEngine/process_image", request);
+        view.addObject("param",dto);
+
+        ActionResult<Map<String, Object>> map = processEngineMicroService.getImageVariable(dto.getProcessInstanceId(), dto.getReceiveUserId());
+        view.addObject("map",map);
+
         return view;
     }
 

@@ -22,4 +22,10 @@ public interface LeaveProcessNodeMapper extends BaseIMapper<LeaveProcessNodeMode
     */
     IPage<LeaveProcessNodeView> selectPage(LeaveProcessNodeDto dto);
 
+    /**
+     * 根据流程Id获取流程节点日志
+     * @param processId
+     * @return
+     */
+    List<LeaveProcessNodeView> selectByProcessId(@Param("processId") Integer processId);
 }

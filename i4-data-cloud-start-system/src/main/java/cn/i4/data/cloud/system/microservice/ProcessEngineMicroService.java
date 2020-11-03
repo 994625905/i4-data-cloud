@@ -72,6 +72,14 @@ public interface ProcessEngineMicroService {
     public ActionResult<String> getTaskByProcessInstanceIdUserId(@RequestParam String processInstanceId,@RequestParam Integer userId);
 
     /**
+     * 办理开始节点
+     * @param processInstanceId
+     * @return
+     */
+    @PostMapping(value = "/processEngine/completeStart")
+    public ActionResult<Boolean> completeStart(@RequestParam String processInstanceId);
+
+    /**
      * 办理任务节点
      * @param processInstanceId
      * @param userId

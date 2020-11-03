@@ -6,6 +6,8 @@ import cn.i4.data.cloud.core.entity.view.UserView;
 import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
+import java.util.List;
+
 /**
 * Service
 * @author wangjc
@@ -34,4 +36,11 @@ public interface IUserService extends BaseService<UserModel> {
      * @return
      */
     UserView selectById(Integer userId);
+
+    /**
+     * 获取除指定userId之外的user
+     * @param userId
+     * @return
+     */
+    List<UserModel> selectListNotUserId(Integer userId);
 }

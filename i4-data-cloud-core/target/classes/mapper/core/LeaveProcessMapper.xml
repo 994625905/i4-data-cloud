@@ -10,8 +10,7 @@
         t.process_def_id as processDefId, 
         t.deployment_id as deploymentId, 
         t.process_instance_id as processInstanceId, 
-        t.user_id as userId, 
-        t.receive_user_id as receiveUserId, 
+        t.user_id as userId,
         t.status as status, 
         t.apply_time as applyTime, 
         t.comment as comment

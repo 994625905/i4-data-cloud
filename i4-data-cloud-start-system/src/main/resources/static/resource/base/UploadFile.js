@@ -59,8 +59,9 @@ var UploadFile = {
      * @param height
      * @param limit
      * @param size
+     * @param callback
      */
-    imageSelect:function(title,imageElem,width,height,limit ,size){
+    imageSelect:function(title,imageElem,width,height,limit ,size,callback){
         var p = "?type=1"
         if(width){
             p += "&width="+width;
@@ -74,7 +75,41 @@ var UploadFile = {
         Feng.loadWindow(title,BasePath+"/materialMsg/imageSelect/index"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
-                    $(imageElem).attr("src",res)
+                    if(imageElem){
+                        $(imageElem).attr("src",res)
+                    }
+                    /** 给个回调函数吧，为了拓展 */
+                    if(callback){
+                        callback(res)
+                    }
+                }
+            })
+        })
+    },
+
+    /**
+     *
+     * @param title
+     * @param fileElem
+     * @param type
+     * @param size
+     * @param callback
+     */
+    fileSelect:function(title,fileElem,type,size,callback){
+        var p = "?type="+type
+        if(size){
+            p += "&fileSize="+size;
+        }
+        Feng.loadWindow(title,BasePath+"/materialMsg/imageSelect/file"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    if(fileElem){
+                        $(fileElem).text(res)
+                    }
+                    /** 给个回调函数吧，为了拓展 */
+                    if(callback){
+                        callback(res)
+                    }
                 }
             })
         })
@@ -198,7 +233,18 @@ var UploadFile = {
                 if(type == 3){
                     return "video/*"
                 }
+                if(type == 4){//文档类型的限制，
+                    return "application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet," +
+                        "application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document," +
+                        "application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation," +
+                        "application/pdf"
+                }
                 return "file"
+            }(),
+            exts:function(){
+                if(type == 4){//文档类型的限制
+                    return "xlsx|xls|doc|docx|ppt|pptx|pdf"
+                }
             }(),
             done:function(res, index, upload){
                 if(res.code == 200){
@@ -206,12 +252,13 @@ var UploadFile = {
                         callback(res.result)
                     }
                 }else{
-                    Feng.error("上传接口异常");
+                    Feng.error(res.message);
                 }
                 Feng.close(loadIndex);
             },
             error:function(){
                 Feng.error("上传失败，请检查文件服务器");
+                Feng.close(loadIndex)
             }
         }
         //上传大小的限制，单位：KB

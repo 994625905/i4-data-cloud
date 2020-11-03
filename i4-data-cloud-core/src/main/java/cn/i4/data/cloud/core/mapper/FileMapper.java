@@ -28,4 +28,11 @@ public interface FileMapper extends BaseIMapper<FileModel> {
      * @return
      */
     IPage<FileView> loadImageTable(FileDto dto);
+
+    /**
+     * 根据条件加载文件（除图片外）
+     * @param dto
+     * @return
+     */
+    IPage<FileView> loadFileTable(FileDto dto);
 }

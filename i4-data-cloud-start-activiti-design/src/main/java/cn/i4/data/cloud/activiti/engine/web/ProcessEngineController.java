@@ -142,6 +142,23 @@ public class ProcessEngineController extends BaseController {
     }
 
     /**
+     * 办理开始节点
+     * @param processInstanceId
+     * @return
+     */
+    @PostMapping(value = "/completeStart")
+    public ActionResult<Boolean> completeStart(@RequestParam String processInstanceId){
+        try {
+            Boolean start = this.processEngineService.completeStart(processInstanceId);
+            return ActionResult.ok(start);
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            e.printStackTrace();
+            return ActionResult.error("办理开始节点失败");
+        }
+    }
+
+    /**
      * 办理任务节点
      * @param processInstanceId
      * @param userId
@@ -155,7 +172,7 @@ public class ProcessEngineController extends BaseController {
         }catch (Exception e){
             logger.error(e.getMessage());
             e.printStackTrace();
-            return ActionResult.error("办理任务节点");
+            return ActionResult.error("办理任务节点失败");
         }
     }
 

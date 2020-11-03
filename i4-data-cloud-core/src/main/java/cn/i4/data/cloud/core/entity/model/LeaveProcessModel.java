@@ -21,6 +21,7 @@ public class LeaveProcessModel extends BaseModel<LeaveProcessModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -52,12 +53,6 @@ public class LeaveProcessModel extends BaseModel<LeaveProcessModel> {
     */
     @TableField("user_id")
     private Integer userId;
-
-    /**
-    * 当前流程的待办者，流程走完就置空
-    */
-    @TableField("receive_user_id")
-    private Integer receiveUserId;
 
     /**
     * 0审批中，1已通过，2未通过
@@ -124,14 +119,6 @@ public class LeaveProcessModel extends BaseModel<LeaveProcessModel> {
 
     public Integer getUserId() {
     return this.userId;
-    }
-
-    public void setReceiveUserId(Integer receiveUserId) {
-    this.receiveUserId = receiveUserId;
-    }
-
-    public Integer getReceiveUserId() {
-    return this.receiveUserId;
     }
 
     public void setStatus(Integer status) {

@@ -131,6 +131,19 @@ public class ProcessEngineServiceImpl implements ProcessEngineService {
     }
 
     /**
+     * 办理开始节点
+     * @param processInstanceId
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public Boolean completeStart(String processInstanceId) throws Exception {
+        Task task = this.getTaskByProcessInstanceId(processInstanceId);
+        this.taskService.complete(task.getId());
+        return true;
+    }
+
+    /**
      * 不建议办理任务设置流程变量
      * @param processInstanceId
      * @param userId

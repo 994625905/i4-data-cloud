@@ -35,4 +35,9 @@ public class FileServiceImpl extends BaseServiceImpl<FileMapper,FileModel> imple
 		return mapper.loadImageTable(dto);
 	}
 
+	@Override
+	public IPage<FileView> loadFileTable(FileDto dto) {
+		return mapper.loadFileTable(dto);
+	}
+
 }

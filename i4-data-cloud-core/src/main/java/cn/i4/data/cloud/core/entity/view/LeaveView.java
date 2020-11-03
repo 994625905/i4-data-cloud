@@ -92,6 +92,20 @@ public class LeaveView extends BaseView<LeaveView> {
 	@TableField("update_time")
 	private Long updateTime;
 
+	/** 补充字段 */
+	private String startTimeStr;
+	private String endTimeStr;
+	private String createTimeStr;
+	private String updateTimeStr;
+	private String realName;
+	private String typeName;
+	private String processId;
+	private String processStatus;
+	/** 流程的相关字段和下一节点的代办人 */
+	private String processDefId;
+	private String deploymentId;
+	private String processInstanceId;
+	private String receiveUserId;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -173,4 +187,99 @@ public class LeaveView extends BaseView<LeaveView> {
 		return this.updateTime;
 	}
 
+	public String getStartTimeStr() {
+		return startTimeStr;
+	}
+
+	public void setStartTimeStr(String startTimeStr) {
+		this.startTimeStr = startTimeStr;
+	}
+
+	public String getEndTimeStr() {
+		return endTimeStr;
+	}
+
+	public void setEndTimeStr(String endTimeStr) {
+		this.endTimeStr = endTimeStr;
+	}
+
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public String getProcessId() {
+		return processId;
+	}
+
+	public void setProcessId(String processId) {
+		this.processId = processId;
+	}
+
+	public String getProcessStatus() {
+		return processStatus;
+	}
+
+	public void setProcessStatus(String processStatus) {
+		this.processStatus = processStatus;
+	}
+
+	public String getProcessDefId() {
+		return processDefId;
+	}
+
+	public void setProcessDefId(String processDefId) {
+		this.processDefId = processDefId;
+	}
+
+	public String getDeploymentId() {
+		return deploymentId;
+	}
+
+	public void setDeploymentId(String deploymentId) {
+		this.deploymentId = deploymentId;
+	}
+
+	public String getProcessInstanceId() {
+		return processInstanceId;
+	}
+
+	public void setProcessInstanceId(String processInstanceId) {
+		this.processInstanceId = processInstanceId;
+	}
+
+	public String getReceiveUserId() {
+		return receiveUserId;
+	}
+
+	public void setReceiveUserId(String receiveUserId) {
+		this.receiveUserId = receiveUserId;
+	}
 }

@@ -21,6 +21,7 @@ public class LeaveModel extends BaseModel<LeaveModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

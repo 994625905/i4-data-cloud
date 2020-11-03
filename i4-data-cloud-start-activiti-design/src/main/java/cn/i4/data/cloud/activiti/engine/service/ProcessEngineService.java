@@ -74,6 +74,14 @@ public interface ProcessEngineService {
     public List<Task> getListTaskByProcessInstanceId(String processInstanceId) throws Exception;
 
     /**
+     * 办理开始节点
+     * @param processInstanceId
+     * @return
+     * @throws Exception
+     */
+    public Boolean completeStart(String processInstanceId) throws Exception;
+
+    /**
      * 办理任务节点
      * @param processInstanceId
      * @param userId

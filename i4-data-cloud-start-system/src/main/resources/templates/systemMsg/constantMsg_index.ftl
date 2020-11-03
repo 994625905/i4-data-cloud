@@ -145,6 +145,74 @@
 
                         <div class="layui-form-item">
                             <div class="layui-inline">
+                                <label class="layui-form-label">文档的封面</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.wordCover!}" title="${systemConstant.wordCover_name!}" id="wordCover" style="max-width: 100px">
+                                    <input name="wordCover_id" value="${systemConstant.wordCover_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm wordCover">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('wordCover')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">视频的封面</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.videoCover!}" title="${systemConstant.videoCover_name!}" id="videoCover" style="max-width: 100px">
+                                    <input name="videoCover_id" value="${systemConstant.videoCover_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm videoCover">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('videoCover')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">语音的封面</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.audioCover!}" title="${systemConstant.audioCover_name!}" id="audioCover" style="max-width: 100px">
+                                    <input name="audioCover_id" value="${systemConstant.audioCover_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm audioCover">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('audioCover')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">其他的封面</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.otherCover!}" title="${systemConstant.otherCover_name!}" id="otherCover" style="max-width: 100px">
+                                    <input name="otherCover_id" value="${systemConstant.otherCover_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm otherCover">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('otherCover')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
                                 <label class="layui-form-label">百度地图appKey</label>
                                 <div class="layui-input-inline" style="width: 400px">
                                     <input name="baiduMapApi" value="${systemConstant.baiduMapApi!}" title="${systemConstant.baiduMapApi_name!}" autocomplete="off" class="layui-input">

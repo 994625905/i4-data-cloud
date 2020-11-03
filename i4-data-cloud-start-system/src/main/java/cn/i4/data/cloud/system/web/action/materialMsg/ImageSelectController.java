@@ -43,9 +43,24 @@ public class ImageSelectController extends WebBaseController {
      */
     @PostMapping(value = "/loadImageTable")
     @RequestLog(module = MODULE_NAME,content = "根据条件加载图片",type = RequestType.SELECT)
-    public ActionResult<IPage<FileView>> loadImageTable(FileDto dto){
+    public ActionResult<IPage<FileView>> loadImageTable(FileDto dto,HttpServletRequest request){
+        dto.setUserId(getUser(request).getId());
 
         IPage<FileView> res = iFileService.loadImageTable(dto);
+        return ActionResult.ok(res);
+    }
+
+    /**
+     * 根据调解加载文件（除图片外）
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/loadFileTable")
+    @RequestLog(module = MODULE_NAME,content = "根据条件加载图片",type = RequestType.SELECT)
+    public ActionResult<IPage<FileView>> loadFileTable(FileDto dto,HttpServletRequest request){
+        dto.setUserId(getUser(request).getId());
+
+        IPage<FileView> res = iFileService.loadFileTable(dto);
         return ActionResult.ok(res);
     }
 

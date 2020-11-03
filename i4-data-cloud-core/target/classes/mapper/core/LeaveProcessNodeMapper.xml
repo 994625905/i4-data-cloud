@@ -11,7 +11,8 @@
         t.node_name as nodeName, 
         t.user_id as userId, 
         t.receive_user_id as receiveUserId, 
-        t.deal_time as dealTime, 
+        t.deal_time as dealTime,
+        FROM_UNIXTIME(t.deal_time,'%Y-%m-%d %T') as dealTimeStr,
         t.deal_type as dealType, 
         t.comment as comment
     </sql>
@@ -22,6 +23,15 @@
         <include refid="Base_Column_List" />
         FROM t_leave_process_node AS t
 
+    </select>
+
+    <select id="selectByProcessId" resultType="cn.i4.data.cloud.core.entity.view.LeaveProcessNodeView">
+        select
+            <include refid="Base_Column_List" />,
+            (select u.realname from t_user u where u.id = t.upper_id) as userName,
+            (select u.realname from t_user u where u.id = t.receive_user_id) as receiveUserName
+        from t_leave_process_node t
+        where t.leave_process_id = #{processId}
     </select>
 
 </mapper>

@@ -30,4 +30,10 @@ public class LeaveProcessNodeServiceImpl extends BaseServiceImpl<LeaveProcessNod
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public List<LeaveProcessNodeView> selectByProcessId(Integer processId) {
+		List<LeaveProcessNodeView> list = mapper.selectByProcessId(processId);
+		return list;
+	}
+
 }

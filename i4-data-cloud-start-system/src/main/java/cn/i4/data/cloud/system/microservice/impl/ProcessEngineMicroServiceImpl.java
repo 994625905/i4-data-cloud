@@ -48,6 +48,11 @@ public class ProcessEngineMicroServiceImpl implements ProcessEngineMicroService 
     }
 
     @Override
+    public ActionResult<Boolean> completeStart(String processInstanceId) {
+        return ActionResult.error("降级处理：办理开始节点失败");
+    }
+
+    @Override
     public ActionResult<Boolean> completeTaskById(String processInstanceId, Integer userId) {
         return ActionResult.error("降级处理：办理任务失败");
     }

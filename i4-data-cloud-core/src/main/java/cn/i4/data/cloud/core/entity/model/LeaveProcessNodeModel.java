@@ -42,13 +42,13 @@ public class LeaveProcessNodeModel extends BaseModel<LeaveProcessNodeModel> {
     private String nodeName;
 
     /**
-    * 当前节点的创建人
+    * 当前节点的办理人
     */
     @TableField("user_id")
     private Integer userId;
 
     /**
-    * 
+    * 下一节点的接收人
     */
     @TableField("receive_user_id")
     private Integer receiveUserId;

@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.service;
 
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.core.entity.dto.LeaveProcessDto;
@@ -19,5 +20,8 @@ public interface ILeaveProcessService extends BaseService<LeaveProcessModel> {
     * @return
     */
     IPage<LeaveProcessView> selectPage(LeaveProcessDto dto);
+
+
+    Boolean apply(LeaveProcessDto dto) throws CommonException;
 
 }

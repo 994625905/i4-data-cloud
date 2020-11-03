@@ -7,10 +7,8 @@ layui.use(["layer","laypage"],()=>{
 
     /** 开启加载 */
     BaseAjax.getDataAsync()
-    Request.async(BasePath+"/materialMsg/imageSelect/loadImageTable",{
-        width:limit_width,
-        height:limit_height,
-        limitProp:limit_flag,
+    Request.async(BasePath+"/materialMsg/imageSelect/loadFileTable",{
+        type:type,
         fileSize:size,
         current:0,
         size:30
@@ -24,17 +22,15 @@ layui.use(["layer","laypage"],()=>{
 
         /** 点击选中，临时存储 */
         $(".imageDiv").click(function(){
-            Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).find("img").attr("src")}).then(res=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).find("img").attr("data")}).then(res=>{
                 parent.layer.closeAll()
             })
         })
 
         Initlay.loadPage("pageDom",res.total,obj=>{
 
-            Request.async(BasePath+"/materialMsg/imageSelect/loadImageTable",{
-                width:limit_width,
-                height:limit_height,
-                limitProp:limit_flag,
+            Request.async(BasePath+"/materialMsg/imageSelect/loadFileTable",{
+                type:type,
                 fileSize:size,
                 current:obj.curr,
                 size:obj.limit
@@ -48,7 +44,7 @@ layui.use(["layer","laypage"],()=>{
 
                 /** 点击选中 */
                 $(".imageDiv").find("img").click(function(){
-                    Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).attr("src")}).then(res=>{
+                    Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).attr("data")}).then(res=>{
                         parent.layer.closeAll()
                     })
                 })
@@ -56,9 +52,9 @@ layui.use(["layer","laypage"],()=>{
         })
     })
 
-    /** 上传图片 */
-    $("#uploadImage").click(()=>{
-        UploadFile.openPage(1,size,limit_width,limit_height,limit_flag)
+    /** 上传文件 */
+    $("#uploadFile").click(()=>{
+        UploadFile.openPage(type,size)
     })
 
 })

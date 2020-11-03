@@ -30,11 +30,11 @@ layui.use(["form","layer","upload"],function(){
         $("input[name='size']").val((res.fileSize/1024).toFixed(2))//单位KB
     },type,size)
 
-    /** 上传封面 */
+    /** 上传封面，封面的比例满足（1;1） */
     UploadFile.image("#uploadCoverBtn",res=>{
         $("#uploadCover").attr("src",res.fileUrl)
         $("input[name='cover']").val(res.fileUrl)
-    },size,limit_width,limit_height,limit_flag)
+    },size,100,100,1)
 
     /** 提交项 */
     form.on("submit(save)",function(obj){

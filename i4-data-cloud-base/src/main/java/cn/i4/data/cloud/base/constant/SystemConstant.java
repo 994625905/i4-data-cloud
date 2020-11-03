@@ -37,4 +37,24 @@ public class SystemConstant {
         }
     }
 
+    /**
+     * 流程控制的常量
+     */
+    public interface PROCESS{
+
+        /** 流程状态：0审批中，1已通过，2未通过 */
+        interface STATUS{
+            Integer DOING = 0;
+            Integer END = 1;
+            Integer NOT = 2;
+        }
+
+        /** 流程审批：0拒绝，1放行，2驳回 */
+        interface DEAL_TYPE{
+            Integer REFUSE = 0;
+            Integer PASS = 1;
+            Integer REJECT = 2;
+        }
+    }
+
 }

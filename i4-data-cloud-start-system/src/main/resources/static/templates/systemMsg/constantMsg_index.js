@@ -111,6 +111,65 @@ layui.use(["layer","form"],()=>{
         uploadConstantImage("errorImage")
     })
 
+    /** 文档的图标 */
+    $("#wordCover").click(()=>{
+        var p = "width=300&height=300&limitProp=1&fileSize=200"
+        Feng.loadWindow("选择文档的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#wordCover").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".wordCover").click(()=>{
+        uploadConstantImage("wordCover")
+    })
+
+    /** 视频的图标 */
+    $("#videoCover").click(()=>{
+        var p = "width=300&height=300&limitProp=1&fileSize=200"
+        Feng.loadWindow("选择视频的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#videoCover").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".videoCover").click(()=>{
+        uploadConstantImage("videoCover")
+    })
+
+    /** 语音的图标 */
+    $("#audioCover").click(()=>{
+        var p = "width=100&height=100&limitProp=1&fileSize=200"
+        Feng.loadWindow("选择语音的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#audioCover").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".audioCover").click(()=>{
+        uploadConstantImage("audioCover")
+    })
+
+    /** 其他的图标 */
+    $("#otherCover").click(()=>{
+        var p = "width=300&height=300&limitProp=1&fileSize=200"
+        Feng.loadWindow("选择其他类型的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#otherCover").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".otherCover").click(()=>{
+        uploadConstantImage("otherCover")
+    })
 
     /** 百度地图API */
     $(".baiduMapApi").click(()=>{

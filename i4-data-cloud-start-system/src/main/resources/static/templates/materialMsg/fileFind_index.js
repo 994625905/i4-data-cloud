@@ -20,7 +20,6 @@ layui.use(["layer","form","table","element","laydate"],()=>{
     /** tab选项卡切换 */
     element.on("tab(type)",function(){
         param.type = this.getAttribute("type")
-        debugger
         if(param.type == 1){
             loadImageTable()
         }
@@ -158,7 +157,7 @@ function loadImageTable(){
 /*************************加载音频表格************************/
 function loadAudioTable(){
     var tabCols = [[
-        {field:"cover",title:"音频(封面)",align:"center",templet:"#imageUrl"},
+        {field:"cover",title:"音频(封面)",align:"center",templet:"#coverUrl"},
         {field:"name",title:"名称"},
         {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
         {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
@@ -173,7 +172,7 @@ function loadAudioTable(){
 /*************************加载音频表格************************/
 function loadVideoTable(){
     var tabCols = [[
-        {field:"cover",title:"视频(封面)",align:"center",templet:"#imageUrl"},
+        {field:"cover",title:"视频(封面)",align:"center",templet:"#coverUrl"},
         {field:"name",title:"名称"},
         {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.date},
         {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
@@ -188,7 +187,7 @@ function loadVideoTable(){
 /*************************加载文档表格************************/
 function loadDocTable(){
     var tabCols = [[
-        {field:"cover",title:"文档(封面)",align:"center",templet:"#imageUrl"},
+        {field:"cover",title:"文档(封面)",align:"center",templet:"#coverUrl"},
         {field:"name",title:"名称"},
         {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
         {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},
@@ -203,7 +202,7 @@ function loadDocTable(){
 /*************************加载其他表格************************/
 function loadOtherTable(){
     var tabCols = [[
-        {field:"cover",title:"封面(封面)",align:"center",templet:"#imageUrl"},
+        {field:"cover",title:"封面(封面)",align:"center",templet:"#coverUrl"},
         {field:"name",title:"名称"},
         {field:"suffix",title:"后缀类型",width: TABLE_COL_WIDTH.normal},
         {field:"size",title:"大小（单位KB）",sort:true,templet(d){ return d.size+" KB" },width: TABLE_COL_WIDTH.date},

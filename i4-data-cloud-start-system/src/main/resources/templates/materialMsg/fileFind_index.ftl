@@ -21,6 +21,9 @@
                                     <input id="date" name="date" class="layui-input">
                                 </div>
                             </div>
+                            <div class="layui-inline">
+                                <div class="layui-form-mid layui-word-aux">考虑到服务器的存储资源，单个文件超过100MB的上传，会被拦截终止。另外，文档类型的上传只识别（xls，xlsx，doc，docx，pptx，pdf），"其他"类型的上传默认接受一切后缀，自定义区分</div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -77,6 +80,9 @@
 </script>
 <script type="text/html" id="imageUrl">
     <img src="{{ d.url }}" onclick="showImage('{{d.name}}','{{d.id}}','{{d.url}}')">
+</script>
+<script type="text/html" id="coverUrl">
+    <img src="{{ d.cover }}" onclick="showImage('{{d.name}}','{{d.id}}','{{d.url}}')">
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/materialMsg/fileFind_index.js?v=1.0"></script>
 </@override>

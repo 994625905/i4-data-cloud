@@ -57,4 +57,17 @@ public class MaterialMsgController extends WebBaseController {
         return view;
     }
 
+    /**
+     * 加载文件选择页
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/imageSelect/file")
+    public ModelAndView imageSelectFile(FileDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/fileFind_selectFile", request);
+        view.addObject("param",dto);
+        return view;
+    }
+
 }

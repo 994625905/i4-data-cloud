@@ -30,9 +30,20 @@
                     <button type="button" class="layui-btn" id="uploadCoverBtn">上传封面</button>
                 </label>
                 <div class="layui-input-block">
-                    <img src="" id="uploadCover">
+                    <#if param.type == 2>
+                        <img src="${systemConstant.audioCover}" id="uploadCover">
+                        <input type="hidden" name="cover" value="${systemConstant.audioCover}" lay-verify="required">
+                    <#elseif param.type == 3>
+                        <img src="${systemConstant.videoCover}" id="uploadCover">
+                        <input type="hidden" name="cover" value="${systemConstant.videoCover}" lay-verify="required">
+                    <#elseif param.type == 4>
+                        <img src="${systemConstant.wordCover}" id="uploadCover">
+                        <input type="hidden" name="cover" value="${systemConstant.wordCover}" lay-verify="required">
+                    <#elseif param.type == 5>
+                        <img src="${systemConstant.otherCover}" id="uploadCover">
+                        <input type="hidden" name="cover" value="${systemConstant.otherCover}" lay-verify="required">
+                    </#if>
                 </div>
-                <input type="hidden" name="cover" lay-verify="required">
             </div>
         </#if>
 
@@ -52,11 +63,11 @@
             </div>
         </#if>
 
-        <input type="hidden" name="suffix" lay-verify="required">
-        <input type="hidden" name="size" lay-verify="required">
-        <input type="hidden" name="type" value="${param.type}" lay-verify="required">
-        <input type="hidden" name="width" lay-verify="required">
-        <input type="hidden" name="height" lay-verify="required">
+        <input type="hidden" name="suffix">
+        <input type="hidden" name="size">
+        <input type="hidden" name="type" value="${param.type}">
+        <input type="hidden" name="width" >
+        <input type="hidden" name="height">
 
         <div class="layui-form-item">
             <label class="layui-form-label">文件名称：</label>

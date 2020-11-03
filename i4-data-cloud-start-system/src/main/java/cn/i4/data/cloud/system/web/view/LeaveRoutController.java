@@ -1,7 +1,8 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.core.entity.dto.LeaveDto;
 import cn.i4.data.cloud.core.entity.model.LeaveTypeModel;
-import cn.i4.data.cloud.core.service.ILeaveTypeService;
+import cn.i4.data.cloud.core.service.*;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +26,14 @@ public class LeaveRoutController extends WebBaseController {
 
     @Autowired
     private ILeaveTypeService iLeaveTypeService;
+    @Autowired
+    private ILeaveService iLeaveService;
+    @Autowired
+    private ILeaveProcessNodeService iLeaveProcessNodeService;
+    @Autowired
+    private IVActReDeployProcdefService ivActReDeployProcdefService;
+    @Autowired
+    private IUserService iUserService;
 
     /**
      * 加载请假类型的首页
@@ -62,4 +71,55 @@ public class LeaveRoutController extends WebBaseController {
         return view;
     }
 
+    /**
+     * 加载请假申请新增页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/leaveApply/addPage")
+    public ModelAndView leaveApplyAddPage(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveApply_add", request);
+        view.addObject("typeList",iLeaveTypeService.list());
+        return view;
+    }
+
+    /**
+     * 加载请假申请修改页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/leaveApply/editPage")
+    public ModelAndView leaveApplyEditPage(LeaveDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveApply_edit", request);
+        view.addObject("typeList",iLeaveTypeService.list());
+        view.addObject("model",iLeaveService.getById(dto.getId()));
+        return view;
+    }
+
+    /**
+     * 发送请假申请
+     * @return
+     */
+    @RequestMapping(value = "/leaveApply/applyPage")
+    public ModelAndView leaveApplyApplyPage(LeaveDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveApply_apply", request);
+        view.addObject("processList",ivActReDeployProcdefService.list());
+        view.addObject("model",iLeaveService.getById(dto.getId()));
+        view.addObject("userList",iUserService.selectListNotUserId(getUser(request).getId()));
+        return view;
+    }
+
+    /**
+     * 加载请假流程日志的页面
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/leaveProcess/logPage")
+    public ModelAndView leaveProcessLogPage(LeaveDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveProcess_log", request);
+        view.addObject("param",dto);
+        view.addObject("nodeList",iLeaveProcessNodeService.selectByProcessId(dto.getProcessId()));
+        return view;
+    }
 }

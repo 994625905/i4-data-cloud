@@ -26,4 +26,11 @@ public interface IFileService extends BaseService<FileModel> {
      * @return
      */
     IPage<FileView> loadImageTable(FileDto dto);
+
+    /**
+     * 根据调解加载文件（除图片外）
+     * @param dto
+     * @return
+     */
+    IPage<FileView> loadFileTable(FileDto dto);
 }
