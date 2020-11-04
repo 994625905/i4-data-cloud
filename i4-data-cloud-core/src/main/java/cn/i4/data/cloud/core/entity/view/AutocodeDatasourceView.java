@@ -28,6 +28,7 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 		this.defaultAuthor = model.getDefaultAuthor();
 		this.defaultPackagePrefix = model.getDefaultPackagePrefix();
 		this.defaultLocal = model.getDefaultLocal();
+		this.userId = model.getUserId();
 		this.createTime = model.getCreateTime();
 		this.updateTime = model.getUpdateTime();
 	}
@@ -107,6 +108,12 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 	 */
 	@TableField("default_local")
 	private String defaultLocal;
+
+	/**
+	 * 创建者
+	 */
+	@TableField("user_id")
+	private Integer userId;
 
 	/**
 	 * 添加时间
@@ -215,6 +222,14 @@ public class AutocodeDatasourceView extends BaseView<AutocodeDatasourceView> {
 
 	public String getDefaultLocal() {
 		return this.defaultLocal;
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 	public void setCreateTime(Long createTime) {

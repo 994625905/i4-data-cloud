@@ -10,6 +10,9 @@ layui.use(["layer","form"],()=>{
 
     /** 封面上传 */
     $("#dataSourceCover").click(()=>{
+        if(limit){
+            return Feng.msg("无权上传图片");
+        }
         UploadFile.imageSelect("选择数据源封面","#dataSourceCover",300,300,1)
     })
 
@@ -60,13 +63,37 @@ layui.use(["layer","form"],()=>{
 
     /** 提交项 */
     form.on("submit(save)",obj=>{
+        if(limit){
+            return Feng.msg("无权修改！");
+        }
         var param = obj.field
         param.dataSourceCover = $("#dataSourceCover").attr("src")
+
+        /** 判断用户密码是否修改，防重复加密 */
+        if(param.authUser == authUser){
+            delete param.authUser
+        }
+        if(param.authPassword == authPassword){
+            delete param.authPassword
+        }
+
         Request.asyncBody(BasePath+"/autoCode/dataSourceMsg/update",{model:param}).then(res=>{
             Feng.success("修改成功")
             parent.refresh()
         })
         return false;
+    })
+
+    /** 删除项 */
+    form.on("submit(delete)",obj=>{
+        if(limit){
+            return Feng.msg("无权删除！");
+        }
+        Request.async(BasePath+"/autoCode/dataSourceMsg/delete",{id:obj.field.id}).then(res=>{
+            Feng.success("删除成功")
+            parent.refresh()
+        })
+        return false
     })
 
 })

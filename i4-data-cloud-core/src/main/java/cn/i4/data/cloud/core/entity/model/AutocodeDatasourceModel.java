@@ -91,6 +91,12 @@ public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> 
     private String defaultLocal;
 
     /**
+     * 创建者
+     */
+    @TableField("user_id")
+    private Integer userId;
+
+    /**
     * 添加时间
     */
     @TableField("create_time")
@@ -197,6 +203,14 @@ public class AutocodeDatasourceModel extends BaseModel<AutocodeDatasourceModel> 
 
     public String getDefaultLocal() {
     return this.defaultLocal;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public void setCreateTime(Long createTime) {

@@ -23,7 +23,7 @@ function loadData(){
 }
 /********************************编辑页面*******************************/
 function editPage(name,id){
-    Feng.loadWindow("编辑"+name,BasePath+"/autoCode/dataSourceMsg/editPage?id="+id)
+    Feng.loadWindow(name,BasePath+"/autoCode/dataSourceMsg/editPage?id="+id)
 }
 function refresh(){
     loadData();
