@@ -213,6 +213,23 @@
 
                         <div class="layui-form-item">
                             <div class="layui-inline">
+                                <label class="layui-form-label">图文草稿的封面</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.richTextCover!}" title="${systemConstant.richTextCover_name!}" id="richTextCover" style="max-width: 100px">
+                                    <input name="richTextCover_id" value="${systemConstant.richTextCover_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm richTextCover">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('richTextCover')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
                                 <label class="layui-form-label">百度地图appKey</label>
                                 <div class="layui-input-inline" style="width: 400px">
                                     <input name="baiduMapApi" value="${systemConstant.baiduMapApi!}" title="${systemConstant.baiduMapApi_name!}" autocomplete="off" class="layui-input">

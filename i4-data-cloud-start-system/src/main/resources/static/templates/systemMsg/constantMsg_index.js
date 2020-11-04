@@ -171,6 +171,21 @@ layui.use(["layer","form"],()=>{
         uploadConstantImage("otherCover")
     })
 
+    /** 图文草稿的封面 */
+    $("#richTextCover").click(()=>{
+        var p = "width=300&height=200&limitProp=1&fileSize=1024"
+        Feng.loadWindow("选择图文草稿的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#richTextCover").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".richTextCover").click(()=>{
+        uploadConstantImage("richTextCover")
+    })
+
     /** 百度地图API */
     $(".baiduMapApi").click(()=>{
         uploadConstantText("baiduMapApi")

@@ -70,4 +70,15 @@ public class MaterialMsgController extends WebBaseController {
         return view;
     }
 
+    /**
+     * 图文草稿的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/richText/index")
+    public ModelAndView richTextIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/richText_index", request);
+        return view;
+    }
+
 }

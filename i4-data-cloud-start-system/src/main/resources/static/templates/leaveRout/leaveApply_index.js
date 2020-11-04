@@ -26,11 +26,13 @@ layui.use(["layer","table"],()=>{
             Feng.loadWindow("修改请假申请",BasePath+"/leaveRout/leaveApply/editPage?id="+obj.data.id)
         }
         if(obj.event == "delete"){
-            Request.async(BasePath+"/leaveRout/leaveApply/delete",{
-                id:obj.data.id
-            }).then(res=>{
-                Feng.success("删除成功")
-                refresh()
+            Feng.confirm("确定删除吗？",()=>{
+                Request.async(BasePath+"/leaveRout/leaveApply/delete",{
+                    id:obj.data.id
+                }).then(res=>{
+                    Feng.success("删除成功")
+                    refresh()
+                })
             })
         }
         if(obj.event == "processLog"){
