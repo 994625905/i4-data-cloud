@@ -30,4 +30,8 @@ public class LeaveServiceImpl extends BaseServiceImpl<LeaveMapper,LeaveModel> im
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public IPage<LeaveView> selectAllLog(LeaveDto dto) {
+		return mapper.selectAllLog(dto);
+	}
 }

@@ -55,4 +55,41 @@
         </if>
     </select>
 
+    <select id="selectAllLog" parameterType="cn.i4.data.cloud.core.entity.dto.LeaveDto"
+            resultType="cn.i4.data.cloud.core.entity.view.LeaveView">
+        select t.* from (
+            SELECT
+            <include refid="Base_Column_List"/>,
+            u.realname as realName,
+            y.name as typeName,
+            p.id as processId,
+            p.status as processStatus,
+            p.process_def_id as processDefId,
+            p.deployment_id as deploymentId,
+            p.process_instance_id as processInstanceId,
+            (select a.receive_user_id from t_leave_process_node a where a.leave_process_id = p.id order by a.deal_time desc
+            limit 1 ) as receiveUserId
+            FROM t_leave AS t
+            left join t_user u on t.user_id = u.id
+            left join t_leave_process p on t.id = p.leave_id
+            left join t_leave_type y on t.type_id = y.id
+            where 1=1
+            <if test="userId != null">
+                and t.user_id = #{userId}
+            </if>
+            <if test="typeId != null">
+                and t.type_id = #{typeId}
+            </if>
+            <if test="startDate != null">
+                and t.create_time between #{startDate} and #{endDate}
+            </if>
+            <if test="field != null and field != ''">
+                order by ${field} ${sort}
+            </if>
+            <if test="field == null or field == ''">
+                ORDER BY t.create_time DESC
+            </if>
+        ) t where t.processId is not null
+    </select>
+
 </mapper>

@@ -57,8 +57,8 @@ public class LeaveApplyController extends WebBaseController {
     @PostMapping(value = "/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
-    public ActionResult<IPage<LeaveView>> loadTable(LeaveDto dto){
-
+    public ActionResult<IPage<LeaveView>> loadTable(LeaveDto dto,HttpServletRequest request){
+        dto.setUserId(getUser(request).getId());
         IPage<LeaveView> page = iLeaveService.selectPage(dto);
         return ActionResult.ok(page);
     }

@@ -26,6 +26,8 @@ public class LeaveDto extends BaseDto<LeaveView> {
 
     private LeaveModel model;
 
+    private String modelTag;
+
     public Integer getId() {
         return id;
     }

@@ -122,4 +122,17 @@ public class LeaveRoutController extends WebBaseController {
         view.addObject("nodeList",iLeaveProcessNodeService.selectByProcessId(dto.getProcessId()));
         return view;
     }
+
+    /**
+     * 加载请求记录的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/leaveLog/index")
+    public ModelAndView leaveLogIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveLog_index", request);
+        view.addObject("typeList",iLeaveTypeService.list());
+        view.addObject("userList",iUserService.list());
+        return view;
+    }
 }

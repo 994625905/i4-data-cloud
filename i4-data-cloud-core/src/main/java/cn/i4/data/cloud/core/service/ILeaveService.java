@@ -20,4 +20,10 @@ public interface ILeaveService extends BaseService<LeaveModel> {
     */
     IPage<LeaveView> selectPage(LeaveDto dto);
 
+    /**
+     * 分页查询
+     * @param dto
+     * @return
+     */
+    IPage<LeaveView> selectAllLog(LeaveDto dto);
 }

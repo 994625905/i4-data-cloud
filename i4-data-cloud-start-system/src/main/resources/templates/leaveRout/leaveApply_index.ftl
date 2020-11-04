@@ -27,8 +27,7 @@
         <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="add">新增</button>
     </div>
 </script>
-<!--附件查看-->
-<script type="text/html" id="enclosureCols">
+<script type="text/html" id="processStatusCols">
     {{# if(d.processStatus == 0){ }}
         <label class="layui-btn layui-btn-sm" lay-event="processDoing">审批中</label>
     {{# } else if(d.processStatus == 1) { }}
