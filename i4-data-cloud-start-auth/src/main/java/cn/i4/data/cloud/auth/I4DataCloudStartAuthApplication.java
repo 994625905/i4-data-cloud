@@ -2,6 +2,8 @@ package cn.i4.data.cloud.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -12,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableDiscoveryClient
 @EnableFeignClients
-@SpringBootApplication(scanBasePackages = {"cn.i4.data.cloud.*"})
+@SpringBootApplication(scanBasePackages = {"cn.i4.data.cloud.*"},exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 public class I4DataCloudStartAuthApplication {
 
     public static void main(String[] args) {

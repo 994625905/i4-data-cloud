@@ -1,5 +1,6 @@
 <@override name="body">
 <title>i4-data-cloud认证中心-登陆</title>
+<link rel="stylesheet" href="${StaticServer}/resource/plugin/editormd/css/editormd.css" />
 <style>
     #login-div{
         background:rgba(0,0,0,0.2);
@@ -18,12 +19,15 @@
         background:rgba(0,0,0,0.2);
         color: white;
     }
+    li{
+        list-style: decimal;
+    }
 </style>
 <body>
     <div class="layui-row" style="height: 100vh;width: 100%;background: url('${systemConstant.authLoginImage}');background-size: cover">
-        <div class="layui-col-xs3 text-white" style="top: 40%;left: 15%">
-            文字表述
-        </div>
+        <textarea id="mdContent" style="display: none">${content!}</textarea>
+        <div class="layui-col-xs3 text-white" id="content" style="top: 40%;left: 15%;"></div>
+
         <div class="bg-white" id="login-div">
             <form class="layui-form p-2" lay-filter="login-form">
                 <div class="layui-anim layui-anim-upbit">
@@ -91,6 +95,15 @@
 <script>
     var redirect = "${redirect!''}";
 </script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/marked.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/prettify.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/raphael.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/underscore.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/flowchart.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/jquery.flowchart.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/sequence-diagram.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/editormd.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/base/Editor.js?v=1.0"></script>
 <script type="text/javascript" src="${StaticServer}/templates/login/login.js"></script>
 </@override>
 <@extends name="/base.ftl"/>

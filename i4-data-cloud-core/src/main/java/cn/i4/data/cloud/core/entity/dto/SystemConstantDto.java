@@ -16,6 +16,10 @@ public class SystemConstantDto extends BaseDto<SystemConstantView> {
 
     private String value;
 
+    private String mongoId;
+
+    private String content;
+
     public Integer getId() {
         return id;
     }
@@ -30,5 +34,21 @@ public class SystemConstantDto extends BaseDto<SystemConstantView> {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getMongoId() {
+        return mongoId;
+    }
+
+    public void setMongoId(String mongoId) {
+        this.mongoId = mongoId;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

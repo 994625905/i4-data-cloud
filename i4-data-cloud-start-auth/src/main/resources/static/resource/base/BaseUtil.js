@@ -295,7 +295,10 @@ var BaseDate = {
 			return null;
 		}else{
 			var d = new Date(timestamp * 1000);
-			return (d.getFullYear())+"-"+(d.getMonth()+1)+"-"+(d.getDate())+" "+(d.getHours())+":"+(d.getMinutes())+":"+(d.getSeconds());
+			return (d.getFullYear())+"-"+(d.getMonth()+1)+"-"+(d.getDate())+" "+
+				( d.getHours().toString().length>1?d.getHours():"0"+d.getHours() )+":"+
+				(d.getMinutes().toString().length>1?d.getMinutes():"0"+d.getMinutes())+":"+
+				(d.getSeconds().toString().length>1?d.getSeconds():"0"+d.getSeconds());
 		}
 	},
 

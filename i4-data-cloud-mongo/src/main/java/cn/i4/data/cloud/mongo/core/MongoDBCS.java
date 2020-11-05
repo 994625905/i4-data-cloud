@@ -24,8 +24,14 @@ public class MongoDBCS {
      */
     public interface CS_SYSTEM{
 
-        /** 富文本草稿库 */
+        /**
+         * 系统常量的集合
+         */
+        String SYSTEM_CONSTANT = "system_constant";
+
+        /** 富文本草稿集合 */
         String RICH_TEXT = "rich_text";
+
     }
 
 }

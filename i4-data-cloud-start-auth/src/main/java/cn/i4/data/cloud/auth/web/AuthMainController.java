@@ -1,9 +1,13 @@
 package cn.i4.data.cloud.auth.web;
 
+import cn.hutool.core.convert.Convert;
 import cn.i4.data.cloud.auth.help.AuthHelp;
 import cn.i4.data.cloud.core.entity.model.UserModel;
+import cn.i4.data.cloud.mongo.core.entity.MongoSystemConstant;
+import cn.i4.data.cloud.mongo.core.service.MongoSystemConstantService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,6 +27,8 @@ import javax.servlet.http.HttpServletRequest;
 public class AuthMainController extends WebBaseController{
 
     private static final Logger logger = LoggerFactory.getLogger(AuthMainController.class);
+    @Autowired
+    private MongoSystemConstantService mongoSystemConstantService;
 
     /**
      * 认证系统主页
@@ -37,6 +43,9 @@ public class AuthMainController extends WebBaseController{
         if(userModel == null){
             ModelAndView view = getModelAndView("/login/login",request);
             view.addObject("redirect", redirect);
+
+            MongoSystemConstant content = mongoSystemConstantService.selectByMongoId(Convert.toStr(this.getSystemConstant().get("authInfo")));
+            view.addObject("content",content==null?"":content.getContent());
 
             logger.debug("登录请求，站点[{}]",redirect);
 
