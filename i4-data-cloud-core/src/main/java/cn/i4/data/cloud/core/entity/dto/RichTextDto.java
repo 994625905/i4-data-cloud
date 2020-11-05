@@ -19,6 +19,12 @@ public class RichTextDto extends BaseDto<RichTextView> {
 
     private RichTextModel model;
 
+    /**
+     * 富文本内容
+     */
+    private String mdContent;
+    private String content;
+
     public Integer getId() {
         return id;
     }
@@ -41,5 +47,21 @@ public class RichTextDto extends BaseDto<RichTextView> {
 
     public void setModel(RichTextModel model) {
         this.model = model;
+    }
+
+    public String getMdContent() {
+        return mdContent;
+    }
+
+    public void setMdContent(String mdContent) {
+        this.mdContent = mdContent;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

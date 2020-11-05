@@ -7,9 +7,13 @@ layui.use(["layer","form"],()=>{
     form = layui.form
     form.render()
 
-    /** 初始化Markdown */
-    $("#content-editor").append("<div id='editormd'></div>");
-    editorMd = Editor.markdown("editormd",editorMd)
+    /** 初始化富文本编辑器 */
+    if(isMd){
+        $("#content-editor").append("<div id='editormd'></div>");
+        editorMd = Editor.markdown("editormd",editorMd,$("#mdContent").val())
+    }else{
+        editor = Editor.kindEditor("editor",editor)
+    }
 
     /** 绑定富文本编辑器的切换 */
     form.on('radio(editor)', function (data) {
@@ -34,10 +38,12 @@ layui.use(["layer","form"],()=>{
     form.on("submit(save)",obj=>{
         let param = {
             model:{
+                id:obj.field.id,
                 title:obj.field.title,
                 cover:$("#cover").attr("src"),
                 explainNote:obj.field.explainNote
             },
+            mongoId:mongoId,
             mdContent:function(){
                 if(obj.field.editor == "markdown"){
                     return editorMd.getMarkdown();
@@ -53,8 +59,8 @@ layui.use(["layer","form"],()=>{
                 }
             }(),
         }
-        Request.asyncBody(BasePath+"/materialMsg/richText/insert",param).then(res=>{
-            Feng.success("新增成功");
+        Request.asyncBody(BasePath+"/materialMsg/richText/update",param).then(res=>{
+            Feng.success("修改成功");
             parent.refresh()
             BaseUtil.setTimeout(()=>{
                 parent.layer.closeAll()

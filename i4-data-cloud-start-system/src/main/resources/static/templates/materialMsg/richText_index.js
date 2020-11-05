@@ -19,13 +19,16 @@ layui.use(["layer","form","table","laydate"],()=>{
         refresh()
     },BaseDate.rangeDate(-60)+" - "+BaseDate.rangeDate(0))
 
+    /** 初始化表格 */
+    loadTable()
+
     /** table工具栏 */
     table.on("toolbar(richTextTable)",obj=>{
         if(obj.event == "refresh"){
             refresh()
         }
         if(obj.event == "add"){
-            Feng.loadWindow(obj.data.title,BasePath+"/materialMsg/richText/addPage")
+            Feng.loadWindow("新增图文草稿",BasePath+"/materialMsg/richText/addPage")
         }
     })
 
@@ -44,7 +47,10 @@ layui.use(["layer","form","table","laydate"],()=>{
         }
         if(obj.event == "delete"){
             Feng.confirm("确定删除吗？",()=>{
-                Request.async(BasePath+"/materialMsg/richText/delete",{id:obj.data.id}).then(res=>{
+                Request.async(BasePath+"/materialMsg/richText/delete",{
+                    id:obj.data.id,
+                    mongoId:obj.data.mongoId
+                }).then(res=>{
                     Feng.success("删除成功")
                     refresh()
                 })
@@ -56,7 +62,7 @@ layui.use(["layer","form","table","laydate"],()=>{
 /** 加载表格 */
 function loadTable(){
     var tabCols = [[
-        {field:"cover",title:"封面"},
+        {field:"cover",title:"封面",templet:"#coverUrl"},
         {field:"title",title:"标题"},
         {field:"wordNumber",title:"字数",sort:true,width: TABLE_COL_WIDTH.one_Cols(3)},
         {field:"realName",title:"作者"},
@@ -69,4 +75,12 @@ function loadTable(){
 /** 刷新 */
 function refresh(){
     Initlay.reloadTable(tableRender,param)
+}
+/*************************加载封面************************/
+function showImage(name,id,url){
+    Initlay.photo([{
+        alt:name,
+        pid:id,
+        src:url
+    }])
 }

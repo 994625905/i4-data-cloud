@@ -85,6 +85,10 @@ public class RichTextView extends BaseView<RichTextView> {
 	@TableField("mongo_id")
 	private String mongoId;
 
+	/** 补充字段 */
+	private String createTimeStr;
+	private String updateTimeStr;
+	private String realName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -158,4 +162,27 @@ public class RichTextView extends BaseView<RichTextView> {
 		return this.mongoId;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
 }

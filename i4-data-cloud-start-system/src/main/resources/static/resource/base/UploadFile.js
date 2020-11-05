@@ -63,14 +63,19 @@ var UploadFile = {
      */
     imageSelect:function(title,imageElem,width,height,limit ,size,callback){
         var p = "?type=1"
+        title += "（限制条件："
         if(width){
             p += "&width="+width;
+            title +="宽："+width+"，"
         }if(height){
             p += "&height="+height;
+            title +="高："+height+"，"
         }if(limit){
             p += "&limitProp="+limit;
+            title += "允许等比例上传，"
         }if(size){
             p += "&fileSize="+size;
+            title += "限制大小："+size+"KB"
         }
         Feng.loadWindow(title,BasePath+"/materialMsg/imageSelect/index"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
@@ -88,7 +93,7 @@ var UploadFile = {
     },
 
     /**
-     *
+     * 文件选择
      * @param title
      * @param fileElem
      * @param type
@@ -99,6 +104,7 @@ var UploadFile = {
         var p = "?type="+type
         if(size){
             p += "&fileSize="+size;
+            title += "（限制大小"+size+"KB）"
         }
         Feng.loadWindow(title,BasePath+"/materialMsg/imageSelect/file"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{

@@ -4448,3 +4448,8 @@ hr.editormd-page-break {
 .editormd-theme-dark .CodeMirror {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+/** 补充被layui覆盖掉的li样式 */
+li{
+  list-style:disc;
+}

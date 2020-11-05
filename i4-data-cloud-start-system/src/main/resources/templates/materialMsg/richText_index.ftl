@@ -1,5 +1,5 @@
 <@override name="body">
-<title>爱思数据云平台·请假事务/请假记录</title>
+<title>爱思数据云平台·素材中心/图文草稿</title>
 <style>
     .layui-table-cell{ height: auto; white-space: normal; }
 </style>
@@ -48,6 +48,9 @@
     <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete">删除</a>
 </script>
-<script type="text/javascript" src="${StaticServer}/templates/materialMsg/richText_index.js?v=1.1"></script>
+<script type="text/html" id="coverUrl">
+    <img src="{{ d.cover }}" onclick="showImage('{{d.title}}','{{d.id}}','{{d.cover}}')">
+</script>
+<script type="text/javascript" src="${StaticServer}/templates/materialMsg/richText_index.js?v=1.2"></script>
 </@override>
 <@extends name="/base.ftl"/>

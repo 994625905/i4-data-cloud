@@ -1,8 +1,8 @@
 package cn.i4.data.cloud.mongo.core.service;
 
 import cn.i4.data.cloud.mongo.base.service.MongoBaseService;
-import cn.i4.data.cloud.mongodb.MongoDBCS;
-import cn.i4.data.cloud.mongodb.entity.MongoRichText;
+import cn.i4.data.cloud.mongo.core.MongoDBCS;
+import cn.i4.data.cloud.mongo.core.entity.MongoRichText;
 import org.springframework.stereotype.Service;
 
 /**

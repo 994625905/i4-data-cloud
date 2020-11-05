@@ -32,7 +32,7 @@ layui.use(["layer","form"],()=>{
     /** 网站logo */
     $("#webLogoImage").click(()=>{
         var p = "width=164&height=46&limitProp=1"
-        Feng.loadWindow("选择网站logo",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择网站logo（限制条件164*46，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#webLogoImage").attr("src",res)
@@ -48,7 +48,7 @@ layui.use(["layer","form"],()=>{
     /** 默认头像 */
     $("#userHeadImage").click(()=>{
         var p = "width=100&height=100&limitProp=1"
-        Feng.loadWindow("选择默认头像",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择默认头像（限制条件100*100，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#userHeadImage").attr("src",res)
@@ -70,7 +70,7 @@ layui.use(["layer","form"],()=>{
     /** MySQL图标 */
     $("#mysqlImage").click(()=>{
         var p = "width=300&height=300&limitProp=1&fileSize=200"
-        Feng.loadWindow("选择MySQL图标",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择MySQL图标（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#mysqlImage").attr("src",res)
@@ -85,7 +85,7 @@ layui.use(["layer","form"],()=>{
     /** Oracle图标 */
     $("#oracleImage").click(()=>{
         var p = "width=300&height=300&limitProp=1&fileSize=200"
-        Feng.loadWindow("选择MySQL图标",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择Oracle图标（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#oracleImage").attr("src",res)
@@ -99,7 +99,7 @@ layui.use(["layer","form"],()=>{
 
     /** 文件上传的降级服务 */
     $("#errorImage").click(()=>{
-        Feng.loadWindow("选择MySQL图标",BasePath+"/materialMsg/imageSelect/index",null,null,null,()=>{
+        Feng.loadWindow("选择文件上传降级的返回",BasePath+"/materialMsg/imageSelect/index",null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#errorImage").attr("src",res)
@@ -114,7 +114,7 @@ layui.use(["layer","form"],()=>{
     /** 文档的图标 */
     $("#wordCover").click(()=>{
         var p = "width=300&height=300&limitProp=1&fileSize=200"
-        Feng.loadWindow("选择文档的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择文档的默认封面（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#wordCover").attr("src",res)
@@ -129,7 +129,7 @@ layui.use(["layer","form"],()=>{
     /** 视频的图标 */
     $("#videoCover").click(()=>{
         var p = "width=300&height=300&limitProp=1&fileSize=200"
-        Feng.loadWindow("选择视频的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择视频的默认封面（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#videoCover").attr("src",res)
@@ -144,7 +144,7 @@ layui.use(["layer","form"],()=>{
     /** 语音的图标 */
     $("#audioCover").click(()=>{
         var p = "width=100&height=100&limitProp=1&fileSize=200"
-        Feng.loadWindow("选择语音的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择语音的默认封面（限制条件100*100，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#audioCover").attr("src",res)
@@ -159,7 +159,7 @@ layui.use(["layer","form"],()=>{
     /** 其他的图标 */
     $("#otherCover").click(()=>{
         var p = "width=300&height=300&limitProp=1&fileSize=200"
-        Feng.loadWindow("选择其他类型的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择其他类型的默认封面（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#otherCover").attr("src",res)
@@ -174,7 +174,7 @@ layui.use(["layer","form"],()=>{
     /** 图文草稿的封面 */
     $("#richTextCover").click(()=>{
         var p = "width=300&height=200&limitProp=1&fileSize=1024"
-        Feng.loadWindow("选择图文草稿的默认封面",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("选择图文草稿的默认封面（限制条件300*200，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     $("#richTextCover").attr("src",res)

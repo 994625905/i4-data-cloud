@@ -21,6 +21,7 @@ public class RichTextModel extends BaseModel<RichTextModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

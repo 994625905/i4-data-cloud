@@ -15,8 +15,8 @@ socketTimeout=0
 #是否打开长连接. defaults to false --boolean
 socketKeepAlive=false
 
-#用户密码登录，需要先分配读写权限
-user=admin
+#用户密码登录，需要先分配读写权限（我这里创建了一个超级权限用户）
+user=root
 pass=i4ppdappda
 database=admin
 

@@ -4,16 +4,24 @@ import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
+import cn.i4.data.cloud.base.util.RichTextUtil;
+import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.core.entity.dto.RichTextDto;
+import cn.i4.data.cloud.core.entity.model.RichTextModel;
 import cn.i4.data.cloud.core.entity.view.RichTextView;
 import cn.i4.data.cloud.core.service.IRichTextService;
-import cn.i4.data.cloud.mongodb.service.MongoRichTextService;
+import cn.i4.data.cloud.mongo.core.entity.MongoRichText;
+import cn.i4.data.cloud.mongo.core.service.MongoRichTextService;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 素材中心--图文草稿的控制层
@@ -42,8 +50,8 @@ public class RichTextController extends WebBaseController {
     @PostMapping(value = "/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
-    public ActionResult<IPage<RichTextView>> loadTable(RichTextDto dto){
-
+    public ActionResult<IPage<RichTextView>> loadTable(RichTextDto dto,HttpServletRequest request){
+        dto.setUserId(getUser(request).getId());
         IPage<RichTextView> page = iRichTextService.selectPage(dto);
         return ActionResult.ok(page);
     }
@@ -57,7 +65,6 @@ public class RichTextController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
     public ActionResult<Boolean> delete(RichTextDto dto){
-
         /** 删除MongoDB */
         Long delete = mongoRichTextService.deleteOne(dto.getMongoId());
         if(delete < 1){
@@ -69,6 +76,74 @@ public class RichTextController extends WebBaseController {
             return ActionResult.ok(true);
         }
         return ActionResult.error("删除数据失败");
+    }
+
+    /**
+     * 新增
+     * @param dto
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/insert")
+    @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
+    public ActionResult<Boolean> insert(@RequestBody RichTextDto dto, HttpServletRequest request){
+
+        /** 新增MongoDB */
+        MongoRichText richText = new MongoRichText();
+        richText.setContent(dto.getContent());
+        richText.setMdContent(dto.getMdContent());
+        String mongoId = mongoRichTextService.insertOne(richText);
+
+        /** 新增MySQL */
+        if(StringUtil.isNullOrEmpty(mongoId)){
+            return ActionResult.error("富文本存储失败");
+        }
+        RichTextModel model = dto.getModel();
+        model.setMongoId(mongoId);
+        model.setCreateTime(System.currentTimeMillis()/1000L);
+        model.setUserId(getUser(request).getId());
+        model.setWordNumber(RichTextUtil.getWordNumber(dto.getContent()));
+        if(StringUtil.isNullOrEmpty(model.getExplainNote())){
+            model.setExplainNote(RichTextUtil.getExplain(dto.getContent()));
+        }
+        boolean save = iRichTextService.save(model);
+        if(save){
+            return ActionResult.ok(true);
+        }
+        return ActionResult.error("新增失败");
+    }
+
+    /**
+     * 编辑
+     * @param dto
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/update")
+    @RequestLog(module = MODULE_NAME,content = "编辑",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"--编辑",key = KEY_PREFIX+"/update")
+    public ActionResult<Boolean> update(@RequestBody RichTextDto dto){
+
+        /** 修改MongoDB */
+        MongoRichText richText = new MongoRichText();
+        richText.setMongoId(new ObjectId(dto.getMongoId()));
+        richText.setContent(dto.getContent());
+        richText.setMdContent(dto.getMdContent());
+        mongoRichTextService.updateOne(richText);
+
+        /** 修改MySQL */
+        RichTextModel model = dto.getModel();
+        model.setUpdateTime(System.currentTimeMillis()/1000L);
+        model.setWordNumber(RichTextUtil.getWordNumber(dto.getContent()));
+        if(StringUtil.isNullOrEmpty(model.getExplainNote())){
+            model.setExplainNote(RichTextUtil.getExplain(dto.getContent()));
+        }
+        boolean modify = iRichTextService.modify(model);
+        if(modify){
+            return ActionResult.ok(true);
+        }
+        return ActionResult.error("修改失败");
     }
 
 }

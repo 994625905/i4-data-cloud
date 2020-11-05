@@ -44,7 +44,8 @@ public class FileFindController extends WebBaseController {
      */
     @PostMapping(value = "/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
-    public ActionResult<IPage<FileView>> loadTable(FileDto dto){
+    public ActionResult<IPage<FileView>> loadTable(FileDto dto,HttpServletRequest request){
+        dto.setUserId(getUser(request).getId());
         IPage<FileView> page = iFileService.selectPage(dto);
         return ActionResult.ok(page);
     }

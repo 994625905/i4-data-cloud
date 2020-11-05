@@ -105,7 +105,7 @@ public class RequestLogAspect extends BaseAspectSupport{
             logger.error(this.resolveMethod(point).getName());
             logger.error(throwable.getMessage());
             throwable.printStackTrace();
-            return ActionResult.error();
+            return ActionResult.error("接口异常报错");
         }finally {
             /** 发送数据到消息队列，以待入库 */
             produceService.sendMessage(RabbitMqConstant.EXCHANGE_NAME.REQUEST,RabbitMqConstant.ROUTING_KEY.REQUEST_LOG_ONE,JSONObject.toJSONString(model));

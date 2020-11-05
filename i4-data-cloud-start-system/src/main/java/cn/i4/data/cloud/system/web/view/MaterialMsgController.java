@@ -1,7 +1,13 @@
 package cn.i4.data.cloud.system.web.view;
 
 import cn.i4.data.cloud.core.entity.dto.FileDto;
+import cn.i4.data.cloud.core.entity.dto.RichTextDto;
+import cn.i4.data.cloud.core.entity.model.RichTextModel;
+import cn.i4.data.cloud.core.service.IRichTextService;
+import cn.i4.data.cloud.mongo.core.entity.MongoRichText;
+import cn.i4.data.cloud.mongo.core.service.MongoRichTextService;
 import cn.i4.data.cloud.system.web.WebBaseController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,6 +25,11 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping(value = "/materialMsg")
 @Controller
 public class MaterialMsgController extends WebBaseController {
+
+    @Autowired
+    private IRichTextService iRichTextService;
+    @Autowired
+    private MongoRichTextService mongoRichTextService;
 
     /**
      * 加载文件查看首页
@@ -78,6 +89,52 @@ public class MaterialMsgController extends WebBaseController {
     @RequestMapping(value = "/richText/index")
     public ModelAndView richTextIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/materialMsg/richText_index", request);
+        return view;
+    }
+
+    /**
+     * 图文草稿的新增页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/richText/addPage")
+    public ModelAndView richTextAddPage(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/richText_add", request);
+        return view;
+    }
+
+    /**
+     * 图文草稿的编辑页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/richText/editPage")
+    public ModelAndView richTextEditPage(RichTextDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/richText_edit", request);
+
+        RichTextModel model = iRichTextService.getById(dto.getId());
+        MongoRichText richText = mongoRichTextService.selectByMongoId(model.getMongoId());
+
+        view.addObject("model",model);
+        view.addObject("richText",richText);
+        return view;
+    }
+
+    /**
+     * 图文草稿的预览页面
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/richText/readPage")
+    public ModelAndView richTextEReadPage(RichTextDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/richText_read", request);
+
+        RichTextModel model = iRichTextService.getById(dto.getId());
+        MongoRichText richText = mongoRichTextService.selectByMongoId(model.getMongoId());
+
+        view.addObject("model",model);
+        view.addObject("richText",richText);
         return view;
     }
 
