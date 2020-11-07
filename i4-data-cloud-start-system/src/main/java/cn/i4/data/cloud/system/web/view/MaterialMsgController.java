@@ -138,4 +138,16 @@ public class MaterialMsgController extends WebBaseController {
         return view;
     }
 
+    /**
+     * 加载图文选择页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/richText/select")
+    public ModelAndView richTextSelect(FileDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/richText_select", request);
+        return view;
+    }
+
+
 }

@@ -24,7 +24,7 @@ var Editor = {
                     "list-ul", "list-ol", "hr", "|",
                     "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime", "html-entities", "pagebreak", "|",
                     "goto-line", "watch", "preview", "fullscreen", "clear", "search", "|",
-                    "help", "info"
+                    "help"
                 ]
             },
             pluginPath: BasePath+"/resource/plugin/editormd/plugins/",
@@ -39,7 +39,7 @@ var Editor = {
             sequenceDiagram: true,//开启时序/序列图支持，默认关闭,
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp"],
-            imageUploadURL: BasePath+"/fileMsg/uploadImageByMd",
+            imageUploadURL: BasePath+"//materialMsg/fileFind/uploadImageByMd",
             onfullscreen:
                 function () {
                     $(".layui-header").css("z-index", "-1");
@@ -76,7 +76,7 @@ var Editor = {
                 'insertfile', 'table', 'hr', 'emoticons', 'pagebreak',
                 'link', 'unlink', 'about'
             ],
-            uploadJson: BasePath+"/fileMsg/uploadImageByEditor",
+            uploadJson: BasePath+"//materialMsg/fileFind/uploadImageByEditor",
             dialogOffset: 0, //对话框距离页面顶部的位置，默认为0居中，
             allowImageUpload: true,
             allowMediaUpload: true,

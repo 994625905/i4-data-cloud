@@ -7,9 +7,12 @@ import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.cache.service.RedisService;
 import cn.i4.data.cloud.core.entity.model.UserInfoModel;
 import cn.i4.data.cloud.core.entity.model.UserModel;
+import cn.i4.data.cloud.core.entity.model.UserTemplateModel;
 import cn.i4.data.cloud.core.entity.view.MenuButtonView;
+import cn.i4.data.cloud.core.entity.view.UserTemplateView;
 import cn.i4.data.cloud.core.service.IMenuButtonService;
 import cn.i4.data.cloud.core.service.ISystemConstantService;
+import cn.i4.data.cloud.core.service.IUserTemplateService;
 import com.alibaba.fastjson.JSONObject;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.DecodedJWT;
@@ -33,6 +36,8 @@ public class WebBaseController extends BaseController {
     @Autowired
     protected RedisService redisService;
     @Autowired
+    protected IUserTemplateService iUserTemplateService;
+    @Autowired
     protected ISystemConstantService iSystemConstantService;
     @Autowired
     protected IMenuButtonService iMenuButtonService;
@@ -47,6 +52,7 @@ public class WebBaseController extends BaseController {
         ModelAndView view = super.getModelAndView(path);
         view.addObject("user",this.getUser(request));
         view.addObject("userInfo",this.getUserInfo(request));
+        view.addObject("userTemplate",this.getUserTemplate(request));
         view.addObject("systemConstant",this.getSystemConstant());
         view.addObject("menuList",this.getUserRoleMenuButton(request));
         return view;
@@ -72,6 +78,22 @@ public class WebBaseController extends BaseController {
     protected UserInfoModel getUserInfo(HttpServletRequest request){
         UserInfoModel userInfo = redisService.get(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX + this.getUser(request).getId(), UserInfoModel.class);
         return userInfo;
+    }
+
+    /**
+     * 获取user template
+     * @param request
+     * @return
+     */
+    protected UserTemplateModel getUserTemplate(HttpServletRequest request){
+        Integer userId = this.getUser(request).getId();
+        UserTemplateModel templateModel = redisService.get(RedisConstant.KEY.LOGIN_USER_TEMPLATE_PREFIX + userId, UserTemplateModel.class);
+
+        if(templateModel == null){
+            templateModel = iUserTemplateService.selectByUserId(userId);
+            redisService.set(RedisConstant.KEY.LOGIN_USER_TEMPLATE_PREFIX + userId,templateModel,RedisConstant.TIMEOUT.LOGIN_USER_TEMPLATE_PREFIX);
+        }
+        return templateModel;
     }
 
     /**

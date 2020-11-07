@@ -7,9 +7,7 @@ layui.use(["layer","laypage"],()=>{
 
     /** 开启加载 */
     BaseAjax.getDataAsync()
-    Request.async(BasePath+"/materialMsg/imageSelect/loadFileTable",{
-        type:type,
-        fileSize:size,
+    Request.async(BasePath+"/materialMsg/richText/loadTable",{
         current:0,
         size:15
     }).then(res=>{
@@ -22,7 +20,7 @@ layui.use(["layer","laypage"],()=>{
 
         /** 点击选中，临时存储 */
         $(".imageDiv").click(function(){
-            Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).find("img").attr("data")}).then(res=>{
+            Request.async(BasePath+"/materialMsg/richText/setRichTextSelectTemp",{mongoId:$(this).find("img").attr("data")}).then(res=>{
                 parent.layer.closeAll()
             })
         })
@@ -44,19 +42,13 @@ layui.use(["layer","laypage"],()=>{
 
                 /** 点击选中 */
                 $(".imageDiv").find("img").click(function(){
-                    Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).attr("data")}).then(res=>{
+                    Request.async(BasePath+"/materialMsg/richText/setRichTextSelectTemp",{mongoId:$(this).attr("data")}).then(res=>{
                         parent.layer.closeAll()
                     })
                 })
             })
         })
     })
-
-    /** 上传文件 */
-    $("#uploadFile").click(()=>{
-        UploadFile.openPage(type,size)
-    })
-
 })
 function refresh(){
     location = location

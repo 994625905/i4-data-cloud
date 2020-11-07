@@ -3,7 +3,9 @@ package cn.i4.data.cloud.system.web.action.materialMsg;
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestType;
+import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
+import cn.i4.data.cloud.base.util.CookieUtil;
 import cn.i4.data.cloud.base.util.RichTextUtil;
 import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.core.entity.dto.RichTextDto;
@@ -145,5 +147,36 @@ public class RichTextController extends WebBaseController {
         }
         return ActionResult.error("修改失败");
     }
+
+    /**
+     * 设置临时存储的url
+     * @return
+     */
+    @PostMapping(value = "/setRichTextSelectTemp")
+    @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
+    public ActionResult<Boolean> setRichTextSelectTemp(String mongoId, HttpServletRequest request){
+        String authorization = CookieUtil.getCookieValue(request, "authorization");
+
+        /** 查出图文消息 */
+        MongoRichText richText = mongoRichTextService.selectByMongoId(mongoId);
+        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization, richText, RedisConstant.TIMEOUT.SELECT_RICH_TEXT);
+        return ActionResult.ok(res);
+    }
+
+    /**
+     * 获取临时存储的url，并删除缓存
+     * @return
+     */
+    @PostMapping(value = "/getRichTextSelectTemp")
+    @RequestLog(module = MODULE_NAME,content = "获取临时存储的url，并删除缓存",type = RequestType.SELECT)
+    public ActionResult<MongoRichText> getRichTextSelectTemp(HttpServletRequest request){
+
+        String authorization = CookieUtil.getCookieValue(request, "authorization");
+
+        MongoRichText richText = (MongoRichText) redisService.hget(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization);
+        redisService.hashDeleteHashKey(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization);
+        return ActionResult.ok(richText);
+    }
+
 
 }

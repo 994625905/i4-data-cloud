@@ -436,5 +436,50 @@ var BaseDate = {
 			return parseInt(shorttime/86400)+"天"+ parseInt(shorttime%86400/3600)+"小时"+ parseInt(shorttime%86400%3600/60)+"分"+parseInt(shorttime%86400%3600%60)+"秒"
 		}
 	},
+	/**
+	 * 获取当前年
+	 */
+	currYear(){
+		return new Date().getFullYear()
+	},
+	/**
+	 * 获取当前周次
+	 */
+	currWeekNum(){
+		let day = new Date();//如果当年的第一天不是星期一，则该日所属周数为上一年的最后一周
+
+		if(day.getDay() !== 1){
+			day = day.getTime()-24*60*60*1000
+			day = new Date(day);
+		}
+		day.setMonth(0);
+		day.setDate(1);
+		day.setHours(0);
+		day.setMinutes(0);
+		day.setSeconds(0);//到这里就得到该年的一月一日
+
+		let today = new Date();
+
+		//计算日期是一年中的第几天
+		let rankDay = Math.ceil((today.getTime()-day.getTime())/(1000*24*60*60))
+		let rankWeek = Math.ceil(rankDay/7)
+		return  rankWeek < 10?("0"+rankWeek):rankWeek
+	},
+	/**
+	 * 当前周一对应的日期
+	 * @returns {string}
+	 */
+	currMonday(){
+		var curr = new Date().getDay();
+		return this.rangeDate(-(curr - 1))
+	},
+	/**
+	 * 获取当前周五对应的日期
+	 * @returns {string}
+	 */
+	currFriday(){
+		var curr = new Date().getDay();
+		return this.rangeDate( 5 - curr);
+	}
 };
 

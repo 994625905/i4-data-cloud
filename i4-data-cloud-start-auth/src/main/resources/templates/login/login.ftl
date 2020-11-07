@@ -22,11 +22,17 @@
     li{
         list-style: decimal;
     }
+    #content{
+        top: 25%;
+        left: 10%;
+        width: 600px;
+        background-color: rgba(0,0,0,0);
+    }
 </style>
 <body>
     <div class="layui-row" style="height: 100vh;width: 100%;background: url('${systemConstant.authLoginImage}');background-size: cover">
         <textarea id="mdContent" style="display: none">${content!}</textarea>
-        <div class="layui-col-xs3 text-white" id="content" style="top: 40%;left: 15%;"></div>
+        <div class="layui-col-xs3 text-white" id="content"></div>
 
         <div class="bg-white" id="login-div">
             <form class="layui-form p-2" lay-filter="login-form">

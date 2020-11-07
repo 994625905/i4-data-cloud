@@ -32,6 +32,9 @@ public class MongoDBCS {
         /** 富文本草稿集合 */
         String RICH_TEXT = "rich_text";
 
+        /** 周报的集合 */
+        String WEEK_REPORT = "week_report";
+
     }
 
 }

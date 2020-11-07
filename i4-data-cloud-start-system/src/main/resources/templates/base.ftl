@@ -45,11 +45,12 @@
     <script type="text/javascript" src="${StaticServer}/resource/base/InitChart.js?v=1.0"></script>
     <script type="text/javascript" src="${StaticServer}/resource/base/UploadFile.js?v=1.0"></script>
     <script type="text/javascript" src="${StaticServer}/resource/base/InitSelect.js?v=1.0"></script>
+    <script type="text/javascript" src="${StaticServer}/resource/base/RicText.js?v=1.0"></script>
     <link rel="stylesheet" href="${StaticServer}/resource/base/free.css">
     <link rel="stylesheet" href="${StaticServer}/resource/base/defined.css">
 
     <!--引入iconfont资源库-->
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2121546_qwe5we92z7.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2121546_134tjbwcg85q.css">
 
     <@block name="body" >base_body_content</@block>
 

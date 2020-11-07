@@ -141,6 +141,8 @@ var Initlay = {
         laypage.render({
             elem:elemId,
             count:dateCount,
+            limit:15,
+            limits:[15, 30, 45, 60, 90],
             layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip'],
             jump: function(obj,first){
                 if(!BaseUtil.isEmpty(firstload) && firstload == true){

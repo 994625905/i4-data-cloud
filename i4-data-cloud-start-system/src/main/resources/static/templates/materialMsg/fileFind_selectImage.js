@@ -13,7 +13,7 @@ layui.use(["layer","laypage"],()=>{
         limitProp:limit_flag,
         fileSize:size,
         current:0,
-        size:30
+        size:15
     }).then(res=>{
         $("#imageTable").html(template("imageCol",{list:res.records}))
 

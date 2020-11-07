@@ -1,0 +1,81 @@
+package cn.i4.data.cloud.system.web.view;
+
+import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
+import cn.i4.data.cloud.core.service.IWeekreportService;
+import cn.i4.data.cloud.mongo.core.service.MongoWeekReportService;
+import cn.i4.data.cloud.system.web.WebBaseController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * 周报事务的模型视图页面
+ * @author wangjc
+ * @title: WeekReportController
+ * @projectName i4-data-cloud
+ * @description: TODO
+ * @date 2020/11/5-18:05
+ */
+@RequestMapping(value = "/weekReport")
+@Controller
+public class WeekReportController extends WebBaseController {
+
+    @Autowired
+    private IWeekreportService iWeekreportService;
+    @Autowired
+    private MongoWeekReportService mongoWeekReportService;
+
+    /**
+     * 加载周报提交的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportApply/index")
+    public ModelAndView weekReportApplyIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportApply_index", request);
+        return view;
+    }
+
+    /**
+     * 加载周报提交的新增页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportApply/addPage")
+    public ModelAndView weekReportApplyAddPage(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportApply_add", request);
+        return view;
+    }
+
+    /**
+     * 加载周报提交的编辑页面
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportApply/editPage")
+    public ModelAndView weekReportApplyEditPage(WeekreportDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportApply_edit", request);
+        view.addObject("model",iWeekreportService.getById(dto.getId()));
+        view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        return view;
+    }
+
+    /**
+     * 加载周报提交的预览页
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportApply/readPage")
+    public ModelAndView weekReportApplyReadPage(WeekreportDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportApply_read", request);
+        view.addObject("model",iWeekreportService.getById(dto.getId()));
+        view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        return view;
+    }
+
+}
