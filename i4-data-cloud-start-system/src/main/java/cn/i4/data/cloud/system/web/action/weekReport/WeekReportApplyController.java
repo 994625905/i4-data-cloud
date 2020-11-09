@@ -18,6 +18,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -59,7 +60,7 @@ public class WeekReportApplyController extends WebBaseController {
     }
 
     /**
-     * 删除
+     * 删除，同时删除MongoId
      * @param dto
      * @param request
      * @return
@@ -68,6 +69,14 @@ public class WeekReportApplyController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
     public ActionResult<Boolean> delete(WeekreportDto dto,HttpServletRequest request){
+
+        /** 删除Mongo */
+        Long one = mongoWeekReportService.deleteOne(dto.getMongoId());
+        if(one < 1){
+            return ActionResult.error("删除mongo失败");
+        }
+
+        /** 删除MySQL */
         boolean remove = iWeekreportService.removeById(dto.getId());
         if(remove){
             return ActionResult.ok(true);
@@ -113,7 +122,7 @@ public class WeekReportApplyController extends WebBaseController {
     @PostMapping(value = "/insert")
     @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
-    public ActionResult<Boolean> insert(WeekreportDto dto,HttpServletRequest request){
+    public ActionResult<Boolean> insert(@RequestBody WeekreportDto dto, HttpServletRequest request){
 
         /** 富文本的存储 */
         MongoWeekReport mongoWeekReport = new MongoWeekReport();
@@ -144,7 +153,7 @@ public class WeekReportApplyController extends WebBaseController {
     @PostMapping(value = "/update")
     @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
-    public ActionResult<Boolean> update(WeekreportDto dto){
+    public ActionResult<Boolean> update(@RequestBody WeekreportDto dto){
 
         /** 富文本的修改 */
         MongoWeekReport mongoWeekReport = new MongoWeekReport();

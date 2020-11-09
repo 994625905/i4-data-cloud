@@ -226,7 +226,7 @@ public class FileFindController extends WebBaseController {
         /** 获取图片宽高，确认是图片 */
         BufferedImage image = ImageIO.read(file.getInputStream());
         if(image != null){
-            model.setDescription("markdown的图片上传");
+            model.setDescription("富文本编辑器的图片上传");
             model.setType(SystemConstant.FILE.TYPE.IMAGE);
             model.setWidth(image.getWidth());
             model.setHeight(image.getHeight());

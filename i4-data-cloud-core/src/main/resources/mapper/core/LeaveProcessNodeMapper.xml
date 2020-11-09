@@ -32,6 +32,7 @@
             (select u.realname from t_user u where u.id = t.receive_user_id) as receiveUserName
         from t_leave_process_node t
         where t.leave_process_id = #{processId}
+        order by t.deal_time desc
     </select>
 
 </mapper>

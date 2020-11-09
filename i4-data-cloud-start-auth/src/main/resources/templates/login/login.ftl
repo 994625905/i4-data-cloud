@@ -25,7 +25,7 @@
     #content{
         top: 25%;
         left: 10%;
-        width: 600px;
+        width: 650px;
         background-color: rgba(0,0,0,0);
     }
 </style>

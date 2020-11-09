@@ -32,7 +32,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">设置模板：</label>
         <div class="layui-input-block">
-            <input name="titleTemplate" value="<#if userTemplate??>${userTemplate.weekreportTitle!}</#if>" placeholder="注意填充的参数不可变动" class="layui-input">
+            <input id="titleTemplate" name="titleTemplate" value="<#if userTemplate??>${userTemplate.weekreportTitle!}</#if>" placeholder="注意填充的参数不可变动" class="layui-input">
         </div>
         <div class="layui-form-mid layui-word-aux">eg：王进潮（研发部）大数据小组{year}年第（{week}）周工作总结及计划（{startDate}-{endDate}）</div>
     </div>
@@ -56,9 +56,9 @@
     {{# } else { }}
         <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="apply">发送</a>
         <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
-        <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete">删除</a>
+        <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="delete">删除</a>
     {{# }}}
-    <a class="layui-btn layui-btn-warm" lay-event="read">预览</a>
+    <a class="layui-btn layui-btn-sm layui-btn-warm" lay-event="read">预览</a>
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/weekReport/weekReportApply_index.js?v=1.1"></script>
 </@override>

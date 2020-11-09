@@ -154,12 +154,12 @@ public class RichTextController extends WebBaseController {
      */
     @PostMapping(value = "/setRichTextSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--设置临时存储的url",key = KEY_PREFIX+"/setRichTextSelectTemp")
     public ActionResult<Boolean> setRichTextSelectTemp(String mongoId, HttpServletRequest request){
         String authorization = CookieUtil.getCookieValue(request, "authorization");
 
-        /** 查出图文消息 */
-        MongoRichText richText = mongoRichTextService.selectByMongoId(mongoId);
-        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization, richText, RedisConstant.TIMEOUT.SELECT_RICH_TEXT);
+        /** 富文本内容不要摄入redis，存mongoId即可，在get的时候查询 */
+        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization, mongoId, RedisConstant.TIMEOUT.SELECT_RICH_TEXT);
         return ActionResult.ok(res);
     }
 
@@ -169,11 +169,14 @@ public class RichTextController extends WebBaseController {
      */
     @PostMapping(value = "/getRichTextSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "获取临时存储的url，并删除缓存",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--获取临时存储的url，并删除缓存",key = KEY_PREFIX+"/getRichTextSelectTemp")
     public ActionResult<MongoRichText> getRichTextSelectTemp(HttpServletRequest request){
 
         String authorization = CookieUtil.getCookieValue(request, "authorization");
 
-        MongoRichText richText = (MongoRichText) redisService.hget(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization);
+        String mongoId = (String) redisService.hget(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization);
+
+        MongoRichText richText = mongoRichTextService.selectByMongoId(mongoId);
         redisService.hashDeleteHashKey(RedisConstant.HASH_KEY.SELECT_RICH_TEXT, authorization);
         return ActionResult.ok(richText);
     }

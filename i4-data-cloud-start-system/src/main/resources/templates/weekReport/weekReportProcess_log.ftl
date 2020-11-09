@@ -1,11 +1,11 @@
 <@override name="body">
-<title>爱思数据云平台·请假事务/请假记录</title>
+<title>爱思数据云平台·周报事务/流程日志</title>
 <body>
 <br>
     <div class="layui-fluid">
         <div class="layui-card">
             <div class="layui-card-header">
-                ---假条：${param.title} 的流转日志---
+                ---周报：${param.title} 的流转日志---
             </div>
             <div class="layui-card-body">
                 <div class="layui-row layui-col-space10">

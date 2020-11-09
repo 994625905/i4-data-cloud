@@ -82,7 +82,6 @@ function loadTable(){
             }
             return "<label class='layui-btn layui-btn-sm layui-btn-disabled'>没有附件</label>"
         }},
-        {field:"createTimeStr",title:"创建时间",width:TABLE_COL_WIDTH.date,sort:true},
         {field:"processStatus",title:"审批状态",toolbar:"#processStatusCols",width:TABLE_COL_WIDTH.one_Cols(4)},
         {fixed:"right",title:"操作",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)},
     ]]

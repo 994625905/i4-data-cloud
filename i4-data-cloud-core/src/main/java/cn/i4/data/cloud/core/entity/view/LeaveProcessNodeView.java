@@ -89,7 +89,6 @@ public class LeaveProcessNodeView extends BaseView<LeaveProcessNodeView> {
 	private String dealTimeStr;
 	private String userName;
 	private String receiveUserName;
-
 	
 	public void setId(Integer id) {
 		this.id = id;

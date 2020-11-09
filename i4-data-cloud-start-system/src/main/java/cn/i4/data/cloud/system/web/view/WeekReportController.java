@@ -1,6 +1,8 @@
 package cn.i4.data.cloud.system.web.view;
 
 import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
+import cn.i4.data.cloud.core.service.IUserService;
+import cn.i4.data.cloud.core.service.IWeekreportProcessNodeService;
 import cn.i4.data.cloud.core.service.IWeekreportService;
 import cn.i4.data.cloud.mongo.core.service.MongoWeekReportService;
 import cn.i4.data.cloud.system.web.WebBaseController;
@@ -26,7 +28,11 @@ public class WeekReportController extends WebBaseController {
     @Autowired
     private IWeekreportService iWeekreportService;
     @Autowired
+    private IWeekreportProcessNodeService iWeekreportProcessNodeService;
+    @Autowired
     private MongoWeekReportService mongoWeekReportService;
+    @Autowired
+    private IUserService iUserService;
 
     /**
      * 加载周报提交的首页
@@ -73,8 +79,48 @@ public class WeekReportController extends WebBaseController {
     @RequestMapping(value = "/weekReportApply/readPage")
     public ModelAndView weekReportApplyReadPage(WeekreportDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_read", request);
-        view.addObject("model",iWeekreportService.getById(dto.getId()));
+        view.addObject("model",iWeekreportService.selectRealNameById(dto.getId()));
         view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        return view;
+    }
+
+    /**
+     * 加载周报记录的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportLog/index")
+    public ModelAndView weekReportLogIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportLog_index", request);
+        view.addObject("userList",iUserService.selectListNotUserId(this.getUser(request).getId()));
+        return view;
+    }
+
+    /**
+     * 加载周报记录的预览页
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportLog/readPage")
+    public ModelAndView weekReportLogReadPage(WeekreportDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportLog_read", request);
+        view.addObject("model",iWeekreportService.selectRealNameById(dto.getId()));
+        view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        return view;
+    }
+
+    /**
+     * 加载周报流程日志页面
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/weekReportProcess/logPage")
+    public ModelAndView weekReportProcessLogPage(WeekreportDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/weekReport/weekReportProcess_log", request);
+        view.addObject("param",dto);
+        view.addObject("nodeList",iWeekreportProcessNodeService.selectByProcessId(dto.getProcessId()));
         return view;
     }
 

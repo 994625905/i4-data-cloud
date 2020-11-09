@@ -30,4 +30,9 @@ public class WeekreportProcessNodeServiceImpl extends BaseServiceImpl<Weekreport
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public List<WeekreportProcessNodeView> selectByProcessId(Integer processId) {
+		return mapper.selectByProcessId(processId);
+	}
+
 }

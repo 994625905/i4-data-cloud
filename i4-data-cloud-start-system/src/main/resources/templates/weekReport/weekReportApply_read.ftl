@@ -18,12 +18,13 @@
                                 <col>
                             </colgroup>
                             <tbody>
-                                <tr><td>年份</td><td>${model.year!}</td></tr>
-                                <tr><td>周次</td><td>${model.week!}</td></tr>
+                                <tr><td>提交者</td><td>${model.realName!}</td></tr>
+                                <tr><td>年份</td><td>${model.year?c!}</td></tr>
+                                <tr><td>周次</td><td>${model.week?c!}</td></tr>
                                 <tr><td>开始时间</td><td>${model.startDate!}</td></tr>
                                 <tr><td>结束时间</td><td>${model.endDate!}</td></tr>
                                 <tr><td>查看附件</td>
-                                    <td><#if model.enclosure??><a href="${${model.enclosure}}" target="_blank" class="text-primary">点击查看</a><#else><span class="layui-word-aux">暂无附件</span></#if></td>
+                                    <td><#if model.enclosure?? && model.enclosure != ""><a href="${model.enclosure}" target="_blank" class="text-primary">点击查看</a><#else><span class="layui-word-aux">暂无附件</span></#if></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -41,6 +42,11 @@
 </body>
 <script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/marked.min.js"></script>
 <script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/prettify.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/raphael.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/underscore.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/flowchart.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/jquery.flowchart.min.js"></script>
+<script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/lib/sequence-diagram.min.js"></script>
 <script type="text/javascript" src="${StaticServer}/resource/plugin/editormd/editormd.js"></script>
 <script type="text/javascript" src="${StaticServer}/resource/plugin/nkeditor/libs/JDialog/JDialog.min.js"></script>
 <script type="text/javascript" src="${StaticServer}/resource/plugin/nkeditor/NKeditor-all-min.js"></script>

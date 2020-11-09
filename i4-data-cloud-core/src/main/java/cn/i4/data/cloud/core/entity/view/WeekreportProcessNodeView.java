@@ -85,7 +85,11 @@ public class WeekreportProcessNodeView extends BaseView<WeekreportProcessNodeVie
 	@TableField("comment")
 	private String comment;
 
-	
+	/** 补充字段 */
+	private String dealTimeStr;
+	private String userName;
+	private String receiveUserName;
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -158,4 +162,27 @@ public class WeekreportProcessNodeView extends BaseView<WeekreportProcessNodeVie
 		return this.comment;
 	}
 
+	public String getDealTimeStr() {
+		return dealTimeStr;
+	}
+
+	public void setDealTimeStr(String dealTimeStr) {
+		this.dealTimeStr = dealTimeStr;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getReceiveUserName() {
+		return receiveUserName;
+	}
+
+	public void setReceiveUserName(String receiveUserName) {
+		this.receiveUserName = receiveUserName;
+	}
 }

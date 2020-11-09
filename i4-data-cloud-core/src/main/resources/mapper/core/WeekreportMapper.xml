@@ -41,7 +41,7 @@
             and t.year = #{year}
         </if>
         <if test="month != null">
-            and t.start_date like concat('____',#{month},'__') and t.end_date like concat('____',#{year},'__')
+            and t.start_date like concat('____',#{month},'__') and t.end_date like concat('____',#{month},'__')
         </if>
         <if test="field != null and field != ''">
             order by ${field} ${sort}
@@ -51,6 +51,21 @@
         </if>
     </select>
 
+    <!-- 查询需要创建者name -->
+    <select id="selectRealNameById" resultType="cn.i4.data.cloud.core.entity.view.WeekreportView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as realName,
+            p.id as processId,
+            p.status as processStatus,
+            p.process_def_id as processDefId,
+            p.deployment_id as deploymentId,
+            p.process_instance_id as processInstanceId
+        FROM t_weekreport AS t
+        left join t_user u on t.user_id = u.id
+        left join t_weekreport_process p on t.id = p.weekreport_id
+        where t.id = #{id}
+    </select>
 
     <select id="selectAll" parameterType="cn.i4.data.cloud.core.entity.dto.WeekreportDto"
             resultType="cn.i4.data.cloud.core.entity.view.WeekreportView">
@@ -74,7 +89,7 @@
                 and t.year = #{year}
             </if>
             <if test="month != null">
-                and t.start_date like concat('%',#{year},'%') and t.end_date like concat('%',#{year},'%')
+                and t.start_date like concat('____',#{month},'__') and t.end_date like concat('____',#{month},'__')
             </if>
             <if test="field != null and field != ''">
                 order by ${field} ${sort}

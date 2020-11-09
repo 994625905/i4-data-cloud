@@ -6,6 +6,7 @@
 <body>
 <br>
 <div class="layui-fluid">
+    <div class="layui-row mt-2 p-1" id="imageTable"></div>
     <div id="pageDom"></div>
 </div>
 </body>

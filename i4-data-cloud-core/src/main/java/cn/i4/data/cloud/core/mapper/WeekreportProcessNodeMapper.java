@@ -22,4 +22,10 @@ public interface WeekreportProcessNodeMapper extends BaseIMapper<WeekreportProce
     */
     IPage<WeekreportProcessNodeView> selectPage(WeekreportProcessNodeDto dto);
 
+    /**
+     * 加载流程办理节点列表
+     * @param processId
+     * @return
+     */
+    List<WeekreportProcessNodeView> selectByProcessId(@Param("processId") Integer processId);
 }

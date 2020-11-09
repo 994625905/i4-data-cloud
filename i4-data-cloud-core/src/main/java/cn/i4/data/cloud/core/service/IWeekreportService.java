@@ -20,4 +20,18 @@ public interface IWeekreportService extends BaseService<WeekreportModel> {
     */
     IPage<WeekreportView> selectPage(WeekreportDto dto);
 
+    /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
+    WeekreportView selectRealNameById(Integer id);
+
+    /**
+     * 查询所有
+     * @param dto
+     * @return
+     */
+    IPage<WeekreportView> selectAll(WeekreportDto dto);
+
 }

@@ -30,4 +30,14 @@ public class WeekreportServiceImpl extends BaseServiceImpl<WeekreportMapper,Week
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public WeekreportView selectRealNameById(Integer id) {
+		return mapper.selectRealNameById(id);
+	}
+
+	@Override
+	public IPage<WeekreportView> selectAll(WeekreportDto dto) {
+		return mapper.selectAll(dto);
+	}
+
 }
