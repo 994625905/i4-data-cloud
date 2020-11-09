@@ -44,7 +44,7 @@ public class RedisConstant {
         Long LOGIN_USER = 60 * 60 * 24 * 1L;//登录的用户，1天
         Long LOGIN_USER_INFO = 60 * 60 * 24 * 1L;//登录用户的info，1天
         Long LOGIN_USER_TEMPLATE_PREFIX = 60 * 60 * 24 * 1L;//登录用户的模板设置，1天
-        Long LOGIN_USER_ROLE_MENU_TREE = 60 * 60 * 1L;//登录用户的模板，1天
+        Long LOGIN_USER_ROLE_MENU_TREE = 60 * 60 * 24 * 1L;//登录用户的模板，1天
         Long SYSTEM_CONSTANT = 60 * 60 * 24 * 1L;//系统常量，1天
         Long AUTH_CODE = 60L;//验证码（uuid），1分钟
         Long SMS_CODE = 60L;//短信验证码（uuid），1分钟

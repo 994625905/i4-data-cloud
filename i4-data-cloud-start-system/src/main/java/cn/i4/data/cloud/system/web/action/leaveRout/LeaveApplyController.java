@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.leaveRout;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.SystemConstant;
 import cn.i4.data.cloud.base.exception.CommonException;
@@ -55,6 +56,7 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "leaveRout:leaveApply/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
     public ActionResult<IPage<LeaveView>> loadTable(LeaveDto dto,HttpServletRequest request){
@@ -70,6 +72,7 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
+    @RequestPermission(value = "leaveRout:leaveApply/insert")
     @RequestLog(module = MODULE_NAME,content = "新增请假",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增请假",key = KEY_PREFIX+"/insert")
     public ActionResult<Boolean> insert(@RequestBody LeaveDto dto, HttpServletRequest request){
@@ -90,6 +93,7 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
+    @RequestPermission(value = "leaveRout:leaveApply/delete")
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
     public ActionResult<Boolean> delete(LeaveDto dto){
@@ -108,6 +112,7 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
+    @RequestPermission(value = "leaveRout:leaveApply/update")
     @RequestLog(module = MODULE_NAME,content = "修改请假",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改请假",key = KEY_PREFIX+"/update")
     public ActionResult<Boolean> update(@RequestBody LeaveDto dto, HttpServletRequest request){
@@ -126,6 +131,7 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/apply")
+    @RequestPermission(value = "leaveRout:leaveApply/apply")
     @RequestLog(module = MODULE_NAME,content = "发送请假申请",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--发送请假申请",key = KEY_PREFIX+"/apply")
     public ActionResult<Boolean> apply(@RequestBody LeaveProcessDto dto, HttpServletRequest request){

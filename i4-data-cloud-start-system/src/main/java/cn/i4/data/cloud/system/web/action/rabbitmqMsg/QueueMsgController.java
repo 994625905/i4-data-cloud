@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.rabbitmqMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
@@ -42,6 +43,7 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载队列表格",type = RequestType.SELECT)
     public ActionResult<IPage<SetRabbitmqQueueView>> loadTable(SetRabbitmqQueueDto dto){
 
@@ -54,6 +56,7 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/refreshCache")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/refreshCache")
     @RequestLog(module = MODULE_NAME,content = "刷新Redis缓存队列",type = RequestType.UPDATE)
     public ActionResult<Boolean> refreshCache(){
 
@@ -68,6 +71,7 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "根据ID删除队列",type = RequestType.DELETE)
     public ActionResult<Boolean> deleteById(SetRabbitmqQueueDto dto){
 
@@ -87,6 +91,7 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增队列",type = RequestType.INSERT)
     public ActionResult<Boolean> insert(@RequestBody SetRabbitmqQueueDto dto, HttpServletRequest request){
         SetRabbitmqQueueModel model = dto.getModel();
@@ -109,6 +114,7 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改队列",type = RequestType.UPDATE)
     public ActionResult<Boolean> update(@RequestBody SetRabbitmqQueueDto dto){
         SetRabbitmqQueueModel model = dto.getModel();

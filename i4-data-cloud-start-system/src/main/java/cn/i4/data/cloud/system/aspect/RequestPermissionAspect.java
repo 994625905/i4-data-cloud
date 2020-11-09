@@ -7,7 +7,11 @@ import cn.i4.data.cloud.base.util.CookieUtil;
 import cn.i4.data.cloud.base.util.JWTUtil;
 import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.cache.service.RedisService;
+import cn.i4.data.cloud.core.entity.model.LogPermissionErrorModel;
 import cn.i4.data.cloud.core.entity.view.MenuButtonView;
+import cn.i4.data.cloud.mq.rabbit.config.RabbitMqConstant;
+import cn.i4.data.cloud.mq.rabbit.producer.ProduceService;
+import com.alibaba.fastjson.JSONObject;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -40,6 +44,8 @@ public class RequestPermissionAspect extends BaseAspectSupport {
     private final static Logger logger = LoggerFactory.getLogger(RequestPermissionAspect.class);
     @Autowired
     protected RedisService redisService;
+    @Autowired
+    private ProduceService produceService;
 
     /**
      * 此处使用注解扫描
@@ -63,29 +69,50 @@ public class RequestPermissionAspect extends BaseAspectSupport {
 
         try {
             String permission = requestPermission.value();
-            List<MenuButtonView> menuList = new ArrayList<>();
 
             /** 获取当前用户的所有权限 */
             ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-            if(servletRequestAttributes != null){
-                HttpServletRequest request = servletRequestAttributes.getRequest();
-                String authorization = CookieUtil.getCookieValue(request,"authorization");
-                menuList = redisService.get(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + JWTUtil.getUserId(authorization), List.class);
-            }
+            HttpServletRequest request = servletRequestAttributes.getRequest();
+            String authorization = CookieUtil.getCookieValue(request,"authorization");
+            List<MenuButtonView> menuList = redisService.get(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + JWTUtil.getUserId(authorization), List.class);
 
             /** 权限验证，或者没有被标注权限标识符的接口也放行 */
             if(checkPermission(menuList,permission) || StringUtil.isNullOrEmpty(permission)){
                 return point.proceed();
             }
+
+            /** 权限验证失败，做错误处理 */
+            LogPermissionErrorModel errorModel = new LogPermissionErrorModel();
+            errorModel.setClassName(method.getDeclaringClass().getName());
+            errorModel.setMethodName(method.getName());
+            errorModel.setRequestPath(request.getServletPath());
+            errorModel.setPermission(permission);
+            errorModel.setUserId(JWTUtil.getUserId(authorization));
+            errorModel.setLoginName(JWTUtil.getUserName(authorization));
+            errorModel.setCreateTime(System.currentTimeMillis()/1000L);
+
             if("ModelAndView".equals(typeName)){
+                logger.debug("页面权限不够:class[{}]，method[{}]",method.getDeclaringClass().getName(),method.getName());
+
+                /** 发送到队列，以待入库 */
+                errorModel.setType(0);
+                produceService.sendMessage(RabbitMqConstant.EXCHANGE_NAME.REQUEST,RabbitMqConstant.ROUTING_KEY.REQUEST_PERMISSION_ONE, JSONObject.toJSONString(errorModel));
+
                 return new ModelAndView("/error/408");
             }else{
-                return ActionResult.error("权限验证失败");
+                logger.debug("接口权限不够:class[{}]，method[{}]",method.getDeclaringClass().getName(),method.getName());
+
+                /** 发送到队列，以待入库 */
+                errorModel.setType(1);
+                produceService.sendMessage(RabbitMqConstant.EXCHANGE_NAME.REQUEST,RabbitMqConstant.ROUTING_KEY.REQUEST_PERMISSION_ONE, JSONObject.toJSONString(errorModel));
+
+                return ActionResult.error("权限验证拦截");
             }
         } catch (Throwable throwable) {
             logger.error(throwable.getMessage());
+            throwable.printStackTrace();
             if("ModelAndView".equals(typeName)){
-                return new ModelAndView("/error/408");
+                return new ModelAndView("/error/409");
             }else{
                 return ActionResult.error("权限验证错误");
             }
@@ -93,7 +120,7 @@ public class RequestPermissionAspect extends BaseAspectSupport {
     }
 
     /**
-     * 验证权限
+     * 验证权限，递归验证
      * @param list
      * @param permission
      * @return
@@ -106,7 +133,7 @@ public class RequestPermissionAspect extends BaseAspectSupport {
                     flag = true;
                     break;
                 }else{
-                    if(checkPermission(menuButton.getChild(),permission)){
+                    if(this.checkPermission(menuButton.getChild(),permission)){
                         flag = true;
                         break;
                     }

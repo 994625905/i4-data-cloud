@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.rabbitmqMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
@@ -47,6 +48,7 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "loadTable")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载交换机表格",type = RequestType.SELECT)
     public ActionResult<IPage<SetRabbitmqExchangeView>> loadTable(SetRabbitmqExchangeDto dto){
 
@@ -59,6 +61,7 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "refreshCache")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/refreshCache")
     @RequestLog(module = MODULE_NAME,content = "刷新Redis缓存交换机",type = RequestType.UPDATE)
     public ActionResult<Boolean> refreshCache(){
 
@@ -73,6 +76,7 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "deleteById")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "根据ID删除交换机",type = RequestType.UPDATE)
     public ActionResult<Boolean> deleteById(SetRabbitmqExchangeDto dto){
 
@@ -91,6 +95,7 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "insert")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增交换机",type = RequestType.INSERT)
     public ActionResult<Boolean> insert(@RequestBody SetRabbitmqExchangeDto dto, HttpServletRequest request){
 
@@ -113,6 +118,7 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "update")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改交换机",type = RequestType.UPDATE)
     public ActionResult<Boolean> update(@RequestBody SetRabbitmqExchangeDto dto, HttpServletRequest request){
 
@@ -134,6 +140,7 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "getQueueById")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/getQueueById")
     @RequestLog(module = MODULE_NAME,content = "根据交换机ID获取绑定队列",type = RequestType.SELECT)
     public ActionResult<List<SetRabbitmqQueueModel>> getQueueById(SetRabbitmqExchangeDto dto){
 

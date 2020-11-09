@@ -72,7 +72,8 @@ var Initlay = {
             },
             parseData:function(res){//数据格式解析的回调，res为接口返回值
                 if(res.code != 200){
-                    Feng.error("表格数据加载有误，请检查后台接口是否正常")
+                    debugger
+                    Feng.error(res.message)
                     return {
                         "code" : res.code,
                         "msg" : res.message

@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.autoCode;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.DesUtil;
@@ -52,6 +53,7 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadData")
+    @RequestPermission(value = "autoCode:dataSourceMsg/loadData")
     @RequestLog(module = MODULE_NAME,content = "加载数据源列表",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"加载数据源列表",key = KEY_PREFIX+"/loadData")
     public ActionResult<List<AutocodeDatasourceModel>> loadData(){
@@ -67,6 +69,7 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
+    @RequestPermission(value = "autoCode:dataSourceMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增数据源",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"新增数据源",key = KEY_PREFIX+"/insert")
     public ActionResult<Boolean> insert(@RequestBody AutocodeDatasourceDto dto, HttpServletRequest request){
@@ -89,6 +92,7 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
+    @RequestPermission(value = "autoCode:dataSourceMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改数据源",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"修改数据源",key = KEY_PREFIX+"/update")
     public ActionResult<Boolean> update(@RequestBody AutocodeDatasourceDto dto){
@@ -108,6 +112,7 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
+    @RequestPermission(value = "autoCode:dataSourceMsg/delete")
     @RequestLog(module = MODULE_NAME,content = "删除数据源",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"删除数据源",key = KEY_PREFIX+"/delete")
     public ActionResult<Boolean> delete(AutocodeDatasourceDto dto){
@@ -124,6 +129,7 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getTableListBySource")
+    @RequestPermission(value = "autoCode:dataSourceMsg/getTableListBySource")
     @RequestLog(module = MODULE_NAME,content = "获取数据表集合根据数据源",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"获取数据表",key = KEY_PREFIX+"/getTableListBySource")
     public ActionResult<List<String>> getTableListBySource(AutocodeDatasourceDto dto){
@@ -138,6 +144,7 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/create")
+    @RequestPermission(value = "autoCode:dataSourceMsg/create")
     @RequestLog(module = MODULE_NAME,content = "自动生成代码",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"自动生成代码",key = KEY_PREFIX+"/create")
     public ActionResult<Boolean> create(@RequestBody AutocodeDatasourceDto dto,HttpServletRequest request){

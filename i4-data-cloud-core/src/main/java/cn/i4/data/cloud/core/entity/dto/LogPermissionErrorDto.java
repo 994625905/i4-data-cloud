@@ -1,24 +1,19 @@
 package cn.i4.data.cloud.core.entity.dto;
 
 import cn.i4.data.cloud.base.entity.dto.BaseDto;
-import cn.i4.data.cloud.core.entity.view.LogLimitView;
+import cn.i4.data.cloud.core.entity.view.LogPermissionErrorView;
 
 /**
 * Dto
 * @author wangjc
-* @date 2020-10-28 19:40:49
+* @date 2020-11-09 16:49:56
 */
-public class LogLimitDto extends BaseDto<LogLimitView> {
+public class LogPermissionErrorDto extends BaseDto<LogPermissionErrorView> {
 
-    private static final long serialVersionUID = 1603885249712L;
+    private static final long serialVersionUID = 1604911797098L;
 
-    /**
-     * 请求路径
-     */
     private String requestPath;
-    /**
-     * 类型
-     */
+
     private Integer type;
 
     public String getRequestPath() {

@@ -1,13 +1,13 @@
-package cn.i4.data.cloud.system.web.action.weekReport;
+package cn.i4.data.cloud.system.web.action.logCache;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
-import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
-import cn.i4.data.cloud.core.entity.view.WeekreportView;
-import cn.i4.data.cloud.core.service.IWeekreportService;
+import cn.i4.data.cloud.core.entity.dto.LogPermissionErrorDto;
+import cn.i4.data.cloud.core.entity.view.LogPermissionErrorView;
+import cn.i4.data.cloud.core.service.ILogPermissionErrorService;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +16,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 周报事务--周报日志的控制层
  * @author wangjc
- * @title: WeekReportLogController
+ * @title: PermissionLogController
  * @projectName i4-data-cloud
  * @description: TODO
- * @date 2020/11/7-15:37
+ * @date 2020/11/9-19:17
  */
-@RequestMapping(value = "/weekReport/weekReportLog")
 @RestController
-public class WeekReportLogController extends WebBaseController {
+@RequestMapping(value = "/logCache/permissionLog")
+public class PermissionLogController extends WebBaseController {
 
-    private static final String MODULE_NAME = "周报事务--周报日志";
-    private static final String KEY_PREFIX = "/weekReport/weekReportLog";
-
+    private static final String MODULE_NAME = "日志捕获--限流日志";
+    private static final String KEY_PREFIX = "/logCache/permissionLog";
     @Autowired
-    private IWeekreportService iWeekreportService;
+    private ILogPermissionErrorService iLogPermissionErrorService;
 
     /**
      * 加载表格
@@ -39,13 +37,13 @@ public class WeekReportLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "weekReport:weekReportLog/loadTable")
+    @RequestPermission(value = "logCache:permissionLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
-    public ActionResult<IPage<WeekreportView>> loadTable(WeekreportDto dto){
-
-        IPage<WeekreportView> page = iWeekreportService.selectAll(dto);
+    public ActionResult<IPage<LogPermissionErrorView>> loadTable(LogPermissionErrorDto dto){
+        IPage<LogPermissionErrorView> page = iLogPermissionErrorService.selectPage(dto);
         return ActionResult.ok(page);
     }
+
 
 }

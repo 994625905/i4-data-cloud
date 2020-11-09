@@ -92,6 +92,7 @@ public class LogLimitView extends BaseView<LogLimitView> {
 	@TableField("create_time")
 	private Long createTime;
 
+	private String createTimeStr;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -173,4 +174,11 @@ public class LogLimitView extends BaseView<LogLimitView> {
 		return this.createTime;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
 }

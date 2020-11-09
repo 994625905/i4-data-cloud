@@ -32,6 +32,7 @@ public class RabbitMqConstant {
     public interface QUEUE{
         String REQUEST_LOG_ONE = "i4-data-cloud-requestLog-one";//接口请求日志的队列
         String REQUEST_LIMIT_ONE = "i4-data-cloud-requestLimit-one";//接口请求限流的队列
+        String REQUEST_PERMISSION_ONE = "i4-data-cloud-requestPermission-one";//接口请求权限拦截的队列
     }
 
     /**
@@ -40,6 +41,7 @@ public class RabbitMqConstant {
     public interface ROUTING_KEY{
         String REQUEST_LOG_ONE = "i4-data-cloud-requestLog-one";//接口请求日志的路由
         String REQUEST_LIMIT_ONE = "i4-data-cloud-requestLimit-one";//接口请求限流的路由
+        String REQUEST_PERMISSION_ONE = "i4-data-cloud-requestPermission-one";//接口请求权限拦截的队列
     }
 
 

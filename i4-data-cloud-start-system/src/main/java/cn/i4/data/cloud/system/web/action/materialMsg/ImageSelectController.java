@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.materialMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
@@ -42,6 +43,7 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadImageTable")
+    @RequestPermission(value = "materialMsg:imageSelect/loadImageTable")
     @RequestLog(module = MODULE_NAME,content = "根据条件加载图片",type = RequestType.SELECT)
     public ActionResult<IPage<FileView>> loadImageTable(FileDto dto,HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
@@ -56,6 +58,7 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadFileTable")
+    @RequestPermission(value = "materialMsg:imageSelect/loadFileTable")
     @RequestLog(module = MODULE_NAME,content = "根据条件加载图片",type = RequestType.SELECT)
     public ActionResult<IPage<FileView>> loadFileTable(FileDto dto,HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
@@ -69,6 +72,7 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/setImageSelectTemp")
+    @RequestPermission(value = "materialMsg:imageSelect/setImageSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
     public ActionResult<Boolean> setImageSelectTemp(String fileUrl, HttpServletRequest request){
 
@@ -82,6 +86,7 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getImageSelectTemp")
+    @RequestPermission(value = "materialMsg:imageSelect/getImageSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "获取临时存储的url，并删除缓存",type = RequestType.SELECT)
     public ActionResult<String> getImageSelectTemp(HttpServletRequest request){
 

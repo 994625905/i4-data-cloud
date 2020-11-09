@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.systemMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.exception.CommonException;
@@ -59,8 +60,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "systemMsg:userMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载用户表格",type = RequestType.SELECT)
-    @RequestLimit(name = "加载用户表格",key = "loadTable")
+    @RequestLimit(name = MODULE_NAME+"--加载用户表格",key = KEY_PREFIX+"/loadTable")
     public ActionResult<IPage<UserView>> loadTable(UserDto dto){
         IPage<UserView> res = iUserService.selectPage(dto);
         return ActionResult.ok(res);
@@ -72,7 +74,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/changeStatus")
+    @RequestPermission(value = "systemMsg:userMsg/changeStatus")
     @RequestLog(module = MODULE_NAME,content = "改变用户状态",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"--改变用户状态",key = KEY_PREFIX+"/changeStatus")
     public ActionResult<Boolean> changeStatus(UserDto dto){
 
         UserModel user = iUserService.getById(dto.getUserId());
@@ -92,7 +96,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
+    @RequestPermission(value = "systemMsg:userMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "根据userId删除用户",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"--根据userId删除",key = KEY_PREFIX+"/deleteById")
     public ActionResult<Boolean> deleteById(UserDto dto){
 
         /** 删除用户 */
@@ -127,7 +133,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/checkUnique")
+    @RequestPermission(value = "systemMsg:userMsg/checkUnique")
     @RequestLog(module = MODULE_NAME,content = "添加的登录名验重",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"--添加的登录名验重",key = KEY_PREFIX+"/checkUnique")
     public ActionResult<Boolean> checkUnique(UserDto dto){
 
         UserModel userModel = iUserService.getOne(new QueryWrapper<UserModel>() {{
@@ -147,7 +155,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/addSave")
+    @RequestPermission(value = "systemMsg:userMsg/addSave")
     @RequestLog(module = MODULE_NAME,content = "添加保存用户",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"--添加保存用户",key = KEY_PREFIX+"/addSave")
     public ActionResult<Boolean> addSave(UserDto dto,HttpServletRequest request){
 
         UserModel model = new UserModel();
@@ -178,7 +188,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getUserRole")
+    @RequestPermission(value = "systemMsg:userMsg/getUserRole")
     @RequestLog(module = MODULE_NAME,content = "获取用户角色（携带对比的所有权限）",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--获取用户角色",key = KEY_PREFIX+"/getUserRole")
     public ActionResult<Map<String,Object>> getUserRole(UserDto dto){
 
         List<RoleView> userRole = iRoleService.selectRolesByUserId(dto.getUserId());
@@ -196,7 +208,9 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/setUserRole")
+    @RequestPermission(value = "systemMsg:userMsg/setUserRole")
     @RequestLog(module = MODULE_NAME,content = "设置用户角色",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"--设置用户角色",key = KEY_PREFIX+"/setUserRole")
     public ActionResult<Boolean> setUserRole(@RequestBody UserDto dto){
 
         boolean remove = iUserRoleService.remove(new QueryWrapper<UserRoleModel>() {{
@@ -224,6 +238,7 @@ public class UserMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/changeDepartment")
+    @RequestPermission(value = "systemMsg:userMsg/changeDepartment")
     @RequestLog(module = MODULE_NAME,content = "设置部门",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"/设置部门",key = KEY_PREFIX+"/changeDepartment")
     public ActionResult<Boolean> changeDepartment(UserDto dto){

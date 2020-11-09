@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.AutocodeDatasourceDto;
 import cn.i4.data.cloud.core.entity.dto.LogAutocodeDto;
 import cn.i4.data.cloud.core.entity.model.AutocodeDatasourceModel;
@@ -34,6 +35,7 @@ public class AutoCodeController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/dataSourceMsg/index")
+    @RequestPermission(value = "autoCode:dataSourceMsg/index")
     public ModelAndView dataSourceMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/autoCode/dataSource_index", request);
         return view;
@@ -45,6 +47,7 @@ public class AutoCodeController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/dataSourceMsg/addPage")
+    @RequestPermission(value = "autoCode:dataSourceMsg/addPage")
     public ModelAndView dataSourceMsgAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/autoCode/dataSource_add", request);
         return view;
@@ -56,6 +59,7 @@ public class AutoCodeController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/dataSourceMsg/readPage")
+    @RequestPermission(value = "autoCode:dataSourceMsg/readPage")
     public ModelAndView dataSourceMsgReadPage(AutocodeDatasourceDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/autoCode/dataSource_read", request);
         view.addObject("dataSource",iAutocodeDatasourceService.getById(dto.getId()));
@@ -68,6 +72,7 @@ public class AutoCodeController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/dataSourceMsg/editPage")
+    @RequestPermission(value = "autoCode:dataSourceMsg/editPage")
     public ModelAndView dataSourceMsgEditPage(AutocodeDatasourceDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/autoCode/dataSource_edit", request);
         view.addObject("dataSource",iAutocodeDatasourceService.getById(dto.getId()));
@@ -80,6 +85,7 @@ public class AutoCodeController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/codeLog/index")
+    @RequestPermission(value = "autoCode:codeLog/index")
     public ModelAndView codeLogIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/autoCode/codeLog_index", request);
         return view;
@@ -91,6 +97,7 @@ public class AutoCodeController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/codeLog/detailPage")
+    @RequestPermission(value = "autoCode:codeLog/detailPage")
     public ModelAndView codeLogDetailPage(LogAutocodeDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/autoCode/codeLog_detail", request);
         view.addObject("param",dto);

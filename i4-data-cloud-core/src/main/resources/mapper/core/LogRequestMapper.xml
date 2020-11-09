@@ -10,7 +10,8 @@
         t.login_name as loginName, 
         t.request_ip as requestIp, 
         t.week as week, 
-        t.create_time as createTime, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
         t.module_name as moduleName, 
         t.action_content as actionContent, 
         t.action_method as actionMethod, 
@@ -21,11 +22,38 @@
         t.action_result as actionResult
     </sql>
 
+    <!--加载表格-->
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.LogRequestDto"
             resultType="cn.i4.data.cloud.core.entity.view.LogRequestView">
         SELECT
-        <include refid="Base_Column_List" />
+            <include refid="Base_Column_List" />
         FROM t_log_request AS t
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null">
+            and t.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="moduleName != null">
+            and t.module_name like concat('%',#{moduleName},'%')
+        </if>
+        <if test="actionContent != null">
+            and t.action_content like concat('%',#{actionContent},'%')
+        </if>
+        <if test="actionType != null">
+            and t.action_type = #{actionType}
+        </if>
+        <if test="actionResult != null">
+            and t.action_result = #{actionResult}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+
 
     </select>
 

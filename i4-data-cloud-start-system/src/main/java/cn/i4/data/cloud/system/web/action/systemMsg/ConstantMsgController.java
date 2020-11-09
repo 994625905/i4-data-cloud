@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
@@ -36,6 +37,7 @@ public class ConstantMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
+    @RequestPermission(value = "systemMsg:constantMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改系统常量，同时更新redis缓存",type = RequestType.UPDATE)
     public ActionResult<Boolean> update(SystemConstantDto dto,HttpServletRequest request){
 
@@ -57,6 +59,7 @@ public class ConstantMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/refresh")
+    @RequestPermission(value = "systemMsg:constantMsg/refresh")
     @RequestLog(module = MODULE_NAME,content = "刷新Redis缓存系统常量",type = RequestType.UPDATE)
     public ActionResult<Boolean> refresh(){
 

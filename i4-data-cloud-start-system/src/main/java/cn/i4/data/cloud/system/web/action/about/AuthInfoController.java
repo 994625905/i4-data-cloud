@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.about;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.SystemConstantDto;
@@ -37,6 +38,7 @@ public class AuthInfoController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
+    @RequestPermission(value = "about:authInfo/update")
     @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
     public ActionResult<Boolean> update(SystemConstantDto dto){

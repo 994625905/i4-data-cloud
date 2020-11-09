@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.materialMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
@@ -50,6 +51,7 @@ public class RichTextController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "materialMsg:richText/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
     public ActionResult<IPage<RichTextView>> loadTable(RichTextDto dto,HttpServletRequest request){
@@ -64,6 +66,7 @@ public class RichTextController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
+    @RequestPermission(value = "materialMsg:richText/delete")
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
     public ActionResult<Boolean> delete(RichTextDto dto){
@@ -87,6 +90,7 @@ public class RichTextController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
+    @RequestPermission(value = "materialMsg:richText/insert")
     @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
     public ActionResult<Boolean> insert(@RequestBody RichTextDto dto, HttpServletRequest request){
@@ -123,6 +127,7 @@ public class RichTextController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
+    @RequestPermission(value = "materialMsg:richText/update")
     @RequestLog(module = MODULE_NAME,content = "编辑",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--编辑",key = KEY_PREFIX+"/update")
     public ActionResult<Boolean> update(@RequestBody RichTextDto dto){
@@ -153,6 +158,7 @@ public class RichTextController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/setRichTextSelectTemp")
+    @RequestPermission(value = "materialMsg:richText/setRichTextSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--设置临时存储的url",key = KEY_PREFIX+"/setRichTextSelectTemp")
     public ActionResult<Boolean> setRichTextSelectTemp(String mongoId, HttpServletRequest request){
@@ -168,6 +174,7 @@ public class RichTextController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getRichTextSelectTemp")
+    @RequestPermission(value = "materialMsg:richText/getRichTextSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "获取临时存储的url，并删除缓存",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--获取临时存储的url，并删除缓存",key = KEY_PREFIX+"/getRichTextSelectTemp")
     public ActionResult<MongoRichText> getRichTextSelectTemp(HttpServletRequest request){

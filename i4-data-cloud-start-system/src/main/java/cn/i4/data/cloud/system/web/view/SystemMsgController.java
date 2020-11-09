@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.MenuButtonDto;
 import cn.i4.data.cloud.core.entity.dto.RoleDto;
 import cn.i4.data.cloud.core.entity.dto.UserDto;
@@ -43,6 +44,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/index")
+    @RequestPermission(value = "systemMsg:menuMsg/index")
     public ModelAndView menuMsgIndex(HttpServletRequest request){
         ModelAndView view = this.getModelAndView("/systemMsg/menuMsg_index", request);
         return view;
@@ -55,6 +57,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/add")
+    @RequestPermission(value = "systemMsg:menuMsg/add")
     public ModelAndView menuMsgAdd(MenuButtonDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/menuMsg_add", request);
         view.addObject("menu",iMenuButtonService.getById(dto.getPid()));
@@ -69,6 +72,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/addButton")
+    @RequestPermission(value = "systemMsg:menuMsg/addButton")
     public ModelAndView menuMsgAddButton(MenuButtonDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/menuMsg_button_add", request);
         view.addObject("menu",iMenuButtonService.getById(dto.getPid()));
@@ -83,6 +87,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/edit")
+    @RequestPermission(value = "systemMsg:menuMsg/edit")
     public ModelAndView menuMsgEdit(MenuButtonDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/menuMsg_edit", request);
         List<MenuButtonView> pMenuList = iMenuButtonService.getMenuButtonsByPid(0);
@@ -98,6 +103,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/editButton")
+    @RequestPermission(value = "systemMsg:menuMsg/editButton")
     public ModelAndView menuMsgEditButton(MenuButtonDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/menuMsg_button_edit", request);
         MenuButtonModel buttonModel = iMenuButtonService.getById(dto.getId());
@@ -114,6 +120,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/detailById")
+    @RequestPermission(value = "systemMsg:menuMsg/detailById")
     public ModelAndView menuMsgDetailById(MenuButtonDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/menuMsg_child", request);
         view.addObject("pid",dto.getId());
@@ -127,6 +134,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/menuMsg/detailButtonById")
+    @RequestPermission(value = "systemMsg:menuMsg/detailButtonById")
     public ModelAndView menuMsgDetailButtonById(MenuButtonDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/menuMsg_button", request);
         view.addObject("pid",dto.getId());
@@ -139,6 +147,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/roleMsg/index")
+    @RequestPermission(value = "systemMsg:roleMsg/index")
     public ModelAndView roleMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/roleMsg_index", request);
         return view;
@@ -150,6 +159,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/roleMsg/add")
+    @RequestPermission(value = "systemMsg:roleMsg/add")
     public ModelAndView roleMsgAdd(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/roleMsg_add", request);
         List<MenuButtonView> menuButtonTree = iMenuButtonService.getMenuButtonTree();
@@ -163,6 +173,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/roleMsg/edit")
+    @RequestPermission(value = "systemMsg:roleMsg/edit")
     public ModelAndView roleMsgEdit(RoleDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/roleMsg_edit", request);
         List<MenuButtonView> menuButtonTree = iMenuButtonService.getMenuButtonTree();
@@ -178,6 +189,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/userMsg/index")
+    @RequestPermission(value = "systemMsg:userMsg/index")
     public ModelAndView userMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/userMsg_index", request);
         return view;
@@ -190,6 +202,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/userMsg/detail")
+    @RequestPermission(value = "systemMsg:userMsg/detail")
     public ModelAndView userMsgDetail(UserDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/userMsg_detail", request);
         UserView detail = iUserService.selectById(dto.getUserId());
@@ -205,6 +218,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/userMsg/add")
+    @RequestPermission(value = "systemMsg:userMsg/add")
     public ModelAndView userMsgAdd(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/userMsg_add", request);
         return view;
@@ -216,6 +230,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/inviteCode/index")
+    @RequestPermission(value = "systemMsg:inviteCode/index")
     public ModelAndView inviteCodeMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/inviteCodeMsg_index", request);
         return view;
@@ -227,6 +242,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/inviteCode/addPage")
+    @RequestPermission(value = "systemMsg:inviteCode/addPage")
     public ModelAndView inviteCodeMsgAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/inviteCodeMsg_add", request);
         view.addObject("departmentList",iDepartmentService.list());
@@ -239,6 +255,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/constantMsg/index")
+    @RequestPermission(value = "systemMsg:constantMsg/index")
     public ModelAndView constantMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/constantMsg_index", request);
         return view;
@@ -250,6 +267,7 @@ public class SystemMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/departmentMsg/index")
+    @RequestPermission(value = "systemMsg:departmentMsg/index")
     public ModelAndView departmentMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/departmentMsg_index", request);
         return view;

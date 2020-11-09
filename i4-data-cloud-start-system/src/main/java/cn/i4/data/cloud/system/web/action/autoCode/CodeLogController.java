@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.autoCode;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.LogAutocodeDto;
@@ -40,6 +41,7 @@ public class CodeLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "autoCode:codeLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     public ActionResult<IPage<LogAutocodeView>> loadTable(LogAutocodeDto dto){
         IPage<LogAutocodeView> page = iLogAutocodeService.selectPage(dto);
@@ -52,6 +54,7 @@ public class CodeLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadDetailTable")
+    @RequestPermission(value = "autoCode:codeLog/loadDetailTable")
     @RequestLog(module = MODULE_NAME,content = "加载日志详情页表格",type = RequestType.SELECT)
     public ActionResult<IPage<LogAutocodeTableView>> loadDetailTable(LogAutocodeTableDto dto){
         IPage<LogAutocodeTableView> page = iLogAutocodeTableService.selectPage(dto);

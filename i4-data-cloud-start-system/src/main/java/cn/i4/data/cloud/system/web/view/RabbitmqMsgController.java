@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.SetRabbitmqExchangeDto;
 import cn.i4.data.cloud.core.entity.dto.SetRabbitmqQueueDto;
 import cn.i4.data.cloud.core.entity.model.SetRabbitmqExchangeModel;
@@ -38,6 +39,7 @@ public class RabbitmqMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/exchangeMsg/index")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/index")
     public ModelAndView exchangeIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/rabbitmqMsg/exchangeMsg_index", request);
         return view;
@@ -49,6 +51,7 @@ public class RabbitmqMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/exchangeMsg/addPage")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/addPage")
     public ModelAndView exchangeMsgAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/rabbitmqMsg/exchangeMsg_add", request);
         return view;
@@ -60,6 +63,7 @@ public class RabbitmqMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/exchangeMsg/editPage")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/editPage")
     public ModelAndView exchangeMsgEditPage(SetRabbitmqExchangeDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/rabbitmqMsg/exchangeMsg_edit", request);
         view.addObject("model",this.iSetRabbitmqExchangeService.getById(dto.getId()));
@@ -72,6 +76,7 @@ public class RabbitmqMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/queueMsg/index")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/index")
     public ModelAndView queueMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/rabbitmqMsg/queueMsg_index", request);
         return view;
@@ -83,6 +88,7 @@ public class RabbitmqMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/queueMsg/addPage")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/addPage")
     public ModelAndView queueMsgAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/rabbitmqMsg/queueMsg_add", request);
         view.addObject("exchangeList",iSetRabbitmqExchangeService.list());
@@ -95,6 +101,7 @@ public class RabbitmqMsgController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/queueMsg/editPage")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/editPage")
     public ModelAndView queueMsgEditPage(SetRabbitmqQueueDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/rabbitmqMsg/queueMsg_edit", request);
         view.addObject("model",iSetRabbitmqQueueService.getById(dto.getId()));

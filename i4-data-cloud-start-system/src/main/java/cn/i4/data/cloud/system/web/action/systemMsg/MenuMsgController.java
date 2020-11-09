@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.MenuButtonDto;
@@ -32,6 +33,7 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadMenuTable")
+    @RequestPermission(value = "systemMsg:menuMsg/loadMenuTable")
     @RequestLog(module = MODULE_NAME,content = "加载菜单表格",type = RequestType.SELECT)
     public ActionResult<IPage<MenuButtonView>> loadMenuTable(MenuButtonDto dto){
 
@@ -45,6 +47,7 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
+    @RequestPermission(value = "systemMsg:menuMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除菜单",type = RequestType.DELETE)
     public ActionResult<Boolean> deleteById(MenuButtonDto dto,HttpServletRequest request){
 
@@ -64,6 +67,7 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/changeStatus")
+    @RequestPermission(value = "systemMsg:menuMsg/changeStatus")
     @RequestLog(module = MODULE_NAME,content = "改变状态",type = RequestType.UPDATE)
     public ActionResult<Boolean> changeStatus(MenuButtonDto dto,HttpServletRequest request){
 
@@ -86,6 +90,7 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/save")
+    @RequestPermission(value = "systemMsg:menuMsg/save")
     @RequestLog(module = MODULE_NAME,content = "保存",type = RequestType.INSERT)
     public ActionResult<Boolean> save(@RequestBody MenuButtonDto dto,HttpServletRequest request){
 

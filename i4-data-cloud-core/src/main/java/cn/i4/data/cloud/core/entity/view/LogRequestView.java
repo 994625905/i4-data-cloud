@@ -115,11 +115,12 @@ public class LogRequestView extends BaseView<LogRequestView> {
 	private Long actionTime;
 
 	/**
-	 * 1成功，2异常失败
+	 * 1成功，0异常失败
 	 */
 	@TableField("action_result")
 	private Integer actionResult;
 
+	private String createTimeStr;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -233,4 +234,11 @@ public class LogRequestView extends BaseView<LogRequestView> {
 		return this.actionResult;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
 }

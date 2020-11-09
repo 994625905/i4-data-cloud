@@ -41,7 +41,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportApply/index")
-    @RequestPermission(value = "user")
+    @RequestPermission(value = "weekReport:weekReportApply/index")
     public ModelAndView weekReportApplyIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_index", request);
         return view;
@@ -53,6 +53,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportApply/addPage")
+    @RequestPermission(value = "weekReport:weekReportApply/addPage")
     public ModelAndView weekReportApplyAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_add", request);
         return view;
@@ -65,6 +66,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportApply/editPage")
+    @RequestPermission(value = "weekReport:weekReportApply/editPage")
     public ModelAndView weekReportApplyEditPage(WeekreportDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_edit", request);
         view.addObject("model",iWeekreportService.getById(dto.getId()));
@@ -79,6 +81,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportApply/readPage")
+    @RequestPermission(value = "weekReport:weekReportApply/readPage")
     public ModelAndView weekReportApplyReadPage(WeekreportDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_read", request);
         view.addObject("model",iWeekreportService.selectRealNameById(dto.getId()));
@@ -92,6 +95,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportLog/index")
+    @RequestPermission(value = "weekReport:weekReportLog/index")
     public ModelAndView weekReportLogIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportLog_index", request);
         view.addObject("userList",iUserService.selectListNotUserId(this.getUser(request).getId()));
@@ -105,6 +109,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportLog/readPage")
+    @RequestPermission(value = "weekReport:weekReportLog/readPage")
     public ModelAndView weekReportLogReadPage(WeekreportDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportLog_read", request);
         view.addObject("model",iWeekreportService.selectRealNameById(dto.getId()));
@@ -119,6 +124,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportProcess/logPage")
+    @RequestPermission(value = "weekReport:weekReportProcess/logPage")
     public ModelAndView weekReportProcessLogPage(WeekreportDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportProcess_log", request);
         view.addObject("param",dto);

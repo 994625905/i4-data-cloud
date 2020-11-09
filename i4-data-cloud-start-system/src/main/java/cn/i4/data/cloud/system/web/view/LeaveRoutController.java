@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.LeaveDto;
 import cn.i4.data.cloud.core.entity.model.LeaveTypeModel;
 import cn.i4.data.cloud.core.service.*;
@@ -41,6 +42,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveType/index")
+    @RequestPermission(value = "leaveRout:leaveType/index")
     public ModelAndView leaveTypeIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveType_index", request);
         return view;
@@ -52,6 +54,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveBoard/index")
+    @RequestPermission(value = "leaveRout:leaveBoard/index")
     public ModelAndView leaveBoardIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveBoard_index", request);
         List<LeaveTypeModel> list = iLeaveTypeService.list();
@@ -65,6 +68,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveApply/index")
+    @RequestPermission(value = "leaveRout:leaveApply/index")
     public ModelAndView leaveApplyIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveApply_index", request);
         view.addObject("typeList",iLeaveTypeService.list());
@@ -77,6 +81,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveApply/addPage")
+    @RequestPermission(value = "leaveRout:leaveApply/addPage")
     public ModelAndView leaveApplyAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveApply_add", request);
         view.addObject("typeList",iLeaveTypeService.list());
@@ -89,6 +94,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveApply/editPage")
+    @RequestPermission(value = "leaveRout:leaveApply/editPage")
     public ModelAndView leaveApplyEditPage(LeaveDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveApply_edit", request);
         view.addObject("typeList",iLeaveTypeService.list());
@@ -101,6 +107,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveApply/applyPage")
+    @RequestPermission(value = "leaveRout:leaveApply/applyPage")
     public ModelAndView leaveApplyApplyPage(LeaveDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveApply_apply", request);
         view.addObject("processList",ivActReDeployProcdefService.list());
@@ -116,6 +123,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveProcess/logPage")
+    @RequestPermission(value = "leaveRout:leaveProcess/logPage")
     public ModelAndView leaveProcessLogPage(LeaveDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveProcess_log", request);
         view.addObject("param",dto);
@@ -129,6 +137,7 @@ public class LeaveRoutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/leaveLog/index")
+    @RequestPermission(value = "leaveRout:leaveLog/index")
     public ModelAndView leaveLogIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveLog_index", request);
         view.addObject("typeList",iLeaveTypeService.list());

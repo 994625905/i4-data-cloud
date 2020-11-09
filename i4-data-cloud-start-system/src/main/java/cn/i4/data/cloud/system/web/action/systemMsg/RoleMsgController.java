@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.RoleDto;
@@ -46,6 +47,7 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "systemMsg:roleMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     public ActionResult<IPage<RoleView>> loadTable(RoleDto dto){
 
@@ -59,6 +61,7 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
+    @RequestPermission(value = "systemMsg:roleMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除角色，级联删除角色--菜单权限",type = RequestType.DELETE)
     public ActionResult<Boolean> deleteById(RoleDto dto,HttpServletRequest request){
 
@@ -82,6 +85,7 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getMenuButtonByRoleId")
+    @RequestPermission(value = "systemMsg:roleMsg/getMenuButtonByRoleId")
     @RequestLog(module = MODULE_NAME,content = "获取角色下的菜单",type = RequestType.SELECT)
     public ActionResult<List<MenuButtonView>> getMenuButtonByRoleId(RoleDto dto){
 
@@ -95,6 +99,7 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/checkUnique")
+    @RequestPermission(value = "systemMsg:roleMsg/checkUnique")
     @RequestLog(module = MODULE_NAME,content = "检验name的唯一性",type = RequestType.SELECT)
     public ActionResult<Boolean> checkUnique(RoleDto dto){
 
@@ -117,6 +122,7 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/save")
+    @RequestPermission(value = "systemMsg:roleMsg/save")
     @RequestLog(module = MODULE_NAME,content = "保存角色",type = RequestType.INSERT)
     public ActionResult<Boolean> save(@RequestBody RoleDto dto,HttpServletRequest request){
 

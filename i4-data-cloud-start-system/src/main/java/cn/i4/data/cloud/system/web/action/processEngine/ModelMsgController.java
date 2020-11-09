@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.processEngine;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.VActReModelDto;
@@ -41,6 +42,7 @@ public class ModelMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "processEngine:modelMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"加载表格",key = KEY_PREFIX+"loadTable")
     public ActionResult<IPage<VActReModelView>> loadTable(VActReModelDto dto){
@@ -55,6 +57,7 @@ public class ModelMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
+    @RequestPermission(value = "processEngine:modelMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除流程模板",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"删除流程模板",key = KEY_PREFIX+"deleteById")
     public ActionResult<Boolean> deleteById(VActReModelDto dto){
@@ -69,6 +72,7 @@ public class ModelMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deploy")
+    @RequestPermission(value = "processEngine:modelMsg/deploy")
     @RequestLog(module = MODULE_NAME,content = "部署流程模板",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"部署流程模板",key = KEY_PREFIX+"deploy")
     public ActionResult<String> deploy(VActReModelDto dto){

@@ -4,6 +4,7 @@ import cn.hutool.core.codec.Base64;
 import cn.hutool.extra.qrcode.QrCodeUtil;
 import cn.hutool.extra.qrcode.QrConfig;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
@@ -72,6 +73,7 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "systemMsg:inviteCode/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     public ActionResult<IPage<InviteCodeView>> loadTable(InviteCodeDto dto){
 
@@ -85,6 +87,7 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
+    @RequestPermission(value = "systemMsg:inviteCode/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除根据ID，级联删除邀请权限数据",type = RequestType.DELETE)
     public ActionResult<Boolean> deleteById(InviteCodeDto dto){
         boolean remove = iInviteCodeService.removeById(dto.getId());
@@ -118,6 +121,7 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getRole")
+    @RequestPermission(value = "systemMsg:inviteCode/getRole")
     @RequestLog(module = MODULE_NAME,content = "获取角色列表",type = RequestType.SELECT)
     public ActionResult<List<RoleModel>> getRole(){
 
@@ -132,6 +136,7 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/saveCode")
+    @RequestPermission(value = "systemMsg:inviteCode/saveCode")
     @RequestLog(module = MODULE_NAME,content = "保存邀请码",type = RequestType.INSERT)
     public ActionResult<Map<String,Object>> saveCode(@RequestBody InviteCodeDto dto, HttpServletRequest request){
 
@@ -195,6 +200,7 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/createQRCode")
+    @RequestPermission(value = "systemMsg:inviteCode/createQRCode")
     @RequestLog(module = MODULE_NAME,content = "生成二维码(流转base64)",type = RequestType.SELECT)
     public ActionResult<String> createQRCode(Integer id,String roleNames,String departmentName,HttpServletRequest request){
 

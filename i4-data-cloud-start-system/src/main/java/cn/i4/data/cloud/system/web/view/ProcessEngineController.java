@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.VActReDeployProcdefDto;
 import cn.i4.data.cloud.system.microservice.ProcessEngineMicroService;
@@ -44,6 +45,7 @@ public class ProcessEngineController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/modelMsg/index")
+    @RequestPermission(value = "processEngine:modelMsg/index")
     public ModelAndView modelMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/processEngine/modelMsg_index", request);
         view.addObject("designAdd",designAdd);
@@ -57,6 +59,7 @@ public class ProcessEngineController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/deployMsg/index")
+    @RequestPermission(value = "processEngine:deployMsg/index")
     public ModelAndView deployMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/processEngine/deployMsg_index", request);
         return view;
@@ -69,6 +72,7 @@ public class ProcessEngineController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/deployMsg/processImage")
+    @RequestPermission(value = "processEngine:deployMsg/processImage")
     public ModelAndView processImage(VActReDeployProcdefDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/processEngine/deployMsg_image", request);
         view.addObject("param",dto);
@@ -82,6 +86,7 @@ public class ProcessEngineController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/deployMsg/processTaskImage")
+    @RequestPermission(value = "processEngine:deployMsg/processTaskImage")
     public ModelAndView processTaskImage(VActReDeployProcdefDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/processEngine/process_image", request);
         view.addObject("param",dto);
@@ -98,6 +103,7 @@ public class ProcessEngineController extends WebBaseController {
      * @param response
      */
     @RequestMapping(value = "/deployMsg/imageio")
+    @RequestPermission(value = "processEngine:deployMsg/imageio")
     public void imageio(VActReDeployProcdefDto dto,HttpServletRequest request, HttpServletResponse response){
         ActionResult<byte[]> result = processEngineMicroService.viewImage(dto.getProcdefId());
         if(result.getCode() != 200){

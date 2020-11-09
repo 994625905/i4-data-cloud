@@ -2,6 +2,7 @@ package cn.i4.data.cloud.system.web.action.processEngine;
 
 import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.VActReDeployProcdefDto;
@@ -41,6 +42,7 @@ public class DeployMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "processEngine:deployMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"loadTable")
     public ActionResult<IPage<VActReDeployProcdefView>> loadTable(VActReDeployProcdefDto dto){
@@ -54,6 +56,7 @@ public class DeployMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
+    @RequestPermission(value = "processEngine:deployMsg/delete")
     @RequestLog(module = MODULE_NAME,content = "删除流程定义",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--删除流程定义",key = KEY_PREFIX+"delete")
     public ActionResult<Boolean> delete(VActReDeployProcdefDto dto){

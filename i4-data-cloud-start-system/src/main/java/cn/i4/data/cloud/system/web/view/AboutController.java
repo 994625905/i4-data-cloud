@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.system.web.view;
 
 import cn.hutool.core.convert.Convert;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.mongo.core.entity.MongoSystemConstant;
 import cn.i4.data.cloud.mongo.core.service.MongoSystemConstantService;
 import cn.i4.data.cloud.system.web.WebBaseController;
@@ -32,6 +33,7 @@ public class AboutController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/authInfo/index")
+    @RequestPermission(value = "about:authInfo/index")
     public ModelAndView authInfoIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/about/authInfo_index", request);
 

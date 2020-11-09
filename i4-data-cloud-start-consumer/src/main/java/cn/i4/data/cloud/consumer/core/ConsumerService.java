@@ -1,8 +1,10 @@
 package cn.i4.data.cloud.consumer.core;
 
 import cn.i4.data.cloud.core.entity.model.LogLimitModel;
+import cn.i4.data.cloud.core.entity.model.LogPermissionErrorModel;
 import cn.i4.data.cloud.core.entity.model.LogRequestModel;
 import cn.i4.data.cloud.core.service.ILogLimitService;
+import cn.i4.data.cloud.core.service.ILogPermissionErrorService;
 import cn.i4.data.cloud.core.service.ILogRequestService;
 import cn.i4.data.cloud.mq.rabbit.config.RabbitMqConstant;
 import cn.i4.data.cloud.mq.rabbit.consume.ConsumerHandler;
@@ -30,6 +32,8 @@ public class ConsumerService extends ConsumerHandler {
     private ILogRequestService iLogRequestService;
     @Autowired
     private ILogLimitService iLogLimitService;
+    @Autowired
+    private ILogPermissionErrorService iLogPermissionErrorService;
 
     /**
      * 返回值为是否正常处理
@@ -51,6 +55,12 @@ public class ConsumerService extends ConsumerHandler {
         if(RabbitMqConstant.QUEUE.REQUEST_LIMIT_ONE.equals(queue)){
             LogLimitModel model = JSONObject.parseObject(msg, LogLimitModel.class);
             iLogLimitService.save(model);
+        }
+
+        /** 接口权限拦截日志 */
+        if(RabbitMqConstant.QUEUE.REQUEST_PERMISSION_ONE.equals(queue)){
+            LogPermissionErrorModel errorModel = JSONObject.parseObject(msg, LogPermissionErrorModel.class);
+            iLogPermissionErrorService.save(errorModel);
         }
 
         return true;
