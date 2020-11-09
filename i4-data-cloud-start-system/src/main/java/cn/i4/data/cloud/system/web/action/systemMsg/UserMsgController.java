@@ -104,7 +104,7 @@ public class UserMsgController extends WebBaseController {
         /** 删除redis */
         redisService.del(RedisConstant.KEY.LOGIN_USER_PREFIX+dto.getUserId());
         redisService.del(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX+dto.getUserId());
-        redisService.del(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_PREFIX+dto.getUserId());
+        redisService.del(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX+dto.getUserId());
 
         /** 删除用户info */
         remove = iUserInfoService.remove(new QueryWrapper<UserInfoModel>(){{

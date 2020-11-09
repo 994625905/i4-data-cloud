@@ -59,6 +59,22 @@ public class WebBaseController extends BaseController {
     }
 
     /**
+     * 404页面
+     * @return
+     */
+    public ModelAndView getNotFoundView(){
+        return this.getModelAndView("/error/404");
+    }
+
+    /**
+     * 错误页面
+     * @return
+     */
+    public ModelAndView getErrorView(){
+        return this.getModelAndView("/error/5xx");
+    }
+
+    /**
      * 获取user，刷新时间在拦截器中
      * @param request
      * @return
@@ -79,6 +95,28 @@ public class WebBaseController extends BaseController {
         UserInfoModel userInfo = redisService.get(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX + this.getUser(request).getId(), UserInfoModel.class);
         return userInfo;
     }
+
+    /**
+     * 获取登陆用户的权限菜单，刷新时间在拦截器中
+     * @param request
+     * @return
+     */
+    protected List<MenuButtonView> getUserRoleMenuButton(HttpServletRequest request){
+        List<MenuButtonView> menuList = redisService.get(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + this.getUser(request).getId(),List.class);
+        return menuList;
+    }
+
+    /**
+     * 刷新登陆用户的权限菜单
+     * @param request
+     * @return
+     */
+    protected List<MenuButtonView> refreshUserRoleMenuButton(HttpServletRequest request){
+        List<MenuButtonView> menuList = iMenuButtonService.getMenuButtonTreeByUserId(this.getUser(request).getId());
+        redisService.set(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + this.getUser(request).getId(),menuList,RedisConstant.TIMEOUT.LOGIN_USER_ROLE_MENU_TREE);
+        return menuList;
+    }
+
 
     /**
      * 获取user template
@@ -109,33 +147,6 @@ public class WebBaseController extends BaseController {
             redisService.expire(RedisConstant.KEY.SYSTEM_CONSTANT,RedisConstant.TIMEOUT.SYSTEM_CONSTANT);
         }
         return map;
-    }
-
-    /**
-     * 获取登陆用户的权限菜单
-     * @param request
-     * @return
-     */
-    protected List<MenuButtonView> getUserRoleMenuButton(HttpServletRequest request){
-        List<MenuButtonView> menuList = redisService.get(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_PREFIX + this.getUser(request).getId(),List.class);
-        if(menuList == null || menuList.size() <1){
-            menuList = iMenuButtonService.getMenuButtonTreeByUserId(this.getUser(request).getId());
-            redisService.set(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_PREFIX + this.getUser(request).getId(),menuList,RedisConstant.TIMEOUT.LOGIN_USER_ROLE_MENU);
-        }else{
-            redisService.expire(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_PREFIX + this.getUser(request).getId(),RedisConstant.TIMEOUT.LOGIN_USER_ROLE_MENU);
-        }
-        return menuList;
-    }
-
-    /**
-     * 刷新登陆用户的权限菜单
-     * @param request
-     * @return
-     */
-    protected List<MenuButtonView> refreshUserRoleMenuButton(HttpServletRequest request){
-        List<MenuButtonView> menuList = iMenuButtonService.getMenuButtonTreeByUserId(this.getUser(request).getId());
-        redisService.set(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_PREFIX + this.getUser(request).getId(),menuList,RedisConstant.TIMEOUT.LOGIN_USER_ROLE_MENU);
-        return menuList;
     }
 
 }

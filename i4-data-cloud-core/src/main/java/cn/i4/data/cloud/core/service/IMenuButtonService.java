@@ -23,6 +23,13 @@ public interface IMenuButtonService extends BaseService<MenuButtonModel> {
     IPage<MenuButtonView> selectPage(MenuButtonDto dto);
 
     /**
+     * 根据userId获取权限下菜单的列表
+     * @param userId
+     * @return
+     */
+    List<MenuButtonView> getMenuButtonByUserId(Integer userId);
+
+    /**
      * 根据userId获取权限下菜单的树结构
      * @param userId
      * @return

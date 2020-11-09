@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.view;
 
+import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
 import cn.i4.data.cloud.core.service.IUserService;
 import cn.i4.data.cloud.core.service.IWeekreportProcessNodeService;
@@ -40,6 +41,7 @@ public class WeekReportController extends WebBaseController {
      * @return
      */
     @RequestMapping(value = "/weekReportApply/index")
+    @RequestPermission(value = "user")
     public ModelAndView weekReportApplyIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_index", request);
         return view;

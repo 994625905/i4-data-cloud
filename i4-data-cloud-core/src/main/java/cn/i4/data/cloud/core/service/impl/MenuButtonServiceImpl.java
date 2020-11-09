@@ -34,6 +34,12 @@ public class MenuButtonServiceImpl extends BaseServiceImpl<MenuButtonMapper,Menu
     }
 
 	@Override
+	public List<MenuButtonView> getMenuButtonByUserId(Integer userId) {
+		List<MenuButtonView> list = mapper.getMenuButtonTreeByUserId(userId, SystemConstant.MENU.ACTIVE);
+		return list;
+	}
+
+	@Override
 	public List<MenuButtonView> getMenuButtonTreeByUserId(Integer userId) {
 		List<MenuButtonView> list = mapper.getMenuButtonTreeByUserId(userId, SystemConstant.MENU.ACTIVE);
 		return this.getMenu(list,0);

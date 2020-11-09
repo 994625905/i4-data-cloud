@@ -64,6 +64,7 @@ public class SystemInterceptor implements HandlerInterceptor {
         CookieUtil.set(response,"authorization",authorization);//刷新时间
         redisService.expire(RedisConstant.KEY.LOGIN_USER_PREFIX + decode.getClaim("userId").asInt(),RedisConstant.TIMEOUT.LOGIN_USER);//刷新时间
         redisService.expire(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX + decode.getClaim("userId").asInt(),RedisConstant.TIMEOUT.LOGIN_USER_INFO);//刷新时间
+        redisService.expire(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + decode.getClaim("userId").asInt(),RedisConstant.TIMEOUT.LOGIN_USER_ROLE_MENU_TREE);//刷新时间
         return true;
     }
 

@@ -41,12 +41,12 @@ public class WebErrorController extends WebBaseController implements ErrorContro
         if(status != null){
             Integer statusCode = Integer.valueOf(status.toString());
             if(statusCode == HttpStatus.NOT_FOUND.value()){
-                return getModelAndView("/error/404");
+                return getNotFoundView();
             }else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()){
-                return getModelAndView("/error/5xx");
+                return getErrorView();
             }
         }
-        return getModelAndView("/error/404");
+        return getNotFoundView();
     }
 
 }

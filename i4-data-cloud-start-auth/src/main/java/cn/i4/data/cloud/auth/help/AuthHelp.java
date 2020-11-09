@@ -7,6 +7,7 @@ import cn.i4.data.cloud.base.util.CookieUtil;
 import cn.i4.data.cloud.base.util.JWTUtil;
 import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.cache.service.RedisService;
+import cn.i4.data.cloud.core.entity.view.MenuButtonView;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.slf4j.Logger;
@@ -14,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * @author wangjc
@@ -57,12 +59,13 @@ public class AuthHelp {
      * @param response
      * @return
      */
-    public static String login(UserModel userModel, UserInfoModel userInfo, RedisService redisService, HttpServletResponse response){
+    public static String login(UserModel userModel, UserInfoModel userInfo, List<MenuButtonView> list, RedisService redisService, HttpServletResponse response){
         if(userModel != null){
             String authorization = JWTUtil.sign(userModel.getId(),userModel.getLoginname());
             CookieUtil.set(response,"authorization",authorization);
             redisService.set(RedisConstant.KEY.LOGIN_USER_PREFIX + userModel.getId(),userModel,RedisConstant.TIMEOUT.LOGIN_USER);
             redisService.set(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX + userModel.getId(),userInfo,RedisConstant.TIMEOUT.LOGIN_USER_INFO);
+            redisService.set(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + userModel.getId(),list,RedisConstant.TIMEOUT.LOGIN_USER_ROLE_MENU_TREE);
             return authorization;
         }
         return null;
@@ -75,9 +78,11 @@ public class AuthHelp {
      */
     public static Boolean logout(String authorization,RedisService redisService){
         DecodedJWT decode = JWT.decode(authorization);
-        Boolean del1 = redisService.del(RedisConstant.KEY.LOGIN_USER_PREFIX + decode.getClaim("userId").asInt());
-        Boolean del2 = redisService.del(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX + decode.getClaim("userId").asInt());
-        return del1 && del2;
+        int userId = decode.getClaim("userId").asInt();
+        Boolean del1 = redisService.del(RedisConstant.KEY.LOGIN_USER_PREFIX + userId);
+        Boolean del2 = redisService.del(RedisConstant.KEY.LOGIN_USER_INFO_PREFIX + userId);
+        Boolean del3 = redisService.del(RedisConstant.KEY.LOGIN_USER_ROLE_MENU_TREE_PREFIX + userId);
+        return del1 && del2 && del3;
     }
 
 }

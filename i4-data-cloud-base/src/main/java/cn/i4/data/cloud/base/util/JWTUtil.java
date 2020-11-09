@@ -44,13 +44,45 @@ public class JWTUtil {
     }
 
     /**
-     * 解析PHONE
+     * 解析出userId
+     * @param authorization
+     * @return
+     */
+    public static Integer getUserId(String authorization){
+        try {
+            DecodedJWT jwt = JWT.decode(authorization);
+            return jwt.getClaim(USER_ID).asInt();
+        } catch (JWTDecodeException e) {
+            logger.error("token解析失败");
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 解析登录名称
      * @param request
      * @param header
      * @return
      */
     public static String getUserName(HttpServletRequest request, String header){
         return getTokenValueByRequestAndKey(request,LOGIN_NAME,header);
+    }
+
+    /**
+     * 解析登录名称
+     * @param authorization
+     * @return
+     */
+    public static String getUserName(String authorization){
+        try {
+            DecodedJWT jwt = JWT.decode(authorization);
+            return jwt.getClaim(LOGIN_NAME).asString();
+        } catch (JWTDecodeException e) {
+            logger.error("token解析失败");
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static String getUserName(){

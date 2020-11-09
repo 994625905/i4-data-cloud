@@ -4,6 +4,8 @@ import cn.i4.data.cloud.core.entity.dto.UserDto;
 import cn.i4.data.cloud.core.entity.model.UserInfoModel;
 import cn.i4.data.cloud.core.entity.model.UserModel;
 import cn.i4.data.cloud.auth.help.AuthHelp;
+import cn.i4.data.cloud.core.entity.view.MenuButtonView;
+import cn.i4.data.cloud.core.service.IMenuButtonService;
 import cn.i4.data.cloud.core.service.IUserInfoService;
 import cn.i4.data.cloud.core.service.IUserService;
 import cn.i4.data.cloud.base.constant.RedisConstant;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -41,6 +44,8 @@ public class AuthLoginController extends WebBaseController {
     private IUserService iUserService;
     @Autowired
     private IUserInfoService iUserInfoService;
+    @Autowired
+    private IMenuButtonService iMenuButtonService;
 
     /**
      * 账号密码登录动作(以此类推，可添加手机验证码，微信……第三方登录接口)
@@ -76,8 +81,11 @@ public class AuthLoginController extends WebBaseController {
                 return ActionResult.ok(map);
             }
 
+            /** 菜单权限 */
+            List<MenuButtonView> list = iMenuButtonService.getMenuButtonTreeByUserId(userModel.getId());
+
             /** 正常登录 */
-            String authorization = AuthHelp.login(userModel, userInfo, redisService, response);
+            String authorization = AuthHelp.login(userModel, userInfo,list, redisService, response);
 
             logger.debug("登录成功，认证token[{}]",authorization);
 
@@ -128,7 +136,10 @@ public class AuthLoginController extends WebBaseController {
             UserInfoModel userInfo = iUserInfoService.getOne(new QueryWrapper<UserInfoModel>() {{
                 eq("user_id", userModel.getId());
             }});
-            String authorization = AuthHelp.login(userModel, userInfo, redisService, response);
+            /** 菜单权限 */
+            List<MenuButtonView> list = iMenuButtonService.getMenuButtonTreeByUserId(userModel.getId());
+
+            String authorization = AuthHelp.login(userModel, userInfo, list, redisService, response);
 
             logger.debug("登录成功，认证token[{}]",authorization);
 

@@ -17,8 +17,8 @@ public class RedisConstant {
         String OPEN_API_PREFIX = "i4-data-cloud-open-api_";//对外开放的api
         String LOGIN_USER_PREFIX = "i4-data-cloud-login-user_";//登录的用户
         String LOGIN_USER_INFO_PREFIX = "i4-data-cloud-login-user_info_";//登录用户的info
-        String LOGIN_USER_TEMPLATE_PREFIX = "i4-data-cloud-login-user_template_";//登录用户的模板
-        String LOGIN_USER_ROLE_MENU_PREFIX = "i4-data-cloud-user-role-menu_";//登陆用户的权限菜单
+        String LOGIN_USER_TEMPLATE_PREFIX = "i4-data-cloud-login-user_template_";//登录用户的模板设置
+        String LOGIN_USER_ROLE_MENU_TREE_PREFIX = "i4-data-cloud-user-role-menu_";//登陆用户的权限菜单
         String SYSTEM_CONSTANT = "i4-data-cloud-system-constant";//系统常量
         String RABBITMQ_EXCHANGE = "i4-data-cloud-rabbitmq-exchange";//系统的rabbitMQ配置，交换机，不过期
         String RABBITMQ_QUEUE = "i4-data-cloud-rabbitmq-queue";//系统的rabbitMQ配置，队列，不过期
@@ -43,8 +43,8 @@ public class RedisConstant {
     public interface TIMEOUT{
         Long LOGIN_USER = 60 * 60 * 24 * 1L;//登录的用户，1天
         Long LOGIN_USER_INFO = 60 * 60 * 24 * 1L;//登录用户的info，1天
-        Long LOGIN_USER_TEMPLATE_PREFIX = 60 * 60 * 24 * 1L;//登录用户的模板，1天
-        Long LOGIN_USER_ROLE_MENU = 60 * 60 * 1L;//登陆用户的权限菜单，1小时（考虑到管理员会修改）
+        Long LOGIN_USER_TEMPLATE_PREFIX = 60 * 60 * 24 * 1L;//登录用户的模板设置，1天
+        Long LOGIN_USER_ROLE_MENU_TREE = 60 * 60 * 1L;//登录用户的模板，1天
         Long SYSTEM_CONSTANT = 60 * 60 * 24 * 1L;//系统常量，1天
         Long AUTH_CODE = 60L;//验证码（uuid），1分钟
         Long SMS_CODE = 60L;//短信验证码（uuid），1分钟
