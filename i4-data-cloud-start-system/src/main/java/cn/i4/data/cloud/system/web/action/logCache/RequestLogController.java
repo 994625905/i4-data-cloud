@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 日志捕获--请求日志的控制层
+ * 日志捕获--请求日志汇总的控制层
  * @author wangjc
  * @title: RequestLogController
  * @projectName i4-data-cloud
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/logCache/requestLog")
 public class RequestLogController extends WebBaseController {
 
-    private static final String MODULE_NAME = "日志捕获--请求日志";
+    private static final String MODULE_NAME = "日志捕获--请求日志汇总";
     private static final String KEY_PREFIX = "/logCache/requestLog";
     @Autowired
     private ILogRequestService iLogRequestService;

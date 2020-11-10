@@ -12,10 +12,20 @@ public class LogRequestDto extends BaseDto<LogRequestView> {
 
     private static final long serialVersionUID = 1603618632637L;
 
+    private String date;
+
     private String moduleName;
     private String actionContent;
-    private String actionType;
-    private String actionResult;
+    private Integer actionType;
+    private Integer actionResult;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getModuleName() {
         return moduleName;
@@ -33,19 +43,19 @@ public class LogRequestDto extends BaseDto<LogRequestView> {
         this.actionContent = actionContent;
     }
 
-    public String getActionType() {
+    public Integer getActionType() {
         return actionType;
     }
 
-    public void setActionType(String actionType) {
+    public void setActionType(Integer actionType) {
         this.actionType = actionType;
     }
 
-    public String getActionResult() {
+    public Integer getActionResult() {
         return actionResult;
     }
 
-    public void setActionResult(String actionResult) {
+    public void setActionResult(Integer actionResult) {
         this.actionResult = actionResult;
     }
 }

@@ -1,8 +1,9 @@
 package cn.i4.data.cloud.core.service.impl;
 
-import java.util.List;
-import java.util.Date;
+import java.util.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.beans.BeanMap;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.base.service.impl.BaseServiceImpl;
@@ -29,5 +30,40 @@ public class LogRequestServiceImpl extends BaseServiceImpl<LogRequestMapper,LogR
 	public IPage<LogRequestView> selectPage(LogRequestDto dto) {
     	return mapper.selectPage(dto);
     }
+
+	@Override
+	public List<Map<String,Object>> selectByUserId(LogRequestDto dto) {
+		List<Map<String,Object>> list = mapper.selectGroupByDate(BeanMap.create(dto));
+		List<LogRequestView> data = mapper.selectByUserId(BeanMap.create(dto));
+
+		for(Map<String,Object> map:list){
+			List<Map<String,Object>> detail = new ArrayList<>();
+			for(LogRequestView temp:data){
+				if(temp.getDate().equals(map.get("date"))){
+					Map<String,Object> t = new HashMap<>();
+					t.put("time",temp.getTime());
+					t.put("moduleName",temp.getModuleName());
+					t.put("actionContent",temp.getActionContent());
+					t.put("actionType",temp.getActionType());
+					t.put("actionName",temp.getActionName());
+					t.put("actionException",temp.getActionException());
+					t.put("actionTime",temp.getActionTime());
+					t.put("actionResult",temp.getActionResult());
+					detail.add(t);
+					if(detail.size() >= 10){
+						break;
+					}
+				}
+			}
+			map.put("detail",detail);
+			map.put("limit",detail.size()>=10?10:detail.size());
+		}
+		return list;
+	}
+
+	@Override
+	public List<LogRequestView> selectByUserIdAndDate(LogRequestDto dto) {
+		return mapper.selectByUserId(BeanMap.create(dto));
+	}
 
 }

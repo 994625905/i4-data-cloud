@@ -18,8 +18,7 @@
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">用户</label>
-                                    <div class="layui-input-inline">
+                                    <div class="layui-input-inline" style="width: 130px">
                                         <select name="userId" class="layui-input">
                                             <option value="">请选择用户</option>
                                             <#if userList??>
@@ -31,31 +30,27 @@
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">模块</label>
                                     <div class="layui-input-inline">
-                                        <input name="moduleName" class="layui-input" style="max-width: 130px">
+                                        <input name="moduleName" class="layui-input" placeholder="模块查询" style="max-width: 130px">
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">内容</label>
                                     <div class="layui-input-inline">
-                                        <input name="actionContent" class="layui-input" style="max-width: 110px">
+                                        <input name="actionContent" class="layui-input" placeholder="内容查询" style="max-width: 110px">
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">类型</label>
                                     <div class="layui-input-inline" style="width: 100px">
                                         <select name="actionType" class="layui-input">
                                             <option value="">选择类型</option>
-                                            <option value="1">增</option>
-                                            <option value="2">删</option>
-                                            <option value="3">改</option>
-                                            <option value="4">查</option>
+                                            <option value="1">新增</option>
+                                            <option value="2">删除</option>
+                                            <option value="3">修改</option>
+                                            <option value="4">查看</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">结果</label>
                                     <div class="layui-input-inline" style="width: 100px">
                                         <select name="actionResult" class="layui-input">
                                             <option value="">选择结果</option>
@@ -79,6 +74,6 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="${StaticServer}/templates/logCache/requestLog_index.js?v=1.0"></script>
+<script type="text/javascript" src="${StaticServer}/templates/logCache/request_index.js?v=1.1"></script>
 </@override>
 <@extends name="/base.ftl"/>

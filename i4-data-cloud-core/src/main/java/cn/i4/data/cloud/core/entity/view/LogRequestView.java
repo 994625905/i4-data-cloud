@@ -121,6 +121,8 @@ public class LogRequestView extends BaseView<LogRequestView> {
 	private Integer actionResult;
 
 	private String createTimeStr;
+	private String date;
+	private String time;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -240,5 +242,21 @@ public class LogRequestView extends BaseView<LogRequestView> {
 
 	public void setCreateTimeStr(String createTimeStr) {
 		this.createTimeStr = createTimeStr;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 }

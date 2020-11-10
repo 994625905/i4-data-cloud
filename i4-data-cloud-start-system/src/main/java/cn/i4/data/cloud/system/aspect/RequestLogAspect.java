@@ -83,13 +83,9 @@ public class RequestLogAspect extends BaseAspectSupport{
         model.setActionName(requestLog.type().getName());
         model.setActionMethod(this.resolveMethod(point).getName());
 
+        long start = System.currentTimeMillis();//开始时间，毫秒
         try {
-            long start = System.currentTimeMillis();//开始时间，毫秒
             Object result = point.proceed();//执行切入点
-            long end = System.currentTimeMillis();//结束时间，毫秒
-
-            /** 执行时间，成功 */
-            model.setActionTime(end - start);
             model.setActionResult(ACTION_SUCCESS);
 
             return result;
@@ -107,6 +103,8 @@ public class RequestLogAspect extends BaseAspectSupport{
             throwable.printStackTrace();
             return ActionResult.error("接口异常报错");
         }finally {
+            /** 执行时间 */
+            model.setActionTime(System.currentTimeMillis() - start);
             /** 发送数据到消息队列，以待入库 */
             produceService.sendMessage(RabbitMqConstant.EXCHANGE_NAME.REQUEST,RabbitMqConstant.ROUTING_KEY.REQUEST_LOG_ONE,JSONObject.toJSONString(model));
         }

@@ -19,13 +19,14 @@ layui.use(["layer","table","form","laydate"],()=>{
         param.startDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[0],"start")
         param.endDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[1],"end")
 
+        Initlay.reloadTable(tableRender,param)
     },BaseDate.rangeDate(-30)+" - "+BaseDate.rangeDate(0))
 
     /** 初始化表格 */
     loadTable()
 
     /** 查询按钮 */
-    form.render("submit(search)",obj=>{
+    form.on("submit(search)",obj=>{
         param.userId = obj.field.userId
         param.requestPath = obj.field.requestPath
         param.type = obj.field.type
@@ -55,7 +56,7 @@ function loadTable(){
         {field:"loginName",title:"拦截用户",width: TABLE_COL_WIDTH.one_Cols(5)},
         {field:"type",title:"拦截类型",sort:true,width:TABLE_COL_WIDTH.one_Cols(4),templet(d){
             if(d.type == 0){
-                return "<label class='layui-btn layui-btn-sm layui-btn-normal'>页面</label>";
+                return "<label class='layui-btn layui-btn-sm layui-btn-normal'>打开页面</label>";
             }
             if(d.type == 1){
                 return "<label class='layui-btn layui-btn-sm layui-btn-danger'>数据接口</label>";

@@ -6,7 +6,6 @@ layui.use(["layer","laypage"],()=>{
     laypage = layui.laypage
 
     /** 开启加载 */
-    BaseAjax.getDataAsync()
     Request.async(BasePath+"/materialMsg/imageSelect/loadImageTable",{
         width:limit_width,
         height:limit_height,

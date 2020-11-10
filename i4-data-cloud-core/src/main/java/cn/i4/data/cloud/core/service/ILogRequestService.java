@@ -6,6 +6,9 @@ import cn.i4.data.cloud.core.entity.dto.LogRequestDto;
 import cn.i4.data.cloud.core.entity.model.LogRequestModel;
 import cn.i4.data.cloud.core.entity.view.LogRequestView;
 
+import java.util.List;
+import java.util.Map;
+
 /**
 * Service
 * @author wangjc
@@ -20,4 +23,17 @@ public interface ILogRequestService extends BaseService<LogRequestModel> {
     */
     IPage<LogRequestView> selectPage(LogRequestDto dto);
 
+    /**
+     * 查询个人日志
+     * @param dto
+     * @return
+     */
+    List<Map<String,Object>> selectByUserId(LogRequestDto dto);
+
+    /**
+     * 查询个人详情
+     * @param dto
+     * @return
+     */
+    List<LogRequestView> selectByUserIdAndDate(LogRequestDto dto);
 }

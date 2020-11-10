@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 日志捕获--限流日志的控制层
+ * 日志捕获--限流日志汇总的控制层
  * @author wangjc
  * @title: LimitLogController
  * @projectName i4-data-cloud
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/logCache/limitLog")
 public class LimitLogController extends WebBaseController {
 
-    private static final String MODULE_NAME = "日志捕获--限流日志";
+    private static final String MODULE_NAME = "日志捕获--限流日志汇总";
     private static final String KEY_PREFIX = "/logCache/limitLog";
     @Autowired
     private ILogLimitService iLogLimitService;

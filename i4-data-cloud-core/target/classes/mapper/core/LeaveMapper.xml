@@ -38,13 +38,13 @@
         left join t_leave_process p on t.id = p.leave_id
         left join t_leave_type y on t.type_id = y.id
         where 1=1
-        <if test="userId != null">
+        <if test="userId != null and userId != ''">
             and t.user_id = #{userId}
         </if>
-        <if test="typeId != null">
+        <if test="typeId != null and typeId != ''">
             and t.type_id = #{typeId}
         </if>
-        <if test="startDate != null">
+        <if test="startDate != null and startDate != ''">
             and t.create_time between #{startDate} and #{endDate}
         </if>
         <if test="field != null and field != ''">
@@ -74,13 +74,13 @@
             left join t_leave_process p on t.id = p.leave_id
             left join t_leave_type y on t.type_id = y.id
             where 1=1
-            <if test="userId != null">
+            <if test="userId != null and userId != ''">
                 and t.user_id = #{userId}
             </if>
-            <if test="typeId != null">
+            <if test="typeId != null and typeId != ''">
                 and t.type_id = #{typeId}
             </if>
-            <if test="startDate != null">
+            <if test="startDate != null and startDate != ''">
                 and t.create_time between #{startDate} and #{endDate}
             </if>
             <if test="field != null and field != ''">

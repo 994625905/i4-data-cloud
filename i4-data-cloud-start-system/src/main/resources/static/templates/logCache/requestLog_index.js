@@ -19,13 +19,14 @@ layui.use(["layer","table","form","laydate"],()=>{
         param.startDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[0],"start")
         param.endDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[1],"end")
 
+        Initlay.reloadTable(tableRender,param)
     },BaseDate.rangeDate(-1)+" - "+BaseDate.rangeDate(0))
 
     /** 初始化表格 */
     loadTable()
 
     /** 查询按钮 */
-    form.render("submit(requestLogTable)",obj=>{
+    form.on("submit(search)",obj=>{
         param.actionResult = obj.field.actionResult
         param.actionType = obj.field.actionType
         param.actionContent = obj.field.actionContent
@@ -55,17 +56,22 @@ layui.use(["layer","table","form","laydate"],()=>{
 /** 加载表格 */
 function loadTable(){
     var tabCols = [[
-        {field:"loginName",title:"操作用户",width:TABLE_COL_WIDTH.one_Cols(4)},
-        {field:"requestIp",title:"请求IP",width:TABLE_COL_WIDTH.one_Cols(4)},
+        {field:"loginName",title:"操作用户",width:TABLE_COL_WIDTH.one_Cols(5)},
+        {field:"requestIp",title:"请求IP",width:TABLE_COL_WIDTH.one_Cols(5)},
 
         {field:"moduleName",title:"模块"},
         {field:"actionContent",title:"内容"},
-        {field:"actionMethod",title:"方法",width:TABLE_COL_WIDTH.one_Cols(4)},
-        {field:"actionName",title:"类型",sort:true,width:TABLE_COL_WIDTH.one_Cols(2)},
+        {field:"actionMethod",title:"方法",width:TABLE_COL_WIDTH.one_Cols(6)},
+        {field:"actionName",title:"类型",sort:true,width:TABLE_COL_WIDTH.one_Cols(3)},
         {field:"actionException",title:"异常"},
-        {field:"actionTime",title:"耗时",sort:true,width:TABLE_COL_WIDTH.one_Cols(2)},
-        {field:"action_result",title:"结果",sort:true,width:TABLE_COL_WIDTH.one_Cols(2)},
-        {field:"week",title:"周",width:TABLE_COL_WIDTH.one_Cols(2)},
+        {field:"actionTime",title:"耗时(毫秒)",sort:true,width:TABLE_COL_WIDTH.one_Cols(5)},
+        {field:"actionResult",title:"结果",sort:true,width:TABLE_COL_WIDTH.one_Cols(3),templet(d){
+            if(d.actionResult == 1){
+                return "<span class='text-success'>成功</span>"
+            }
+            return "<span class='text-danger'>失败</span>"
+        }},
+        {field:"week",title:"周",width:TABLE_COL_WIDTH.one_Cols(3)},
         {field:"createTimeStr",title:"请求时间",sort:true,width:TABLE_COL_WIDTH.date}
     ]]
     tableRender = Initlay.initTable("#requestLogTable",BasePath+"/logCache/requestLog/loadTable",tabCols,null,param)

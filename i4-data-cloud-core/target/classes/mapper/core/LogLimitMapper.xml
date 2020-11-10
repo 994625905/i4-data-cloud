@@ -24,7 +24,7 @@
             <include refid="Base_Column_List" />
         FROM t_log_limit AS t
         where 1=1
-        <if test="startDate != null">
+        <if test="startDate != null and startDate != ''">
             and t.create_time between #{startDate} and #{endDate}
         </if>
         <if test="requestPath != null">

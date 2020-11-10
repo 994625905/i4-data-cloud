@@ -19,13 +19,14 @@ layui.use(["layer","table","form","laydate"],()=>{
         param.startDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[0],"start")
         param.endDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[1],"end")
 
+        Initlay.reloadTable(tableRender,param)
     },BaseDate.rangeDate(-30)+" - "+BaseDate.rangeDate(0))
 
     /** 初始化表格 */
     loadTable()
 
     /** 查询按钮 */
-    form.render("submit(search)",obj=>{
+    form.on("submit(search)",obj=>{
         param.requestPath = obj.field.requestPath
         param.type = obj.field.type
         param.startDate = BaseDate.dateStrToTimeStamp($("#date").val().split(" - ")[0],"start")
@@ -53,7 +54,7 @@ layui.use(["layer","table","form","laydate"],()=>{
 function loadTable(){
     var tabCols = [[
         {field:"name",title:"限流名称"},
-        {field:"period",title:"时间范围（秒）",width:TABLE_COL_WIDTH.one_Cols(4)},
+        {field:"period",title:"单位（秒）",width:TABLE_COL_WIDTH.one_Cols(4)},
         {field:"count",title:"上限次数",width:TABLE_COL_WIDTH.one_Cols(4)},
         {field:"prefix",title:"限流前缀",width:TABLE_COL_WIDTH.one_Cols(4)},
         {field:"limitKey",title:"限流Key"},

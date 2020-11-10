@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 日志捕获--限流日志汇总的控制层
  * @author wangjc
  * @title: PermissionLogController
  * @projectName i4-data-cloud
@@ -26,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/logCache/permissionLog")
 public class PermissionLogController extends WebBaseController {
 
-    private static final String MODULE_NAME = "日志捕获--限流日志";
+    private static final String MODULE_NAME = "日志捕获--限流日志汇总";
     private static final String KEY_PREFIX = "/logCache/permissionLog";
     @Autowired
     private ILogPermissionErrorService iLogPermissionErrorService;

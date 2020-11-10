@@ -23,13 +23,13 @@
         <include refid="Base_Column_List" />
         FROM t_log_permission_error AS t
         where 1=1
-        <if test="userId != null">
+        <if test="userId != null and userId != ''">
             and t.user_id = #{userId}
         </if>
-        <if test="startDate != null">
+        <if test="startDate != null and startDate != ''">
             and t.create_time between #{startDate} and #{endDate}
         </if>
-        <if test="requestPath != null">
+        <if test="requestPath != null and requestPath != ''">
             and t.request_path like concat('%',#{requestPath},'%')
         </if>
         <if test="type != null">

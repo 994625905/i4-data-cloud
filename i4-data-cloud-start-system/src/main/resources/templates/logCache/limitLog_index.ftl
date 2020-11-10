@@ -18,13 +18,11 @@
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">请求路径</label>
                                     <div class="layui-input-inline">
-                                        <input name="requestPath" class="layui-input" style="max-width: 130px">
+                                        <input name="requestPath" class="layui-input" placeholder="请求路径查询" style="max-width: 150px">
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">类型</label>
                                     <div class="layui-input-inline" style="width: 100px">
                                         <select name="type" class="layui-input">
                                             <option value="">选择类型</option>

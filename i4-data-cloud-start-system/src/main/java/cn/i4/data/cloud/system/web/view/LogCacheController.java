@@ -1,6 +1,9 @@
 package cn.i4.data.cloud.system.web.view;
 
 import cn.i4.data.cloud.base.annotation.RequestPermission;
+import cn.i4.data.cloud.core.entity.dto.LogRequestDto;
+import cn.i4.data.cloud.core.entity.view.LogRequestView;
+import cn.i4.data.cloud.core.service.ILogRequestService;
 import cn.i4.data.cloud.core.service.IUserService;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 日志捕获的模型视图页面
@@ -24,9 +28,11 @@ public class LogCacheController extends WebBaseController {
 
     @Autowired
     private IUserService iUserService;
+    @Autowired
+    private ILogRequestService iLogRequestService;
 
     /**
-     * 加载请求日志的首页
+     * 加载请求日志汇总的首页
      * @param request
      * @return
      */
@@ -39,7 +45,36 @@ public class LogCacheController extends WebBaseController {
     }
 
     /**
-     * 加载限流日志的首页
+     * 加载请求日志的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/request/index")
+    @RequestPermission(value = "logCache:request/index")
+    public ModelAndView requestIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/logCache/request_index", request);
+        return view;
+    }
+
+    /**
+     * 加载请求日志的详情页
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/request/detailPage")
+    @RequestPermission(value = "logCache:request/detailPage")
+    public ModelAndView requestDetailPage(LogRequestDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/logCache/request_detail", request);
+
+        dto.setUserId(getUser(request).getId());
+        List<LogRequestView> list = iLogRequestService.selectByUserIdAndDate(dto);
+        view.addObject("list",list);
+        return view;
+    }
+
+    /**
+     * 加载限流日志汇总的首页
      * @param request
      * @return
      */
@@ -51,7 +86,7 @@ public class LogCacheController extends WebBaseController {
     }
 
     /**
-     * 加载权限验证日志的首页
+     * 加载权限验证日志汇总的首页
      * @param request
      * @return
      */

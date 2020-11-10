@@ -31,7 +31,6 @@
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">类型</label>
                                     <div class="layui-input-inline" style="width: 100px">
                                         <select name="type" class="layui-input">
                                             <option value="">选择类型</option>
