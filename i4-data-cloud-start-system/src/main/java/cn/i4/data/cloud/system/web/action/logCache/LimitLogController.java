@@ -38,9 +38,9 @@ public class LimitLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "logCache:limitLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "logCache:limitLog/loadTable")
     public ActionResult<IPage<LogLimitView>> loadTable(LogLimitDto dto){
         IPage<LogLimitView> page = iLogLimitService.selectPage(dto);
         return ActionResult.ok(page);

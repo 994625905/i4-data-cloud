@@ -38,9 +38,9 @@ public class RequestLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "logCache:requestLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "logCache:requestLog/loadTable")
     public ActionResult<IPage<LogRequestView>> loadTable(LogRequestDto dto){
         IPage<LogRequestView> page = iLogRequestService.selectPage(dto);
         return ActionResult.ok(page);

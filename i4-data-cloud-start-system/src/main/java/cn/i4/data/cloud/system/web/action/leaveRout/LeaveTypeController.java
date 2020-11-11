@@ -42,9 +42,9 @@ public class LeaveTypeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "leaveRout:leaveType/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "leaveRout:leaveType/loadTable")
     public ActionResult<IPage<LeaveTypeView>> loadTable(LeaveTypeDto dto){
 
         IPage<LeaveTypeView> page = iLeaveTypeService.selectPage(dto);
@@ -57,9 +57,9 @@ public class LeaveTypeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "leaveRout:leaveType/delete")
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
+    @RequestPermission(value = "leaveRout:leaveType/delete")
     public ActionResult<Boolean> delete(LeaveTypeDto dto){
 
         boolean remove = iLeaveTypeService.removeById(dto.getId());
@@ -75,9 +75,9 @@ public class LeaveTypeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "leaveRout:leaveType/insert")
     @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
+    @RequestPermission(value = "leaveRout:leaveType/insert")
     public ActionResult<Boolean> insert(LeaveTypeDto dto, HttpServletRequest request){
         LeaveTypeModel model = new LeaveTypeModel();
         model.setCreateTime(System.currentTimeMillis()/1000L);
@@ -98,9 +98,9 @@ public class LeaveTypeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "leaveRout:leaveType/update")
     @RequestLog(module = MODULE_NAME,content = "编辑",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--编辑",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "leaveRout:leaveType/update")
     public ActionResult<Boolean> update(LeaveTypeDto dto,HttpServletRequest request){
         LeaveTypeModel model = iLeaveTypeService.getById(dto.getId());
         model.setName(dto.getName());

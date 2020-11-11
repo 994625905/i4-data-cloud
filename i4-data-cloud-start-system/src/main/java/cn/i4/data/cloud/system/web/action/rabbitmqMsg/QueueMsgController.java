@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.rabbitmqMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -34,6 +35,7 @@ import java.util.List;
 public class QueueMsgController extends WebBaseController {
 
     private final static String MODULE_NAME = "消息队列--队列管理";
+    private final static String KEY_PREFIX = "/rabbitmqMsg/queueMsg";
     @Autowired
     private ISetRabbitmqQueueService iSetRabbitmqQueueService;
 
@@ -43,8 +45,9 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "rabbitmqMsg:queueMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载队列表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"加载队列表格",key = KEY_PREFIX+"loadTable")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/loadTable")
     public ActionResult<IPage<SetRabbitmqQueueView>> loadTable(SetRabbitmqQueueDto dto){
 
         IPage<SetRabbitmqQueueView> res = iSetRabbitmqQueueService.selectPage(dto);
@@ -56,8 +59,9 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/refreshCache")
-    @RequestPermission(value = "rabbitmqMsg:queueMsg/refreshCache")
     @RequestLog(module = MODULE_NAME,content = "刷新Redis缓存队列",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"刷新Redis缓存队列",key = KEY_PREFIX+"refreshCache")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/refreshCache")
     public ActionResult<Boolean> refreshCache(){
 
         List<SetRabbitmqQueueModel> list = iSetRabbitmqQueueService.list();
@@ -71,8 +75,9 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
-    @RequestPermission(value = "rabbitmqMsg:queueMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "根据ID删除队列",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"根据ID删除队列",key = KEY_PREFIX+"deleteById")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/deleteById")
     public ActionResult<Boolean> deleteById(SetRabbitmqQueueDto dto){
 
         boolean remove = iSetRabbitmqQueueService.removeById(dto.getId());
@@ -91,8 +96,9 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "rabbitmqMsg:queueMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增队列",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"新增队列",key = KEY_PREFIX+"insert")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/insert")
     public ActionResult<Boolean> insert(@RequestBody SetRabbitmqQueueDto dto, HttpServletRequest request){
         SetRabbitmqQueueModel model = dto.getModel();
         model.setCreateTime(System.currentTimeMillis()/1000L);
@@ -114,8 +120,9 @@ public class QueueMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "rabbitmqMsg:queueMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改队列",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"修改队列",key = KEY_PREFIX+"update")
+    @RequestPermission(value = "rabbitmqMsg:queueMsg/update")
     public ActionResult<Boolean> update(@RequestBody SetRabbitmqQueueDto dto){
         SetRabbitmqQueueModel model = dto.getModel();
         model.setUpdateTime(System.currentTimeMillis()/1000L);

@@ -39,9 +39,9 @@ public class WeekReportLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "weekReport:weekReportLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "weekReport:weekReportLog/loadTable")
     public ActionResult<IPage<WeekreportView>> loadTable(WeekreportDto dto){
 
         IPage<WeekreportView> page = iWeekreportService.selectAll(dto);

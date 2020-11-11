@@ -42,9 +42,9 @@ public class ListController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "afternoonTea:list/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "afternoonTea:list/loadTable")
     public ActionResult<IPage<AfternoonTeaView>> loadTable(AfternoonTeaDto dto){
         IPage<AfternoonTeaView> page = iAfternoonTeaService.selectPage(dto);
         return ActionResult.ok(page);
@@ -57,9 +57,9 @@ public class ListController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "afternoonTea:list/insert")
     @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
+    @RequestPermission(value = "afternoonTea:list/insert")
     public ActionResult<Boolean> insert(@RequestBody AfternoonTeaDto dto, HttpServletRequest request){
         AfternoonTeaModel model = dto.getModel();
         model.setCreateUserId(this.getUser(request).getId());
@@ -79,9 +79,9 @@ public class ListController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "afternoonTea:list/update")
     @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "afternoonTea:list/update")
     public ActionResult<Boolean> update(@RequestBody AfternoonTeaDto dto, HttpServletRequest request){
         AfternoonTeaModel model = dto.getModel();
         model.setUpdateTime(System.currentTimeMillis()/1000L);
@@ -100,9 +100,9 @@ public class ListController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "afternoonTea:list/delete")
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
+    @RequestPermission(value = "afternoonTea:list/delete")
     public ActionResult<Boolean> delete(AfternoonTeaDto dto, HttpServletRequest request){
         boolean remove = iAfternoonTeaService.removeById(dto.getId());
         if(remove){

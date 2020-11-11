@@ -42,9 +42,9 @@ public class RequestController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "logCache:request/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "logCache:request/loadTable")
     public ActionResult<List<Map<String,Object>>> loadTable(LogRequestDto dto, HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
         List<Map<String,Object>> page = iLogRequestService.selectByUserId(dto);
@@ -58,9 +58,9 @@ public class RequestController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadDetail")
-    @RequestPermission(value = "logCache:request/loadDetail")
     @RequestLog(module = MODULE_NAME,content = "加载详情",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载详情",key = KEY_PREFIX+"/loadDetail")
+    @RequestPermission(value = "logCache:request/loadDetail")
     public ActionResult<List<LogRequestView>> loadDetail(LogRequestDto dto, HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
         List<LogRequestView> list = iLogRequestService.selectByUserIdAndDate(dto);

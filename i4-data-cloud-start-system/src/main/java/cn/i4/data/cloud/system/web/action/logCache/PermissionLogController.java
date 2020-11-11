@@ -38,9 +38,9 @@ public class PermissionLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "logCache:permissionLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "logCache:permissionLog/loadTable")
     public ActionResult<IPage<LogPermissionErrorView>> loadTable(LogPermissionErrorDto dto){
         IPage<LogPermissionErrorView> page = iLogPermissionErrorService.selectPage(dto);
         return ActionResult.ok(page);

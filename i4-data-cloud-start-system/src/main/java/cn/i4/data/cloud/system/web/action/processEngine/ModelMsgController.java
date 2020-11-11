@@ -42,9 +42,9 @@ public class ModelMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "processEngine:modelMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"加载表格",key = KEY_PREFIX+"loadTable")
+    @RequestPermission(value = "processEngine:modelMsg/loadTable")
     public ActionResult<IPage<VActReModelView>> loadTable(VActReModelDto dto){
 
         IPage<VActReModelView> page = ivActReModelService.selectPage(dto);
@@ -57,9 +57,9 @@ public class ModelMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
-    @RequestPermission(value = "processEngine:modelMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除流程模板",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"删除流程模板",key = KEY_PREFIX+"deleteById")
+    @RequestPermission(value = "processEngine:modelMsg/deleteById")
     public ActionResult<Boolean> deleteById(VActReModelDto dto){
 
         ActionResult<Boolean> result = processEngineMicroService.deleteProcessModelById(dto.getModelId());
@@ -72,9 +72,9 @@ public class ModelMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deploy")
-    @RequestPermission(value = "processEngine:modelMsg/deploy")
     @RequestLog(module = MODULE_NAME,content = "部署流程模板",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"部署流程模板",key = KEY_PREFIX+"deploy")
+    @RequestPermission(value = "processEngine:modelMsg/deploy")
     public ActionResult<String> deploy(VActReModelDto dto){
 
         ActionResult<String> res = processEngineMicroService.deployProcessModelById(dto.getModelId());

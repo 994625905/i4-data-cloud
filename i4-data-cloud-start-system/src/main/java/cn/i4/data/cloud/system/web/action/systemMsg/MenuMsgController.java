@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -27,14 +28,16 @@ import javax.servlet.http.HttpServletRequest;
 public class MenuMsgController extends WebBaseController {
 
     private static final String MODULE_NAME = "系统管理--菜单管理";
+    private static final String KEY_PREFIX = "/systemMsg/menuMsg";
 
     /**
      * 加载菜单表格
      * @return
      */
     @PostMapping(value = "/loadMenuTable")
-    @RequestPermission(value = "systemMsg:menuMsg/loadMenuTable")
     @RequestLog(module = MODULE_NAME,content = "加载菜单表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"加载菜单表格",key = KEY_PREFIX+"loadMenuTable")
+    @RequestPermission(value = "systemMsg:menuMsg/loadMenuTable")
     public ActionResult<IPage<MenuButtonView>> loadMenuTable(MenuButtonDto dto){
 
         IPage<MenuButtonView> page = iMenuButtonService.selectPage(dto);
@@ -47,8 +50,9 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
-    @RequestPermission(value = "systemMsg:menuMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除菜单",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"删除菜单",key = KEY_PREFIX+"deleteById")
+    @RequestPermission(value = "systemMsg:menuMsg/deleteById")
     public ActionResult<Boolean> deleteById(MenuButtonDto dto,HttpServletRequest request){
 
         boolean remove = iMenuButtonService.removeById(dto.getId());
@@ -67,8 +71,9 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/changeStatus")
-    @RequestPermission(value = "systemMsg:menuMsg/changeStatus")
     @RequestLog(module = MODULE_NAME,content = "改变状态",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"改变状态",key = KEY_PREFIX+"changeStatus")
+    @RequestPermission(value = "systemMsg:menuMsg/changeStatus")
     public ActionResult<Boolean> changeStatus(MenuButtonDto dto,HttpServletRequest request){
 
         MenuButtonModel menu = iMenuButtonService.getById(dto.getId());
@@ -90,8 +95,9 @@ public class MenuMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/save")
-    @RequestPermission(value = "systemMsg:menuMsg/save")
     @RequestLog(module = MODULE_NAME,content = "保存",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"保存",key = KEY_PREFIX+"save")
+    @RequestPermission(value = "systemMsg:menuMsg/save")
     public ActionResult<Boolean> save(@RequestBody MenuButtonDto dto,HttpServletRequest request){
 
         Boolean save = true;

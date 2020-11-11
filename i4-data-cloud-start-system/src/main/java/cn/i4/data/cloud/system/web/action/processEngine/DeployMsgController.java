@@ -42,9 +42,9 @@ public class DeployMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "processEngine:deployMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"loadTable")
+    @RequestPermission(value = "processEngine:deployMsg/loadTable")
     public ActionResult<IPage<VActReDeployProcdefView>> loadTable(VActReDeployProcdefDto dto){
         IPage<VActReDeployProcdefView> page = ivActReDeployProcdefService.selectPage(dto);
         return ActionResult.ok(page);
@@ -56,9 +56,9 @@ public class DeployMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "processEngine:deployMsg/delete")
     @RequestLog(module = MODULE_NAME,content = "删除流程定义",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--删除流程定义",key = KEY_PREFIX+"delete")
+    @RequestPermission(value = "processEngine:deployMsg/delete")
     public ActionResult<Boolean> delete(VActReDeployProcdefDto dto){
         ActionResult<Boolean> res = processEngineMicroService.deleteProcessDeploymentById(dto.getDeploymentId(), true);
         return res;

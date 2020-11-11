@@ -51,9 +51,9 @@ public class WeekReportApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "weekReport:weekReportApply/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "weekReport:weekReportApply/loadTable")
     public ActionResult<IPage<WeekreportView>> loadTable(WeekreportDto dto, HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
 
@@ -68,9 +68,9 @@ public class WeekReportApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "weekReport:weekReportApply/delete")
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
+    @RequestPermission(value = "weekReport:weekReportApply/delete")
     public ActionResult<Boolean> delete(WeekreportDto dto,HttpServletRequest request){
 
         /** 删除Mongo */
@@ -94,9 +94,9 @@ public class WeekReportApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/setTitle")
-    @RequestPermission(value = "weekReport:weekReportApply/setTitle")
     @RequestLog(module = MODULE_NAME,content = "设置标题模板",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--设置标题模板",key = KEY_PREFIX+"/setTitle")
+    @RequestPermission(value = "weekReport:weekReportApply/setTitle")
     public ActionResult<Boolean> setTitle(WeekreportDto dto,HttpServletRequest request){
         Integer userId = this.getUser(request).getId();
         Boolean res = true;
@@ -124,9 +124,9 @@ public class WeekReportApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "weekReport:weekReportApply/insert")
     @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
+    @RequestPermission(value = "weekReport:weekReportApply/insert")
     public ActionResult<Boolean> insert(@RequestBody WeekreportDto dto, HttpServletRequest request){
 
         /** 富文本的存储 */
@@ -156,9 +156,9 @@ public class WeekReportApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "weekReport:weekReportApply/update")
     @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "weekReport:weekReportApply/update")
     public ActionResult<Boolean> update(@RequestBody WeekreportDto dto){
 
         /** 富文本的修改 */

@@ -3,6 +3,7 @@ package cn.i4.data.cloud.system.web.action.systemMsg;
 import cn.hutool.core.codec.Base64;
 import cn.hutool.extra.qrcode.QrCodeUtil;
 import cn.hutool.extra.qrcode.QrConfig;
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -56,6 +57,7 @@ import java.util.UUID;
 public class InviteCodeController extends WebBaseController {
 
     private static final String MODULE_NAME = "系统管理--菜单管理";
+    private static final String KEY_PREFIX = "/systemMsg/inviteCode";
     @Autowired
     private IInviteCodeService iInviteCodeService;
     @Autowired
@@ -73,8 +75,9 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "systemMsg:inviteCode/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"加载表格",key = KEY_PREFIX+"loadTable")
+    @RequestPermission(value = "systemMsg:inviteCode/loadTable")
     public ActionResult<IPage<InviteCodeView>> loadTable(InviteCodeDto dto){
 
         IPage<InviteCodeView> res = iInviteCodeService.selectPage(dto);
@@ -87,8 +90,9 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
-    @RequestPermission(value = "systemMsg:inviteCode/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除根据ID，级联删除邀请权限数据",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"删除根据ID，级联删除邀请权限数据",key = KEY_PREFIX+"deleteById")
+    @RequestPermission(value = "systemMsg:inviteCode/deleteById")
     public ActionResult<Boolean> deleteById(InviteCodeDto dto){
         boolean remove = iInviteCodeService.removeById(dto.getId());
         if(!remove){
@@ -121,8 +125,9 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getRole")
-    @RequestPermission(value = "systemMsg:inviteCode/getRole")
     @RequestLog(module = MODULE_NAME,content = "获取角色列表",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"获取角色列表",key = KEY_PREFIX+"getRole")
+    @RequestPermission(value = "systemMsg:inviteCode/getRole")
     public ActionResult<List<RoleModel>> getRole(){
 
         List<RoleModel> list = iRoleService.getBaseMapper().selectList(null);
@@ -136,8 +141,9 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/saveCode")
-    @RequestPermission(value = "systemMsg:inviteCode/saveCode")
     @RequestLog(module = MODULE_NAME,content = "保存邀请码",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"保存邀请码",key = KEY_PREFIX+"saveCode")
+    @RequestPermission(value = "systemMsg:inviteCode/saveCode")
     public ActionResult<Map<String,Object>> saveCode(@RequestBody InviteCodeDto dto, HttpServletRequest request){
 
         /** 生成可用的邀请码（6位数），确保不冲突 */
@@ -200,8 +206,9 @@ public class InviteCodeController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/createQRCode")
-    @RequestPermission(value = "systemMsg:inviteCode/createQRCode")
     @RequestLog(module = MODULE_NAME,content = "生成二维码(流转base64)",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"生成二维码(流转base64)",key = KEY_PREFIX+"createQRCode")
+    @RequestPermission(value = "systemMsg:inviteCode/createQRCode")
     public ActionResult<String> createQRCode(Integer id,String roleNames,String departmentName,HttpServletRequest request){
 
         InviteCodeModel model = iInviteCodeService.getById(id);

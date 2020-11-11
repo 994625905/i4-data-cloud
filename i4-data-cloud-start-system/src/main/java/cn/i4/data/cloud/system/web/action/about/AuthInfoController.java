@@ -38,9 +38,9 @@ public class AuthInfoController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "about:authInfo/update")
     @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "about:authInfo/update")
     public ActionResult<Boolean> update(SystemConstantDto dto){
 
         /** 修改MongoDB */

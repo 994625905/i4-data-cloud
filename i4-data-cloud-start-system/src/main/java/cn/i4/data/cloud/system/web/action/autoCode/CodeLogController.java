@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.autoCode;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -30,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CodeLogController extends WebBaseController {
 
     private static final String MODULE_NAME = "自动生成代码--生成代码日志";
+    private static final String KEY_PREFIX = "/autoCode/codeLog";
     @Autowired
     private ILogAutocodeService iLogAutocodeService;
     @Autowired
@@ -41,8 +43,9 @@ public class CodeLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "autoCode:codeLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "autoCode:codeLog/loadTable")
     public ActionResult<IPage<LogAutocodeView>> loadTable(LogAutocodeDto dto){
         IPage<LogAutocodeView> page = iLogAutocodeService.selectPage(dto);
         return ActionResult.ok(page);
@@ -54,8 +57,9 @@ public class CodeLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadDetailTable")
-    @RequestPermission(value = "autoCode:codeLog/loadDetailTable")
     @RequestLog(module = MODULE_NAME,content = "加载日志详情页表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载日志详情页表格",key = KEY_PREFIX+"/loadDetailTable")
+    @RequestPermission(value = "autoCode:codeLog/loadDetailTable")
     public ActionResult<IPage<LogAutocodeTableView>> loadDetailTable(LogAutocodeTableDto dto){
         IPage<LogAutocodeTableView> page = iLogAutocodeTableService.selectPage(dto);
         return ActionResult.ok(page);

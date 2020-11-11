@@ -56,9 +56,9 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "leaveRout:leaveApply/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "leaveRout:leaveApply/loadTable")
     public ActionResult<IPage<LeaveView>> loadTable(LeaveDto dto,HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
         IPage<LeaveView> page = iLeaveService.selectPage(dto);
@@ -72,9 +72,9 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "leaveRout:leaveApply/insert")
     @RequestLog(module = MODULE_NAME,content = "新增请假",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增请假",key = KEY_PREFIX+"/insert")
+    @RequestPermission(value = "leaveRout:leaveApply/insert")
     public ActionResult<Boolean> insert(@RequestBody LeaveDto dto, HttpServletRequest request){
         LeaveModel model = dto.getModel();
         model.setCreateTime(System.currentTimeMillis()/1000L);
@@ -93,9 +93,9 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "leaveRout:leaveApply/delete")
     @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
+    @RequestPermission(value = "leaveRout:leaveApply/delete")
     public ActionResult<Boolean> delete(LeaveDto dto){
 
         boolean remove = iLeaveService.removeById(dto.getId());
@@ -112,9 +112,9 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "leaveRout:leaveApply/update")
     @RequestLog(module = MODULE_NAME,content = "修改请假",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改请假",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "leaveRout:leaveApply/update")
     public ActionResult<Boolean> update(@RequestBody LeaveDto dto, HttpServletRequest request){
         LeaveModel model = dto.getModel();
         model.setUpdateTime(System.currentTimeMillis()/1000L);
@@ -131,9 +131,9 @@ public class LeaveApplyController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/apply")
-    @RequestPermission(value = "leaveRout:leaveApply/apply")
     @RequestLog(module = MODULE_NAME,content = "发送请假申请",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--发送请假申请",key = KEY_PREFIX+"/apply")
+    @RequestPermission(value = "leaveRout:leaveApply/apply")
     public ActionResult<Boolean> apply(@RequestBody LeaveProcessDto dto, HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
 

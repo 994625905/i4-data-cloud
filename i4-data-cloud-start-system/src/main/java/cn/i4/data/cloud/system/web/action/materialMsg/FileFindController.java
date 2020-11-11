@@ -55,9 +55,9 @@ public class FileFindController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "materialMsg:fileFind/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "materialMsg:fileFind/loadTable")
     public ActionResult<IPage<FileView>> loadTable(FileDto dto,HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
         IPage<FileView> page = iFileService.selectPage(dto);
@@ -70,9 +70,9 @@ public class FileFindController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/save")
-    @RequestPermission(value = "materialMsg:fileFind/save")
     @RequestLog(module = MODULE_NAME,content = "文件保存",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--文件保存",key = KEY_PREFIX+"/save")
+    @RequestPermission(value = "materialMsg:fileFind/save")
     public ActionResult<Boolean> save(@RequestBody FileDto dto,HttpServletRequest request){
 
         FileModel model = dto.getModel();
@@ -93,9 +93,9 @@ public class FileFindController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/upload")
-    @RequestPermission(value = "materialMsg:fileFind/upload")
     @RequestLog(module = MODULE_NAME,content = "文件上传",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--文件上传",key = KEY_PREFIX+"/upload")
+    @RequestPermission(value = "materialMsg:fileFind/upload")
     public ActionResult<Map<String,Object>> upload(MultipartFile file){
 
         ActionResult<Map<String, Object>> result = fileMicroservice.upload(file);
@@ -108,9 +108,9 @@ public class FileFindController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "materialMsg:fileFind/delete")
     @RequestLog(module = MODULE_NAME,content = "文件删除",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--文件删除",key = KEY_PREFIX+"/delete")
+    @RequestPermission(value = "materialMsg:fileFind/delete")
     public ActionResult<Boolean> delete(FileDto dto){
 
         ActionResult<Boolean> delete = fileMicroservice.delete(dto.getFileUrl());
@@ -131,9 +131,9 @@ public class FileFindController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/changeStatus")
-    @RequestPermission(value = "materialMsg:fileFind/changeStatus")
     @RequestLog(module = MODULE_NAME,content = "改变状态",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--改变状态",key = KEY_PREFIX+"/changeStatus")
+    @RequestPermission(value = "materialMsg:fileFind/changeStatus")
     public ActionResult<Boolean> changeStatus(FileDto dto){
 
         FileModel model = iFileService.getById(dto.getId());

@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.materialMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -34,6 +35,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ImageSelectController extends WebBaseController {
 
     private static final String MODULE_NAME = "系统管理--图片选择";
+    private static final String KEY_PREFIX = "/materialMsg/imageSelect";
     @Autowired
     private IFileService iFileService;
 
@@ -43,8 +45,9 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadImageTable")
-    @RequestPermission(value = "materialMsg:imageSelect/loadImageTable")
     @RequestLog(module = MODULE_NAME,content = "根据条件加载图片",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--根据条件加载图片",key = KEY_PREFIX+"/loadImageTable")
+    @RequestPermission(value = "materialMsg:imageSelect/loadImageTable")
     public ActionResult<IPage<FileView>> loadImageTable(FileDto dto,HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
 
@@ -58,8 +61,9 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadFileTable")
+    @RequestLog(module = MODULE_NAME,content = "根据调解加载文件",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--根据调解加载文件",key = KEY_PREFIX+"/loadFileTable")
     @RequestPermission(value = "materialMsg:imageSelect/loadFileTable")
-    @RequestLog(module = MODULE_NAME,content = "根据条件加载图片",type = RequestType.SELECT)
     public ActionResult<IPage<FileView>> loadFileTable(FileDto dto,HttpServletRequest request){
         dto.setUserId(getUser(request).getId());
 
@@ -72,8 +76,9 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/setImageSelectTemp")
-    @RequestPermission(value = "materialMsg:imageSelect/setImageSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--设置临时存储的url",key = KEY_PREFIX+"/setImageSelectTemp")
+    @RequestPermission(value = "materialMsg:imageSelect/setImageSelectTemp")
     public ActionResult<Boolean> setImageSelectTemp(String fileUrl, HttpServletRequest request){
         String authorization = CookieUtil.getCookieValue(request, "authorization");
         boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization, fileUrl, RedisConstant.TIMEOUT.SELECT_IMAGE_TEMP);
@@ -85,8 +90,9 @@ public class ImageSelectController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getImageSelectTemp")
-    @RequestPermission(value = "materialMsg:imageSelect/getImageSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "获取临时存储的url，并删除缓存",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--获取临时存储的url，并删除缓存",key = KEY_PREFIX+"/getImageSelectTemp")
+    @RequestPermission(value = "materialMsg:imageSelect/getImageSelectTemp")
     public ActionResult<String> getImageSelectTemp(HttpServletRequest request){
 
         String authorization = CookieUtil.getCookieValue(request, "authorization");

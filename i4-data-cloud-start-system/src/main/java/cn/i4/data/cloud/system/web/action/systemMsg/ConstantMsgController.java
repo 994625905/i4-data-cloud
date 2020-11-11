@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -29,6 +30,7 @@ import java.util.Map;
 public class ConstantMsgController extends WebBaseController {
 
     private static final String MODULE_NAME = "系统管理--系统常量";
+    private static final String KEY_PREFIX = "/systemMsg/constantMsg";
 
     /**
      * 修改系统常量，同时更新redis缓存
@@ -37,8 +39,9 @@ public class ConstantMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "systemMsg:constantMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改系统常量，同时更新redis缓存",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"修改系统常量，同时更新redis缓存",key = KEY_PREFIX+"update")
+    @RequestPermission(value = "systemMsg:constantMsg/update")
     public ActionResult<Boolean> update(SystemConstantDto dto,HttpServletRequest request){
 
         SystemConstantModel model = iSystemConstantService.getById(dto.getId());
@@ -59,8 +62,9 @@ public class ConstantMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/refresh")
-    @RequestPermission(value = "systemMsg:constantMsg/refresh")
     @RequestLog(module = MODULE_NAME,content = "刷新Redis缓存系统常量",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"刷新Redis缓存系统常量",key = KEY_PREFIX+"refresh")
+    @RequestPermission(value = "systemMsg:constantMsg/refresh")
     public ActionResult<Boolean> refresh(){
 
         Map<String,Object> map = iSystemConstantService.getSystemConstant();

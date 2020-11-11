@@ -53,9 +53,9 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadData")
-    @RequestPermission(value = "autoCode:dataSourceMsg/loadData")
     @RequestLog(module = MODULE_NAME,content = "加载数据源列表",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"加载数据源列表",key = KEY_PREFIX+"/loadData")
+    @RequestPermission(value = "autoCode:dataSourceMsg/loadData")
     public ActionResult<List<AutocodeDatasourceModel>> loadData(){
 
         List<AutocodeDatasourceModel> list = iAutocodeDatasourceService.list();
@@ -69,9 +69,9 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "autoCode:dataSourceMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增数据源",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"新增数据源",key = KEY_PREFIX+"/insert")
+    @RequestPermission(value = "autoCode:dataSourceMsg/insert")
     public ActionResult<Boolean> insert(@RequestBody AutocodeDatasourceDto dto, HttpServletRequest request){
         AutocodeDatasourceModel model = dto.getModel();
         model.setUserId(getUser(request).getId());
@@ -92,9 +92,9 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "autoCode:dataSourceMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改数据源",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"修改数据源",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "autoCode:dataSourceMsg/update")
     public ActionResult<Boolean> update(@RequestBody AutocodeDatasourceDto dto){
         AutocodeDatasourceModel model = dto.getModel();
         model.setUpdateTime(System.currentTimeMillis()/1000L);
@@ -112,9 +112,9 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/delete")
-    @RequestPermission(value = "autoCode:dataSourceMsg/delete")
     @RequestLog(module = MODULE_NAME,content = "删除数据源",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"删除数据源",key = KEY_PREFIX+"/delete")
+    @RequestPermission(value = "autoCode:dataSourceMsg/delete")
     public ActionResult<Boolean> delete(AutocodeDatasourceDto dto){
         boolean remove = iAutocodeDatasourceService.removeById(dto.getId());
         if(remove){
@@ -129,9 +129,9 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getTableListBySource")
-    @RequestPermission(value = "autoCode:dataSourceMsg/getTableListBySource")
     @RequestLog(module = MODULE_NAME,content = "获取数据表集合根据数据源",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"获取数据表",key = KEY_PREFIX+"/getTableListBySource")
+    @RequestPermission(value = "autoCode:dataSourceMsg/getTableListBySource")
     public ActionResult<List<String>> getTableListBySource(AutocodeDatasourceDto dto){
         ActionResult<List<String>> list = autoCodeMicroService.getTableListBySource(dto.getDriverClass(), dto.getDataSourceUrl(), DesUtil.dec(dto.getUser()), DesUtil.dec(dto.getPassword()));
         return list;
@@ -144,9 +144,9 @@ public class DataSourceMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/create")
-    @RequestPermission(value = "autoCode:dataSourceMsg/create")
     @RequestLog(module = MODULE_NAME,content = "自动生成代码",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"自动生成代码",key = KEY_PREFIX+"/create")
+    @RequestPermission(value = "autoCode:dataSourceMsg/create")
     public ActionResult<Boolean> create(@RequestBody AutocodeDatasourceDto dto,HttpServletRequest request){
         ActionResult<Boolean> result = autoCodeMicroService.create(dto.getDriverClass(), dto.getDataSourceUrl(), DesUtil.dec(dto.getUser()), DesUtil.dec(dto.getPassword()), dto.getDefaultAuthor(),
                                         dto.getDefaultPackagePrefix(), dto.getDefaultLocal(), dto.getTableList());

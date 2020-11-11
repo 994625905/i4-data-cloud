@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.rabbitmqMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -37,6 +38,7 @@ import java.util.List;
 public class ExchangeMsgController extends WebBaseController {
 
     private final static String MODULE_NAME = "消息队列--交换机管理";
+    private final static String KEY_PREFIX = "/rabbitmqMsg/exchangeMsg";
     @Autowired
     private ISetRabbitmqExchangeService iSetRabbitmqExchangeService;
     @Autowired
@@ -48,8 +50,9 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "loadTable")
-    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载交换机表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"加载交换机表格",key = KEY_PREFIX+"loadTable")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/loadTable")
     public ActionResult<IPage<SetRabbitmqExchangeView>> loadTable(SetRabbitmqExchangeDto dto){
 
         IPage<SetRabbitmqExchangeView> res = iSetRabbitmqExchangeService.selectPage(dto);
@@ -61,8 +64,9 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "refreshCache")
-    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/refreshCache")
     @RequestLog(module = MODULE_NAME,content = "刷新Redis缓存交换机",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"刷新Redis缓存交换机",key = KEY_PREFIX+"refreshCache")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/refreshCache")
     public ActionResult<Boolean> refreshCache(){
 
         List<SetRabbitmqExchangeModel> list = iSetRabbitmqExchangeService.getBaseMapper().selectList(null);
@@ -76,8 +80,9 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "deleteById")
-    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "根据ID删除交换机",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"根据ID删除交换机",key = KEY_PREFIX+"deleteById")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/deleteById")
     public ActionResult<Boolean> deleteById(SetRabbitmqExchangeDto dto){
 
         boolean remove = iSetRabbitmqExchangeService.removeById(dto.getId());
@@ -95,8 +100,9 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "insert")
-    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增交换机",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"新增交换机",key = KEY_PREFIX+"insert")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/insert")
     public ActionResult<Boolean> insert(@RequestBody SetRabbitmqExchangeDto dto, HttpServletRequest request){
 
         SetRabbitmqExchangeModel model = dto.getModel();
@@ -118,8 +124,9 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "update")
-    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改交换机",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"修改交换机",key = KEY_PREFIX+"update")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/update")
     public ActionResult<Boolean> update(@RequestBody SetRabbitmqExchangeDto dto, HttpServletRequest request){
 
         SetRabbitmqExchangeModel model = dto.getModel();
@@ -140,8 +147,9 @@ public class ExchangeMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "getQueueById")
-    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/getQueueById")
     @RequestLog(module = MODULE_NAME,content = "根据交换机ID获取绑定队列",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"根据交换机ID获取绑定队列",key = KEY_PREFIX+"getQueueById")
+    @RequestPermission(value = "rabbitmqMsg:exchangeMsg/getQueueById")
     public ActionResult<List<SetRabbitmqQueueModel>> getQueueById(SetRabbitmqExchangeDto dto){
 
         List<SetRabbitmqQueueModel> list = iSetRabbitmqQueueService.getBaseMapper().selectList(new QueryWrapper<SetRabbitmqQueueModel>() {{

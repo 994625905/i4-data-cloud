@@ -43,9 +43,9 @@ public class DepartmentMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "systemMsg:departmentMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "systemMsg:departmentMsg/loadTable")
     public ActionResult<IPage<DepartmentView>> loadTable(DepartmentDto dto){
 
         IPage<DepartmentView> page = iDepartmentService.selectPage(dto);
@@ -58,9 +58,9 @@ public class DepartmentMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
-    @RequestPermission(value = "systemMsg:departmentMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除部门",type = RequestType.DELETE)
     @RequestLimit(name = MODULE_NAME+"--删除部门",key = KEY_PREFIX+"/deleteById")
+    @RequestPermission(value = "systemMsg:departmentMsg/deleteById")
     public ActionResult<Boolean> deleteById(DepartmentDto dto){
 
         boolean remove = iDepartmentService.removeById(dto.getId());
@@ -76,9 +76,9 @@ public class DepartmentMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/insert")
-    @RequestPermission(value = "systemMsg:departmentMsg/insert")
     @RequestLog(module = MODULE_NAME,content = "新增部门",type = RequestType.INSERT)
     @RequestLimit(name = MODULE_NAME+"--新增部门",key = KEY_PREFIX+"/insert")
+    @RequestPermission(value = "systemMsg:departmentMsg/insert")
     public ActionResult<Boolean> insert(@RequestBody DepartmentDto dto){
         DepartmentModel model = dto.getModel();
         model.setCreateTime(System.currentTimeMillis()/1000L);
@@ -96,9 +96,9 @@ public class DepartmentMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/update")
-    @RequestPermission(value = "systemMsg:departmentMsg/update")
     @RequestLog(module = MODULE_NAME,content = "修改部门",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改部门",key = KEY_PREFIX+"/update")
+    @RequestPermission(value = "systemMsg:departmentMsg/update")
     public ActionResult<Boolean> update(@RequestBody DepartmentDto dto){
         DepartmentModel model = dto.getModel();
         model.setUpdateTime(System.currentTimeMillis()/1000L);
@@ -115,9 +115,9 @@ public class DepartmentMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getList")
-    @RequestPermission(value = "systemMsg:departmentMsg/getList")
     @RequestLog(module = MODULE_NAME,content = "获取所有的部门列表",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--获取所有的部门列表",key = KEY_PREFIX+"/getList")
+    @RequestPermission(value = "systemMsg:departmentMsg/getList")
     public ActionResult<List<DepartmentModel>> getList(){
         List<DepartmentModel> list = iDepartmentService.list();
         return ActionResult.ok(list);

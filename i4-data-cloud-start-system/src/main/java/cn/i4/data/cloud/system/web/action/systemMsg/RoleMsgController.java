@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.system.web.action.systemMsg;
 
+import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
@@ -35,6 +36,7 @@ import java.util.List;
 public class RoleMsgController extends WebBaseController {
 
     private static final String MODULE_NAME = "系统管理--角色管理";
+    private static final String KEY_PREFIX = "/systemMsg/roleMsg/";
 
     @Autowired
     private IRoleService iRoleService;
@@ -47,8 +49,9 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "systemMsg:roleMsg/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"加载表格",key = KEY_PREFIX+"loadTable")
+    @RequestPermission(value = "systemMsg:roleMsg/loadTable")
     public ActionResult<IPage<RoleView>> loadTable(RoleDto dto){
 
         IPage<RoleView> res = iRoleService.selectPage(dto);
@@ -61,8 +64,9 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/deleteById")
-    @RequestPermission(value = "systemMsg:roleMsg/deleteById")
     @RequestLog(module = MODULE_NAME,content = "删除角色，级联删除角色--菜单权限",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"删除角色，级联删除角色--菜单权限",key = KEY_PREFIX+"deleteById")
+    @RequestPermission(value = "systemMsg:roleMsg/deleteById")
     public ActionResult<Boolean> deleteById(RoleDto dto,HttpServletRequest request){
 
         boolean remove = iRoleService.removeById(dto.getId());
@@ -85,8 +89,9 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/getMenuButtonByRoleId")
-    @RequestPermission(value = "systemMsg:roleMsg/getMenuButtonByRoleId")
     @RequestLog(module = MODULE_NAME,content = "获取角色下的菜单",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"获取角色下的菜单",key = KEY_PREFIX+"getMenuButtonByRoleId")
+    @RequestPermission(value = "systemMsg:roleMsg/getMenuButtonByRoleId")
     public ActionResult<List<MenuButtonView>> getMenuButtonByRoleId(RoleDto dto){
 
         List<MenuButtonView> roleMenuList = iMenuButtonService.getMenuButtonByRoleId(dto.getId());
@@ -99,8 +104,9 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/checkUnique")
-    @RequestPermission(value = "systemMsg:roleMsg/checkUnique")
     @RequestLog(module = MODULE_NAME,content = "检验name的唯一性",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"检验name的唯一性",key = KEY_PREFIX+"checkUnique")
+    @RequestPermission(value = "systemMsg:roleMsg/checkUnique")
     public ActionResult<Boolean> checkUnique(RoleDto dto){
 
         RoleModel model = iRoleService.getOne(new QueryWrapper<RoleModel>() {{
@@ -122,8 +128,9 @@ public class RoleMsgController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/save")
-    @RequestPermission(value = "systemMsg:roleMsg/save")
     @RequestLog(module = MODULE_NAME,content = "保存角色",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"保存角色",key = KEY_PREFIX+"save")
+    @RequestPermission(value = "systemMsg:roleMsg/save")
     public ActionResult<Boolean> save(@RequestBody RoleDto dto,HttpServletRequest request){
 
         Boolean res = null;

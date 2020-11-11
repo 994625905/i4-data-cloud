@@ -44,9 +44,9 @@ public class LeaveLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestPermission(value = "leaveRout:leaveLog/loadTable")
     @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    @RequestPermission(value = "leaveRout:leaveLog/loadTable")
     public ActionResult<IPage<LeaveView>> loadTable(LeaveDto dto){
 
         IPage<LeaveView> page = iLeaveService.selectAllLog(dto);
