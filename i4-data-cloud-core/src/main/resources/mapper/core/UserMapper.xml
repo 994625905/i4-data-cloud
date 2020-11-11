@@ -34,12 +34,19 @@
             u.detail_address as detailAddress,
             FROM_UNIXTIME(u.create_time,'%Y-%m-%d %T') as createTimeStrInfo,
             FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo,
-            (select d.name from t_department d where d.id = (select a.department_id from t_user_department a where a.user_id = t.id)) as departmentName
+            c.name as departmentName
         FROM t_user AS t
         left join t_user_info u on t.id = u.user_id
+        left join (select a.user_id,b.name,b.id from t_user_department a,t_department b where a.department_id = b.id) c on t.id = c.user_id
         where 1=1
         <if test="loginName != null and loginName != ''">
             and (t.loginname = #{loginName} or t.realname = #{loginName})
+        </if>
+        <if test="departmentId != null">
+            and c.id = #{departmentId}
+        </if>
+        <if test="gender != null">
+            and u.gender = #{gender}
         </if>
         order by t.create_time
     </select>

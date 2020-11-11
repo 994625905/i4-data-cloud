@@ -98,7 +98,7 @@ public class WeekReportController extends WebBaseController {
     @RequestPermission(value = "weekReport:weekReportLog/index")
     public ModelAndView weekReportLogIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/weekReport/weekReportLog_index", request);
-        view.addObject("userList",iUserService.selectListNotUserId(this.getUser(request).getId()));
+        view.addObject("userList",iUserService.list());
         return view;
     }
 

@@ -186,6 +186,21 @@ layui.use(["layer","form"],()=>{
         uploadConstantImage("richTextCover")
     })
 
+    /** 下午茶默认图片 */
+    $("#afternoonTeaImage").click(()=>{
+        var p = "width=300&height=300&limitProp=1&fileSize=1024"
+        Feng.loadWindow("选择下午茶的默认图片（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    $("#afternoonTeaImage").attr("src",res)
+                }
+            })
+        })
+    })
+    $(".afternoonTeaImage").click(()=>{
+        uploadConstantImage("afternoonTeaImage")
+    })
+
     /** 百度地图API */
     $(".baiduMapApi").click(()=>{
         uploadConstantText("baiduMapApi")

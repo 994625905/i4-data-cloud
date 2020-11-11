@@ -75,7 +75,6 @@ public class ImageSelectController extends WebBaseController {
     @RequestPermission(value = "materialMsg:imageSelect/setImageSelectTemp")
     @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
     public ActionResult<Boolean> setImageSelectTemp(String fileUrl, HttpServletRequest request){
-
         String authorization = CookieUtil.getCookieValue(request, "authorization");
         boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization, fileUrl, RedisConstant.TIMEOUT.SELECT_IMAGE_TEMP);
         return ActionResult.ok(res);

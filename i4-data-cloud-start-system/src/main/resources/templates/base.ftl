@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="${StaticServer}/resource/base/defined.css">
 
     <!--引入iconfont资源库-->
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2121546_bkvtpikicxr.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2121546_1w9ow6wtcqc.css">
 
     <@block name="body" >base_body_content</@block>
 

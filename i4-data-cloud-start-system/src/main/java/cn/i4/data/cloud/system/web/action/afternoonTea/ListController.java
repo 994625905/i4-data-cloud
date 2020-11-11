@@ -1,0 +1,114 @@
+package cn.i4.data.cloud.system.web.action.afternoonTea;
+
+import cn.i4.data.cloud.base.annotation.RequestLimit;
+import cn.i4.data.cloud.base.annotation.RequestLog;
+import cn.i4.data.cloud.base.annotation.RequestPermission;
+import cn.i4.data.cloud.base.annotation.RequestType;
+import cn.i4.data.cloud.base.result.ActionResult;
+import cn.i4.data.cloud.core.entity.dto.AfternoonTeaDto;
+import cn.i4.data.cloud.core.entity.model.AfternoonTeaModel;
+import cn.i4.data.cloud.core.entity.view.AfternoonTeaView;
+import cn.i4.data.cloud.core.service.IAfternoonTeaService;
+import cn.i4.data.cloud.system.web.WebBaseController;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * 下午茶--列表管理
+ * @author wangjc
+ * @title: ListController
+ * @projectName i4-data-cloud
+ * @description: TODO
+ * @date 2020/11/10-15:20
+ */
+@RequestMapping(value = "/afternoonTea/list")
+@RestController
+public class ListController extends WebBaseController {
+
+    private static final String MODULE_NAME = "下午茶--列表管理";
+    private static final String KEY_PREFIX = "/afternoonTea/list";
+    @Autowired
+    private IAfternoonTeaService iAfternoonTeaService;
+
+    /**
+     * 加载表格
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/loadTable")
+    @RequestPermission(value = "afternoonTea:list/loadTable")
+    @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+    public ActionResult<IPage<AfternoonTeaView>> loadTable(AfternoonTeaDto dto){
+        IPage<AfternoonTeaView> page = iAfternoonTeaService.selectPage(dto);
+        return ActionResult.ok(page);
+    }
+
+    /**
+     * 新增
+     * @param dto
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/insert")
+    @RequestPermission(value = "afternoonTea:list/insert")
+    @RequestLog(module = MODULE_NAME,content = "新增",type = RequestType.INSERT)
+    @RequestLimit(name = MODULE_NAME+"--新增",key = KEY_PREFIX+"/insert")
+    public ActionResult<Boolean> insert(@RequestBody AfternoonTeaDto dto, HttpServletRequest request){
+        AfternoonTeaModel model = dto.getModel();
+        model.setCreateUserId(this.getUser(request).getId());
+        model.setCreateTime(System.currentTimeMillis()/1000L);
+
+        boolean save = iAfternoonTeaService.save(model);
+        if(save){
+            return ActionResult.ok(true);
+        }
+        return ActionResult.error("新增失败");
+    }
+
+    /**
+     * 修改
+     * @param dto
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/update")
+    @RequestPermission(value = "afternoonTea:list/update")
+    @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
+    public ActionResult<Boolean> update(@RequestBody AfternoonTeaDto dto, HttpServletRequest request){
+        AfternoonTeaModel model = dto.getModel();
+        model.setUpdateTime(System.currentTimeMillis()/1000L);
+
+        boolean modify = iAfternoonTeaService.modify(model);
+        if(modify){
+            return ActionResult.ok(true);
+        }
+        return ActionResult.error("修改失败");
+    }
+
+    /**
+     * 删除
+     * @param dto
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/delete")
+    @RequestPermission(value = "afternoonTea:list/delete")
+    @RequestLog(module = MODULE_NAME,content = "删除",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"--删除",key = KEY_PREFIX+"/delete")
+    public ActionResult<Boolean> delete(AfternoonTeaDto dto, HttpServletRequest request){
+        boolean remove = iAfternoonTeaService.removeById(dto.getId());
+        if(remove){
+            return ActionResult.ok(true);
+        }
+        return ActionResult.error("删除失败");
+    }
+
+}

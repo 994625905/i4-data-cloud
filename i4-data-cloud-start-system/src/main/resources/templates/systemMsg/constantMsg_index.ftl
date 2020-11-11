@@ -230,6 +230,23 @@
 
                         <div class="layui-form-item">
                             <div class="layui-inline">
+                                <label class="layui-form-label">下午茶默认图片</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.afternoonTeaImage!}" title="${systemConstant.afternoonTeaImage_name!}" id="afternoonTeaImage" style="max-width: 100px">
+                                    <input name="afternoonTeaImage_id" value="${systemConstant.afternoonTeaImage_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm afternoonTeaImage">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('afternoonTeaImage')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
                                 <label class="layui-form-label">百度地图appKey</label>
                                 <div class="layui-input-inline" style="width: 400px">
                                     <input name="baiduMapApi" value="${systemConstant.baiduMapApi!}" title="${systemConstant.baiduMapApi_name!}" autocomplete="off" class="layui-input">

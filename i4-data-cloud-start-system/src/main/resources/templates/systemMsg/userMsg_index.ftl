@@ -21,6 +21,28 @@
                                 </div>
                             </div>
                             <div class="layui-inline">
+                                <div class="layui-input-inline" style="width: 140px">
+                                    <select name="departmentId" class="layui-input">
+                                        <option value="">选择部门查询</option>
+                                        <#if departmentList??>
+                                            <#list departmentList as department>
+                                                <option value="${department.id}">${department.name}</option>
+                                            </#list>
+                                        </#if>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline" style="width: 140px">
+                                    <select name="gender" class="layui-input">
+                                        <option value="">性别查询</option>
+                                        <option value="1">男</option>
+                                        <option value="2">女</option>
+                                        <option value="3">未知</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
                                 <button class="layui-btn layui-btn-primary search-button" lay-submit="" lay-filter="search">查询</button>
                             </div>
                         </form>

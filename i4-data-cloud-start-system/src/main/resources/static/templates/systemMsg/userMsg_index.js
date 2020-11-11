@@ -15,6 +15,8 @@ layui.use(["layer","table","form"],()=>{
     /** 查询 */
     form.on("submit(search)",obj=>{
         param.loginName = obj.field.loginName
+        param.departmentId = obj.field.departmentId
+        param.gender = obj.field.gender
         refresh()
         return false;
     })

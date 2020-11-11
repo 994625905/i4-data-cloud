@@ -72,7 +72,7 @@ public class PermissionTagDirective implements TemplateDirectiveModel {
      */
     private Boolean checkPermission(List<MenuButtonView> list, String permission){
         Boolean flag = false;
-        if(list != null && list.size() > 1){
+        if(list != null && list.size() >= 1){
             for(MenuButtonView menuButton:list){
                 if(permission.equals(menuButton.getPermission())){
                     flag = true;

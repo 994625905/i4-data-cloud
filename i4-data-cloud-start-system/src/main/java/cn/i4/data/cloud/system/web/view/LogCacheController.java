@@ -40,7 +40,7 @@ public class LogCacheController extends WebBaseController {
     @RequestPermission(value = "logCache:requestLog/index")
     public ModelAndView requestLogIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/logCache/requestLog_index", request);
-        view.addObject("userList",iUserService.selectListNotUserId(getUser(request).getId()));
+        view.addObject("userList",iUserService.list());
         return view;
     }
 
@@ -94,7 +94,7 @@ public class LogCacheController extends WebBaseController {
     @RequestPermission(value = "logCache:permissionLog/index")
     public ModelAndView permissionLogIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/logCache/permissionLog_index",request);
-        view.addObject("userList",iUserService.selectListNotUserId(getUser(request).getId()));
+        view.addObject("userList",iUserService.list());
         return view;
     }
 }

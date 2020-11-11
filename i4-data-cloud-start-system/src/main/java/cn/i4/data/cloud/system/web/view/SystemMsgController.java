@@ -192,6 +192,7 @@ public class SystemMsgController extends WebBaseController {
     @RequestPermission(value = "systemMsg:userMsg/index")
     public ModelAndView userMsgIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/systemMsg/userMsg_index", request);
+        view.addObject("departmentList",iDepartmentService.list());
         return view;
     }
 
