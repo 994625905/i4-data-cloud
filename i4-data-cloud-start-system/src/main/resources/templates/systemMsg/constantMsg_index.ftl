@@ -247,17 +247,17 @@
 
                         <div class="layui-form-item">
                             <div class="layui-inline">
-                                <label class="layui-form-label">表示不用，谢绝，拒绝……</label>
+                                <label class="layui-form-label">图片的丢失</label>
                                 <div class="layui-input-inline" style="width: 400px">
-                                    <img src="${systemConstant.needNotImage!}" title="${systemConstant.needNotImage_name!}" id="needNotImage" style="max-width: 100px">
-                                    <input name="needNotImage_id" value="${systemConstant.needNotImage_id!}" type="hidden">
+                                    <img src="${systemConstant.loseImage!}" title="${systemConstant.loseImage_name!}" id="loseImage" style="max-width: 100px">
+                                    <input name="loseImage_id" value="${systemConstant.loseImage_id!}" type="hidden">
                                 </div>
                             </div>
                             <div class="layui-inline">
-                                <button type="button" class="layui-btn layui-btn-sm needNotImage">提交</button>
+                                <button type="button" class="layui-btn layui-btn-sm loseImage">提交</button>
                             </div>
                             <div class="layui-inline">
-                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('needNotImage')">查看key</button>
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('loseImage')">查看key</button>
                             </div>
                         </div>
                         <hr class="layui-bg-gray">
@@ -290,6 +290,6 @@
 
 </body>
 
-<script type="text/javascript" src="${StaticServer}/templates/systemMsg/constantMsg_index.js?v=1.0"></script>
+<script type="text/javascript" src="${StaticServer}/templates/systemMsg/constantMsg_index.js?v=1.1"></script>
 </@override>
 <@extends name="/base.ftl"/>

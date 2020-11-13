@@ -25,6 +25,12 @@ public class AfternoonTeaModel extends BaseModel<AfternoonTeaModel> {
     private Integer id;
 
     /**
+     * 类型
+     */
+    @TableField("type_id")
+    private Integer typeId;
+
+    /**
     * 名称
     */
     @TableField("name")
@@ -73,6 +79,14 @@ public class AfternoonTeaModel extends BaseModel<AfternoonTeaModel> {
 
     public Integer getId() {
     return this.id;
+    }
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
     }
 
     public void setName(String name) {

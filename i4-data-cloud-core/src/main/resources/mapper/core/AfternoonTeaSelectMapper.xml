@@ -74,4 +74,46 @@
         </if>
     </select>
 
+    <!--根据类型-->
+    <select id="loadChart" parameterType="org.springframework.cglib.beans.BeanMap" resultType="java.util.Map">
+        SELECT
+            count(t.id) AS count,
+            ifnull(a.name, '没有点单') AS name
+        FROM t_afternoon_tea_select t
+        LEFT JOIN t_afternoon_tea a ON t.tea_id = a.id
+        where 1=1
+        <if test="userId != null">
+            and t.select_user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="teaName != null and teaName != ''">
+            and a.name like concat('%',#{teaName},'%')
+        </if>
+        GROUP BY a.name order by count desc
+    </select>
+
+    <!--加载报表根据类型-->
+    <select id="loadChartByType" parameterType="org.springframework.cglib.beans.BeanMap" resultType="java.util.Map">
+        SELECT
+            count(t.id) AS count,
+            ifnull(p.name, '没有点单') AS type
+        FROM (
+            SELECT t.id,a.type_id FROM t_afternoon_tea_select t LEFT JOIN t_afternoon_tea a ON t.tea_id = a.id
+            where 1=1
+            <if test="userId != null">
+                and t.select_user_id = #{userId}
+            </if>
+            <if test="startDate != null and startDate != ''">
+                and t.create_time between #{startDate} and #{endDate}
+            </if>
+            <if test="teaName != null and teaName != ''">
+                and a.name like concat('%',#{teaName},'%')
+            </if>
+        ) t
+        LEFT JOIN t_afternoon_tea_type p ON t.type_id = p.id
+        GROUP BY p.name order by count desc
+    </select>
+
 </mapper>

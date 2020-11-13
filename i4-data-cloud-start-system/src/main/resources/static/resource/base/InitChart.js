@@ -685,14 +685,6 @@ var InitChart = {
                     saveAsImage: {},
                     dataView: {readOnly: false}
                 },
-                myShare: {
-                    show: true,
-                    title: "分享报表",
-                    icon:"image://"+BasePath+"/resource/image/share.png",
-                    onclick: function () {
-                        shareEvent();
-                    }
-                },
                 right: 20
             },
             grid: {
@@ -739,7 +731,7 @@ var InitChart = {
                     name: data.title,
                     type: 'pie',
                     radius : '45%',
-                    center: ['70%', '40%'],
+                    center: ['85%', '40%'],
                     data: data.pie.series,
                     itemStyle: {
                         emphasis: {
@@ -760,10 +752,6 @@ var InitChart = {
                     }
                 }
             ]
-        };
-        /** 分享事件 */
-        var shareEvent = function(){
-            BaseShare.chart(option,disTitle);
         };
         t.setOption(option);
         $(window).resize(t.resize);

@@ -201,19 +201,19 @@ layui.use(["layer","form"],()=>{
         uploadConstantImage("afternoonTeaImage")
     })
 
-    /** 不用，谢绝，拒绝……的默认图片 */
-    $("#needNotImage").click(()=>{
+    /** 图片丢失的默认图片 */
+    $("#loseImage").click(()=>{
         var p = "width=300&height=300&limitProp=1&fileSize=1024"
-        Feng.loadWindow("选择（不用，谢绝……）的默认图片（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
+        Feng.loadWindow("图片丢失的默认图片（限制条件300*300，允许等比例，限制大小200KB）",BasePath+"/materialMsg/imageSelect/index?"+p,null,null,null,()=>{
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
-                    $("#needNotImage").attr("src",res)
+                    $("#loseImage").attr("src",res)
                 }
             })
         })
     })
-    $(".needNotImage").click(()=>{
-        uploadConstantImage("needNotImage")
+    $(".loseImage").click(()=>{
+        uploadConstantImage("loseImage")
     })
 
     /** 百度地图API */

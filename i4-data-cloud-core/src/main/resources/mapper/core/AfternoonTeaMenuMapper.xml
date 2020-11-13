@@ -11,10 +11,8 @@
         t.date as date, 
         t.week as week, 
         t.end_time as endTime, 
-        t.create_time as createTime, 
-        t.update_time as updateTime, 
-        t.create_user_id as createUserId, 
-        t.status as status
+        t.create_time as createTime,
+        t.create_user_id as createUserId
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AfternoonTeaMenuDto"

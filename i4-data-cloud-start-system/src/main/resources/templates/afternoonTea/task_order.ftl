@@ -34,7 +34,7 @@
                                         <i class="iconfont icon-xuanze text-success position-absolute select-hide <#if selectList??><#list selectList as select><#if select.teaMenuId == menu.id && select.teaId??
                                             && select.teaId == tea.id>select-show</#if></#list></#if>" style="font-size: 50px!important; top: 35%;left:35%" data-id="${tea.id?c}"></i>
                                         <img class="rounded" src="${tea.image}" style="max-width: 100px" title="${tea.name}">
-                                        <span class="text-danger font-weight-bold">￥：${tea.price}</span>
+                                        <span class="text-danger font-weight-bold">￥:${tea.price}</span>
                                         <span>${tea.name}</span>
                                     </div>
                                 </div>

@@ -1,5 +1,7 @@
 let layer,form,table,laydate
 let tableRender
+let selectChartByType = echarts.init(document.getElementById("selectChartByType"))
+let selectChart = echarts.init(document.getElementById("selectChart"))
 let param = {
     startDate:BaseDate.dateStrToTimeStamp(BaseDate.rangeDate(-30),"start"),
     endDate:BaseDate.dateStrToTimeStamp(BaseDate.rangeDate(0),"end"),
@@ -20,16 +22,22 @@ layui.use(["layer","form","table","laydate"],()=>{
         param.startDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[0],"start")
         param.endDate = BaseDate.dateStrToTimeStamp(value.split(" - ")[1],"end")
         Initlay.reloadTable(tableRender,param)
+        loadChartByType()
+        loadChart()
     },BaseDate.rangeDate(-30)+" - "+BaseDate.rangeDate(0))
 
     /** 初始化表格 */
     loadTable()
+    loadChart()
+    loadChartByType()
 
     /** 查询按钮 */
     form.on("submit(search)",obj=>{
         param.name = obj.field.name
         param.userId = obj.field.userId
         Initlay.reloadTable(tableRender,param)
+        loadChartByType()
+        loadChart()
 
         return false;
     })
@@ -57,6 +65,18 @@ function loadTable(){
         {field:"taskTitle",title:"标题"}
     ]]
     tableRender = Initlay.initTable("#selectLogTable",BasePath+"/afternoonTea/selectLog/loadTable",tabCols,null,param,null,null,25)
+}
+/*************************加载报表根据类型************************/
+function loadChartByType(){
+    Request.async(BasePath+"/afternoonTea/selectLog/loadChartByType",param).then(res=>{
+        InitChart.barAndPie(selectChartByType,res,"按类型")
+    })
+}
+/*************************加载报表************************/
+function loadChart(){
+    Request.async(BasePath+"/afternoonTea/selectLog/loadChart",param).then(res=>{
+        InitChart.barAndPie(selectChart,res,"按名称")
+    })
 }
 /*************************加载封面************************/
 function showHeadImage(name,id,image){

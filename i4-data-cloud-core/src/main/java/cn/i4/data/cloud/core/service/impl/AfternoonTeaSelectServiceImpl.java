@@ -2,10 +2,12 @@ package cn.i4.data.cloud.core.service.impl;
 
 import java.util.List;
 import java.util.Date;
+import java.util.Map;
 
 import cn.i4.data.cloud.base.exception.CommonException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.beans.BeanMap;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.base.service.impl.BaseServiceImpl;
@@ -66,6 +68,16 @@ public class AfternoonTeaSelectServiceImpl extends BaseServiceImpl<AfternoonTeaS
 	@Override
 	public IPage<AfternoonTeaSelectView> selectDetailTable(AfternoonTeaSelectDto dto) {
 		return mapper.selectDetailTable(dto);
+	}
+
+	@Override
+	public List<Map<String, Object>> loadChart(AfternoonTeaSelectDto dto) {
+		return mapper.loadChart(BeanMap.create(dto));
+	}
+
+	@Override
+	public List<Map<String, Object>> loadChartByType(AfternoonTeaSelectDto dto) {
+		return mapper.loadChartByType(BeanMap.create(dto));
 	}
 
 }

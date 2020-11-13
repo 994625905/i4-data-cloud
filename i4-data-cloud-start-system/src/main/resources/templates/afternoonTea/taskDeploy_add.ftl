@@ -67,7 +67,7 @@
         <div class="flex flex-column align-center justify-center position-relative">
             <a class="position-absolute" style="top: -10px;right:-7px" title="删除" id="deleteTea{{addTea}}"><i class="iconfont icon-shanchu text-danger"></i></a>
             <img class="rounded" src="{{tea.image}}" style="max-width: 45px" title="{{tea.name}}" data-id="{{tea.id}}">
-            <span class="text-danger font-weight-bold">￥：{{tea.price}}</span>
+            <span class="text-danger font-weight-bold">￥:{{tea.price}}</span>
             <span class="font-xs">{{tea.name}}</span>
         </div>
     </div>

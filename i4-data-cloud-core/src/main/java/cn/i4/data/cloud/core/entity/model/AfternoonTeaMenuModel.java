@@ -63,21 +63,8 @@ public class AfternoonTeaMenuModel extends BaseModel<AfternoonTeaMenuModel> {
     /**
     * 
     */
-    @TableField("update_time")
-    private Long updateTime;
-
-    /**
-    * 
-    */
     @TableField("create_user_id")
     private Integer createUserId;
-
-    /**
-    * 0未发布，1已发布，2已过期（过期根据end_time判断）
-    */
-    @TableField("status")
-    private Integer status;
-
 
     public void setId(Integer id) {
     this.id = id;
@@ -135,28 +122,12 @@ public class AfternoonTeaMenuModel extends BaseModel<AfternoonTeaMenuModel> {
     return this.createTime;
     }
 
-    public void setUpdateTime(Long updateTime) {
-    this.updateTime = updateTime;
-    }
-
-    public Long getUpdateTime() {
-    return this.updateTime;
-    }
-
     public void setCreateUserId(Integer createUserId) {
     this.createUserId = createUserId;
     }
 
     public Integer getCreateUserId() {
     return this.createUserId;
-    }
-
-    public void setStatus(Integer status) {
-    this.status = status;
-    }
-
-    public Integer getStatus() {
-    return this.status;
     }
 
 }

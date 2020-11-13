@@ -13,7 +13,7 @@
     <div class="layui-col-xs2 p-1" style="overflow: hidden;" >
         <div class="flex flex-column align-center justify-center p-1 imageDiv border border-light-secondary rounded" style="height: 140px">
             <img src="{{tea.image}}" style="max-height: 100px;" title="{{tea.storeAddress}}" data-id="{{tea.id}}" data-name="{{tea.name}}" data-price="{{tea.price}}">
-            <span class="text-danger font-weight-bold" style="margin-top:2px">￥：{{tea.price}}</span>
+            <span class="text-danger font-weight-bold" style="margin-top:2px">￥:{{tea.price}}</span>
             <span style="margin-top:3px">{{tea.name}}</span>
         </div>
     </div>

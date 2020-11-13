@@ -17,6 +17,7 @@ layui.use(["layer","form","table"],()=>{
     /** 查询按钮 */
     form.on("submit(search)",obj=>{
         param.name = obj.field.name
+        param.typeId = obj.field.typeId
         refresh()
 
         return false;
@@ -58,6 +59,7 @@ function loadTable(){
     let tabCols = [[
         {field:"image",title:"图片",align:"center",templet:"#imageUrl"},
         {field:"name",title:"名称"},
+        {field:"typeName",title:"类型",width:TABLE_COL_WIDTH.one_Cols(4)},
         {field:"price",title:"单价（元）",sort:true,width:TABLE_COL_WIDTH.one_Cols(5)},
         {field:"storeAddress",title:"商家信息"},
         {field:"createTimeStr",title:"上架时间",sort:true,width:TABLE_COL_WIDTH.date},

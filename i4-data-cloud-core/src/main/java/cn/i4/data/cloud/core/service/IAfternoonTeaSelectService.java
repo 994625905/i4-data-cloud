@@ -8,6 +8,7 @@ import cn.i4.data.cloud.core.entity.model.AfternoonTeaSelectModel;
 import cn.i4.data.cloud.core.entity.view.AfternoonTeaSelectView;
 
 import java.util.List;
+import java.util.Map;
 
 /**
 * Service
@@ -43,4 +44,19 @@ public interface IAfternoonTeaSelectService extends BaseService<AfternoonTeaSele
      * @return
      */
     IPage<AfternoonTeaSelectView> selectDetailTable(AfternoonTeaSelectDto dto);
+
+    /**
+     * 加载报表
+     * @param dto
+     * @return
+     */
+    List<Map<String, Object>> loadChart(AfternoonTeaSelectDto dto);
+
+    /**
+     * 加载报表根据类型
+     * @param dto
+     * @return
+     */
+    List<Map<String, Object>> loadChartByType(AfternoonTeaSelectDto dto);
+
 }

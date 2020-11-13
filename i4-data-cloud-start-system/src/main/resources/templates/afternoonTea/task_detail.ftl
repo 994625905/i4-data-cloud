@@ -35,9 +35,9 @@
                                                                     </div>
                                                                 </div>
                                                             </td>
-                                                            <td class="text-danger font-weight-bolder">￥：${tea.price}</td>
+                                                            <td class="text-danger font-weight-bolder">￥:${tea.price}</td>
                                                             <td>${tea.selectCount}</td>
-                                                            <td class="text-danger font-weight-bolder">￥：${tea.amount}</td>
+                                                            <td class="text-danger font-weight-bolder">￥:${tea.amount}</td>
                                                         </tr>
                                                     </#list>
                                                 </#if>

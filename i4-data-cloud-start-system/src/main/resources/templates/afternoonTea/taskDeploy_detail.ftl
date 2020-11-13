@@ -26,7 +26,7 @@
                                     <div class="layui-inline tea border border-light-secondary" style="line-height: 15px">
                                         <div class="flex flex-column align-center justify-center">
                                             <img class="rounded" src="${tea.image}" style="max-width: 45px" title="${tea.name}">
-                                            <span class="text-danger font-weight-bold">￥：${tea.price}</span>
+                                            <span class="text-danger font-weight-bold">￥:${tea.price}</span>
                                             <span class="font-xs">${tea.name}</span>
                                         </div>
                                     </div>

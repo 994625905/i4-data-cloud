@@ -28,6 +28,19 @@
                                 <input type="number" name="price" value="${model.price!}" lay-verify="price" class="layui-input" placeholder="请输入单价（元）">
                             </div>
                         </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">类型选择：</label>
+                            <div class="layui-input-inline">
+                                <select name="typeId" lay-verify="required" class="layui-input">
+                                    <option value="">选择下午茶类型</option>
+                                    <#if typeList??>
+                                        <#list typeList as type>
+                                            <option value="${type.id}" <#if model.typeId == type.id>selected</#if>>${type.name}</option>
+                                        </#list>
+                                    </#if>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">商家信息：</label>

@@ -36,6 +36,8 @@ public class AfternoonTeaController extends WebBaseController {
     @Autowired
     private IAfternoonTeaService iAfternoonTeaService;
     @Autowired
+    private IAfternoonTeaTypeService iAfternoonTeaTypeService;
+    @Autowired
     private IUserService iUserService;
     @Autowired
     private IAfternoonTeaTaskService iAfternoonTeaTaskService;
@@ -43,6 +45,18 @@ public class AfternoonTeaController extends WebBaseController {
     private IAfternoonTeaMenuService iAfternoonTeaMenuService;
     @Autowired
     private IAfternoonTeaSelectService iAfternoonTeaSelectService;
+
+    /**
+     * 加载下午茶类型的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/type/index")
+    @RequestPermission(value = "afternoonTea:type/index")
+    public ModelAndView typeIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/afternoonTea/type_index", request);
+        return view;
+    }
 
     /**
      * 加载下午茶列表的首页
@@ -53,6 +67,7 @@ public class AfternoonTeaController extends WebBaseController {
     @RequestPermission(value = "afternoonTea:list/index")
     public ModelAndView listIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/afternoonTea/list_index", request);
+        view.addObject("typeList",iAfternoonTeaTypeService.list());
         return view;
     }
 
@@ -65,6 +80,7 @@ public class AfternoonTeaController extends WebBaseController {
     @RequestPermission(value = "afternoonTea:list/addPage")
     public ModelAndView listAddPage(HttpServletRequest request){
         ModelAndView view = getModelAndView("/afternoonTea/list_add", request);
+        view.addObject("typeList",iAfternoonTeaTypeService.list());
         return view;
     }
 
@@ -78,6 +94,7 @@ public class AfternoonTeaController extends WebBaseController {
     public ModelAndView listEditPage(AfternoonTeaDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/afternoonTea/list_edit", request);
         view.addObject("model", iAfternoonTeaService.getById(dto.getId()));
+        view.addObject("typeList",iAfternoonTeaTypeService.list());
         return view;
     }
 

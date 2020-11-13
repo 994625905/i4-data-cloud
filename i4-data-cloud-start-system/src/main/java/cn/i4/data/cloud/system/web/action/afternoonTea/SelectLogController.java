@@ -4,6 +4,7 @@ import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
+import cn.i4.data.cloud.base.chart.view.ChartBarAndPieView;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.AfternoonTeaSelectDto;
 import cn.i4.data.cloud.core.entity.view.AfternoonTeaSelectView;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 下午茶--选择记录汇总
@@ -48,4 +51,40 @@ public class SelectLogController extends WebBaseController {
         IPage<AfternoonTeaSelectView> page = iAfternoonTeaSelectService.selectPage(dto);
         return ActionResult.ok(page);
     }
+
+    /**
+     * 加载报表按类型
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/loadChart")
+    @RequestLog(module = MODULE_NAME,content = "加载报表",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载报表",key = KEY_PREFIX+"/loadChart")
+    @RequestPermission(value = "afternoonTea:selectLog/loadChart")
+    public ActionResult<ChartBarAndPieView> loadChart(AfternoonTeaSelectDto dto, HttpServletRequest request){
+        List<Map<String,Object>> list = iAfternoonTeaSelectService.loadChart(dto);
+        ChartBarAndPieView res = new ChartBarAndPieView("点单统计图","name","count",list,15);
+        return ActionResult.ok(res);
+    }
+
+    /**
+     * 加载报表根据类型
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/loadChartByType")
+    @RequestLog(module = MODULE_NAME,content = "加载报表",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载报表",key = KEY_PREFIX+"/loadChartByType")
+    @RequestPermission(value = "afternoonTea:selectLog/loadChartByType")
+    public ActionResult<ChartBarAndPieView> loadChartByType(AfternoonTeaSelectDto dto, HttpServletRequest request){
+        List<Map<String,Object>> list = iAfternoonTeaSelectService.loadChartByType(dto);
+        ChartBarAndPieView res = new ChartBarAndPieView("点单统计图","type","count",list,15);
+        return ActionResult.ok(res);
+    }
+
+//    （照片，视频，文档）表
+//
+//    活动下是否还需细分（不同的活动内容：）
+//
+//    （点赞评论）
 }

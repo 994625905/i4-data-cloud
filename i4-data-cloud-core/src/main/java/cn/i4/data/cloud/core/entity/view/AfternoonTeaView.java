@@ -18,6 +18,7 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 
 	public AfternoonTeaView(AfternoonTeaModel model) {
 		this.id = model.getId();
+		this.typeId = model.getTypeId();
 		this.name = model.getName();
 		this.image = model.getImage();
 		this.price = model.getPrice();
@@ -36,6 +37,12 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 	 */
 	@TableField("id")
 	private Integer id;
+
+	/**
+	 * 类型
+	 */
+	@TableField("type_id")
+	private Integer typeId;
 
 	/**
 	 * 名称
@@ -82,6 +89,7 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 	private String createTimeStr;
 	private String updateTimeStr;
 	private String realName;
+	private String typeName;
 	private String selectCount;
 	private BigDecimal amount;
 
@@ -91,6 +99,14 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 
 	public Integer getId() {
 		return this.id;
+	}
+
+	public Integer getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(Integer typeId) {
+		this.typeId = typeId;
 	}
 
 	public void setName(String name) {
@@ -171,6 +187,14 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 
 	public void setRealName(String realName) {
 		this.realName = realName;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
 	}
 
 	public String getSelectCount() {

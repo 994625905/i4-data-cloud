@@ -50,6 +50,17 @@
         <div class="layui-col-xs12">
             <div id="selectLogTable" lay-filter="selectLogTable"></div>
         </div>
+
+        <!--报表-->
+        <div class="layui-col-xs12">
+            <div id="selectChartByType" style="height: 450px"></div>
+        </div>
+
+        <!--报表-->
+        <div class="layui-col-xs12">
+            <div id="selectChart" style="height: 450px"></div>
+        </div>
+
     </div>
 </div>
 </body>
@@ -67,13 +78,13 @@
         </div>
     {{# } else{ }}
         <div class="flex align-center justify-start">
-            <img class="rounded" src="${systemConstant.needNotImage!}" onclick="showHeadImage('没有点单','{{d.id}}','${systemConstant.needNotImage!}')" style="max-width: 50px">
+            <img class="rounded" src="${systemConstant.loseImage!}" onclick="showHeadImage('没有点单','{{d.id}}','${systemConstant.loseImage!}')" style="max-width: 50px">
             <div class="flex flex-column align-center justify-start pl-1">
                 <span class="text-light-muted">没有点单</span>
             </div>
         </div>
     {{# }}}
 </script>
-<script type="text/javascript" src="${StaticServer}/templates/afternoonTea/selectLog_index.js?v=1.2"></script>
+<script type="text/javascript" src="${StaticServer}/templates/afternoonTea/selectLog_index.js?v=1.3"></script>
 </@override>
 <@extends name="/base.ftl"/>

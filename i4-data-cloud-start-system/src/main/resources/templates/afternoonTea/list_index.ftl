@@ -21,6 +21,19 @@
                                 </div>
                             </div>
                             <div class="layui-inline">
+                                <label class="layui-form-label">类型选择：</label>
+                                <div class="layui-input-inline" style="width: 120px">
+                                    <select name="typeId" lay-verify="required" class="layui-input">
+                                        <option value="">选择类型</option>
+                                        <#if typeList??>
+                                            <#list typeList as type>
+                                                <option value="${type.id}">${type.name}</option>
+                                            </#list>
+                                        </#if>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
                                 <button class="layui-btn layui-btn-primary search-button" lay-submit="" lay-filter="search">查询</button>
                             </div>
                         </form>

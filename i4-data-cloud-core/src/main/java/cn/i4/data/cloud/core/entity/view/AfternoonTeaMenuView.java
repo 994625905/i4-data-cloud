@@ -25,9 +25,7 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 		this.week = model.getWeek();
 		this.endTime = model.getEndTime();
 		this.createTime = model.getCreateTime();
-		this.updateTime = model.getUpdateTime();
 		this.createUserId = model.getCreateUserId();
-		this.status = model.getStatus();
 	}
 
 	public AfternoonTeaMenuView() {
@@ -79,20 +77,8 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 	/**
 	 * 
 	 */
-	@TableField("update_time")
-	private Long updateTime;
-
-	/**
-	 * 
-	 */
 	@TableField("create_user_id")
 	private Integer createUserId;
-
-	/**
-	 * 0未发布，1已发布，2已过期（过期根据end_time判断）
-	 */
-	@TableField("status")
-	private Integer status;
 
 	/**
 	 * teaIds对应的下午茶列表
@@ -155,28 +141,12 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 		return this.createTime;
 	}
 
-	public void setUpdateTime(Long updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	public Long getUpdateTime() {
-		return this.updateTime;
-	}
-
 	public void setCreateUserId(Integer createUserId) {
 		this.createUserId = createUserId;
 	}
 
 	public Integer getCreateUserId() {
 		return this.createUserId;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public Integer getStatus() {
-		return this.status;
 	}
 
 	public List<AfternoonTeaView> getTeaList() {
