@@ -1,6 +1,8 @@
 package cn.i4.data.cloud.core.entity.view;
 
 import java.util.Date;
+import java.util.List;
+
 import com.baomidou.mybatisplus.annotation.TableField;
 import cn.i4.data.cloud.base.entity.view.BaseView;
 import cn.i4.data.cloud.core.entity.model.AfternoonTeaMenuModel;
@@ -9,15 +11,16 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
  * View
  * @author wangjc
- * @date 2020-11-10 19:54:04
+ * @date 2020-11-11 11:41:50
  */
 public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 
-	private static final long serialVersionUID = 1605009244112L;
+	private static final long serialVersionUID = 1605066110251L;
 
 	public AfternoonTeaMenuView(AfternoonTeaMenuModel model) {
 		this.id = model.getId();
-		this.afternoonTeaIds = model.getAfternoonTeaIds();
+		this.teaTaskId = model.getTeaTaskId();
+		this.teaIds = model.getTeaIds();
 		this.date = model.getDate();
 		this.week = model.getWeek();
 		this.endTime = model.getEndTime();
@@ -38,10 +41,16 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 	private Integer id;
 
 	/**
+	 * 下午茶任务id
+	 */
+	@TableField("tea_task_id")
+	private Integer teaTaskId;
+
+	/**
 	 * 下午茶id的列表字符串，逗号隔开
 	 */
-	@TableField("afternoon_tea_ids")
-	private String afternoonTeaIds;
+	@TableField("tea_ids")
+	private String teaIds;
 
 	/**
 	 * 日期
@@ -80,11 +89,15 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 	private Integer createUserId;
 
 	/**
-	 * 0未发布，1已发布，2已过期
+	 * 0未发布，1已发布，2已过期（过期根据end_time判断）
 	 */
 	@TableField("status")
 	private Integer status;
 
+	/**
+	 * teaIds对应的下午茶列表
+	 */
+	private List<AfternoonTeaView> teaList;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -94,12 +107,20 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 		return this.id;
 	}
 
-	public void setAfternoonTeaIds(String afternoonTeaIds) {
-		this.afternoonTeaIds = afternoonTeaIds;
+	public void setTeaTaskId(Integer teaTaskId) {
+		this.teaTaskId = teaTaskId;
 	}
 
-	public String getAfternoonTeaIds() {
-		return this.afternoonTeaIds;
+	public Integer getTeaTaskId() {
+		return this.teaTaskId;
+	}
+
+	public void setTeaIds(String teaIds) {
+		this.teaIds = teaIds;
+	}
+
+	public String getTeaIds() {
+		return this.teaIds;
 	}
 
 	public void setDate(String date) {
@@ -158,4 +179,11 @@ public class AfternoonTeaMenuView extends BaseView<AfternoonTeaMenuView> {
 		return this.status;
 	}
 
+	public List<AfternoonTeaView> getTeaList() {
+		return teaList;
+	}
+
+	public void setTeaList(List<AfternoonTeaView> teaList) {
+		this.teaList = teaList;
+	}
 }

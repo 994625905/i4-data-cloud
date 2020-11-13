@@ -25,7 +25,7 @@
                             <input name="describeInfo" value="${role.describeInfo!}" class="layui-input">
                         </div>
                     </div>
-                    <input name="id" type="hidden" value="${role.id}">
+                    <input name="id" type="hidden" value="${role.id?c}">
                     <div class="layui-inline">
                         <div class="layui-input-inline">
                             <button class="layui-btn layui-btn-sm" lay-submit="" lay-filter="save">保存</button>
@@ -46,9 +46,9 @@
                                     <div class="layui-row layui-col-space5">
                                         <div class="layui-col-xs2 selectButton">
                                             <div class="layui-btn-group">
-                                                <a class="layui-btn layui-btn-sm search-button all" data-id="${menu.id}">全选</a>
-                                                <a class="layui-btn layui-btn-sm layui-btn-danger reverse" data-id="${menu.id}">反选</a>
-                                                <a class="layui-btn layui-btn-sm layui-btn-primary clear" data-id="${menu.id}">不选</a>
+                                                <a class="layui-btn layui-btn-sm search-button all" data-id="${menu.id?c}">全选</a>
+                                                <a class="layui-btn layui-btn-sm layui-btn-danger reverse" data-id="${menu.id?c}">反选</a>
+                                                <a class="layui-btn layui-btn-sm layui-btn-primary clear" data-id="${menu.id?c}">不选</a>
                                             </div>
                                         </div>
                                         <div class="layui-col-xs10">
@@ -62,15 +62,15 @@
                                                                 <div class="layui-row">
                                                                     <div class="layui-col-xs2 selectButton">
                                                                         <div class="layui-btn-group">
-                                                                            <a class="layui-btn layui-btn-sm search-button all" data-id="${child.id}">全</a>
-                                                                            <a class="layui-btn layui-btn-sm layui-btn-danger reverse" data-id="${child.id}">反</a>
-                                                                            <a class="layui-btn layui-btn-sm layui-btn-primary clear" data-id="${child.id}">不</a>
+                                                                            <a class="layui-btn layui-btn-sm search-button all" data-id="${child.id?c}">全</a>
+                                                                            <a class="layui-btn layui-btn-sm layui-btn-danger reverse" data-id="${child.id?c}">反</a>
+                                                                            <a class="layui-btn layui-btn-sm layui-btn-primary clear" data-id="${child.id?c}">不</a>
                                                                         </div>
                                                                     </div>
                                                                     <div class="layui-col-xs10">
                                                                         <!--二级菜单下的按钮（要求菜单只细化到二级）-->
                                                                         <#list child.child as button>
-                                                                            <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="${child.parentId}" parent-id="${button.parentId}" data-id="${button.id}">${button.name}</button>
+                                                                            <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="${child.parentId?c}" parent-id="${button.parentId?c}" data-id="${button.id?c}">${button.name}</button>
                                                                         </#list>
                                                                     </div>
                                                                 </div>
@@ -78,7 +78,7 @@
                                                         </div>
                                                     </div>
                                                 <#else>
-                                                    <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="" parent-id="${child.parentId}" data-id="${child.id}">${child.name}</button>
+                                                    <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="" parent-id="${child.parentId?c}" data-id="${child.id?c}">${child.name}</button>
                                                 </#if>
                                             </#list>
                                         </div>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     <#else>
-                        <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="" parent-id="${menu.parentId}" data-id="${menu.id}">${menu.name}</button>
+                        <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="" parent-id="${menu.parentId?c}" data-id="${menu.id?c}">${menu.name}</button>
                     </#if>
                 </#list>
             </div>

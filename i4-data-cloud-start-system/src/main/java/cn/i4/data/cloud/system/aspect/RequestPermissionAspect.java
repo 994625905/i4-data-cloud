@@ -112,7 +112,7 @@ public class RequestPermissionAspect extends BaseAspectSupport {
             logger.error(throwable.getMessage());
             throwable.printStackTrace();
             if("ModelAndView".equals(typeName)){
-                return new ModelAndView("/error/409");
+                return new ModelAndView("/error/5xx");
             }else{
                 return ActionResult.error("权限验证错误");
             }

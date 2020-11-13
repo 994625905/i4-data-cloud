@@ -9,7 +9,7 @@
             <div class="layui-input-block">
                 <#if menu??>
                     <input readonly value="${menu.name!}" class="layui-input">
-                    <input type="hidden" value="${menu.id!}" name="parentId" class="layui-input">
+                    <input type="hidden" value="${menu.id?c}" name="parentId" class="layui-input">
                 <#else>
                     <input readonly placeholder="已是顶级节点" class="layui-input">
                 </#if>

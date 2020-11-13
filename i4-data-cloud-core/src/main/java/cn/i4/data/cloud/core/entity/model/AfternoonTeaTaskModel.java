@@ -21,6 +21,7 @@ public class AfternoonTeaTaskModel extends BaseModel<AfternoonTeaTaskModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -59,6 +60,11 @@ public class AfternoonTeaTaskModel extends BaseModel<AfternoonTeaTaskModel> {
     @TableField("status")
     private Integer status;
 
+    /**
+     * 描述信息
+     */
+    @TableField("describe_info")
+    private String describeInfo;
 
     public void setId(Integer id) {
     this.id = id;
@@ -116,4 +122,11 @@ public class AfternoonTeaTaskModel extends BaseModel<AfternoonTeaTaskModel> {
     return this.status;
     }
 
+    public String getDescribeInfo() {
+        return describeInfo;
+    }
+
+    public void setDescribeInfo(String describeInfo) {
+        this.describeInfo = describeInfo;
+    }
 }

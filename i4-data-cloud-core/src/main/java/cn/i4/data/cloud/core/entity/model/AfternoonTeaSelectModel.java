@@ -21,6 +21,7 @@ public class AfternoonTeaSelectModel extends BaseModel<AfternoonTeaSelectModel> 
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

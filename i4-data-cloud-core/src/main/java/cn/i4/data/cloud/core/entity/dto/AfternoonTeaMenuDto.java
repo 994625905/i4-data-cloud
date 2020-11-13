@@ -6,10 +6,10 @@ import cn.i4.data.cloud.core.entity.view.AfternoonTeaMenuView;
 /**
 * Dto
 * @author wangjc
-* @date 2020-11-10 19:54:04
+* @date 2020-11-11 11:41:50
 */
 public class AfternoonTeaMenuDto extends BaseDto<AfternoonTeaMenuView> {
 
-    private static final long serialVersionUID = 1605009244114L;
+    private static final long serialVersionUID = 1605066110261L;
 
 }

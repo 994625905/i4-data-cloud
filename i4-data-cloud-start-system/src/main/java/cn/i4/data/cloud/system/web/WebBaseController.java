@@ -75,6 +75,14 @@ public class WebBaseController extends BaseController {
     }
 
     /**
+     * 数据过期页面
+     * @return
+     */
+    public ModelAndView getTimeOutView(){
+        return this.getModelAndView("/error/410");
+    }
+
+    /**
      * 获取user，刷新时间在拦截器中
      * @param request
      * @return

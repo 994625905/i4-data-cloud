@@ -50,7 +50,7 @@
                 <#list menuList as menu>
                     <li>
                         <#if menu.url?? && menu.url != "" && menu.url != "#">
-                            <a onclick="xadmin.add_tab('${menu.name!}','${StaticServer}/${menu.url!}?menuId=${menu.id!}&menuName=${menu.name!}')">
+                            <a onclick="xadmin.add_tab('${menu.name!}','${StaticServer}/${menu.url!}?menuId=${menu.id?c}&menuName=${menu.name!}')">
                                 <#if menu.icon?? && menu.icon != "">
                                     <i class="iconfont ${menu.icon!}"></i>
                                 <#else>
@@ -74,7 +74,7 @@
                                 <#list menu.child as child0>
                                     <li>
                                         <#if child0.url?? && child0.url != "" && child0.url != "#">
-                                            <a onclick="xadmin.add_tab('${child0.name!}','${StaticServer}/${child0.url!}?menuId=${menu.id!}&menuName=${menu.name!}')">
+                                            <a onclick="xadmin.add_tab('${child0.name!}','${StaticServer}/${child0.url!}?menuId=${menu.id?c}&menuName=${menu.name!}')">
                                                 <cite>${child0.name!}</cite>
                                             </a>
                                         <#else>

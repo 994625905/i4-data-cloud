@@ -4,7 +4,9 @@ import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
+import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
+import cn.i4.data.cloud.base.util.CookieUtil;
 import cn.i4.data.cloud.core.entity.dto.AfternoonTeaDto;
 import cn.i4.data.cloud.core.entity.model.AfternoonTeaModel;
 import cn.i4.data.cloud.core.entity.view.AfternoonTeaView;
@@ -109,6 +111,40 @@ public class ListController extends WebBaseController {
             return ActionResult.ok(true);
         }
         return ActionResult.error("删除失败");
+    }
+
+    /**
+     * 设置下午茶选择的临时存储
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/setTeaSelectTemp")
+    @RequestLog(module = MODULE_NAME,content = "设置下午茶选择的临时存储",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"--设置下午茶选择的临时存储",key = KEY_PREFIX+"/setTeaSelectTemp")
+    @RequestPermission(value = "afternoonTea:list/setTeaSelectTemp")
+    public ActionResult<Boolean> setTeaSelectTemp(AfternoonTeaDto dto,HttpServletRequest request){
+        String authorization = CookieUtil.getCookieValue(request, "authorization");
+        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_AFTERNOON_TEA, authorization, dto, RedisConstant.TIMEOUT.SELECT_AFTERNOON_TEA);
+        return ActionResult.ok(res);
+    }
+
+    /**
+     * 获取下午茶选择的临时存储
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/getTeaSelectTemp")
+    @RequestLog(module = MODULE_NAME,content = "获取下午茶选择的临时存储",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"--获取下午茶选择的临时存储",key = KEY_PREFIX+"/getTeaSelectTemp")
+    @RequestPermission(value = "afternoonTea:list/getTeaSelectTemp")
+    public ActionResult<AfternoonTeaDto> getTeaSelectTemp(HttpServletRequest request){
+        String authorization = CookieUtil.getCookieValue(request, "authorization");
+        AfternoonTeaDto param = (AfternoonTeaDto) redisService.hget(RedisConstant.HASH_KEY.SELECT_AFTERNOON_TEA, authorization);
+        if(param == null){
+            return ActionResult.error("请重新选择下午茶");
+        }
+        redisService.hashDeleteHashKey(RedisConstant.HASH_KEY.SELECT_AFTERNOON_TEA, authorization);
+        return ActionResult.ok(param);
     }
 
 }

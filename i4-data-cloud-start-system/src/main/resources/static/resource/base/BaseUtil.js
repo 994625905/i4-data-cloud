@@ -443,6 +443,12 @@ var BaseDate = {
 		return new Date().getFullYear()
 	},
 	/**
+	 * 获取当前月
+	 */
+	currMonth(){
+		return new Date().getMonth()+1
+	},
+	/**
 	 * 获取当前周次
 	 */
 	currWeekNum(){
@@ -480,6 +486,29 @@ var BaseDate = {
 	currFriday(){
 		var curr = new Date().getDay();
 		return this.rangeDate( 5 - curr);
+	},
+	/**
+	 * 根据事件获取周次
+	 * @param dateStr
+	 */
+	getWeekByDate(dateStr){
+		let temp = new Date(dateStr)
+		switch (temp.getDay()){
+			case 1:
+				return "星期一"
+			case 2:
+				return "星期二"
+			case 3:
+				return "星期三"
+			case 4:
+				return "星期四"
+			case 5:
+				return "星期五"
+			case 6:
+				return "星期六"
+			case 0:
+				return "星期日"
+		}
 	}
 };
 

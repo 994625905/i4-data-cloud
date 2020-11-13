@@ -52,7 +52,7 @@
                     <select class="layui-input" name="exchangeId" >
                         <option value="">请选择交换机绑定</option>
                         <#list exchangeList as exchange>
-                            <option value="${exchange.id}" <#if model.exchangeId?? && model.exchangeId == exchange.id>selected</#if> >${exchange.name}</option>
+                            <option value="${exchange.id?c}" <#if model.exchangeId?? && model.exchangeId == exchange.id>selected</#if> >${exchange.name}</option>
                         </#list>
                     </select>
                 </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="layui-form-mid layui-word-aux">非绑定到广播交换机，则必须设置</div>
             </div>
-            <input value="${model.id}" name="id" type="hidden">
+            <input value="${model.id?c}" name="id" type="hidden">
             <div class="layui-form-item">
                 <div class="layui-input-block">
                     <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>

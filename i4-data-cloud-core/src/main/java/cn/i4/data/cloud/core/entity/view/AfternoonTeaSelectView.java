@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.entity.view;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableField;
 import cn.i4.data.cloud.base.entity.view.BaseView;
@@ -68,6 +69,8 @@ public class AfternoonTeaSelectView extends BaseView<AfternoonTeaSelectView> {
 	private String realName;
 	private String teaName;
 	private String teaImage;
+	private String teaStoreAddress;
+	private BigDecimal teaPrice;
 	private String dateWeek;
 	private String taskTitle;
 	
@@ -149,6 +152,22 @@ public class AfternoonTeaSelectView extends BaseView<AfternoonTeaSelectView> {
 
 	public void setTeaImage(String teaImage) {
 		this.teaImage = teaImage;
+	}
+
+	public String getTeaStoreAddress() {
+		return teaStoreAddress;
+	}
+
+	public void setTeaStoreAddress(String teaStoreAddress) {
+		this.teaStoreAddress = teaStoreAddress;
+	}
+
+	public BigDecimal getTeaPrice() {
+		return teaPrice;
+	}
+
+	public void setTeaPrice(BigDecimal teaPrice) {
+		this.teaPrice = teaPrice;
 	}
 
 	public String getDateWeek() {

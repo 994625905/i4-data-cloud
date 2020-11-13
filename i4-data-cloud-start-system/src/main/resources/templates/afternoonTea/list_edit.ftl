@@ -35,7 +35,7 @@
                             <input name="storeAddress" value="${model.storeAddress!}" lay-verify="required" class="layui-input" placeholder="简介或者门店名称/地址，都行">
                         </div>
                     </div>
-                    <input type="hidden" class="layui-input" name="id" value="${model.id!}">
+                    <input type="hidden" class="layui-input" name="id" value="${model.id?c}">
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <@permission value="afternoonTea:list/update">

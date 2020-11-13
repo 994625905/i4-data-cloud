@@ -24,7 +24,7 @@
                                             <#if typeList??>
                                                 <option value="">请选择类型</option>
                                                 <#list typeList as type>
-                                                    <option value="${type.id}">${type.name}</option>
+                                                    <option value="${type.id?c}">${type.name}</option>
                                                 </#list>
                                             </#if>
                                         </select>
@@ -37,7 +37,7 @@
                                             <option value="">请选择用户</option>
                                             <#if userList??>
                                                 <#list userList as user>
-                                                    <option value="${user.id}">${user.realname}</option>
+                                                    <option value="${user.id?c}">${user.realname}</option>
                                                 </#list>
                                             </#if>
                                         </select>

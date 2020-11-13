@@ -12,9 +12,9 @@
                     <#if pMenuList??>
                         <#list pMenuList as pMenu>
                             <#if pMenu.id == menu.parentId>
-                                <option value="${pMenu.id}" selected>${pMenu.name}</option>
+                                <option value="${pMenu.id?c}" selected>${pMenu.name}</option>
                             <#else>
-                                <option value="${pMenu.id}">${pMenu.name}</option>
+                                <option value="${pMenu.id?c}">${pMenu.name}</option>
                             </#if>
                         </#list>
                     </#if>
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </#if>
-        <input type="hidden" name="id" value="${menu.id}">
+        <input type="hidden" name="id" value="${menu.id?c}">
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>

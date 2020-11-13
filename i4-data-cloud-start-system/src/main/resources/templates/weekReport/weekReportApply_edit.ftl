@@ -83,7 +83,7 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input type="hidden" name="id" value="${model.id}">
+                            <input type="hidden" name="id" value="${model.id?c}">
                             <button class="layui-btn" lay-submit lay-filter="save">立即保存</button>
                             <button type="button" class="layui-btn layui-btn-danger" onclick="parent.layer.closeAll()">关闭</button>
                         </div>

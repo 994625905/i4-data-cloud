@@ -37,7 +37,7 @@
                                 <select id="departmentId" class="layui-input" >
                                     <#if departmentList??>
                                         <#list departmentList as department>
-                                            <option value="${department.id}" >${department.name}</option>
+                                            <option value="${department.id?c}" >${department.name}</option>
                                         </#list>
                                     </#if>
                                 </select>

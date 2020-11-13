@@ -46,7 +46,7 @@
                             </div>
                             <div class="layui-form-mid layui-word-aux">摈弃自动下载zip压缩包，采用在指定路径生成的方式存放</div>
                         </div>
-                        <input type="hidden" name="id" value="${dataSource.id}">
+                        <input type="hidden" name="id" value="${dataSource.id?c}">
                         <div class="layui-form-item">
                             <div class="layui-input-block">
                                 <button class="layui-btn" lay-submit lay-filter="create">一键生成</button>

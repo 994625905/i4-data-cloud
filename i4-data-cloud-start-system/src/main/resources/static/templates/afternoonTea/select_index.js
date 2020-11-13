@@ -49,12 +49,11 @@ layui.use(["layer","form","table","laydate"],()=>{
 /*************************加载表格************************/
 function loadTable(){
     let tabCols = [[
-        {field:"image",title:"图片",align:"center",templet:"#imageUrl"},
-        {field:"name",title:"名称"},
+        {field:"realName",title:"用户",width:TABLE_COL_WIDTH.one_Cols(6)},
+        {field:"teaImage",title:"下午茶图片",align:"center",templet:"#imageUrl"},
         {field:"dateWeek",title:"所属日期",width:TABLE_COL_WIDTH.one_Cols(7)},
         {field:"createTimeStr",title:"选择时间",sort:true,width:TABLE_COL_WIDTH.date},
-        {field:"taskTitle",title:"标题"},
-        {field:"realName",title:"用户",width:TABLE_COL_WIDTH.one_Cols(6)}
+        {field:"taskTitle",title:"标题"}
     ]]
     tableRender = Initlay.initTable("#selectTable",BasePath+"/afternoonTea/select/loadTable",tabCols,null,param,null,null,25)
 }

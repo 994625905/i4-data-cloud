@@ -22,4 +22,10 @@ public interface AfternoonTeaMapper extends BaseIMapper<AfternoonTeaModel> {
     */
     IPage<AfternoonTeaView> selectPage(AfternoonTeaDto dto);
 
+    /**
+     * 根据ids查询
+     * @param asList
+     * @return
+     */
+    List<AfternoonTeaView> selectByIds(@Param("idList") List<String> idList,@Param("menuId") Integer menuId,@Param("taskId") Integer taskId);
 }

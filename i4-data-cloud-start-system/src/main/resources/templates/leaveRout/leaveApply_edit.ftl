@@ -18,7 +18,7 @@
                             <select class="layui-input" name="typeId" >
                                 <#if typeList??>
                                     <#list typeList  as type>
-                                        <option value="${type.id}" <#if model.typeId == type.id>selected</#if> >${type.name}</option>
+                                        <option value="${type.id?c}" <#if model.typeId == type.id>selected</#if> >${type.name}</option>
                                     </#list>
                                 </#if>
                             </select>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input value="${model.id}" type="hidden" name="id">
+                            <input value="${model.id?c}" type="hidden" name="id">
                             <button class="layui-btn" lay-submit lay-filter="save">立即保存</button>
                             <button type="button" class="layui-btn layui-btn-danger" onclick="parent.layer.closeAll()">关闭</button>
                         </div>

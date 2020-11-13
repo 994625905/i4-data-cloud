@@ -33,7 +33,7 @@
                                             <option value="">请选择用户</option>
                                             <#if userList??>
                                                 <#list userList as user>
-                                                    <option value="${user.id}">${user.realname}</option>
+                                                    <option value="${user.id?c}">${user.realname}</option>
                                                 </#list>
                                             </#if>
                                         </select>

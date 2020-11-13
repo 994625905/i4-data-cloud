@@ -23,6 +23,7 @@ public class AfternoonTeaTaskView extends BaseView<AfternoonTeaTaskView> {
 		this.updateTime = model.getUpdateTime();
 		this.createUserId = model.getCreateUserId();
 		this.status = model.getStatus();
+		this.describeInfo = model.getDescribeInfo();
 	}
 
 	public AfternoonTeaTaskView() {
@@ -71,6 +72,17 @@ public class AfternoonTeaTaskView extends BaseView<AfternoonTeaTaskView> {
 	@TableField("status")
 	private Integer status;
 
+	/**
+	 * 描述信息
+	 */
+	@TableField("describe_info")
+	private String describeInfo;
+
+	private String endTimeStr;
+	private String createTimeStr;
+	private String updateTimeStr;
+	private String realName;
+	private Integer menuCount;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -128,4 +140,51 @@ public class AfternoonTeaTaskView extends BaseView<AfternoonTeaTaskView> {
 		return this.status;
 	}
 
+	public String getDescribeInfo() {
+		return describeInfo;
+	}
+
+	public void setDescribeInfo(String describeInfo) {
+		this.describeInfo = describeInfo;
+	}
+
+	public String getEndTimeStr() {
+		return endTimeStr;
+	}
+
+	public void setEndTimeStr(String endTimeStr) {
+		this.endTimeStr = endTimeStr;
+	}
+
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public Integer getMenuCount() {
+		return menuCount;
+	}
+
+	public void setMenuCount(Integer menuCount) {
+		this.menuCount = menuCount;
+	}
 }

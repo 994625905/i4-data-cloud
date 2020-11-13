@@ -6,7 +6,8 @@
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         t.id as id, 
-        t.afternoon_tea_ids as afternoonTeaIds, 
+        t.tea_task_id as teaTaskId, 
+        t.tea_ids as teaIds, 
         t.date as date, 
         t.week as week, 
         t.end_time as endTime, 

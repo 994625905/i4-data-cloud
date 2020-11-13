@@ -344,6 +344,7 @@
 .bg-hover-primary:hover{ background-color: #0062cc;}
 .bg-secondary { background-color: #6c757d;}
 .bg-light { background-color: #f8f9fa;}
+.bg-layui {background-color: #F2F2F2;}
 .bg-light-muted { background-color: #A9A5A0;}
 .bg-hover-secondary:hover{ background-color: #545b62;}
 .bg-success { background-color: #28a745;}

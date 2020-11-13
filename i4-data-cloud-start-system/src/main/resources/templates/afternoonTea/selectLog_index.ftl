@@ -26,7 +26,7 @@
                                         <option value="">请选择用户</option>
                                         <#if userList??>
                                             <#list userList as user>
-                                                <option value="${user.id}">${user.realname}</option>
+                                                <option value="${user.id?c}">${user.realname}</option>
                                             </#list>
                                         </#if>
                                     </select>
@@ -54,7 +54,25 @@
 </div>
 </body>
 <script type="text/html" id="imageUrl">
-    <img class="rounded" src="{{ d.teaImage }}" onclick="showHeadImage('{{d.teaName}}','{{d.id}}','{{d.teaImage}}')" style="max-width: 45px">
+    {{# if(d.teaImage){ }}
+        <div class="flex align-center justify-start">
+            <img class="rounded" src="{{ d.teaImage }}" onclick="showHeadImage('{{d.teaName}}','{{d.id}}','{{d.teaImage}}')" style="max-width: 50px">
+            <div class="flex flex-column align-center justify-start pl-1">
+                <div>
+                    <span class="text-danger font-weight-bolder">￥:{{d.teaPrice}}</span>
+                    <span class="font-weight-bold">{{d.teaName}}</span>
+                </div>
+                <span class="text-light-muted">{{d.teaStoreAddress}}</span>
+            </div>
+        </div>
+    {{# } else{ }}
+        <div class="flex align-center justify-start">
+            <img class="rounded" src="${systemConstant.needNotImage!}" onclick="showHeadImage('没有点单','{{d.id}}','${systemConstant.needNotImage!}')" style="max-width: 50px">
+            <div class="flex flex-column align-center justify-start pl-1">
+                <span class="text-light-muted">没有点单</span>
+            </div>
+        </div>
+    {{# }}}
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/afternoonTea/selectLog_index.js?v=1.2"></script>
 </@override>

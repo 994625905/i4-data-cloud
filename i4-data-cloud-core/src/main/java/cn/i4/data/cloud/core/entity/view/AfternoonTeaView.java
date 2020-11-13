@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.entity.view;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableField;
 import cn.i4.data.cloud.base.entity.view.BaseView;
@@ -52,7 +53,7 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 	 * 单价
 	 */
 	@TableField("price")
-	private java.math.BigDecimal price;
+	private BigDecimal price;
 
 	/**
 	 * 商店地址（简称也行）
@@ -82,6 +83,7 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 	private String updateTimeStr;
 	private String realName;
 	private String selectCount;
+	private BigDecimal amount;
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -177,5 +179,13 @@ public class AfternoonTeaView extends BaseView<AfternoonTeaView> {
 
 	public void setSelectCount(String selectCount) {
 		this.selectCount = selectCount;
+	}
+
+	public BigDecimal getAmount() {
+		return amount;
+	}
+
+	public void setAmount(BigDecimal amount) {
+		this.amount = amount;
 	}
 }

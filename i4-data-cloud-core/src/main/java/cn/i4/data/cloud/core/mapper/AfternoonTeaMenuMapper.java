@@ -11,7 +11,7 @@ import cn.i4.data.cloud.core.entity.view.AfternoonTeaMenuView;
 /**
 * Mapper
 * @author wangjc
-* @date 2020-11-10 19:54:04
+* @date 2020-11-11 11:41:50
 */
 public interface AfternoonTeaMenuMapper extends BaseIMapper<AfternoonTeaMenuModel> {
 

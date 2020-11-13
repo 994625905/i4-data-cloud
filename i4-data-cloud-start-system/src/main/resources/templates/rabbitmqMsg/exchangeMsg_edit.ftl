@@ -57,7 +57,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux">消息监听的消息处理方式，，默认手动</div>
         </div>
-        <input value="${model.id}" name="id" type="hidden">
+        <input value="${model.id?c}" name="id" type="hidden">
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>

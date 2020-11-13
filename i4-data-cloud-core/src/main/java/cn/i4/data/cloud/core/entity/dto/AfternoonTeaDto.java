@@ -15,6 +15,8 @@ public class AfternoonTeaDto extends BaseDto<AfternoonTeaView> {
 
     private Integer id;
     private String name;
+    private String image;
+    private String price;
     private AfternoonTeaModel model;
 
     public Integer getId() {
@@ -39,5 +41,21 @@ public class AfternoonTeaDto extends BaseDto<AfternoonTeaView> {
 
     public void setModel(AfternoonTeaModel model) {
         this.model = model;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

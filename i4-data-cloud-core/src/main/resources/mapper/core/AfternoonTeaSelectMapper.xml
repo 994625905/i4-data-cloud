@@ -21,6 +21,8 @@
             u.realname as realName,
             a.name as teaName,
             a.image as teaImage,
+            a.store_address as teaStoreAddress,
+            a.price as teaPrice,
             concat(m.date,'(',m.week,')') as dateWeek,
             k.title as taskTitle
         FROM t_afternoon_tea_select AS t
@@ -38,6 +40,32 @@
         <if test="teaName != null and teaName != ''">
             and a.name like concat('%',#{teaName},'%')
         </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+    <select id="selectDetailTable" parameterType="cn.i4.data.cloud.core.entity.dto.AfternoonTeaSelectDto"
+            resultType="cn.i4.data.cloud.core.entity.view.AfternoonTeaSelectView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as realName,
+            a.name as teaName,
+            a.image as teaImage,
+            a.store_address as teaStoreAddress,
+            a.price as teaPrice,
+            concat(m.date,'(',m.week,')') as dateWeek,
+            k.title as taskTitle
+        FROM t_afternoon_tea_select AS t
+        left join t_user u on t.select_user_id = u.id
+        left join t_afternoon_tea a on a.id = t.tea_id
+        left join t_afternoon_tea_menu m on m.id = t.tea_menu_id
+        left join t_afternoon_tea_task k on k.id = t.tea_task_id
+        where t.tea_task_id = #{taskId}
+        and t.tea_menu_id = #{menuId}
         <if test="field != null and field != ''">
             order by ${field} ${sort}
         </if>

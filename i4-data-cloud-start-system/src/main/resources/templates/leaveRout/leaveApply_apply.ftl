@@ -18,7 +18,7 @@
                             <select class="layui-input" name="processDefId" lay-verify="required" lay-filter="processDefId">
                                 <#if processList??>
                                     <#list processList  as process>
-                                        <option value="${process.procdefId},${process.deploymentId}">${process.procdefName}</option>
+                                        <option value="${process.procdefId?c},${process.deploymentId?c}">${process.procdefName}</option>
                                     </#list>
                                 </#if>
                             </select>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input value="${model.id}" name="leaveId" type="hidden">
+                            <input value="${model.id?c}" name="leaveId" type="hidden">
                             <button class="layui-btn" lay-submit lay-filter="apply">发送申请</button>
                             <button type="button" class="layui-btn layui-btn-danger" onclick="parent.layer.closeAll()">关闭</button>
                         </div>

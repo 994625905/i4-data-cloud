@@ -22,4 +22,10 @@ public interface AfternoonTeaSelectMapper extends BaseIMapper<AfternoonTeaSelect
     */
     IPage<AfternoonTeaSelectView> selectPage(AfternoonTeaSelectDto dto);
 
+    /**
+     * 加载详情页的表格
+     * @param dto
+     * @return
+     */
+    IPage<AfternoonTeaSelectView> selectDetailTable(AfternoonTeaSelectDto dto);
 }

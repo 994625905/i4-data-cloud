@@ -22,4 +22,10 @@ public interface AfternoonTeaTaskMapper extends BaseIMapper<AfternoonTeaTaskMode
     */
     IPage<AfternoonTeaTaskView> selectPage(AfternoonTeaTaskDto dto);
 
+    /**
+     * 查询任务待发布
+     * @param dto
+     * @return
+     */
+    IPage<AfternoonTeaTaskView> selectTaskDeploy(AfternoonTeaTaskDto dto);
 }

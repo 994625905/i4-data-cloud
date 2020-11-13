@@ -52,7 +52,7 @@
                 <select class="layui-input" name="exchangeId" >
                     <option value="">请选择交换机绑定</option>
                     <#list exchangeList as exchange>
-                        <option value="${exchange.id}">${exchange.name}</option>
+                        <option value="${exchange.id?c}">${exchange.name}</option>
                     </#list>
                 </select>
             </div>

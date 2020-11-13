@@ -26,7 +26,7 @@
                                         <option value="">选择部门查询</option>
                                         <#if departmentList??>
                                             <#list departmentList as department>
-                                                <option value="${department.id}">${department.name}</option>
+                                                <option value="${department.id?c}">${department.name}</option>
                                             </#list>
                                         </#if>
                                     </select>

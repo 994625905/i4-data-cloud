@@ -6,7 +6,7 @@
 
     <div class="layui-card">
         <div class="layui-card-header">
-            --- 负责人在点单区发布每周的下午茶单子，所有用户的下午茶专区将会对应显示相关的信息。---
+            --- 可以在此点单，也可以在首页的下午茶专区点（超过设置的截止日期，任务将会失效，还请及时处理）---
         </div>
         <div class="layui-card-body">
             <div class="layui-row layui-col-space10">
@@ -19,20 +19,14 @@
 
 </div>
 </body>
-<script type="text/html" id="toolbar">
-    <label class="layui-btn layui-btn-sm" lay-event="add">新增点单</label>
-</script>
 <script type="text/html" id="operate">
-    {{# if(d.status ==0 ){ }}
-        <label class="layui-btn layui-btn-sm layui-btn-normal" lay-event="deploy">未发布</label>
-        <label class="layui-btn layui-btn-sm" lay-event="edit">编辑</label>
-        <label class="layui-btn layui-btn-sm layui-btn-danger" lay-event="delete">删除</label>
-    {{# else if(d.status ==1){ }}
-        <label class="layui-btn layui-btn-sm layui-btn-primary">已发布</label>
-        <label class="layui-btn layui-btn-sm" lay-event="detail">详情</label>
-    {{# else{ }}
+    {{# if(d.status ==1 ){ }}
+        <label class="layui-btn layui-btn-sm" lay-event="order">进入选项</label>
+    {{# } else{ }}
         <label class="layui-btn layui-btn-sm layui-btn-disabled">已过期</label>
-        <label class="layui-btn layui-btn-sm" lay-event="detail">详情</label>
+        <@permission value="afternoonTea:task/detailPage">
+            <label class="layui-btn layui-btn-sm layui-btn-normal" lay-event="detail">点单详情</label>
+        </@permission>
     {{# }}}
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/afternoonTea/task_index.js?v=1.2"></script>

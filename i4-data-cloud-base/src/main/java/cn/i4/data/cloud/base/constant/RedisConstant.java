@@ -34,6 +34,7 @@ public class RedisConstant {
         String EMAIL_CODE = "i4-data-cloud-auth-code";//邮箱验证码（uuid）
         String SELECT_IMAGE_TEMP = "i4-data-cloud-select-image-temp";//选择图片的临时存储（authorization）
         String SELECT_RICH_TEXT = "i4-data-cloud-select-rich-text-temp";//选择图文的临时存储（authorization）
+        String SELECT_AFTERNOON_TEA = "i4-data-cloud-select-afternoon-tea-temp";//选择下午茶的临时存储（authorization）
         String INVITE_CODE = "i4-data-cloud-invite-code";//注册邀请码（OK）
     }
 
@@ -51,6 +52,7 @@ public class RedisConstant {
         Long EMAIL_CODE = 60L;//邮箱验证码（uuid），1分钟
         Long SELECT_IMAGE_TEMP = 60L;//选择图片的临时存储（authorization），1分钟
         Long SELECT_RICH_TEXT = 60L;//选择图文的临时存储（authorization），1分钟
+        Long SELECT_AFTERNOON_TEA = 60L;//选择下午茶的临时存储（authorization），1分钟
     }
 
 }

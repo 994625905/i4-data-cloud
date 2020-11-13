@@ -37,13 +37,13 @@ public @interface RequestLimit {
      * 时间范围，单位秒
      * @return
      */
-    int period() default 2;
+    int period() default 10;
 
     /**
-     * 限制访问次数，（默认2秒钟之内只能访问1次，具体到IP/用户/接口）
+     * 限制访问次数，（默认1秒钟之内只能访问1次，具体到IP/用户/接口）
      * @return
      */
-    int count() default 1;
+    int count() default 10;
 
     /**
      * 限流类型，默认为用户身份限流

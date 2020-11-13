@@ -8,7 +8,7 @@
             <label class="layui-form-label">所属按钮：</label>
             <div class="layui-input-block">
                 <input readonly value="${menu.name!}" class="layui-input">
-                <input type="hidden" value="${menu.id!}" name="parentId" class="layui-input">
+                <input type="hidden" value="${menu.id?c}" name="parentId" class="layui-input">
             </div>
         </div>
 

@@ -18,7 +18,7 @@
                             <select class="layui-input" name="typeId" >
                                 <#if typeList??>
                                     <#list typeList  as type>
-                                        <option value="${type.id}">${type.name}</option>
+                                        <option value="${type.id?c}">${type.name}</option>
                                     </#list>
                                 </#if>
                             </select>

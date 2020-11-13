@@ -106,7 +106,7 @@
                         </div>
                         <div class="layui-form-mid layui-word-aux">摈弃自动下载zip压缩包，采用在指定路径生成的方式存放</div>
                     </div>
-                    <input type="hidden" name="id" value="${dataSource.id}">
+                    <input type="hidden" name="id" value="${dataSource.id?c}">
                     <div class="layui-form-item" style="display: <#if user.id != dataSource.userId>none</#if>">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit lay-filter="save">立即提交</button>
@@ -121,7 +121,7 @@
 </div>
 </body>
 <script>
-    let limit = ${user.id} != ${dataSource.userId}
+    let limit = ${user.id?c} != ${dataSource.userId?c}
     let authUser = "${dataSource.authUser}"
     let authPassword = "${dataSource.authPassword}"
 </script>

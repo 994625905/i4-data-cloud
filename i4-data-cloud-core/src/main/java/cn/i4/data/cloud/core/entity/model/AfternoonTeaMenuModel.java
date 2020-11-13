@@ -11,23 +11,30 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
 * Model
 * @author wangjc
-* @date 2020-11-10 19:54:04
+* @date 2020-11-11 11:41:50
 */
 @TableName("t_afternoon_tea_menu")
 public class AfternoonTeaMenuModel extends BaseModel<AfternoonTeaMenuModel> {
 
-    private static final long serialVersionUID = 1605009244109L;
+    private static final long serialVersionUID = 1605066110225L;
     /**
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
+
+    /**
+    * 下午茶任务id
+    */
+    @TableField("tea_task_id")
+    private Integer teaTaskId;
 
     /**
     * 下午茶id的列表字符串，逗号隔开
     */
-    @TableField("afternoon_tea_ids")
-    private String afternoonTeaIds;
+    @TableField("tea_ids")
+    private String teaIds;
 
     /**
     * 日期
@@ -66,7 +73,7 @@ public class AfternoonTeaMenuModel extends BaseModel<AfternoonTeaMenuModel> {
     private Integer createUserId;
 
     /**
-    * 0未发布，1已发布，2已过期
+    * 0未发布，1已发布，2已过期（过期根据end_time判断）
     */
     @TableField("status")
     private Integer status;
@@ -80,12 +87,20 @@ public class AfternoonTeaMenuModel extends BaseModel<AfternoonTeaMenuModel> {
     return this.id;
     }
 
-    public void setAfternoonTeaIds(String afternoonTeaIds) {
-    this.afternoonTeaIds = afternoonTeaIds;
+    public void setTeaTaskId(Integer teaTaskId) {
+    this.teaTaskId = teaTaskId;
     }
 
-    public String getAfternoonTeaIds() {
-    return this.afternoonTeaIds;
+    public Integer getTeaTaskId() {
+    return this.teaTaskId;
+    }
+
+    public void setTeaIds(String teaIds) {
+    this.teaIds = teaIds;
+    }
+
+    public String getTeaIds() {
+    return this.teaIds;
     }
 
     public void setDate(String date) {

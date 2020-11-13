@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" value="${model.id!}" name="id">
+                    <input type="hidden" value="${model.id?c}" name="id">
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit lay-filter="save">立即保存</button>

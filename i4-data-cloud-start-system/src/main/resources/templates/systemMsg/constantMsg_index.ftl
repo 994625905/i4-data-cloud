@@ -247,6 +247,23 @@
 
                         <div class="layui-form-item">
                             <div class="layui-inline">
+                                <label class="layui-form-label">表示不用，谢绝，拒绝……</label>
+                                <div class="layui-input-inline" style="width: 400px">
+                                    <img src="${systemConstant.needNotImage!}" title="${systemConstant.needNotImage_name!}" id="needNotImage" style="max-width: 100px">
+                                    <input name="needNotImage_id" value="${systemConstant.needNotImage_id!}" type="hidden">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm needNotImage">提交</button>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" class="layui-btn layui-btn-sm constantKey" onclick="findConstantKey('needNotImage')">查看key</button>
+                            </div>
+                        </div>
+                        <hr class="layui-bg-gray">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
                                 <label class="layui-form-label">百度地图appKey</label>
                                 <div class="layui-input-inline" style="width: 400px">
                                     <input name="baiduMapApi" value="${systemConstant.baiduMapApi!}" title="${systemConstant.baiduMapApi_name!}" autocomplete="off" class="layui-input">
