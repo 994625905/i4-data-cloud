@@ -20,6 +20,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.data.redis.core.script.RedisScript;
@@ -44,6 +45,7 @@ import java.util.Map;
  */
 @Aspect
 @Component
+@Order(2)
 public class RequestLimitAspect extends BaseAspectSupport{
 
     private static final Logger logger = LoggerFactory.getLogger(RequestLimitAspect.class);

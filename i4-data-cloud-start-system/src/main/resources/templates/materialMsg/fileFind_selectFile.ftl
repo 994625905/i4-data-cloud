@@ -25,7 +25,8 @@
     {{each list as file}}
         <div class="layui-col-xs2 p-1" style="overflow: hidden;" >
             <div class="flex flex-column align-center justify-center p-1 imageDiv border border-light-secondary rounded" style="height: 140px">
-                <img src="{{file.cover}}" data="{{file.url}}" style="max-height: 100px;" title="{{file.description}}">
+                <img src="{{file.cover}}" style="max-height: 100px;" title="{{file.description}}" data-url="{{file.url}}" data-name="{{file.name}}" data-suffix="{{file.suffix}}" data-type="{{file.type}}"
+                     data-size="{{file.size}}">
                 <span flex flex-column align-center justify-center style="margin-top:3px">{{file.name}}</span>
             </div>
         </div>

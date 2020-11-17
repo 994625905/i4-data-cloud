@@ -15,7 +15,8 @@
     {{each list as img}}
         <div class="layui-col-xs2 p-1" style="overflow: hidden;" >
             <div class="flex flex-column align-center justify-center p-1 imageDiv border border-light-secondary rounded" style="height: 140px">
-                <img src="{{img.url}}" style="max-height: 100px;" title="{{img.description}}">
+                <img src="{{img.url}}" style="max-height: 100px;" title="{{img.description}}" data-name="{{img.name}}" data-suffix="{{img.suffix}}"
+                        data-type="{{img.type}}" data-size="{{img.size}}" data-width="{{img.width}}" data-height="{{img.height}}">
                 <span flex flex-column align-center justify-center style="margin-top:3px">{{img.name}}</span>
             </div>
         </div>

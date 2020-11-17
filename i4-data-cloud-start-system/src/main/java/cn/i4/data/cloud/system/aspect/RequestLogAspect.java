@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -36,6 +37,7 @@ import java.util.Map;
  */
 @Aspect
 @Component
+@Order(1)
 public class RequestLogAspect extends BaseAspectSupport{
 
     private static final Logger logger = LoggerFactory.getLogger(RequestLogAspect.class);

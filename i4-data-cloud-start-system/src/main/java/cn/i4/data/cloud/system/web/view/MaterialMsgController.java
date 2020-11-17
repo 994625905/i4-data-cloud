@@ -60,6 +60,20 @@ public class MaterialMsgController extends WebBaseController {
     }
 
     /**
+     * 批量上传的页面
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/fileFind/batchUploadPage")
+    @RequestPermission(value = "materialMsg:fileFind/batchUploadPage")
+    public ModelAndView fileFindBatchUploadPage(FileDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/fileFind_uploadBatch", request);
+        view.addObject("param",dto);
+        return view;
+    }
+
+    /**
      * 加载图片选择页面
      * @param request
      * @return
@@ -68,6 +82,19 @@ public class MaterialMsgController extends WebBaseController {
     @RequestPermission(value = "materialMsg:imageSelect/index")
     public ModelAndView imageSelectIndex(FileDto dto, HttpServletRequest request){
         ModelAndView view = getModelAndView("/materialMsg/fileFind_selectImage", request);
+        view.addObject("param",dto);
+        return view;
+    }
+
+    /**
+     * 加载批量图片选择页面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/imageSelect/list")
+    @RequestPermission(value = "materialMsg:imageSelect/list")
+    public ModelAndView imageSelectList(FileDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/materialMsg/fileFind_selectImageList", request);
         view.addObject("param",dto);
         return view;
     }

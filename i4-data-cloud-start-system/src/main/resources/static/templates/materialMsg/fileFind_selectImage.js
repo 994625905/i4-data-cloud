@@ -23,7 +23,15 @@ layui.use(["layer","laypage"],()=>{
 
         /** 点击选中，临时存储 */
         $(".imageDiv").click(function(){
-            Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).find("img").attr("src")}).then(res=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{
+                url:$(this).find("img").attr("src"),
+                name:$(this).find("img").attr("data-name"),
+                suffix:$(this).find("img").attr("data-suffix"),
+                type:$(this).find("img").attr("data-type"),
+                size:$(this).find("img").attr("data-size"),
+                width:$(this).find("img").attr("data-width"),
+                height:$(this).find("img").attr("data-height")
+            }).then(res=>{
                 parent.layer.closeAll()
             })
         })
@@ -47,7 +55,15 @@ layui.use(["layer","laypage"],()=>{
 
                 /** 点击选中 */
                 $(".imageDiv").find("img").click(function(){
-                    Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{fileUrl:$(this).attr("src")}).then(res=>{
+                    Request.async(BasePath+"/materialMsg/imageSelect/setImageSelectTemp",{
+                        url:$(this).attr("src"),
+                        name:$(this).attr("data-name"),
+                        suffix:$(this).attr("data-suffix"),
+                        type:$(this).attr("data-type"),
+                        size:$(this).attr("data-size"),
+                        width:$(this).attr("data-width"),
+                        height:$(this).attr("data-height")
+                    }).then(res=>{
                         parent.layer.closeAll()
                     })
                 })

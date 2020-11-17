@@ -82,9 +82,4 @@ public class SelectLogController extends WebBaseController {
         return ActionResult.ok(res);
     }
 
-//    （照片，视频，文档）表
-//
-//    活动下是否还需细分（不同的活动内容：）
-//
-//    （点赞评论）
 }

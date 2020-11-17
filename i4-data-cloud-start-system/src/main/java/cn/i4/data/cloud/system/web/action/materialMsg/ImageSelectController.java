@@ -15,12 +15,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 图片选择的控制层
@@ -79,9 +77,9 @@ public class ImageSelectController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "设置临时存储的url",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--设置临时存储的url",key = KEY_PREFIX+"/setImageSelectTemp")
     @RequestPermission(value = "materialMsg:imageSelect/setImageSelectTemp")
-    public ActionResult<Boolean> setImageSelectTemp(String fileUrl, HttpServletRequest request){
+    public ActionResult<Boolean> setImageSelectTemp(FileView file, HttpServletRequest request){
         String authorization = CookieUtil.getCookieValue(request, "authorization");
-        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization, fileUrl, RedisConstant.TIMEOUT.SELECT_IMAGE_TEMP);
+        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization, file, RedisConstant.TIMEOUT.SELECT_IMAGE_TEMP);
         return ActionResult.ok(res);
     }
 
@@ -93,12 +91,45 @@ public class ImageSelectController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "获取临时存储的url，并删除缓存",type = RequestType.SELECT)
     @RequestLimit(name = MODULE_NAME+"--获取临时存储的url，并删除缓存",key = KEY_PREFIX+"/getImageSelectTemp")
     @RequestPermission(value = "materialMsg:imageSelect/getImageSelectTemp")
-    public ActionResult<String> getImageSelectTemp(HttpServletRequest request){
+    public ActionResult<FileView> getImageSelectTemp(HttpServletRequest request){
 
         String authorization = CookieUtil.getCookieValue(request, "authorization");
-        String fileUrl = (String) redisService.hget(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization);
+        FileView file = (FileView) redisService.hget(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization);
         redisService.hashDeleteHashKey(RedisConstant.HASH_KEY.SELECT_IMAGE_TEMP, authorization);
-        return ActionResult.ok(fileUrl);
+        return ActionResult.ok(file);
     }
+
+    /**
+     * 设置临时存储的list
+     * @param dto
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/setListSelectTemp")
+    @RequestLog(module = MODULE_NAME,content = "设置临时存储的list",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--设置临时存储的list",key = KEY_PREFIX+"/setListSelectTemp")
+    @RequestPermission(value = "materialMsg:imageSelect/setListSelectTemp")
+    public ActionResult<Boolean> setListSelectTemp(@RequestBody FileDto dto, HttpServletRequest request){
+        String authorization = CookieUtil.getCookieValue(request, "authorization");
+        boolean res = redisService.hset(RedisConstant.HASH_KEY.SELECT_LIST_IMAGE_TEMP, authorization, dto.getFileList(), RedisConstant.TIMEOUT.SELECT_LIST_IMAGE_TEMP);
+        return ActionResult.ok(res);
+    }
+
+    /**
+     * 获取临时存储的list，并删除缓存
+     * @return
+     */
+    @PostMapping(value = "/getListSelectTemp")
+    @RequestLog(module = MODULE_NAME,content = "获取临时存储的list，并删除缓存",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--获取临时存储的list，并删除缓存",key = KEY_PREFIX+"/getListSelectTemp")
+    @RequestPermission(value = "materialMsg:imageSelect/getListSelectTemp")
+    public ActionResult<List<FileView>> getListSelectTemp(HttpServletRequest request){
+
+        String authorization = CookieUtil.getCookieValue(request, "authorization");
+        List<FileView> list = (List<FileView>) redisService.hget(RedisConstant.HASH_KEY.SELECT_LIST_IMAGE_TEMP, authorization);
+        redisService.hashDeleteHashKey(RedisConstant.HASH_KEY.SELECT_LIST_IMAGE_TEMP, authorization);
+        return ActionResult.ok(list);
+    }
+
 
 }

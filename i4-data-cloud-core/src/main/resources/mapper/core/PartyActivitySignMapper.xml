@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.PartyActivitySignMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.activity_id as activityId, 
+        t.sign_user_id as signUserId, 
+        t.sign_time as signTime, 
+        t.sign_user_count as signUserCount, 
+        t.sign_describe_info as signDescribeInfo, 
+        t.sign_traffic as signTraffic
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.PartyActivitySignDto"
+            resultType="cn.i4.data.cloud.core.entity.view.PartyActivitySignView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_party_activity_sign AS t
+
+    </select>
+
+</mapper>

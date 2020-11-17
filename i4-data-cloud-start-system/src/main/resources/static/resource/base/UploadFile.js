@@ -3,6 +3,7 @@ var UploadFile = {
 
     uploadUrl:BasePath+"/materialMsg/fileFind/upload",
     pageUrl:BasePath+"/materialMsg/fileFind/uploadPage",
+    batchPageUrl:BasePath+"/materialMsg/fileFind/batchUploadPage",
 
     /**
      * 根据类型获取文本
@@ -52,6 +53,19 @@ var UploadFile = {
     },
 
     /**
+     * 批量上传的页面（取消尺寸限制，默认为图片上传）
+     * @param type
+     * @param size
+     */
+    batchPage:function(size,type = 1){
+        var url = this.batchPageUrl+"?type="+type;
+        if(size){
+            url += "&fileSize="+size;
+        }
+        Feng.loadWindow("批量"+this.getTypeText(type)+"上传",url)
+    },
+
+    /**
      * 图片选择页面
      * @param title
      * @param imageElem
@@ -81,7 +95,7 @@ var UploadFile = {
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     if(imageElem){
-                        $(imageElem).attr("src",res)
+                        $(imageElem).attr("src",res.url)
                     }
                     /** 给个回调函数吧，为了拓展 */
                     if(callback){
@@ -91,6 +105,30 @@ var UploadFile = {
             })
         })
     },
+
+    /**
+     * 批量选择页面
+     * @param title
+     * @param size
+     * @param callback
+     */
+    listSelect:function(title,size,callback){
+        var p = "?type=1"
+        if(size){
+            p += "&fileSize="+size;
+            title += "限制大小："+size+"KB"
+        }
+        Feng.loadWindow(title,BasePath+"/materialMsg/imageSelect/list"+p,null,null,null,()=>{
+            Request.async(BasePath+"/materialMsg/imageSelect/getListSelectTemp").then(res=>{
+                if(!BaseUtil.isEmpty(res)){
+                    if(callback){
+                        callback(res)
+                    }
+                }
+            })
+        })
+    },
+
 
     /**
      * 文件选择
@@ -110,7 +148,7 @@ var UploadFile = {
             Request.async(BasePath+"/materialMsg/imageSelect/getImageSelectTemp").then(res=>{
                 if(!BaseUtil.isEmpty(res)){
                     if(fileElem){
-                        $(fileElem).text(res)
+                        $(fileElem).text(res.url)
                     }
                     /** 给个回调函数吧，为了拓展 */
                     if(callback){
@@ -140,7 +178,7 @@ var UploadFile = {
             exts:"jpg|png|gif|bmp|jpeg",
             done:function(res, index, upload){
                 if(res.code == 200){
-                    /** 即便尺寸比例校验失败，还是传到后台上传了，应该是layui的bug，后期考虑此种情况补偿删除fastDFS */
+                    /** 即便尺寸比例校验失败，还是传到后台上传了，应该是layui的bug */
                     if(limitFlag){
                         if(callback){
                             callback({
@@ -149,6 +187,9 @@ var UploadFile = {
                                 height:imageHeight
                             })
                         }
+                    }else{
+                        /** 补偿删除 */
+                        Request.async(BasePath+"/materialMsg/fileFind/onlyDelete",{fileUrl:res.result.fileUrl})
                     }
                 }else{
                     Feng.error(res.message || "上传接口异常");

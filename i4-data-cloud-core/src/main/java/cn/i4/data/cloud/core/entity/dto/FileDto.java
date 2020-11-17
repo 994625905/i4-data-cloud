@@ -4,6 +4,8 @@ import cn.i4.data.cloud.base.entity.dto.BaseDto;
 import cn.i4.data.cloud.core.entity.model.FileModel;
 import cn.i4.data.cloud.core.entity.view.FileView;
 
+import java.util.List;
+
 /**
 * Dto
 * @author wangjc
@@ -45,6 +47,11 @@ public class FileDto extends BaseDto<FileView> {
     private Integer status;
 
     private FileModel model;
+
+    /**
+     * 文件列表
+     */
+    private List<FileView> fileList;
 
     public Integer getId() {
         return id;
@@ -116,5 +123,13 @@ public class FileDto extends BaseDto<FileView> {
 
     public void setModel(FileModel model) {
         this.model = model;
+    }
+
+    public List<FileView> getFileList() {
+        return fileList;
+    }
+
+    public void setFileList(List<FileView> fileList) {
+        this.fileList = fileList;
     }
 }

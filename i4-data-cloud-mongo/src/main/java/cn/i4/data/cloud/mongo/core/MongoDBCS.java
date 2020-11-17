@@ -15,12 +15,12 @@ public class MongoDBCS {
      */
     public interface DBS{
 
-        /** 数据云系统 */
+        /** 数据中心系统 */
         String SYSTEM = "i4_data_cloud_system";
     }
 
     /**
-     * 数据云系统库下面的集合（表名）
+     * 数据中心系统库下面的集合（表名）
      */
     public interface CS_SYSTEM{
 
@@ -34,6 +34,9 @@ public class MongoDBCS {
 
         /** 周报的集合 */
         String WEEK_REPORT = "week_report";
+
+        /** 活动的集合 */
+        String PARTY_ACTIVITY = "party_activity";
 
     }
 

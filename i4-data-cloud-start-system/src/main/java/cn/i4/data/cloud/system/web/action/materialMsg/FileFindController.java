@@ -26,6 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -100,6 +101,19 @@ public class FileFindController extends WebBaseController {
 
         ActionResult<Map<String, Object>> result = fileMicroservice.upload(file);
         return result;
+    }
+
+    /**
+     * 尺寸不匹配的补偿删除，补偿layui上传的bug，无需要权限校验
+     * @param fileUrl
+     * @return
+     */
+    @PostMapping(value = "/onlyDelete")
+    @RequestLog(module = MODULE_NAME,content = "尺寸不匹配的补偿删除",type = RequestType.DELETE)
+    @RequestLimit(name = MODULE_NAME+"--尺寸不匹配的补偿删除",key = KEY_PREFIX+"/onlyDelete")
+    public ActionResult<Boolean> onlyDelete(String fileUrl){
+        ActionResult<Boolean> delete = fileMicroservice.delete(fileUrl);
+        return delete;
     }
 
     /**
