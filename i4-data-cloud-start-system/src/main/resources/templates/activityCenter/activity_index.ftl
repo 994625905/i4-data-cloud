@@ -82,6 +82,58 @@
         <label class="layui-btn layui-btn-sm layui-btn-disabled">无需报名</label>
     {{# }}}
 </script>
+<script type="text/html" id="signContent">
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">携带成员</label>
+                <div class="layui-input-inline">
+                    <input readonly class="layui-input" value="{{ if limitSign == 0 }}允许{{else}}禁止{{/if}}">
+                </div>
+                <div class="layui-form-mid layui-word-aux"> 允许携带家属（签到数可>1）， 禁止携带家属（签到数必<=1） </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">交通方式</label>
+                <div class="layui-input-inline">
+                    <input readonly class="layui-input" value="{{ if trafficType == 0 }}自行前往{{else}}集体乘车（允许自驾）{{/if}}">
+                </div>
+                <div class="layui-form-mid layui-word-aux"> 活动设定的交通方式</div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">签到人数</label>
+                <div class="layui-input-inline">
+                    <input type="number" id="signUserCount" value="0" class="layui-input" placeholder="签到人数">
+                </div>
+                <div class="layui-form-mid layui-word-aux"> 有事不参与的话，签到人数填0 </div>
+            </div>
+        </div>
+        {{ if trafficType == 1}}
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">参与方式</label>
+                    <div class="layui-input-inline">
+                        <select id="signTraffic" class="layui-input">
+                            <option value="">请选择</option>
+                            <option value="0">跟团</option>
+                            <option value="1">自驾</option>
+                        </select>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">不参与的此次可不选</div>
+                </div>
+            </div>
+        {{/if}}
+        <div class="layui-form-item">
+            <label class="layui-form-label">描述信息</label>
+            <div class="layui-input-block">
+                <textarea class="layui-textarea" id="signDescribeInfo" placeholder="如果携带家属的话，注明携带成员身份，如果不去的话，说明原因。单人参与，该项非必填项"></textarea>
+            </div>
+        </div>
+    </form>
+</script>
 <script type="text/javascript" src="${StaticServer}/templates/activityCenter/activity_index.js?v=1.2"></script>
 </@override>
 <@extends name="/base.ftl"/>

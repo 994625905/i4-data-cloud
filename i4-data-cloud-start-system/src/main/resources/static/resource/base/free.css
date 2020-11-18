@@ -464,3 +464,7 @@
 .shadow-none { box-shadow: none !important;}
 /* #endif */
 
+/** 鼠标 */
+.cursor-pointer{
+    cursor: pointer
+}

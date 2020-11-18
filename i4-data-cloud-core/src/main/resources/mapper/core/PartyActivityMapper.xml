@@ -68,7 +68,7 @@
         FROM t_party_activity AS t
         left join t_user u on u.id = t.head_user_id
         left join t_party_activity_type p on t.type_id = p.id
-        left join t_party_activity_sign s = on t.id = s.activity_id and s.sign_user_id = #{userId}
+        left join t_party_activity_sign s on t.id = s.activity_id and s.sign_user_id = #{userId}
         where t.status = 1
         <if test="typeId != null">
             and t.type_id = #{typeId}
@@ -82,6 +82,30 @@
         <if test="field == null or field == ''">
             ORDER BY t.start_time DESC
         </if>
+    </select>
+
+    <select id="selectActivityById" resultType="cn.i4.data.cloud.core.entity.view.PartyActivityView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as headUserName,
+            p.name as typeName
+        FROM t_party_activity AS t
+        left join t_user u on u.id = t.head_user_id
+        left join t_party_activity_type p on t.type_id = p.id
+        where t.id = #{id}
+    </select>
+
+    <!--加载照片组-->
+    <select id="selectImageGroup" resultType="cn.i4.data.cloud.core.entity.view.PartyActivityView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            b.url as imageCover,
+            ifnull((select count(a.id) from t_party_activity_image a where a.activity_id = t.id),0) as imageCount
+        FROM t_party_activity AS t
+        left join (select max(a.count),a.url,a.activity_id from (select b.url,b.activity_id,count(a.id) AS count from t_party_activity_image b
+                    left join t_party_activity_image_like a ON b.id = a.image_id group by a.image_id order by count desc,a.create_time desc) a group by a.activity_id) b on b.activity_id = t.id
+        where t.status = 1
+        ORDER BY t.start_time DESC
     </select>
 
 </mapper>

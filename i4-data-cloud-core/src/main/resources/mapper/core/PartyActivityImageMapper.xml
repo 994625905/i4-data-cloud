@@ -14,15 +14,19 @@
         t.width as width, 
         t.height as height, 
         t.create_user_id as createUserId, 
-        t.create_time as createTime
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.PartyActivityImageDto"
             resultType="cn.i4.data.cloud.core.entity.view.PartyActivityImageView">
         SELECT
-        <include refid="Base_Column_List" />
+            <include refid="Base_Column_List" />,
+            u.realname as createUserName
         FROM t_party_activity_image AS t
-
+        left join t_user u on t.create_user_id = u.id
+        where t.activity_id = #{activityId}
+        order by t.create_time desc
     </select>
 
 </mapper>

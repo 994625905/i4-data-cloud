@@ -35,6 +35,12 @@ public class UserModel extends BaseModel<UserModel> {
     private String realname;
 
     /**
+     * 工号
+     */
+    @TableField("job_number")
+    private String jobNumber;
+
+    /**
     * 
     */
     @TableField("phone")
@@ -99,6 +105,14 @@ public class UserModel extends BaseModel<UserModel> {
 
     public String getRealname() {
     return this.realname;
+    }
+
+    public String getJobNumber() {
+        return jobNumber;
+    }
+
+    public void setJobNumber(String jobNumber) {
+        this.jobNumber = jobNumber;
     }
 
     public void setPhone(String phone) {

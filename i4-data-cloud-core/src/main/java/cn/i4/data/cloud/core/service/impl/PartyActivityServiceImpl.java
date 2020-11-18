@@ -129,4 +129,14 @@ public class PartyActivityServiceImpl extends BaseServiceImpl<PartyActivityMappe
 		return true;
 	}
 
+	@Override
+	public PartyActivityView selectById(Integer id) {
+		return mapper.selectActivityById(id);
+	}
+
+	@Override
+	public List<PartyActivityView> selectImageGroup() {
+		return mapper.selectImageGroup();
+	}
+
 }

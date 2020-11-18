@@ -33,8 +33,6 @@ public class LeaveRoutController extends WebBaseController {
     private ILeaveProcessNodeService iLeaveProcessNodeService;
     @Autowired
     private IVActReDeployProcdefService ivActReDeployProcdefService;
-    @Autowired
-    private IUserService iUserService;
 
     /**
      * 加载请假类型的首页

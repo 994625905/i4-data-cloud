@@ -82,7 +82,7 @@ public class PartyActivityModel extends BaseModel<PartyActivityModel> {
      * 开始报名时间
      */
     @TableField("sign_start_time")
-    private String signStartTime;
+    private Long signStartTime;
 
     /**
     * 截止报名时间
@@ -206,11 +206,11 @@ public class PartyActivityModel extends BaseModel<PartyActivityModel> {
         this.isSign = isSign;
     }
 
-    public String getSignStartTime() {
+    public Long getSignStartTime() {
         return signStartTime;
     }
 
-    public void setSignStartTime(String signStartTime) {
+    public void setSignStartTime(Long signStartTime) {
         this.signStartTime = signStartTime;
     }
 

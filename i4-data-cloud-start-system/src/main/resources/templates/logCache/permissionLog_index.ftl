@@ -24,7 +24,7 @@
                                             <option value="">请选择用户</option>
                                             <#if userList??>
                                                 <#list userList as user>
-                                                    <option value="${user.id?c}">${user.loginName}</option>
+                                                    <option value="${user.id?c}">${user.loginname}</option>
                                                 </#list>
                                             </#if>
                                         </select>

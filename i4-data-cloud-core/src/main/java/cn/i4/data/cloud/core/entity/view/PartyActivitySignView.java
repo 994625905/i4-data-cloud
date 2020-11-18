@@ -71,6 +71,8 @@ public class PartyActivitySignView extends BaseView<PartyActivitySignView> {
 	@TableField("sign_traffic")
 	private Integer signTraffic;
 
+	private String signTimeStr;
+	private String signRealName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -128,4 +130,19 @@ public class PartyActivitySignView extends BaseView<PartyActivitySignView> {
 		return this.signTraffic;
 	}
 
+	public String getSignTimeStr() {
+		return signTimeStr;
+	}
+
+	public void setSignTimeStr(String signTimeStr) {
+		this.signTimeStr = signTimeStr;
+	}
+
+	public String getSignRealName() {
+		return signRealName;
+	}
+
+	public void setSignRealName(String signRealName) {
+		this.signRealName = signRealName;
+	}
 }

@@ -17,6 +17,7 @@
         <module name="i4-data-cloud-cache" />
         <module name="i4-data-cloud-start-consumer" />
         <module name="i4-data-cloud-core" />
+        <module name="i4-data-cloud-start-schedule" />
         <module name="i4-data-cloud-start-file" />
         <module name="i4-data-cloud-start-aspect" />
         <module name="i4-data-cloud-mongo" />
@@ -44,6 +45,7 @@
       <module name="i4-data-cloud-start-eureka" options="-parameters" />
       <module name="i4-data-cloud-start-file" options="-parameters" />
       <module name="i4-data-cloud-start-gateway" options="-parameters" />
+      <module name="i4-data-cloud-start-schedule" options="-parameters" />
       <module name="i4-data-cloud-start-system" options="-parameters" />
     </option>
   </component>

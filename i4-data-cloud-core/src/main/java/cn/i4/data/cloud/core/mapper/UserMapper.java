@@ -7,6 +7,8 @@ import cn.i4.data.cloud.core.entity.view.UserView;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
 * Mapper
 * @author wangjc
@@ -35,4 +37,11 @@ public interface UserMapper extends BaseIMapper<UserModel> {
      * @return
      */
     UserView selectUserViewById(@Param("userId") Integer userId);
+
+    /**
+     * 加载活动未签到列表
+     * @param activityId
+     * @return
+     */
+    List<UserView> selectActivityNoSignList(@Param("activityId") Integer activityId);
 }

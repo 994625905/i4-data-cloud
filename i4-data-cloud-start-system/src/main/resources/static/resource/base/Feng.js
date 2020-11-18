@@ -75,7 +75,7 @@ var Feng = {
     },
     confirm:function(title,ensure){//确认框，ensure：回调函数
         layer.confirm(title, {
-            skin: 'layui-layer-molv', //加上边框
+            skin: 'defined-open-iframe', //加上边框
             anim:1,//动画
             btn: ['确定', '取消']
         }, function (index) {
@@ -97,7 +97,7 @@ var Feng = {
         layer.open({
             title: title,
             type: 2,//2：表示url,1:表示html
-            skin: 'layui-layer-molv', //加上边框
+            skin: 'defined-open-iframe', //加上边框
             anim:2,//动画
             area: [diswidth,disheight], //宽高
             content:url,
@@ -165,7 +165,7 @@ var Feng = {
         layer.open({
             title: title,
             type: disType,//1，标准版，5:可越界
-            skin: 'layui-layer-molv', //加上边框
+            skin: 'defined-open-iframe', //加上边框
             anim:4,//动画
             area: [diswidth, disheight], //宽高
             content: '<div style="padding: 20px;">' + display + '</div>',

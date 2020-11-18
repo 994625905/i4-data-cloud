@@ -2,6 +2,8 @@ package cn.i4.data.cloud.core.service.impl;
 
 import java.util.List;
 import java.util.Date;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -29,5 +31,10 @@ public class PartyActivitySignServiceImpl extends BaseServiceImpl<PartyActivityS
 	public IPage<PartyActivitySignView> selectPage(PartyActivitySignDto dto) {
     	return mapper.selectPage(dto);
     }
+
+	@Override
+	public Map<String, Object> signCount(Integer activityId) {
+		return mapper.signCount(activityId);
+	}
 
 }

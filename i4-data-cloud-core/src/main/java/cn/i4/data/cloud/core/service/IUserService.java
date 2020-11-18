@@ -43,4 +43,11 @@ public interface IUserService extends BaseService<UserModel> {
      * @return
      */
     List<UserModel> selectListNotUserId(Integer userId);
+
+    /**
+     * 加载活动未签到列表
+     * @param activityId
+     * @return
+     */
+    List<UserView> selectActivityNoSignList(Integer activityId);
 }

@@ -203,7 +203,7 @@
     let address = "${model.address!}"
     let startTime = ${model.startTime?c}
     let endTime = ${model.endTime?c}
-    let signEndTime = <#if model.isSign == 1>${model.signEndTime?c}<#else>null</#if>
+    let signEndTime = <#if model.isSign == 1 && model.signEndTime??>${model.signEndTime?c}<#else>null</#if>
     let signStartTime = <#if model.isSign == 1 && model.signStartTime??>${model.signStartTime?c}<#else>null</#if>
     var isMd = <#if mongo.mdContent?? && mongo.mdContent != "">true<#else>false</#if>
     let mongoId = "${mongo.mongoId}"

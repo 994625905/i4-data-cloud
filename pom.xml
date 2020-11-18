@@ -26,6 +26,7 @@
         <module>i4-data-cloud-start-eureka</module>
         <module>i4-data-cloud-start-file</module>
         <module>i4-data-cloud-start-gateway</module>
+        <module>i4-data-cloud-start-schedule</module>
         <module>i4-data-cloud-start-system</module>
     </modules>
 

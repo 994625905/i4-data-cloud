@@ -12,6 +12,7 @@ import cn.i4.data.cloud.core.entity.view.MenuButtonView;
 import cn.i4.data.cloud.core.entity.view.UserTemplateView;
 import cn.i4.data.cloud.core.service.IMenuButtonService;
 import cn.i4.data.cloud.core.service.ISystemConstantService;
+import cn.i4.data.cloud.core.service.IUserService;
 import cn.i4.data.cloud.core.service.IUserTemplateService;
 import com.alibaba.fastjson.JSONObject;
 import com.auth0.jwt.JWT;
@@ -41,6 +42,8 @@ public class WebBaseController extends BaseController {
     protected ISystemConstantService iSystemConstantService;
     @Autowired
     protected IMenuButtonService iMenuButtonService;
+    @Autowired
+    protected IUserService iUserService;
 
     /**
      * 获取模型视图，设置user和userInfo

@@ -34,8 +34,6 @@ public class SystemMsgController extends WebBaseController {
     @Autowired
     private IRoleService iRoleService;
     @Autowired
-    private IUserService iUserService;
-    @Autowired
     private IDepartmentService iDepartmentService;
 
     /**

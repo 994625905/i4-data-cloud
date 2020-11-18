@@ -41,19 +41,61 @@ layui.use(["layer","form","table","laydate"],()=>{
     /** table的操作列 */
     table.on("tool(activityTable)",obj=>{
         if(obj.event == "image"){
-            BaseUtil.redirect(BasePath+"/activityCenter/activity/imagePage")
+            Feng.loadWindow(obj.data.title+"--》照片墙",BasePath+"/activityCenter/activity/imagePage?id="+obj.data.id)
         }
         if(obj.event == "read"){
-            Feng.loadWindow(obj.data.title,BasePath+"/activityCenter/activity/readPage")
+            Feng.loadWindow(obj.data.title,BasePath+"/activityCenter/activity/readPage?id="+obj.data.id+"&mongoId="+obj.data.mongoId)
         }
         if(obj.event == "sign"){
             if(obj.data.userSign == 1){//已经签到，跳转到签到详情页
-                Feng.loadWindow(obj.data.title+"签到详情页",BasePath+"/activityCenter/activity/signPage")
+                Feng.loadWindow(obj.data.title+"签到详情页",BasePath+"/activityCenter/activity/signPage?id="+obj.data.id)
             }
             if(obj.data.userSign == 0){ // 需要先签到
-                Request.async(BasePath+"/activityCenter/activity/sign",{id:obj.data.id}).then(res=>{
 
-                })
+                /** 签到截止时间的判断 */
+                if(obj.data.signStartTime > BaseDate.currTime()){
+                    return Feng.msg("签到时间还未到")
+                }
+                if(obj.data.signEndTime < BaseDate.currTime()){
+                    return Feng.msg("签到时间已结束")
+                }
+
+                let signContent = template("signContent",{limitSign:obj.data.limitSign,trafficType:obj.data.trafficType})
+                Feng.infoDetail("填写签到选项",signContent,()=>{
+                    form.render()
+                },index=>{
+                    let p = {
+                        signUserCount:$("#signUserCount").val(),
+                        signTraffic:$("#signTraffic")?$("#signTraffic").val():null,
+                        signDescribeInfo:$("#signDescribeInfo").val(),
+                        activityId:obj.data.id
+                    }
+                    /** 提交项的判断 */
+                    if(BaseUtil.isEmpty(p.signUserCount) || p.signUserCount < 0){
+                        return Feng.error("签到人数为必填项")
+                    }
+                    if(obj.data.limitSign == 1 && p.signUserCount > 1){
+                        return Feng.error("不允许携带家属")
+                    }
+                    if(obj.data.trafficType == 1 && BaseUtil.isEmpty(p.signTraffic) && p.signUserCount > 0){
+                        return Feng.error("交通方式为必填项")
+                    }
+                    if(p.signUserCount > 1 && BaseUtil.isEmpty(p.signDescribeInfo)){
+                        return Feng.error("请注明携带成员身份")
+                    }
+                    if(p.signUserCount == 0 && BaseUtil.isEmpty(p.signDescribeInfo)){
+                        return Feng.error("请注明不参与的原因")
+                    }
+                    Request.asyncBody(BasePath+"/activityCenter/activity/sign",{
+                        model:p,
+                        signStartTime:obj.data.signStartTime,
+                        signEndTime:obj.data.signEndTime
+                    }).then(res=>{
+                        Feng.close(index)
+                        Feng.success("签到成功")
+                        refresh()
+                    })
+                },LAYOUT_SIZE.SM_WIDTH(),LAYOUT_SIZE.SM_HEIGHT())
             }
         }
     })

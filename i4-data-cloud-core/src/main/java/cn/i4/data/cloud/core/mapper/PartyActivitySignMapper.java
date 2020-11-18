@@ -1,6 +1,8 @@
 package cn.i4.data.cloud.core.mapper;
 
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 import cn.i4.data.cloud.base.mapper.BaseIMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -21,5 +23,12 @@ public interface PartyActivitySignMapper extends BaseIMapper<PartyActivitySignMo
     * @return
     */
     IPage<PartyActivitySignView> selectPage(PartyActivitySignDto dto);
+
+    /**
+     * 加载签到统计信息
+     * @param activityId
+     * @return
+     */
+    Map<String, Object> signCount(@Param("activityId") Integer activityId);
 
 }

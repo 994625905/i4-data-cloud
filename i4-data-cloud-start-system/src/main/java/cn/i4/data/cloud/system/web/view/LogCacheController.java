@@ -27,8 +27,6 @@ import java.util.List;
 public class LogCacheController extends WebBaseController {
 
     @Autowired
-    private IUserService iUserService;
-    @Autowired
     private ILogRequestService iLogRequestService;
 
     /**

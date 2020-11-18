@@ -17,6 +17,7 @@ public class UserView extends BaseView<UserView> {
 		this.id = model.getId();
 		this.loginname = model.getLoginname();
 		this.realname = model.getRealname();
+		this.jobNumber = model.getJobNumber();
 		this.phone = model.getPhone();
 		this.email = model.getEmail();
 		this.password = model.getPassword();
@@ -47,6 +48,12 @@ public class UserView extends BaseView<UserView> {
 	 */
 	@TableField("realname")
 	private String realname;
+
+	/**
+	 * 工号
+	 */
+	@TableField("job_number")
+	private String jobNumber;
 
 	/**
 	 * 
@@ -114,6 +121,14 @@ public class UserView extends BaseView<UserView> {
 
 	public String getRealname() {
 		return this.realname;
+	}
+
+	public String getJobNumber() {
+		return jobNumber;
+	}
+
+	public void setJobNumber(String jobNumber) {
+		this.jobNumber = jobNumber;
 	}
 
 	public void setPhone(String phone) {

@@ -7,6 +7,8 @@ import cn.i4.data.cloud.core.entity.dto.PartyActivityDto;
 import cn.i4.data.cloud.core.entity.model.PartyActivityModel;
 import cn.i4.data.cloud.core.entity.view.PartyActivityView;
 
+import java.util.List;
+
 /**
 * Service
 * @author wangjc
@@ -48,5 +50,18 @@ public interface IPartyActivityService extends BaseService<PartyActivityModel> {
      * @return
      */
     Boolean update(PartyActivityDto dto) throws CommonException;
+
+    /**
+     * 根据id查询（手动SQL）
+     * @param id
+     * @return
+     */
+    PartyActivityView selectById(Integer id);
+
+    /**
+     * 加载照片组
+     * @return
+     */
+    List<PartyActivityView> selectImageGroup();
 
 }

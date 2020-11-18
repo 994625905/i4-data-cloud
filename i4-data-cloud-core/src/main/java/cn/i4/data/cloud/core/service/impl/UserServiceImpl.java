@@ -49,4 +49,9 @@ public class UserServiceImpl extends BaseServiceImpl<UserMapper, UserModel> impl
 		return list;
 	}
 
+	@Override
+	public List<UserView> selectActivityNoSignList(Integer activityId) {
+		return mapper.selectActivityNoSignList(activityId);
+	}
+
 }

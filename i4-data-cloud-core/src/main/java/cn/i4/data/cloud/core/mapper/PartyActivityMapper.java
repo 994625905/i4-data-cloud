@@ -28,4 +28,18 @@ public interface PartyActivityMapper extends BaseIMapper<PartyActivityModel> {
      * @return
      */
     IPage<PartyActivityView> selectActivity(PartyActivityDto dto);
+
+    /**
+     * 查询活动根据id
+     * @param id
+     * @return
+     */
+    PartyActivityView selectActivityById(@Param("id") Integer id);
+
+    /**
+     * 查询照片组
+     * @return
+     */
+    List<PartyActivityView> selectImageGroup();
+
 }

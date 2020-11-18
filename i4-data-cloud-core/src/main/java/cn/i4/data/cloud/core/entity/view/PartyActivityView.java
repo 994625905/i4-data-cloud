@@ -103,7 +103,7 @@ public class PartyActivityView extends BaseView<PartyActivityView> {
 	 * 开始报名时间
 	 */
 	@TableField("sign_start_time")
-	private String signStartTime;
+	private Long signStartTime;
 
 	/**
 	 * 截止报名时间
@@ -157,6 +157,10 @@ public class PartyActivityView extends BaseView<PartyActivityView> {
 	private String headUserName;
 	private String typeName;
 	private Integer userSign;
+
+	/** 照片墙 */
+	private String imageCover;
+	private Integer imageCount;
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -238,11 +242,11 @@ public class PartyActivityView extends BaseView<PartyActivityView> {
 		this.isSign = isSign;
 	}
 
-	public String getSignStartTime() {
+	public Long getSignStartTime() {
 		return signStartTime;
 	}
 
-	public void setSignStartTime(String signStartTime) {
+	public void setSignStartTime(Long signStartTime) {
 		this.signStartTime = signStartTime;
 	}
 
@@ -372,5 +376,21 @@ public class PartyActivityView extends BaseView<PartyActivityView> {
 
 	public void setUserSign(Integer userSign) {
 		this.userSign = userSign;
+	}
+
+	public String getImageCover() {
+		return imageCover;
+	}
+
+	public void setImageCover(String imageCover) {
+		this.imageCover = imageCover;
+	}
+
+	public Integer getImageCount() {
+		return imageCount;
+	}
+
+	public void setImageCount(Integer imageCount) {
+		this.imageCount = imageCount;
 	}
 }

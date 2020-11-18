@@ -44,8 +44,6 @@ public class UserMsgController extends WebBaseController {
     private static final String KEY_PREFIX = "/systemMsg/userMsg";
 
     @Autowired
-    private IUserService iUserService;
-    @Autowired
     private IUserInfoService iUserInfoService;
     @Autowired
     private IRoleService iRoleService;

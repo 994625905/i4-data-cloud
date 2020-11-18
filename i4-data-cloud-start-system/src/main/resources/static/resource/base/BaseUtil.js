@@ -437,6 +437,12 @@ var BaseDate = {
 		}
 	},
 	/**
+	 * 获取当前时间戳，精确到秒
+	 */
+	currTime(){
+		return parseInt(new Date().getTime()/1000)
+	},
+	/**
 	 * 获取当前年
 	 */
 	currYear(){

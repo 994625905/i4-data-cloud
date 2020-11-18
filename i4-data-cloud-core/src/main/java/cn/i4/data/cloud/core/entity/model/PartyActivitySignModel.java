@@ -21,6 +21,7 @@ public class PartyActivitySignModel extends BaseModel<PartyActivitySignModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

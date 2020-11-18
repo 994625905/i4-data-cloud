@@ -42,7 +42,7 @@ var Initlay = {
             page:true,
             loading:true,
             limit:disLimit,
-            limits:[10,15,25,35,50],
+            limits:[10,15,25,35,50,100,150],
             cellMinWidth:100,
             title:"",
             even:true,//隔行色
@@ -72,7 +72,6 @@ var Initlay = {
             },
             parseData:function(res){//数据格式解析的回调，res为接口返回值
                 if(res.code != 200){
-                    debugger
                     Feng.error(res.message)
                     return {
                         "code" : res.code,
@@ -207,21 +206,20 @@ var Initlay = {
      * @param elem：组件容器
      * @param callback：回调函数(返回填充的HTML片段和最大分页数，分页值自己设置)
      * @param isLazyimg：图片是否设置懒加载，默认false，设置后必须使用lay-src
+     * @param endFun：渲染后的函数，可以绑定事件
      */
-    loadFlowAuto:function(elem,callback,isLazyimg){
+    loadFlowAuto:function(elem,callback,endFun){
         var data,disLazyImg;
-        if(BaseUtil.isEmpty(isLazyimg)){
-            disLazyImg = false;
-        }else{
-            disLazyImg = isLazyimg;
-        }
         flow.load({
             elem:elem,
             isAuto:true,//默认为true
-            isLazyimg:disLazyImg,
+            isLazyimg:false,
             done:function(page, next){
                 data = callback(page);
                 next(data.content,page < data.page);
+                if(endFun){
+                    endFun()
+                }
             }
         });
     },
@@ -231,21 +229,20 @@ var Initlay = {
      * @param elem：组件容器
      * @param callback：回调函数
      * @param isLazyimg：图片是否设置懒加载，默认false，设置后必须使用lay-src
+     * @param endFun：渲染后的函数，可以绑定事件
      */
-    loadFlowClick:function(elem,callback,isLazyimg){
+    loadFlowClick:function(elem,callback,endFun){
         var data,disLazyImg;
-        if(BaseUtil.isEmpty(isLazyimg)){
-            disLazyImg = false;
-        }else{
-            disLazyImg = isLazyimg;
-        }
         flow.load({
             elem:elem,
             isAuto:false,
-            isLazyimg:disLazyImg,
+            isLazyimg:false,
             done:function(page, next){
                 data = callback(page);
                 next(data.content,page < data.page);
+                if(endFun){
+                    endFun()
+                }
             }
         });
     },
@@ -468,7 +465,7 @@ var Initlay = {
      * @param start：开始位置
      * @param array：数组alt,pid,src,thumb
      */
-    photo:function(array,title="查看图片",start = 0){
+    photo:function(array,title="查看图片",start = 0,callback){
         layer.photos({
             photos: {
                 title:title,
@@ -476,7 +473,12 @@ var Initlay = {
                 start:start,
                 data:array
             },
-            anim:5
+            // anim:5,//0-6，默认随机
+            tab: function(pic, layero){
+                if(callback){
+                    callback(pic)
+                }
+            }
         });
     }
 

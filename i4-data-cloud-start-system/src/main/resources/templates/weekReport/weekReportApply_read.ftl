@@ -11,8 +11,8 @@
             </div>
             <div class="layui-card-body">
                 <div class="layui-row layui-col-space10">
-                    <div class="layui-col-xs12">
-                        <table class="layui-table" lay-size="sm" lay-skin="nob">
+                    <div class="layui-col-xs12 bg-layui">
+                        <table class="layui-table bg-white" lay-size="sm" lay-skin="nob">
                             <colgroup>
                                 <col width="150">
                                 <col>
@@ -29,8 +29,8 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="layui-col-xs12">
-                        <div id="content">
+                    <div class="layui-col-xs12 bg-layui">
+                        <div id="content" class="bg-white">
                             ${weekReport.content!}
                         </div>
                     </div>

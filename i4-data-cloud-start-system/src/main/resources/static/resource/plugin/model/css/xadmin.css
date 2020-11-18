@@ -189,14 +189,14 @@ body{
     transition: all 0.3s;
 }
 .left-nav a:hover{
-    background: #000000 !important;
+    background: #007bff !important;
     color: #fff;
-    border-color:  #000000 !important;
+    border-color:  #007bff !important;
 }
 .left-nav a.active{
-    background: #000000 !important;
+    background: #007bff !important;
     color: #fff;
-    border-color:  #000000 !important;
+    border-color:  #007bff !important;
 }
 .left-nav #nav li a cite{
     font-size: 12px;

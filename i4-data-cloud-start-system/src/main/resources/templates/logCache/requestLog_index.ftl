@@ -23,7 +23,7 @@
                                             <option value="">请选择用户</option>
                                             <#if userList??>
                                                 <#list userList as user>
-                                                    <option value="${user.id?c}">${user.loginName}</option>
+                                                    <option value="${user.id?c}">${user.loginname}</option>
                                                 </#list>
                                             </#if>
                                         </select>
@@ -74,6 +74,6 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="${StaticServer}/templates/logCache/request_index.js?v=1.1"></script>
+<script type="text/javascript" src="${StaticServer}/templates/logCache/requestLog_index.js?v=1.1"></script>
 </@override>
 <@extends name="/base.ftl"/>

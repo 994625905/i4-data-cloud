@@ -32,8 +32,6 @@ public class WeekReportController extends WebBaseController {
     private IWeekreportProcessNodeService iWeekreportProcessNodeService;
     @Autowired
     private MongoWeekReportService mongoWeekReportService;
-    @Autowired
-    private IUserService iUserService;
 
     /**
      * 加载周报提交的首页

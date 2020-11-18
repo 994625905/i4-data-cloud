@@ -38,8 +38,6 @@ public class AfternoonTeaController extends WebBaseController {
     @Autowired
     private IAfternoonTeaTypeService iAfternoonTeaTypeService;
     @Autowired
-    private IUserService iUserService;
-    @Autowired
     private IAfternoonTeaTaskService iAfternoonTeaTaskService;
     @Autowired
     private IAfternoonTeaMenuService iAfternoonTeaMenuService;

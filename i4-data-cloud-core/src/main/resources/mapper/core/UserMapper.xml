@@ -7,7 +7,8 @@
     <sql id="Base_Column_List">
         t.id as id,
         t.loginname as loginname,
-        t.realname as realname, 
+        t.realname as realname,
+        t.job_number as jobNumber,
         t.phone as phone, 
         t.email as email, 
         t.password as password, 
@@ -76,6 +77,18 @@
         <include refid="Base_Column_List" />
         FROM t_user AS t
         where t.loginname = #{loginName} and t.password = #{password}
+    </select>
+
+    <!--加载活动未签到列表-->
+    <select id="selectActivityNoSignList" resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        select
+            <include refid="Base_Column_List" />
+        from t_user as t
+        where t.status != 5
+        <if test="activityId != null">
+            and t.id not in (SELECT a.sign_user_id FROM t_party_activity_sign a WHERE a.activity_id = #{activityId})
+        </if>
+        order by t.job_number asc
     </select>
 
 </mapper>

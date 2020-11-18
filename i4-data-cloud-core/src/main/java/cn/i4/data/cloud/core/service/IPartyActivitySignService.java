@@ -6,6 +6,8 @@ import cn.i4.data.cloud.core.entity.dto.PartyActivitySignDto;
 import cn.i4.data.cloud.core.entity.model.PartyActivitySignModel;
 import cn.i4.data.cloud.core.entity.view.PartyActivitySignView;
 
+import java.util.Map;
+
 /**
 * Service
 * @author wangjc
@@ -19,5 +21,12 @@ public interface IPartyActivitySignService extends BaseService<PartyActivitySign
     * @return
     */
     IPage<PartyActivitySignView> selectPage(PartyActivitySignDto dto);
+
+    /**
+     * 签到的统计信息
+     * @param activityId
+     * @return
+     */
+    Map<String, Object> signCount(Integer activityId);
 
 }

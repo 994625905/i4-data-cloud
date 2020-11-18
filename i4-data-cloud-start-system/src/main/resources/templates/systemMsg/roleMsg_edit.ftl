@@ -69,9 +69,11 @@
                                                                     </div>
                                                                     <div class="layui-col-xs10">
                                                                         <!--二级菜单下的按钮（要求菜单只细化到二级）-->
-                                                                        <#list child.child as button>
-                                                                            <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="${child.parentId?c}" parent-id="${button.parentId?c}" data-id="${button.id?c}">${button.name}</button>
-                                                                        </#list>
+                                                                        <div class="layui-btn-container">
+                                                                            <#list child.child as button>
+                                                                                <button class="layui-btn layui-btn-sm layui-btn-primary menu" menu-parent-id="${child.parentId?c}" parent-id="${button.parentId?c}" data-id="${button.id?c}">${button.name}</button>
+                                                                            </#list>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>

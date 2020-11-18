@@ -91,7 +91,13 @@ public class PartyActivityImageView extends BaseView<PartyActivityImageView> {
 	 */
 	@TableField("create_time")
 	private Long createTime;
+	private String createTimeStr;
 
+	/** 补充字段，上传者，点赞数，阅读数，当前用户是否点赞（0，1） */
+	private String createUserName;
+	private Integer likeCount;
+	private Integer readCount;
+	private Integer isLike;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -173,4 +179,43 @@ public class PartyActivityImageView extends BaseView<PartyActivityImageView> {
 		return this.createTime;
 	}
 
+	public String getCreateUserName() {
+		return createUserName;
+	}
+
+	public void setCreateUserName(String createUserName) {
+		this.createUserName = createUserName;
+	}
+
+	public Integer getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(Integer likeCount) {
+		this.likeCount = likeCount;
+	}
+
+	public Integer getReadCount() {
+		return readCount;
+	}
+
+	public void setReadCount(Integer readCount) {
+		this.readCount = readCount;
+	}
+
+	public Integer getIsLike() {
+		return isLike;
+	}
+
+	public void setIsLike(Integer isLike) {
+		this.isLike = isLike;
+	}
+
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
 }
