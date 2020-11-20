@@ -37,49 +37,33 @@ layui.use(["layer","element","flow"],()=>{
         })
     })
 
-    Request.async(BasePath+"/history/historyImageWall/loadDetailTable",{
-        groupId:groupId,
-        current:0,
-        size:15
-    }).then(res=>{
-
-        $("#imageDiv").append(template("imageContent",{list:res.records,size:imageList.length}))
-
-        /** 点赞，删除 */
-        likeEvent(imageList.length)
-        deleteImage(imageList.length)
-
-        setImageList(res.records)
-
-        /** 流加载分页 */
-        Initlay.loadFlowAuto("#imageDiv",obj=>{
-
-            let r = BaseAjax.getData(BasePath+"/history/historyImageWall/loadDetailTable",{
-                groupId:groupId,
-                current:obj,
-                size:15
-            })
-            if(r.code != 200){
-                Feng.error(r.message)
-                return {
-                    content:r.message,
-                    page:obj
-                }
-            }
-            imageListSize = imageList.length
-
-            setImageList(r.result.records)
-            return {
-                content: template("imageContent",{list:r.result.records,size:imageListSize}),
-                page: r.result.total/15 +1
-            }
-        },()=>{
-            /** 点赞，删除 */
-            likeEvent(imageListSize)
-            deleteImage(imageListSize)
+    /** 流加载分页 */
+    Initlay.loadFlowAuto("#imageDiv",obj=>{
+        let r = BaseAjax.getData(BasePath+"/history/historyImageWall/loadDetailTable",{
+            groupId:groupId,
+            current:obj,
+            size:15
         })
+        if(r.code != 200){
+            Feng.error(r.message)
+            return {
+                content:r.message,
+                page:obj
+            }
+        }
+        imageListSize = imageList.length
 
+        setImageList(r.result.records)
+        return {
+            content: template("imageContent",{list:r.result.records,size:imageListSize}),
+            page: r.result.total/15 +1
+        }
+    },()=>{
+        /** 点赞，删除 */
+        likeEvent(imageListSize)
+        deleteImage(imageListSize)
     })
+
 })
 /** 格式化结果集，设置到imageList */
 function setImageList(array,site){
@@ -153,6 +137,12 @@ function deleteImage(size){
             Request.async(BasePath+"/history/historyImageWall/deleteImage",p).then(res=>{
                 Feng.success("删除成功")
                 temp.parent().remove()
+
+                /** 移除图片数组中，重新构建排序data-index，不然二次删除顺序会乱 */
+                imageList.splice(temp.attr("data-index"),1)
+                $.each($(".deleteIcon"),(i,o)=>{
+                    $(o).attr("data-index",i)
+                })
             })
         })
     })

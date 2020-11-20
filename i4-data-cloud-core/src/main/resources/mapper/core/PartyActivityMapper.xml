@@ -96,7 +96,7 @@
     </select>
 
     <!--加载照片组-->
-    <select id="selectImageGroup" resultType="cn.i4.data.cloud.core.entity.view.PartyActivityView">
+    <select id="selectImageGroup" parameterType="cn.i4.data.cloud.core.entity.dto.PartyActivityImageDto" resultType="cn.i4.data.cloud.core.entity.view.PartyActivityView">
         SELECT
             <include refid="Base_Column_List" />,
             b.url as imageCover,

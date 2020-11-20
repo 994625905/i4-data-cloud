@@ -34,13 +34,13 @@
         <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 
             <@permission value="history:historyImageWall/update">
-                <a class="position-absolute cursor-pointer update{{size}}" data-id="{{groups.id}}" style="top: 0px;right:5px;z-index: 9999" title="删除">
-                    <i class="iconfont icon-bianji text-primary"></i>
+                <a class="position-absolute cursor-pointer update{{size}}" data-id="{{groups.id}}" data-name="{{groups.name}}" data-describeInfo="{{groups.describeInfo}}" style="bottom: 3px;right:6px;z-index: 9999" title="编辑">
+                    <i class="iconfont icon-bianji"></i>
                 </a>
             </@permission>
             <@permission value="history:historyImageWall/delete">
-                <a class="position-absolute cursor-pointer delete{{size}}" data-id="{{groups.id}}" style="top: 0px;right:0px;z-index: 9999" title="删除">
-                    <i class="iconfont icon-shanchu1 text-danger"></i>
+                <a class="position-absolute cursor-pointer delete{{size}}" data-id="{{groups.id}}" data-name="{{groups.name}}" data-describeInfo="{{groups.describeInfo}}" style="top: 0px;right:6px;z-index: 9999" title="删除">
+                    <i class="iconfont icon-shanchu1"></i>
                 </a>
             </@permission>
 
@@ -59,7 +59,7 @@
                         <span class="text-ellipsis layui-word-aux groupDescribeInfo">{{groups.describeInfo}}</span>
                     </div>
                     <div class="flex justify-start font-xs">
-                        <span>数量：</span>
+                        <span>图片数量：</span>
                         <span class="layui-word-aux">{{groups.imageCount}}</span>
                     </div>
                 </div>

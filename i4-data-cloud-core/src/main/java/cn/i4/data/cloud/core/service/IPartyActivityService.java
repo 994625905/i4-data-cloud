@@ -2,6 +2,7 @@ package cn.i4.data.cloud.core.service;
 
 import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.service.BaseService;
+import cn.i4.data.cloud.core.entity.dto.PartyActivityImageDto;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.core.entity.dto.PartyActivityDto;
 import cn.i4.data.cloud.core.entity.model.PartyActivityModel;
@@ -62,6 +63,6 @@ public interface IPartyActivityService extends BaseService<PartyActivityModel> {
      * 加载照片组
      * @return
      */
-    List<PartyActivityView> selectImageGroup();
+    IPage<PartyActivityView> selectImageGroup(PartyActivityImageDto dto);
 
 }

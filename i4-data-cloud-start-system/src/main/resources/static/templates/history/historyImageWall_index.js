@@ -53,7 +53,7 @@ layui.use(["layer","element","flow"],()=>{
         }
         Size += r.result.records.length
         return {
-            content: template("groupContent",{list:r.result.records}),
+            content: template("groupContent",{list:r.result.records,size:Size}),
             page: r.result.total/15 +1
         }
     },()=>{
@@ -70,6 +70,7 @@ function photoGroup(groupId,groupName){
 /** 绑定修改事件 */
 function updateEvent(size){
     $(".update"+size).click(function(){
+        debugger
         let temp = $(this)
         let content = template("updateContent",{name:$(this).attr("data-name"),describeInfo:$(this).attr("data-describeInfo")})
         Feng.infoDetail("相册修改",content,null,index=>{

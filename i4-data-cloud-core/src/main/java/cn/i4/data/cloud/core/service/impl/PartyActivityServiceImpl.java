@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Date;
 
 import cn.i4.data.cloud.base.exception.CommonException;
+import cn.i4.data.cloud.core.entity.dto.PartyActivityImageDto;
 import cn.i4.data.cloud.core.entity.model.PartyActivityFileModel;
 import cn.i4.data.cloud.core.entity.model.PartyActivityImageModel;
 import cn.i4.data.cloud.core.entity.model.PartyActivitySignModel;
@@ -135,8 +136,8 @@ public class PartyActivityServiceImpl extends BaseServiceImpl<PartyActivityMappe
 	}
 
 	@Override
-	public List<PartyActivityView> selectImageGroup() {
-		return mapper.selectImageGroup();
+	public IPage<PartyActivityView> selectImageGroup(PartyActivityImageDto dto) {
+		return mapper.selectImageGroup(dto);
 	}
 
 }

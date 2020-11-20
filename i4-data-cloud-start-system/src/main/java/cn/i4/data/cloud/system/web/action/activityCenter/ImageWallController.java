@@ -12,7 +12,9 @@ import cn.i4.data.cloud.core.entity.model.PartyActivityImageLikeModel;
 import cn.i4.data.cloud.core.entity.model.PartyActivityImageReadModel;
 import cn.i4.data.cloud.core.entity.model.UserModel;
 import cn.i4.data.cloud.core.entity.view.PartyActivityImageView;
+import cn.i4.data.cloud.core.entity.view.PartyActivityView;
 import cn.i4.data.cloud.core.service.IPartyActivityImageService;
+import cn.i4.data.cloud.core.service.IPartyActivityService;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -43,7 +45,23 @@ public class ImageWallController extends WebBaseController {
     private static final String MODULE_NAME = "活动中心--照片墙";
     private static final String KEY_PREFIX = "/activityCenter/imageWall";
     @Autowired
+    private IPartyActivityService iPartyActivityService;
+    @Autowired
     private IPartyActivityImageService iPartyActivityImageService;
+
+    /**
+     * 加载照片分组
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/selectImageGroup")
+    @RequestLog(module = MODULE_NAME,content = "/加载照片分组",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载照片分组",key = KEY_PREFIX+"/selectImageGroup")
+    @RequestPermission(value = "activityCenter:imageWall/selectImageGroup")
+    public ActionResult<IPage<PartyActivityView>> selectImageGroup(PartyActivityImageDto dto){
+        IPage<PartyActivityView> page = iPartyActivityService.selectImageGroup(dto);
+        return ActionResult.ok(page);
+    }
 
     /**
      * 加载详情表格，点赞数和阅读数从redis中获取

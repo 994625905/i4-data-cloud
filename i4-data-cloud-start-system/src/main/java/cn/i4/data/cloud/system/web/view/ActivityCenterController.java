@@ -176,9 +176,6 @@ public class ActivityCenterController extends WebBaseController {
     @RequestPermission(value = "activityCenter:imageWall/index")
     public ModelAndView imageWallIndex(HttpServletRequest request){
         ModelAndView view = getModelAndView("/activityCenter/imageWall_index", request);
-
-        List<PartyActivityView> list = iPartyActivityService.selectImageGroup();
-        view.addObject("activityList",list);
         return view;
     }
 

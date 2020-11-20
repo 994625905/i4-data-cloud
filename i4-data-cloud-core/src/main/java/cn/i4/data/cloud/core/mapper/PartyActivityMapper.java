@@ -1,6 +1,8 @@
 package cn.i4.data.cloud.core.mapper;
 
 import java.util.List;
+
+import cn.i4.data.cloud.core.entity.dto.PartyActivityImageDto;
 import org.apache.ibatis.annotations.Param;
 import cn.i4.data.cloud.base.mapper.BaseIMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -40,6 +42,6 @@ public interface PartyActivityMapper extends BaseIMapper<PartyActivityModel> {
      * 查询照片组
      * @return
      */
-    List<PartyActivityView> selectImageGroup();
+    IPage<PartyActivityView> selectImageGroup(PartyActivityImageDto dto);
 
 }

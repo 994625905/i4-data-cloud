@@ -35,7 +35,7 @@
         <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 
             <@permission value="history:historyImageWall/deleteImage">
-                <a class="position-absolute cursor-pointer deleteImage{{size}}" data-id="{{image.id}}" style="top: 0px;right:0px;z-index: 9999" title="删除">
+                <a class="position-absolute cursor-pointer deleteIcon deleteImage{{size}}" data-index="{{size+index}}" data-id="{{image.id}}" style="top: 0px;right:0px;z-index: 9999" title="删除">
                     <i class="iconfont icon-shanchu text-danger"></i>
                 </a>
             </@permission>
