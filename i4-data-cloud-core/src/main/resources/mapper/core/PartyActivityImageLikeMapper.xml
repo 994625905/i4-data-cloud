@@ -8,7 +8,8 @@
         t.id as id, 
         t.image_id as imageId, 
         t.create_user_id as createUserId, 
-        t.create_time as createTime
+        t.create_time as createTime,
+        t.type as type
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.PartyActivityImageLikeDto"

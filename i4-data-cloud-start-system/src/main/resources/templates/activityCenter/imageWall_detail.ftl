@@ -20,7 +20,7 @@
 <div class="layui-fluid">
     <div class="layui-card bg-layui">
         <div class="layui-card-header">
-            <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" id="imageRead"><i class="iconfont icon-yulan"></i>预览</button>
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" id="imageRead"><i class="iconfont icon-yulan1"></i>预览</button>
             <button type="button" class="layui-btn layui-btn-sm" id="imageUpload"><i class="layui-icon layui-icon-upload"></i>上传</button>
             <label class="layui-word-aux">注意：上传后当前列表可能会排版稍微凌乱，因为懒加载预留了一个触发的块元素占据了位置，关掉当前弹框重新进来就好了</label>
         </div>

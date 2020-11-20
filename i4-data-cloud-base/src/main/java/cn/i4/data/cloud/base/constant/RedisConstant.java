@@ -44,6 +44,10 @@ public class RedisConstant {
         String ACTIVITY_IMAGE_LIKE_COUNT = "i4-data-cloud-activity-image-like-count";//活动照片墙的点赞数量（imageId-count），对应照片的点赞数量
         String ACTIVITY_IMAGE_LIKE_USER = "i4-data-cloud-activity-image-like-user";;//用户所点赞的照片（userId-Set<imageId>），对应点赞的照片列表
         String ACTIVITY_IMAGE_READ_COUNT = "i4-data-cloud-activity-image-read-count";//活动照片墙的阅读数量（imageId-Count）,对应照片的阅读数量
+
+        String HISTORY_IMAGE_LIKE_COUNT = "i4-data-cloud-history-image-like-count";//历史照片墙的点赞数量（imageId-count），对应照片的点赞数量
+        String HISTORY_IMAGE_LIKE_USER = "i4-data-cloud-history-image-like-user";;//用户所点赞的照片（userId-Set<imageId>），对应点赞的照片列表
+        String HISTORY_IMAGE_READ_COUNT = "i4-data-cloud-history-image-read-count";//历史照片墙的阅读数量（imageId-Count）,对应照片的阅读数量
     }
 
     /**
@@ -51,8 +55,10 @@ public class RedisConstant {
      */
     public interface SET_KEY{
         String ACTIVITY_IMAGE_LIKE = "i4-data-cloud-activity-image-like";//活动照片墙的点赞（imageId-Set<like>）,默认不过期，定时任务跑（新增/）
-        String ACTIVITY_IMAGE_LIKE_CANCEL = "i4-data-cloud-activity-image-like-cancel";//活动照片墙的取赞（imageId-Set<like>）,默认不过期，定时任务跑（删除）
         String ACTIVITY_IMAGE_READ = "i4-data-cloud-activity-image-read";//活动照片墙的阅读（imageId-Set<read>）,默认不过期，定时任务跑（新增）
+
+        String HISTORY_IMAGE_LIKE = "i4-data-cloud-history-image-like";//历史照片墙的点赞（imageId-Set<like>）,默认不过期，定时任务跑（新增/）
+        String HISTORY_IMAGE_READ = "i4-data-cloud-history-image-read";//历史照片墙的阅读（imageId-Set<read>）,默认不过期，定时任务跑（新增）
     }
 
     /**

@@ -273,7 +273,7 @@ var Initlay = {
             value:disValue,
             max:BaseDate.rangeDate(0),//设置最大时间为当天
             range: false,
-            theme:"#000000",
+            theme:"#007bff",
             done:function(value){
                 if(value == BaseDate.rangeDate(0)){
                     Feng.tip("数据统计日期截止到"+value,elem,2);
@@ -286,13 +286,13 @@ var Initlay = {
         laydate.render(option);
 
         /** 新增日期左右移控件,同时绑定事件 */
-        var html =  '<div class="layui-input-inline" style="margin-left: -4px;color: black">' +
+        var html =  '<div class="layui-input-inline" style="margin-left: -4px">' +
                     '   <div class="layui-btn-group">' +
                     '       <button class="layui-btn-primary '+date_left+'" type="button" style="width: 30px;height:38px;text-align:center;font-size:14px;">' +
-                    '           <strong><i class="layui-icon layui-icon-left"></i></strong>' +
+                    '           <strong><i class="layui-icon layui-icon-left font-weight-bolder"></i></strong>' +
                     '       </button>' +
                     '       <button class="layui-btn-primary '+date_right+'" type="button" style="width: 30px;height:38px;text-align:center;font-size:14px;">' +
-                    '           <strong><i class="layui-icon layui-icon-right"></i></strong>' +
+                    '           <strong><i class="layui-icon layui-icon-right font-weight-bolder"></i></strong>' +
                     '       </button>' +
                     '   </div>' +
                     '</div>';
@@ -350,7 +350,7 @@ var Initlay = {
         laydate.render({
             elem: elem,
             range: true,
-            theme:"#000000",
+            theme:"#007bff",
             value: disDateRange,
             max:BaseDate.rangeDate(0),//设置最大时间为当天
             done: function (value) {
@@ -366,13 +366,13 @@ var Initlay = {
         });
 
         /** 新增日期左右移控件,同时绑定事件 */
-        var html =  '<div class="layui-input-inline" style="margin-left: -4px;color: black">' +
+        var html =  '<div class="layui-input-inline" style="margin-left: -4px">' +
                     '   <div class="layui-btn-group">' +
                     '       <button class="layui-btn-primary '+date_left+'" type="button" style="width: 30px;height:38px;text-align:center;font-size:14px;">' +
-                    '           <strong><i class="layui-icon layui-icon-left"></i></strong>' +
+                    '           <strong><i class="layui-icon layui-icon-left font-weight-bolder"></i></strong>' +
                     '       </button>' +
                     '       <button class="layui-btn-primary '+date_right+'" type="button" style="width: 30px;height:38px;text-align:center;font-size:14px;">' +
-                    '           <strong><i class="layui-icon layui-icon-right"></i></strong>' +
+                    '           <strong><i class="layui-icon layui-icon-right font-weight-bolder"></i></strong>' +
                     '       </button>' +
                     '   </div>' +
                     '</div>';

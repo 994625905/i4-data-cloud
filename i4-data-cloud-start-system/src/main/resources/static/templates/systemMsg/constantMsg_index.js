@@ -135,6 +135,14 @@ layui.use(["layer","form"],()=>{
         uploadConstantImage("activityCoverImage")
     })
 
+    /** 相册的默认封面 */
+    $("#photoGroupImage").click(()=>{
+        UploadFile.imageSelect("相册的默认封面","#photoGroupImage",300,200,1,1024)
+    })
+    $(".photoGroupImage").click(()=>{
+        uploadConstantImage("photoGroupImage")
+    })
+
     /** 百度地图API */
     $(".baiduMapApi").click(()=>{
         uploadConstantText("baiduMapApi")

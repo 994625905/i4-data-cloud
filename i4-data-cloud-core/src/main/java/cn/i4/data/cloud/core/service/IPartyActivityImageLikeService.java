@@ -6,6 +6,8 @@ import cn.i4.data.cloud.core.entity.dto.PartyActivityImageLikeDto;
 import cn.i4.data.cloud.core.entity.model.PartyActivityImageLikeModel;
 import cn.i4.data.cloud.core.entity.view.PartyActivityImageLikeView;
 
+import java.util.Set;
+
 /**
 * Service
 * @author wangjc
@@ -19,5 +21,12 @@ public interface IPartyActivityImageLikeService extends BaseService<PartyActivit
     * @return
     */
     IPage<PartyActivityImageLikeView> selectPage(PartyActivityImageLikeDto dto);
+
+    /**
+     * 同步redis数据
+     * @param set
+     * @return
+     */
+    Integer asyncByRedis(Set<Object> set);
 
 }

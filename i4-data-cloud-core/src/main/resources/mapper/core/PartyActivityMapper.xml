@@ -102,8 +102,11 @@
             b.url as imageCover,
             ifnull((select count(a.id) from t_party_activity_image a where a.activity_id = t.id),0) as imageCount
         FROM t_party_activity AS t
-        left join (select max(a.count),a.url,a.activity_id from (select b.url,b.activity_id,count(a.id) AS count from t_party_activity_image b
-                    left join t_party_activity_image_like a ON b.id = a.image_id group by a.image_id order by count desc,a.create_time desc) a group by a.activity_id) b on b.activity_id = t.id
+        left join (
+            select max(a.count),a.url,a.activity_id from (
+                select b.url,b.activity_id,count(a.id) AS count from t_party_activity_image b left join t_party_activity_image_like a ON b.id = a.image_id group by a.image_id order by count desc,a.create_time desc
+            ) a group by a.activity_id
+        ) b on b.activity_id = t.id
         where t.status = 1
         ORDER BY t.start_time DESC
     </select>

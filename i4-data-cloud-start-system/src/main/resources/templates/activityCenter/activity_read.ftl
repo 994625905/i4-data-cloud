@@ -43,10 +43,10 @@
                         <span>活动地址：</span>
                         <span class="layui-word-aux">${model.address}</span>
                     </div>
-                    <div class="flex align-center justify-start">
+                    <div class="flex align-center align-start justify-start">
                         <span>附件列表：</span>
-                        <div class="flex flex-column align-center justify-start">
-                            <#if fileList??  && fileList?size &lt; 0>
+                        <div class="flex flex-column align-start justify-start">
+                            <#if fileList?? && fileList?size &gt; 0>
                                 <#list fileList as file>
                                     <a href="${file.url}" target="_blank" class="i4_a">${file.name}</a>
                                 </#list>

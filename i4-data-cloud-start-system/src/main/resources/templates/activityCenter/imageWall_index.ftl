@@ -29,7 +29,7 @@
                         <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
                             <div class="image-list p-1">
                                 <div class="flex align-center justify-center border border-light-secondary rounded p-1">
-                                    <img src="<#if activity.imageCover??>${activity.imageCover}<#else>${systemConstant.authLoginImage}</#if>"
+                                    <img src="<#if activity.imageCover??>${activity.imageCover}<#else>${systemConstant.photoGroupImage}</#if>"
                                          title="${activity.title}" class="cursor-pointer" onclick="photoGroup(${activity.id?c},'${activity.title}')">
                                 </div>
                                 <div class="flex flex-column">

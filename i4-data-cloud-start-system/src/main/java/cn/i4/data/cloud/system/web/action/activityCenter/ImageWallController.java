@@ -184,6 +184,7 @@ public class ImageWallController extends WebBaseController {
         PartyActivityImageLikeModel likeModel = dto.getLikeModel();
         likeModel.setCreateTime(System.currentTimeMillis()/1000L);
         likeModel.setCreateUserId(this.getUser(request).getId());
+        likeModel.setType(1);
 
         /** 添加到点赞set中 */
         redisService.setAddSetMap(RedisConstant.SET_KEY.ACTIVITY_IMAGE_LIKE, JSONObject.toJSONString(likeModel));
@@ -213,9 +214,10 @@ public class ImageWallController extends WebBaseController {
         PartyActivityImageLikeModel likeModel = dto.getLikeModel();
         likeModel.setCreateTime(System.currentTimeMillis()/1000L);
         likeModel.setCreateUserId(this.getUser(request).getId());
+        likeModel.setType(-1);
 
-        /** 添加到取赞的set中，先判断是否存储 */
-        redisService.setAddSetMap(RedisConstant.SET_KEY.ACTIVITY_IMAGE_LIKE_CANCEL, JSONObject.toJSONString(likeModel));
+        /** 添加到点赞的set中 */
+        redisService.setAddSetMap(RedisConstant.SET_KEY.ACTIVITY_IMAGE_LIKE, JSONObject.toJSONString(likeModel));
         /** 照片点赞数量-1 */
         redisService.hincr(RedisConstant.HASH_KEY.ACTIVITY_IMAGE_LIKE_COUNT,likeModel.getImageId().toString(),-1);
         /** 个人点赞列表移除 */

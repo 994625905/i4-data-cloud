@@ -41,7 +41,7 @@ layui.use(["layer","form","table","laydate"],()=>{
     /** table的操作列 */
     table.on("tool(activityTable)",obj=>{
         if(obj.event == "image"){
-            Feng.loadWindow(obj.data.title+"--》照片墙",BasePath+"/activityCenter/activity/imagePage?id="+obj.data.id)
+            Feng.loadWindow(obj.data.title+"--》照片墙",BasePath+"/activityCenter/imageWall/detailPage?activityId="+obj.data.id+"&activityTitle="+obj.data.title)
         }
         if(obj.event == "read"){
             Feng.loadWindow(obj.data.title,BasePath+"/activityCenter/activity/readPage?id="+obj.data.id+"&mongoId="+obj.data.mongoId)
@@ -106,7 +106,7 @@ function loadTable(){
     let tabCols = [[
         {field:"coverImage",title:"活动封面",templet:"#imageUrl"},
         {field:"headUserName",title:"负责人",width:TABLE_COL_WIDTH.one_Cols(5)},
-        {field:"typeName",title: "活动类型",width:TABLE_COL_WIDTH.one_Cols(5)},
+        {field:"typeName",title: "活动类型",width:TABLE_COL_WIDTH.one_Cols(4)},
         {field:"startTimeStr",title:"开始时间",width:TABLE_COL_WIDTH.date},
         {field:"endTimeStr",title:"结束时间",width:TABLE_COL_WIDTH.date},
         {field:"signStartTimeStr",title:"开始报名",width:TABLE_COL_WIDTH.date,templet(d){

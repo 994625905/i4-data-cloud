@@ -6,6 +6,8 @@ import cn.i4.data.cloud.core.entity.dto.PartyActivityImageReadDto;
 import cn.i4.data.cloud.core.entity.model.PartyActivityImageReadModel;
 import cn.i4.data.cloud.core.entity.view.PartyActivityImageReadView;
 
+import java.util.Set;
+
 /**
 * Service
 * @author wangjc
@@ -20,4 +22,10 @@ public interface IPartyActivityImageReadService extends BaseService<PartyActivit
     */
     IPage<PartyActivityImageReadView> selectPage(PartyActivityImageReadDto dto);
 
+    /**
+     * 同步redis中数据
+     * @param set
+     * @return
+     */
+    Integer asyncByRedis(Set<Object> set);
 }

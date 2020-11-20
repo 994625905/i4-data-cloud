@@ -20,6 +20,7 @@ public class PartyActivityImageLikeView extends BaseView<PartyActivityImageLikeV
 		this.imageId = model.getImageId();
 		this.createUserId = model.getCreateUserId();
 		this.createTime = model.getCreateTime();
+		this.type = model.getType();
 	}
 
 	public PartyActivityImageLikeView() {
@@ -50,6 +51,11 @@ public class PartyActivityImageLikeView extends BaseView<PartyActivityImageLikeV
 	@TableField("create_time")
 	private Long createTime;
 
+	/**
+	 * 点赞类型：1点赞，-1取赞
+	 */
+	@TableField("type")
+	private Integer type;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -83,4 +89,11 @@ public class PartyActivityImageLikeView extends BaseView<PartyActivityImageLikeV
 		return this.createTime;
 	}
 
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
+	}
 }

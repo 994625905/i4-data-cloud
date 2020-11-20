@@ -29,7 +29,7 @@ var Feng = {
         if(!BaseUtil.isEmpty(time)){
             disTime = time;
         }
-        disTips.push("#000000");
+        disTips.push("#007bff");
         layer.tips(info,follow,{
             anim:3,//动画
             tips:disTips,

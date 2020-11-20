@@ -74,9 +74,9 @@
     <label class="layui-btn layui-btn-sm" lay-event="read">查看</label>
     {{# if(d.isSign ==1 ){ }}
         {{# if(d.userSign ==1 ){ }}
-            <label class="layui-btn layui-btn-sm layui-btn-primary" lay-event="sign">已报名<i class="iconfont icon-yiqiandao"></i></label>
+            <label class="layui-btn layui-btn-sm layui-btn-primary" lay-event="sign">已报名</label>
         {{# } else{ }}
-            <label class="layui-btn layui-btn-sm layui-btn-danger" lay-event="sign">未报名<i class="iconfont icon-weiqiandao"></i></label>
+            <label class="layui-btn layui-btn-sm layui-btn-danger" lay-event="sign">未报名</label>
         {{# }}}
     {{# } else{ }}
         <label class="layui-btn layui-btn-sm layui-btn-disabled">无需报名</label>
