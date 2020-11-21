@@ -14,7 +14,7 @@
         <a href="./index.html"><img src="${systemConstant.webLogoImage!}" style="max-height: 45px"></a>
     </div>
     <div class="left_open">
-        <a style="color: black"><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
+        <a style="color: black"><i title="展开左侧栏" class="iconfont icon-caidan text-primary"></i></a>
     </div>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
