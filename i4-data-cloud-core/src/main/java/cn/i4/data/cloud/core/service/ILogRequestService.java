@@ -8,6 +8,7 @@ import cn.i4.data.cloud.core.entity.view.LogRequestView;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
 * Service
@@ -36,4 +37,11 @@ public interface ILogRequestService extends BaseService<LogRequestModel> {
      * @return
      */
     List<LogRequestView> selectByUserIdAndDate(LogRequestDto dto);
+
+    /**
+     * 同步redis数据
+     * @param logSet
+     * @return
+     */
+    Integer asyncByRedis(Set<Object> logSet);
 }

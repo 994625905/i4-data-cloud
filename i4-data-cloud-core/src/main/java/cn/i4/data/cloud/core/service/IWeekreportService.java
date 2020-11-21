@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.service;
 
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
@@ -34,4 +35,25 @@ public interface IWeekreportService extends BaseService<WeekreportModel> {
      */
     IPage<WeekreportView> selectAll(WeekreportDto dto);
 
+    /**
+     * 新增周报
+     * @param dto
+     * @return
+     * @throws CommonException
+     */
+    Boolean insert(WeekreportDto dto) throws CommonException;
+
+    /**
+     * 修改周报
+     * @param dto
+     * @return
+     */
+    Boolean update(WeekreportDto dto) throws CommonException;
+
+    /**
+     * 删除周报
+     * @param id
+     * @return
+     */
+    Boolean deleteById(Integer id) throws CommonException;
 }

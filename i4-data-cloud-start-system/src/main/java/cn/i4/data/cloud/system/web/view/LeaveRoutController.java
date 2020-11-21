@@ -33,6 +33,8 @@ public class LeaveRoutController extends WebBaseController {
     private ILeaveProcessNodeService iLeaveProcessNodeService;
     @Autowired
     private IVActReDeployProcdefService ivActReDeployProcdefService;
+    @Autowired
+    private ILeaveFileService iLeaveFileService;
 
     /**
      * 加载请假类型的首页
@@ -97,6 +99,7 @@ public class LeaveRoutController extends WebBaseController {
         ModelAndView view = getModelAndView("/leaveRout/leaveApply_edit", request);
         view.addObject("typeList",iLeaveTypeService.list());
         view.addObject("model",iLeaveService.getById(dto.getId()));
+        view.addObject("fileList",iLeaveFileService.selectByLeaveId(dto.getId()));
         return view;
     }
 

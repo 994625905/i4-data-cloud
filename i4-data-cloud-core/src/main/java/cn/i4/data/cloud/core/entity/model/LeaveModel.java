@@ -61,12 +61,6 @@ public class LeaveModel extends BaseModel<LeaveModel> {
     private Long endTime;
 
     /**
-    * 附件的在线地址，多个的话用逗号隔开
-    */
-    @TableField("enclosure")
-    private String enclosure;
-
-    /**
     * 创建时间
     */
     @TableField("create_time")
@@ -133,14 +127,6 @@ public class LeaveModel extends BaseModel<LeaveModel> {
 
     public Long getEndTime() {
     return this.endTime;
-    }
-
-    public void setEnclosure(String enclosure) {
-    this.enclosure = enclosure;
-    }
-
-    public String getEnclosure() {
-    return this.enclosure;
     }
 
     public void setCreateTime(Long createTime) {

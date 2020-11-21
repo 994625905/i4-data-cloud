@@ -67,12 +67,6 @@ public class WeekreportModel extends BaseModel<WeekreportModel> {
     private String mongoId;
 
     /**
-    * 附加地址，非必填项
-    */
-    @TableField("enclosure")
-    private String enclosure;
-
-    /**
     * 
     */
     @TableField("create_time")
@@ -147,14 +141,6 @@ public class WeekreportModel extends BaseModel<WeekreportModel> {
 
     public void setMongoId(String mongoId) {
         this.mongoId = mongoId;
-    }
-
-    public void setEnclosure(String enclosure) {
-    this.enclosure = enclosure;
-    }
-
-    public String getEnclosure() {
-    return this.enclosure;
     }
 
     public void setCreateTime(Long createTime) {

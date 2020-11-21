@@ -29,6 +29,7 @@ const TABLE_COL_WIDTH = {
         return 25*num
     },
     text:320,//文本宽度
+    date_no_time:120,//不带时间日期宽度
     date:170,//日期宽度
     normal:150,//普通宽度
     number_min:60,

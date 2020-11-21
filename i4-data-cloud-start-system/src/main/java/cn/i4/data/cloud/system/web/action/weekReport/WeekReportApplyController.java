@@ -4,13 +4,16 @@ import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.StringUtil;
 import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
 import cn.i4.data.cloud.core.entity.model.UserTemplateModel;
 import cn.i4.data.cloud.core.entity.model.WeekreportModel;
 import cn.i4.data.cloud.core.entity.view.UserTemplateView;
+import cn.i4.data.cloud.core.entity.view.WeekreportFileView;
 import cn.i4.data.cloud.core.entity.view.WeekreportView;
+import cn.i4.data.cloud.core.service.IWeekreportFileService;
 import cn.i4.data.cloud.core.service.IWeekreportService;
 import cn.i4.data.cloud.mongo.core.entity.MongoWeekReport;
 import cn.i4.data.cloud.mongo.core.service.MongoWeekReportService;
@@ -24,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 周报事务--周报提交的控制层
@@ -42,6 +46,8 @@ public class WeekReportApplyController extends WebBaseController {
 
     @Autowired
     private IWeekreportService iWeekreportService;
+    @Autowired
+    private IWeekreportFileService iWeekreportFileService;
     @Autowired
     private MongoWeekReportService mongoWeekReportService;
 
@@ -78,13 +84,13 @@ public class WeekReportApplyController extends WebBaseController {
         if(one < 1){
             return ActionResult.error("删除mongo失败");
         }
-
         /** 删除MySQL */
-        boolean remove = iWeekreportService.removeById(dto.getId());
-        if(remove){
-            return ActionResult.ok(true);
+        try {
+            boolean delete = iWeekreportService.deleteById(dto.getId());
+            return ActionResult.ok(delete);
+        } catch (CommonException e) {
+            return ActionResult.error(e.getMessage());
         }
-        return ActionResult.error("删除失败");
     }
 
     /**
@@ -139,15 +145,14 @@ public class WeekReportApplyController extends WebBaseController {
         }
 
         /** MySQL的存储 */
-        WeekreportModel model = dto.getModel();
-        model.setMongoId(mongoId);
-        model.setCreateTime(System.currentTimeMillis()/1000L);
-        model.setUserId(this.getUser(request).getId());
-        Boolean save = iWeekreportService.save(model);
-        if(save){
-            return ActionResult.ok(true);
+        dto.setUserId(this.getUser(request).getId());
+        dto.setMongoId(mongoId);
+        try {
+            Boolean insert = iWeekreportService.insert(dto);
+            return ActionResult.ok(insert);
+        } catch (CommonException e) {
+            return ActionResult.error(e.getMessage());
         }
-        return ActionResult.error("新增失败");
     }
 
     /**
@@ -159,7 +164,7 @@ public class WeekReportApplyController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
     @RequestPermission(value = "weekReport:weekReportApply/update")
-    public ActionResult<Boolean> update(@RequestBody WeekreportDto dto){
+    public ActionResult<Boolean> update(@RequestBody WeekreportDto dto,HttpServletRequest request){
 
         /** 富文本的修改 */
         MongoWeekReport mongoWeekReport = new MongoWeekReport();
@@ -169,13 +174,27 @@ public class WeekReportApplyController extends WebBaseController {
         mongoWeekReportService.updateOne(mongoWeekReport);
 
         /** MySQL的修改 */
-        WeekreportModel model = dto.getModel();
-        model.setUpdateTime(System.currentTimeMillis()/1000L);
-        Boolean modify = iWeekreportService.modify(model);
-        if(modify){
-            return ActionResult.ok(modify);
+        dto.setUserId(this.getUser(request).getId());
+        try {
+            Boolean update = iWeekreportService.update(dto);
+            return ActionResult.ok(update);
+        } catch (CommonException e) {
+            return ActionResult.error("修改失败");
         }
-        return ActionResult.error("修改失败");
+    }
+
+    /**
+     * 查询附件列表
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/getFileListByWeekReportId")
+    @RequestLog(module = MODULE_NAME,content = "查询附件列表",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--查询附件列表",key = KEY_PREFIX+"/getFileListByWeekReportId")
+    @RequestPermission(value = "weekReport:weekReportApply/getFileListByWeekReportId")
+    public ActionResult<List<WeekreportFileView>> getFileListByWeekReportId(WeekreportDto dto){
+        List<WeekreportFileView> list = iWeekreportFileService.selectByWeekReportId(dto.getId());
+        return ActionResult.ok(list);
     }
 
 }

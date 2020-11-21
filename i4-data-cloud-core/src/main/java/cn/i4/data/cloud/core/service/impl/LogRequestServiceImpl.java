@@ -2,6 +2,7 @@ package cn.i4.data.cloud.core.service.impl;
 
 import java.util.*;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cglib.beans.BeanMap;
 import org.springframework.stereotype.Service;
@@ -64,6 +65,15 @@ public class LogRequestServiceImpl extends BaseServiceImpl<LogRequestMapper,LogR
 	@Override
 	public List<LogRequestView> selectByUserIdAndDate(LogRequestDto dto) {
 		return mapper.selectByUserId(BeanMap.create(dto));
+	}
+
+	@Override
+	public Integer asyncByRedis(Set<Object> logSet) {
+		int insert = 0;
+		for(Object json:logSet){
+			insert += this.mapper.insert(JSONObject.parseObject(json.toString(),LogRequestModel.class));
+		}
+		return insert;
 	}
 
 }

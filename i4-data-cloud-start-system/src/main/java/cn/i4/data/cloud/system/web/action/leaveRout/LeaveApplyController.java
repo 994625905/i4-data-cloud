@@ -10,10 +10,10 @@ import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.LeaveDto;
 import cn.i4.data.cloud.core.entity.dto.LeaveProcessDto;
 import cn.i4.data.cloud.core.entity.model.LeaveModel;
-import cn.i4.data.cloud.core.entity.model.LeaveProcessModel;
 import cn.i4.data.cloud.core.entity.model.LeaveProcessNodeModel;
-import cn.i4.data.cloud.core.entity.model.UserModel;
+import cn.i4.data.cloud.core.entity.view.LeaveFileView;
 import cn.i4.data.cloud.core.entity.view.LeaveView;
+import cn.i4.data.cloud.core.service.ILeaveFileService;
 import cn.i4.data.cloud.core.service.ILeaveProcessService;
 import cn.i4.data.cloud.core.service.ILeaveService;
 import cn.i4.data.cloud.system.microservice.ProcessEngineMicroService;
@@ -46,6 +46,8 @@ public class LeaveApplyController extends WebBaseController {
     @Autowired
     private ILeaveService iLeaveService;
     @Autowired
+    private ILeaveFileService iLeaveFileService;
+    @Autowired
     private ProcessEngineMicroService processEngineMicroService;
     @Autowired
     private ILeaveProcessService iLeaveProcessService;
@@ -76,15 +78,13 @@ public class LeaveApplyController extends WebBaseController {
     @RequestLimit(name = MODULE_NAME+"--新增请假",key = KEY_PREFIX+"/insert")
     @RequestPermission(value = "leaveRout:leaveApply/insert")
     public ActionResult<Boolean> insert(@RequestBody LeaveDto dto, HttpServletRequest request){
-        LeaveModel model = dto.getModel();
-        model.setCreateTime(System.currentTimeMillis()/1000L);
-        model.setUserId(getUser(request).getId());
-
-        boolean save = iLeaveService.save(model);
-        if(save){
+        dto.setUserId(this.getUser(request).getId());
+        try {
+            Boolean insert = iLeaveService.insert(dto);
             return ActionResult.ok(true);
+        } catch (CommonException e) {
+            return ActionResult.error(e.getMessage());
         }
-        return ActionResult.error("新增请假失败");
     }
 
     /**
@@ -98,11 +98,12 @@ public class LeaveApplyController extends WebBaseController {
     @RequestPermission(value = "leaveRout:leaveApply/delete")
     public ActionResult<Boolean> delete(LeaveDto dto){
 
-        boolean remove = iLeaveService.removeById(dto.getId());
-        if(remove){
-            return ActionResult.ok(true);
+        try {
+            boolean delete = iLeaveService.deleteByLeaveId(dto.getId());
+            return ActionResult.ok(delete);
+        } catch (CommonException e) {
+            return ActionResult.error(e.getMessage());
         }
-        return ActionResult.error("删除请假失败");
     }
 
     /**
@@ -116,14 +117,27 @@ public class LeaveApplyController extends WebBaseController {
     @RequestLimit(name = MODULE_NAME+"--修改请假",key = KEY_PREFIX+"/update")
     @RequestPermission(value = "leaveRout:leaveApply/update")
     public ActionResult<Boolean> update(@RequestBody LeaveDto dto, HttpServletRequest request){
-        LeaveModel model = dto.getModel();
-        model.setUpdateTime(System.currentTimeMillis()/1000L);
-
-        boolean modify = iLeaveService.modify(model);
-        if(modify){
-            return ActionResult.ok(true);
+        dto.setUserId(this.getUser(request).getId());
+        try {
+            boolean update = iLeaveService.update(dto);
+            return ActionResult.ok(update);
+        } catch (CommonException e) {
+            return ActionResult.error(e.getMessage());
         }
-        return ActionResult.error("修改请假失败");
+    }
+
+    /**
+     * 查询请假条附件列表
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/getFileListByLeaveId")
+    @RequestLog(module = MODULE_NAME,content = "查询请假条附件列表",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--查询请假条附件列表",key = KEY_PREFIX+"/getFileListByLeaveId")
+    @RequestPermission(value = "leaveRout:leaveApply/getFileListByLeaveId")
+    public ActionResult<List<LeaveFileView>> getFileListByLeaveId(LeaveDto dto){
+        List<LeaveFileView> list = iLeaveFileService.selectByLeaveId(dto.getId());
+        return ActionResult.ok(list);
     }
 
     /**

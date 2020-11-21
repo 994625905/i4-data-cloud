@@ -6,6 +6,8 @@ import cn.i4.data.cloud.core.entity.dto.LogPermissionErrorDto;
 import cn.i4.data.cloud.core.entity.model.LogPermissionErrorModel;
 import cn.i4.data.cloud.core.entity.view.LogPermissionErrorView;
 
+import java.util.Set;
+
 /**
 * Service
 * @author wangjc
@@ -20,4 +22,10 @@ public interface ILogPermissionErrorService extends BaseService<LogPermissionErr
     */
     IPage<LogPermissionErrorView> selectPage(LogPermissionErrorDto dto);
 
+    /**
+     * 同步redis数据
+     * @param permissionSet
+     * @return
+     */
+    Integer asyncByRedis(Set<Object> permissionSet);
 }

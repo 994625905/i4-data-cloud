@@ -25,17 +25,37 @@ layui.use(["layer","form","laydate"],()=>{
         theme:"#000000",
     })
 
-    /** 绑定附件上传,大小不超过10M */
+    /** 附件类型替换文本 */
+    $.each($(".fileType"),(i,o)=>{
+        $(o).text(UploadFile.getTypeText($(o).text()))
+    })
+
+    /** 绑定附件删除 */
+    $(".deleteFile").click(function(){
+        $(this).parents(".tr-file").remove()
+    })
+    /** 上传附件 */
     $("#uploadEnclosure").click(()=>{
-        let type = $("#enclosureType").val()
-        if(type == "1"){
-            UploadFile.imageSelect("上传附件图片（大小<=1024KB）",null,null,null,null,10*1024,res=>{
-                $("#enclosure").text(res)
-                $("input[name='enclosure']").val(res)
+        let type = $("#fileType").val()
+        if(type == 1){
+            UploadFile.listSelect("上传附件",1024,res=>{
+                let content = ""
+                $.each(res,(i,o)=>{
+                    content += template("fileContent",{file:o,typeText:UploadFile.getTypeText(type)})
+                })
+                $("#imageList").append(content)
+                /** 绑定删除 */
+                $(".deleteFile").click(function(){
+                    $(this).parents(".tr-file").remove()
+                })
             })
         }else{
-            UploadFile.fileSelect("上传附件（大小<=10 * 1024KB）","#enclosure",type,10*1024,res=>{
-                $("input[name='enclosure']").val(res)
+            UploadFile.fileSelect("上传附件",null,type,10*1024,res=>{
+                $("#imageList").append(template("fileContent",{file:res,typeText:UploadFile.getTypeText(type)}))
+                /** 绑定删除 */
+                $(".deleteFile").click(function(){
+                    $(this).parents(".tr-file").remove()
+                })
             })
         }
     })
@@ -47,7 +67,22 @@ layui.use(["layer","form","laydate"],()=>{
         }
         param.startTime = BaseDate.dateStrToTimeStamp(param.startTime)
         param.endTime = BaseDate.dateStrToTimeStamp(param.endTime)
-        Request.asyncBody(BasePath+"/leaveRout/leaveApply/update",{model:param}).then(res=>{
+        Request.asyncBody(BasePath+"/leaveRout/leaveApply/update",{
+            model:param,
+            fileList:function(){
+                let list = []
+                $.each($(".tr-file"),(i,o)=>{
+                    list.push({
+                        url:$(o).attr("data-url"),
+                        name:$(o).attr("data-name"),
+                        type:$(o).attr("data-type"),
+                        size:$(o).attr("data-size"),
+                        suffix:$(o).attr("data-suffix"),
+                    })
+                })
+                return list
+            }()
+        }).then(res=>{
             Feng.success("编辑成功，选择流程发送审批吧")
             BaseUtil.setTimeout(()=>{
                 parent.refresh()

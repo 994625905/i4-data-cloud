@@ -1,6 +1,7 @@
 package cn.i4.data.cloud.core.entity.dto;
 
 import cn.i4.data.cloud.base.entity.dto.BaseDto;
+import cn.i4.data.cloud.core.entity.model.LeaveFileModel;
 import cn.i4.data.cloud.core.entity.model.LeaveModel;
 import cn.i4.data.cloud.core.entity.model.LeaveProcessModel;
 import cn.i4.data.cloud.core.entity.view.LeaveView;
@@ -25,6 +26,8 @@ public class LeaveDto extends BaseDto<LeaveView> {
     private String title;
 
     private LeaveModel model;
+
+    private List<LeaveFileModel> fileList;
 
     public Integer getId() {
         return id;
@@ -66,4 +69,11 @@ public class LeaveDto extends BaseDto<LeaveView> {
         this.model = model;
     }
 
+    public List<LeaveFileModel> getFileList() {
+        return fileList;
+    }
+
+    public void setFileList(List<LeaveFileModel> fileList) {
+        this.fileList = fileList;
+    }
 }

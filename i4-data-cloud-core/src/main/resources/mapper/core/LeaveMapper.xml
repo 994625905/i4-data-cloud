@@ -14,7 +14,6 @@
         t.end_time as endTime,
         FROM_UNIXTIME(t.start_time,'%Y-%m-%d %T') as startTimeStr,
 		FROM_UNIXTIME(t.end_time,'%Y-%m-%d %T') as endTimeStr,
-        t.enclosure as enclosure, 
         t.create_time as createTime, 
         t.update_time as updateTime,
         FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,

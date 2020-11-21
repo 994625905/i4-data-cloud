@@ -2,6 +2,9 @@ package cn.i4.data.cloud.core.service.impl;
 
 import java.util.List;
 import java.util.Date;
+import java.util.Set;
+
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -29,5 +32,14 @@ public class LogLimitServiceImpl extends BaseServiceImpl<LogLimitMapper,LogLimit
 	public IPage<LogLimitView> selectPage(LogLimitDto dto) {
     	return mapper.selectPage(dto);
     }
+
+	@Override
+	public Integer asyncByRedis(Set<Object> limitSet) {
+		int insert = 0;
+		for(Object json:limitSet){
+			insert += this.mapper.insert(JSONObject.parseObject(json.toString(),LogLimitModel.class));
+		}
+		return insert;
+	}
 
 }

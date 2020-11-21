@@ -168,10 +168,10 @@
                                 <tbody id="imageList">
                                     <#if fileList??>
                                         <#list fileList as file>
-                                            <tr class="tr-file" data-url="${file.url}" data-name="${file.name}" data-type="${file.type}" data-size="${file.size}" data-suffix="${file.suffix}">
+                                            <tr class="tr-file" data-url="${file.url}" data-name="${file.name}" data-type="${file.type}" data-size="${file.size?string("0.00")}" data-suffix="${file.suffix}">
                                                 <td class="fileName">${file.name}</td>
                                                 <td class="fileType">${file.type}</td>
-                                                <td class="fileSize">${file.size}KB</td>
+                                                <td class="fileSize">${file.size?string("0.00")}KB</td>
                                                 <td class="fileSuffix">${file.suffix}</td>
                                                 <td><button class="layui-btn layui-btn-xs layui-btn-danger deleteFile">删除</button></td>
                                             </tr>

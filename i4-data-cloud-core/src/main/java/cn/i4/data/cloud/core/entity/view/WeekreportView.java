@@ -24,7 +24,6 @@ public class WeekreportView extends BaseView<WeekreportView> {
 		this.startDate = model.getStartDate();
 		this.endDate = model.getEndDate();
 		this.mongoId = model.getMongoId();
-		this.enclosure = model.getEnclosure();
 		this.createTime = model.getCreateTime();
 		this.updateTime = model.getUpdateTime();
 	}
@@ -80,12 +79,6 @@ public class WeekreportView extends BaseView<WeekreportView> {
 	 */
 	@TableField("mongo_id")
 	private String mongoId;
-
-	/**
-	 * 附加地址，非必填项
-	 */
-	@TableField("enclosure")
-	private String enclosure;
 
 	/**
 	 * 
@@ -172,14 +165,6 @@ public class WeekreportView extends BaseView<WeekreportView> {
 
 	public void setMongoId(String mongoId) {
 		this.mongoId = mongoId;
-	}
-
-	public void setEnclosure(String enclosure) {
-		this.enclosure = enclosure;
-	}
-
-	public String getEnclosure() {
-		return this.enclosure;
 	}
 
 	public void setCreateTime(Long createTime) {

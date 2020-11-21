@@ -54,11 +54,15 @@ public class RedisConstant {
      * redis表存储的key（set），不可随意变更，（set结构中的key）
      */
     public interface SET_KEY{
-        String ACTIVITY_IMAGE_LIKE = "i4-data-cloud-activity-image-like";//活动照片墙的点赞（imageId-Set<like>）,默认不过期，定时任务跑（新增/）
-        String ACTIVITY_IMAGE_READ = "i4-data-cloud-activity-image-read";//活动照片墙的阅读（imageId-Set<read>）,默认不过期，定时任务跑（新增）
+        String ACTIVITY_IMAGE_LIKE = "i4-data-cloud-activity-image-like";//活动照片墙的点赞（Set<like>）,默认不过期，定时任务跑（新增/）
+        String ACTIVITY_IMAGE_READ = "i4-data-cloud-activity-image-read";//活动照片墙的阅读（Set<read>）,默认不过期，定时任务跑（新增）
 
-        String HISTORY_IMAGE_LIKE = "i4-data-cloud-history-image-like";//历史照片墙的点赞（imageId-Set<like>）,默认不过期，定时任务跑（新增/）
-        String HISTORY_IMAGE_READ = "i4-data-cloud-history-image-read";//历史照片墙的阅读（imageId-Set<read>）,默认不过期，定时任务跑（新增）
+        String HISTORY_IMAGE_LIKE = "i4-data-cloud-history-image-like";//历史照片墙的点赞（Set<like>）,默认不过期，定时任务跑（新增/）
+        String HISTORY_IMAGE_READ = "i4-data-cloud-history-image-read";//历史照片墙的阅读（Set<read>）,默认不过期，定时任务跑（新增）
+
+        String REQUEST_LOG = "i4-data-cloud-request-log";//请求日志的记录（Set<log>），默认不过期，定时任务跑（新增）
+        String REQUEST_LIMIT = "i4-data-cloud-request-limit";//限流日志的记录（Set<limit>），默认不过期，定时任务跑（新增）
+        String REQUEST_PERMISSION = "i4-data-cloud-request-permission";//权限拦截日志的记录（Set<permission>），默认不过期，定时任务跑（新增）
     }
 
     /**

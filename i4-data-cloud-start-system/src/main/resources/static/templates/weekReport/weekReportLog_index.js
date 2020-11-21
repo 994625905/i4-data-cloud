@@ -65,11 +65,8 @@ function loadTable(){
         {field:"week",title:"周次",sort:true,templet(d) {return "第"+d.week+"周";}},
         {field:"startDate",title:"开始时间",width:TABLE_COL_WIDTH.date},
         {field:"endDate",title:"结束时间",width:TABLE_COL_WIDTH.date},
-        {field:"enclosure",title:"附件查看",width:TABLE_COL_WIDTH.one_Cols(4),templet(d){
-            if(d.enclosure){
-                return "<label class='layui-btn layui-btn-sm layui-btn-normal' onclick='showEnclosure(\""+d.title+"\",\""+d.enclosure+"\")'>查看附件</label>"
-            }
-            return "<label class='layui-btn layui-btn-sm layui-btn-disabled'>没有附件</label>"
+        {field:"id",title:"附件查看",width:TABLE_COL_WIDTH.one_Cols(4),templet(d){
+            return "<label class='layui-btn layui-btn-sm layui-btn-normal' onclick='showEnclosure("+d.id+",\""+d.title+"\")'>查看附件</label>"
         }},
         {field:"processStatus",title:"审批状态",toolbar:"#processStatusCols",width:TABLE_COL_WIDTH.one_Cols(4)},
         {fixed:"right",title:"操作",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(4)},
@@ -81,6 +78,15 @@ function refresh(){
     Initlay.reloadTable(tableRender,param)
 }
 /** 查看附件 */
-function showEnclosure(name,url){
-    BaseUtil.openBlank(url,name)
+function showEnclosure(id,title){
+    Request.async(BasePath+"/weekReport/weekReportApply/getFileListByWeekReportId",{id:id}).then(res=>{
+        let content = template("fileList",{list:res})
+        Feng.infoDetail("附件列表",content,()=>{
+
+            /** 附件类型替换文本 */
+            $.each($(".fileType"),(i,o)=>{
+                $(o).text(UploadFile.getTypeText($(o).text()))
+            })
+        },null,"450px","500px")
+    })
 }

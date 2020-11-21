@@ -23,7 +23,6 @@ public class LeaveView extends BaseView<LeaveView> {
 		this.reason = model.getReason();
 		this.startTime = model.getStartTime();
 		this.endTime = model.getEndTime();
-		this.enclosure = model.getEnclosure();
 		this.createTime = model.getCreateTime();
 		this.updateTime = model.getUpdateTime();
 	}
@@ -73,12 +72,6 @@ public class LeaveView extends BaseView<LeaveView> {
 	 */
 	@TableField("end_time")
 	private Long endTime;
-
-	/**
-	 * 附件的在线地址，多个的话用逗号隔开
-	 */
-	@TableField("enclosure")
-	private String enclosure;
 
 	/**
 	 * 创建时间
@@ -161,14 +154,6 @@ public class LeaveView extends BaseView<LeaveView> {
 
 	public Long getEndTime() {
 		return this.endTime;
-	}
-
-	public void setEnclosure(String enclosure) {
-		this.enclosure = enclosure;
-	}
-
-	public String getEnclosure() {
-		return this.enclosure;
 	}
 
 	public void setCreateTime(Long createTime) {

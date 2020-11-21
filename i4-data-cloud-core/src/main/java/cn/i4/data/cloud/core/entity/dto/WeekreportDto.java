@@ -1,8 +1,11 @@
 package cn.i4.data.cloud.core.entity.dto;
 
 import cn.i4.data.cloud.base.entity.dto.BaseDto;
+import cn.i4.data.cloud.core.entity.model.WeekreportFileModel;
 import cn.i4.data.cloud.core.entity.model.WeekreportModel;
 import cn.i4.data.cloud.core.entity.view.WeekreportView;
+
+import java.util.List;
 
 /**
 * Dto
@@ -22,6 +25,11 @@ public class WeekreportDto extends BaseDto<WeekreportView> {
     private String titleTemplate;
 
     private WeekreportModel model;
+
+    /**
+     * 附件列表
+     */
+    private List<WeekreportFileModel> fileList;
 
     private String content;
 
@@ -111,5 +119,13 @@ public class WeekreportDto extends BaseDto<WeekreportView> {
 
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    public List<WeekreportFileModel> getFileList() {
+        return fileList;
+    }
+
+    public void setFileList(List<WeekreportFileModel> fileList) {
+        this.fileList = fileList;
     }
 }

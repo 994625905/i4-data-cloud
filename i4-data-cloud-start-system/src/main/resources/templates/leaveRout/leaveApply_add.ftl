@@ -47,7 +47,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">上传附件：</label>
                         <div class="layui-input-inline">
-                            <select id="enclosureType">
+                            <select id="fileType">
                                 <option value="1">图片</option>
                                 <option value="2">音频</option>
                                 <option value="3">视频</option>
@@ -55,11 +55,21 @@
                                 <option value="5">其他</option>
                             </select>
                         </div>
+                        <div class="layui-form-mid layui-word-aux">只提供图片批量上传</div>
                         <div class="layui-input-inline">
-                            <button class="layui-btn" type="button" id="uploadEnclosure">点击选择</button>
+                            <label class="layui-btn layui-btn-normal" id="uploadEnclosure">上传</label>
+                            <div class="layui-form-mid layui-word-aux">非必填项</div>
                         </div>
-                        <input name="enclosure" type="hidden">
-                        <div class="layui-form-mid layui-word-aux" id="enclosure">此处非必填项，有的话就上传</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" id="content-editor" >
+                            <div class="layui-upload-list">
+                                <table class="layui-table">
+                                    <thead><tr><th>附件名称</th><th>类型</th><th>大小</th><th>后缀</th><th>操作</th></tr></thead>
+                                    <tbody id="enclosureList"></tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
@@ -72,6 +82,15 @@
         </div>
     </div>
 </body>
+<script type="text/html" id="fileContent">
+    <tr class="tr-file" data-url="{{file.url}}" data-name="{{file.name}}" data-type="{{file.type}}" data-size="{{file.size}}" data-suffix="{{file.suffix}}">
+        <td class="fileName">{{file.name}}</td>
+        <td class="fileType">{{typeText}}</td>
+        <td class="fileSize">{{file.size}}KB</td>
+        <td class="fileSuffix">{{file.suffix}}</td>
+        <td><button class="layui-btn layui-btn-xs layui-btn-danger deleteFile">删除</button></td>
+    </tr>
+</script>
 <script type="text/javascript" src="${StaticServer}/templates/leaveRout/leaveApply_add.js?v=1.4"></script>
 </@override>
 <@extends name="/base.ftl"/>

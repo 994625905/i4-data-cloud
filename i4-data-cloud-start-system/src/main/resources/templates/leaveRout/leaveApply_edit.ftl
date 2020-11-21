@@ -45,22 +45,47 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">上传附件：</label>
-                        <div class="layui-input-inline">
-                            <select id="enclosureType">
-                                <option value="1">图片</option>
-                                <option value="2">音频</option>
-                                <option value="3">视频</option>
-                                <option value="4">文档</option>
-                                <option value="5">其他</option>
-                            </select>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">上传附件：</label>
+                            <div class="layui-input-inline">
+                                <select id="fileType">
+                                    <option value="1">图片</option>
+                                    <option value="2">音频</option>
+                                    <option value="3">视频</option>
+                                    <option value="4">文档</option>
+                                    <option value="5">其他</option>
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">只提供图片批量上传</div>
+                            <div class="layui-input-inline">
+                                <label class="layui-btn layui-btn-normal" id="uploadEnclosure">上传</label>
+                                <div class="layui-form-mid layui-word-aux">非必填项</div>
+                            </div>
                         </div>
-                        <div class="layui-input-inline">
-                            <button class="layui-btn" type="button" id="uploadEnclosure">点击选择</button>
-                        </div>
-                        <input name="enclosure" type="hidden" value="${model.enclosure!}">
-                        <div class="layui-form-mid layui-word-aux" id="enclosure"><#if model.enclosure??>${model.enclosure}<#else>此处非必填项，有的话就上传</#if></div>
                     </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" id="content-editor" >
+                            <div class="layui-upload-list">
+                                <table class="layui-table">
+                                    <thead><tr><th>附件名称</th><th>类型</th><th>大小</th><th>后缀</th><th>操作</th></tr></thead>
+                                    <tbody id="imageList">
+                                    <#if fileList??>
+                                        <#list fileList as file>
+                                            <tr class="tr-file" data-url="${file.url}" data-name="${file.name}" data-type="${file.type}" data-size="${file.size?string("0.00")}" data-suffix="${file.suffix}">
+                                                <td class="fileName">${file.name}</td>
+                                                <td class="fileType">${file.type}</td>
+                                                <td class="fileSize">${file.size?string("0.00")}KB</td>
+                                                <td class="fileSuffix">${file.suffix}</td>
+                                                <td><button class="layui-btn layui-btn-xs layui-btn-danger deleteFile">删除</button></td>
+                                            </tr>
+                                        </#list>
+                                    </#if>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <input value="${model.id?c}" type="hidden" name="id">
@@ -76,6 +101,15 @@
 <script>
     let startTime = ${model.startTime?c}
     let endTime = ${model.endTime?c}
+</script>
+<script type="text/html" id="fileContent">
+    <tr class="tr-file" data-url="{{file.url}}" data-name="{{file.name}}" data-type="{{file.type}}" data-size="{{file.size}}" data-suffix="{{file.suffix}}">
+        <td class="fileName">{{file.name}}</td>
+        <td class="fileType">{{typeText}}</td>
+        <td class="fileSize">{{file.size}}KB</td>
+        <td class="fileSuffix">{{file.suffix}}</td>
+        <td><button class="layui-btn layui-btn-xs layui-btn-danger deleteFile">删除</button></td>
+    </tr>
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/leaveRout/leaveApply_edit.js?v=1.5"></script>
 </@override>

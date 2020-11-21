@@ -13,7 +13,6 @@
         t.start_date as startDate, 
         t.end_date as endDate, 
         t.mongo_id as mongoId,
-        t.enclosure as enclosure, 
         t.create_time as createTime, 
         t.update_time as updateTime,
         FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,

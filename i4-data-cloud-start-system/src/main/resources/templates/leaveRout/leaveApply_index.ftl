@@ -38,7 +38,31 @@
         <label class="layui-btn layui-btn-sm layui-btn-disabled">暂未申请</label>
     {{# }}}
 </script>
-
+<!--附件列表-->
+<script type="text/html" id="fileList">
+    <div class="layui-fluid">
+        <table class="layui-table" lay-size="sm" lay-skin="nob">
+            <colgroup>
+                <col width="300">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>类型</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{each list as file}}
+            <tr>
+                <th><a class="i4_a" href="{{file.url}}" target="_blank" title="{{file.name}}">{{file.name}}</a></th>
+                <th class="fileType">{{file.type}}</th>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
 <!--操作列-->
 <script type="text/html" id="operate">
     {{# if(d.processId != null && d.processId != ""){ }}

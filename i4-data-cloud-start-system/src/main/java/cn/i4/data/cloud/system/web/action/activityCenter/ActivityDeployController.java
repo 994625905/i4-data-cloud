@@ -142,7 +142,8 @@ public class ActivityDeployController extends WebBaseController {
     @RequestLog(module = MODULE_NAME,content = "/修改",type = RequestType.UPDATE)
     @RequestLimit(name = MODULE_NAME+"--修改",key = KEY_PREFIX+"/update")
     @RequestPermission(value = "activityCenter:activityDeploy/update")
-    public ActionResult<Boolean> update(@RequestBody PartyActivityDto dto){
+    public ActionResult<Boolean> update(@RequestBody PartyActivityDto dto, HttpServletRequest request){
+        dto.setUserId(this.getUser(request).getId());
         try {
 
             /** mongo的修改 */

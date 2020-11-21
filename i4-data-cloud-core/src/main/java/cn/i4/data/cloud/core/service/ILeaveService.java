@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.service;
 
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.core.entity.dto.LeaveDto;
@@ -26,4 +27,25 @@ public interface ILeaveService extends BaseService<LeaveModel> {
      * @return
      */
     IPage<LeaveView> selectAllLog(LeaveDto dto);
+
+    /**
+     * 新增请假条
+     * @param dto
+     * @return
+     */
+    Boolean insert(LeaveDto dto) throws CommonException;
+
+    /**
+     * 删除请假条，
+     * @param id
+     * @return
+     */
+    Boolean deleteByLeaveId(Integer id) throws CommonException;
+
+    /**
+     * 修改请假条
+     * @param dto
+     * @return
+     */
+    Boolean update(LeaveDto dto) throws CommonException;
 }

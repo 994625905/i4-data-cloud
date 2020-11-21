@@ -24,7 +24,17 @@
                                 <tr><td>开始时间</td><td>${model.startDate!}</td></tr>
                                 <tr><td>结束时间</td><td>${model.endDate!}</td></tr>
                                 <tr><td>查看附件</td>
-                                    <td><#if model.enclosure?? && model.enclosure != ""><a href="${model.enclosure}" target="_blank" class="text-primary">点击查看</a><#else><span class="layui-word-aux">暂无附件</span></#if></td>
+                                    <td>
+                                        <#if fileList?? && fileList?size &gt; 0>
+                                            <div class="flex flex-column justify-start">
+                                                <#list fileList as file>
+                                                    <a href="${file.url}" target="_blank" class="i4_a" title="${file.name}">${file.name}</a>
+                                                </#list>
+                                            </div>
+                                        <#else>
+                                            <span class="layui-word-aux">暂无附件</span>
+                                        </#if>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

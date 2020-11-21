@@ -3,6 +3,7 @@ package cn.i4.data.cloud.system.web.view;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.WeekreportDto;
 import cn.i4.data.cloud.core.service.IUserService;
+import cn.i4.data.cloud.core.service.IWeekreportFileService;
 import cn.i4.data.cloud.core.service.IWeekreportProcessNodeService;
 import cn.i4.data.cloud.core.service.IWeekreportService;
 import cn.i4.data.cloud.mongo.core.service.MongoWeekReportService;
@@ -28,6 +29,8 @@ public class WeekReportController extends WebBaseController {
 
     @Autowired
     private IWeekreportService iWeekreportService;
+    @Autowired
+    private IWeekreportFileService iWeekreportFileService;
     @Autowired
     private IWeekreportProcessNodeService iWeekreportProcessNodeService;
     @Autowired
@@ -69,6 +72,7 @@ public class WeekReportController extends WebBaseController {
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_edit", request);
         view.addObject("model",iWeekreportService.getById(dto.getId()));
         view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        view.addObject("fileList", iWeekreportFileService.selectByWeekReportId(dto.getId()));
         return view;
     }
 
@@ -84,6 +88,7 @@ public class WeekReportController extends WebBaseController {
         ModelAndView view = getModelAndView("/weekReport/weekReportApply_read", request);
         view.addObject("model",iWeekreportService.selectRealNameById(dto.getId()));
         view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        view.addObject("fileList", iWeekreportFileService.selectByWeekReportId(dto.getId()));
         return view;
     }
 
@@ -112,6 +117,7 @@ public class WeekReportController extends WebBaseController {
         ModelAndView view = getModelAndView("/weekReport/weekReportLog_read", request);
         view.addObject("model",iWeekreportService.selectRealNameById(dto.getId()));
         view.addObject("weekReport",mongoWeekReportService.selectByMongoId(dto.getMongoId()));
+        view.addObject("fileList", iWeekreportFileService.selectByWeekReportId(dto.getId()));
         return view;
     }
 
