@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Set;
 
 /**
 * Service Impl
@@ -52,6 +53,11 @@ public class UserServiceImpl extends BaseServiceImpl<UserMapper, UserModel> impl
 	@Override
 	public List<UserView> selectActivityNoSignList(Integer activityId) {
 		return mapper.selectActivityNoSignList(activityId);
+	}
+
+	@Override
+	public List<UserView> selectByHistoryNoticeId(Integer historyNoticeId, Set<Integer> userIdList) {
+		return mapper.selectByHistoryNoticeId(historyNoticeId,userIdList);
 	}
 
 }

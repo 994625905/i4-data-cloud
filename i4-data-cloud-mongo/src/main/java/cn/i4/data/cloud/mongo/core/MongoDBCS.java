@@ -38,6 +38,9 @@ public class MongoDBCS {
         /** 活动的集合 */
         String PARTY_ACTIVITY = "party_activity";
 
+        /** 历史公告的集合 */
+        String HISTORY_NOTICE = "history_notice";
+
     }
 
 }

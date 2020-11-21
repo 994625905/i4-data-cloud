@@ -21,6 +21,7 @@ public class HistoryNoticeReadModel extends BaseModel<HistoryNoticeReadModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -34,12 +35,6 @@ public class HistoryNoticeReadModel extends BaseModel<HistoryNoticeReadModel> {
     */
     @TableField("create_user_id")
     private Integer createUserId;
-
-    /**
-    * 
-    */
-    @TableField("create_time")
-    private Long createTime;
 
 
     public void setId(Integer id) {
@@ -64,14 +59,6 @@ public class HistoryNoticeReadModel extends BaseModel<HistoryNoticeReadModel> {
 
     public Integer getCreateUserId() {
     return this.createUserId;
-    }
-
-    public void setCreateTime(Long createTime) {
-    this.createTime = createTime;
-    }
-
-    public Long getCreateTime() {
-    return this.createTime;
     }
 
 }

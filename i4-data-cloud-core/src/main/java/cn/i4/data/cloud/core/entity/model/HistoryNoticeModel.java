@@ -21,6 +21,7 @@ public class HistoryNoticeModel extends BaseModel<HistoryNoticeModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

@@ -6,6 +6,8 @@ import cn.i4.data.cloud.core.entity.dto.HistoryNoticeFileDto;
 import cn.i4.data.cloud.core.entity.model.HistoryNoticeFileModel;
 import cn.i4.data.cloud.core.entity.view.HistoryNoticeFileView;
 
+import java.util.List;
+
 /**
 * Service
 * @author wangjc
@@ -20,4 +22,10 @@ public interface IHistoryNoticeFileService extends BaseService<HistoryNoticeFile
     */
     IPage<HistoryNoticeFileView> selectPage(HistoryNoticeFileDto dto);
 
+    /**
+     * 根据公告id查询附件列表
+     * @param noticeId
+     * @return
+     */
+    List<HistoryNoticeFileView> selectByNoticeId(Integer noticeId);
 }

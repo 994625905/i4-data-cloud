@@ -92,6 +92,12 @@ public class HistoryNoticeView extends BaseView<HistoryNoticeView> {
 	@TableField("status")
 	private Integer status;
 
+	/** 补充字段 */
+	private String typeName;
+	private String createTimeStr;
+	private String updateTimeStr;
+	private String deployTimeStr;
+	private String createUserName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -173,4 +179,43 @@ public class HistoryNoticeView extends BaseView<HistoryNoticeView> {
 		return this.status;
 	}
 
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getUpdateTimeStr() {
+		return updateTimeStr;
+	}
+
+	public void setUpdateTimeStr(String updateTimeStr) {
+		this.updateTimeStr = updateTimeStr;
+	}
+
+	public String getDeployTimeStr() {
+		return deployTimeStr;
+	}
+
+	public void setDeployTimeStr(String deployTimeStr) {
+		this.deployTimeStr = deployTimeStr;
+	}
+
+	public String getCreateUserName() {
+		return createUserName;
+	}
+
+	public void setCreateUserName(String createUserName) {
+		this.createUserName = createUserName;
+	}
 }

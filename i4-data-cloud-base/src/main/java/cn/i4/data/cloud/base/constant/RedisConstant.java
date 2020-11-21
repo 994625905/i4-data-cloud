@@ -42,27 +42,29 @@ public class RedisConstant {
         String SELECT_AFTERNOON_TEA = "i4-data-cloud-select-afternoon-tea-temp";//选择下午茶的临时存储（authorization）
 
         String ACTIVITY_IMAGE_LIKE_COUNT = "i4-data-cloud-activity-image-like-count";//活动照片墙的点赞数量（imageId-count），对应照片的点赞数量
-        String ACTIVITY_IMAGE_LIKE_USER = "i4-data-cloud-activity-image-like-user";;//用户所点赞的照片（userId-Set<imageId>），对应点赞的照片列表
-        String ACTIVITY_IMAGE_READ_COUNT = "i4-data-cloud-activity-image-read-count";//活动照片墙的阅读数量（imageId-Count）,对应照片的阅读数量
+        String ACTIVITY_IMAGE_LIKE_USER = "i4-data-cloud-activity-image-like-user";//用户所点赞的照片（userId-Set<imageId>），对应点赞的照片列表
+        String ACTIVITY_IMAGE_READ_COUNT = "i4-data-cloud-activity-image-read-count";//活动照片墙的阅读数量（imageId-Count）,对应照片的阅读数量，允许重复阅读+1
 
         String HISTORY_IMAGE_LIKE_COUNT = "i4-data-cloud-history-image-like-count";//历史照片墙的点赞数量（imageId-count），对应照片的点赞数量
-        String HISTORY_IMAGE_LIKE_USER = "i4-data-cloud-history-image-like-user";;//用户所点赞的照片（userId-Set<imageId>），对应点赞的照片列表
-        String HISTORY_IMAGE_READ_COUNT = "i4-data-cloud-history-image-read-count";//历史照片墙的阅读数量（imageId-Count）,对应照片的阅读数量
+        String HISTORY_IMAGE_LIKE_USER = "i4-data-cloud-history-image-like-user";//用户所点赞的照片（userId-Set<imageId>），对应点赞的照片列表
+        String HISTORY_IMAGE_READ_COUNT = "i4-data-cloud-history-image-read-count";//历史照片墙的阅读数量（imageId-Count）,对应照片的阅读数量，允许重复阅读+1
+
+        String HISTORY_NOTICE_READ_USER = "i4-data-cloud-history-notice-read-user";//公告的阅读用户（noticeId-Set<userId>），对应阅读的用户id列表，不重复阅读，定时任务跑（匹配新增，不删除redis）
     }
 
     /**
      * redis表存储的key（set），不可随意变更，（set结构中的key）
      */
     public interface SET_KEY{
-        String ACTIVITY_IMAGE_LIKE = "i4-data-cloud-activity-image-like";//活动照片墙的点赞（Set<like>）,默认不过期，定时任务跑（新增/）
-        String ACTIVITY_IMAGE_READ = "i4-data-cloud-activity-image-read";//活动照片墙的阅读（Set<read>）,默认不过期，定时任务跑（新增）
+        String ACTIVITY_IMAGE_LIKE = "i4-data-cloud-activity-image-like";//活动照片墙的点赞（Set<like>）,默认不过期，定时任务跑（新增/），跑完删除
+        String ACTIVITY_IMAGE_READ = "i4-data-cloud-activity-image-read";//活动照片墙的阅读（Set<read>）,默认不过期，定时任务跑（新增），跑完删除
 
-        String HISTORY_IMAGE_LIKE = "i4-data-cloud-history-image-like";//历史照片墙的点赞（Set<like>）,默认不过期，定时任务跑（新增/）
-        String HISTORY_IMAGE_READ = "i4-data-cloud-history-image-read";//历史照片墙的阅读（Set<read>）,默认不过期，定时任务跑（新增）
+        String HISTORY_IMAGE_LIKE = "i4-data-cloud-history-image-like";//历史照片墙的点赞（Set<like>）,默认不过期，定时任务跑（新增/），跑完删除
+        String HISTORY_IMAGE_READ = "i4-data-cloud-history-image-read";//历史照片墙的阅读（Set<read>）,默认不过期，定时任务跑（新增），跑完删除
 
-        String REQUEST_LOG = "i4-data-cloud-request-log";//请求日志的记录（Set<log>），默认不过期，定时任务跑（新增）
-        String REQUEST_LIMIT = "i4-data-cloud-request-limit";//限流日志的记录（Set<limit>），默认不过期，定时任务跑（新增）
-        String REQUEST_PERMISSION = "i4-data-cloud-request-permission";//权限拦截日志的记录（Set<permission>），默认不过期，定时任务跑（新增）
+        String REQUEST_LOG = "i4-data-cloud-request-log";//请求日志的记录（Set<log>），默认不过期，定时任务跑（新增），跑完删除
+        String REQUEST_LIMIT = "i4-data-cloud-request-limit";//限流日志的记录（Set<limit>），默认不过期，定时任务跑（新增），跑完删除
+        String REQUEST_PERMISSION = "i4-data-cloud-request-permission";//权限拦截日志的记录（Set<permission>），默认不过期，定时任务跑（新增），跑完删除
     }
 
     /**

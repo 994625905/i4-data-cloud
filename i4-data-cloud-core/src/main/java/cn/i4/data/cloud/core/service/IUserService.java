@@ -7,6 +7,7 @@ import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 import java.util.List;
+import java.util.Set;
 
 /**
 * Service
@@ -50,4 +51,12 @@ public interface IUserService extends BaseService<UserModel> {
      * @return
      */
     List<UserView> selectActivityNoSignList(Integer activityId);
+
+    /**
+     * 查询历史公告已读列表
+     * @param id
+     * @param userIdList
+     * @return
+     */
+    List<UserView>  selectByHistoryNoticeId(Integer historyNoticeId, Set<Integer> userIdList);
 }

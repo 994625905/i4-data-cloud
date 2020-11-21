@@ -22,4 +22,10 @@ public interface HistoryNoticeFileMapper extends BaseIMapper<HistoryNoticeFileMo
     */
     IPage<HistoryNoticeFileView> selectPage(HistoryNoticeFileDto dto);
 
+    /**
+     * 根据公告id查询
+     * @param noticeId
+     * @return
+     */
+    List<HistoryNoticeFileView> selectByNoticeId(Integer noticeId);
 }

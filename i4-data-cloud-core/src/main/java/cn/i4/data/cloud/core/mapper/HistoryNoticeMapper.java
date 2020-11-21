@@ -22,4 +22,10 @@ public interface HistoryNoticeMapper extends BaseIMapper<HistoryNoticeModel> {
     */
     IPage<HistoryNoticeView> selectPage(HistoryNoticeDto dto);
 
+    /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
+    HistoryNoticeView selectByNoticeId(@Param("id") Integer id);
 }

@@ -13,7 +13,8 @@
         t.suffix as suffix, 
         t.type as type, 
         t.size as size, 
-        t.create_time as createTime
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr
     </sql>
 
     <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.HistoryNoticeFileDto"
@@ -22,6 +23,14 @@
         <include refid="Base_Column_List" />
         FROM t_history_notice_file AS t
 
+    </select>
+
+    <select id="selectByNoticeId" resultType="cn.i4.data.cloud.core.entity.view.HistoryNoticeFileView">
+        SELECT
+            <include refid="Base_Column_List" />
+        FROM t_history_notice_file AS t
+        where t.notice_id = #{noticeId}
+        order by t.create_time asc
     </select>
 
 </mapper>

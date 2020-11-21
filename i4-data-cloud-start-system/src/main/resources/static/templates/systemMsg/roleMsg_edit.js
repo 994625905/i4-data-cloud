@@ -18,6 +18,7 @@ layui.use(["layer","form","element"],()=>{
             $.each(temp,(n,m)=>{
                 if(o.id == $(m).attr("data-id")){
                     $(m).toggleClass("layui-btn-normal")
+                    $(m).toggleClass("layui-btn-primary")
                 }
             })
         })
@@ -27,22 +28,23 @@ layui.use(["layer","form","element"],()=>{
 
     /** 全选按钮（测试是否会多次添加class） */
     $(".all").click(function(){
-        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").addClass("layui-btn-normal");
+        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").addClass("layui-btn-normal").removeClass("layui-btn-primary");
     });
 
     /** 反选 */
     $(".reverse").click(function(){
-        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").toggleClass("layui-btn-normal");
+        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").toggleClass("layui-btn-normal").toggleClass("layui-btn-primary");
     });
 
     /** 不选 */
     $(".clear").click(function(){
-        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").removeClass("layui-btn-normal");
+        $(this).parent(".layui-btn-group").parent(".selectButton").next().find("button").removeClass("layui-btn-normal").addClass("layui-btn-primary");
     });
 
     /** 具体菜单按钮 */
     $(".menu").click(function(){
         $(this).toggleClass("layui-btn-normal");
+        $(this).toggleClass("layui-btn-primary");
     });
 
     /** 验证项 */

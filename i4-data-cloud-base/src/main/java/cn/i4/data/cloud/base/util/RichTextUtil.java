@@ -15,7 +15,7 @@ import org.springframework.util.StringUtils;
 public class RichTextUtil {
 
     /** 自动获取的摘要长度 */
-    private final static Integer ABSTRACT_LIMIT = 15;
+    private final static Integer ABSTRACT_LIMIT = 20;
 
     /**
      * 根据富文本获取纯文本信息
@@ -38,13 +38,17 @@ public class RichTextUtil {
     }
 
     /**
-     * 根据富文本获取摘要信息
+     * 根据富文本获取摘要信息，
      * @param content
      * @return
      */
     public static String getExplain(String content){
         String clearContent = HtmlUtil.cleanHtmlTag(StrUtil.trim(content));
         clearContent = StringUtils.trimAllWhitespace(clearContent);
+        /** 判断文本长度是否大于指定长度 */
+        if(clearContent.length() <= 20){
+            return clearContent;
+        }
         return clearContent.substring(0,ABSTRACT_LIMIT);
     }
 

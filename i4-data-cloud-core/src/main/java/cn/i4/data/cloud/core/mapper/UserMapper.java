@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Set;
 
 /**
 * Mapper
@@ -44,4 +45,12 @@ public interface UserMapper extends BaseIMapper<UserModel> {
      * @return
      */
     List<UserView> selectActivityNoSignList(@Param("activityId") Integer activityId);
+
+    /**
+     * 查询历史公告已读列表
+     * @param historyNoticeId
+     * @param userIdList
+     * @return
+     */
+    List<UserView> selectByHistoryNoticeId(@Param("historyNoticeId") Integer historyNoticeId, @Param("userIdList") Set<Integer> userIdList);
 }

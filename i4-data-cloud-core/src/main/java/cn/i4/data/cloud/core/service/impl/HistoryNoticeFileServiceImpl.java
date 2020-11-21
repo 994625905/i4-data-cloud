@@ -30,4 +30,9 @@ public class HistoryNoticeFileServiceImpl extends BaseServiceImpl<HistoryNoticeF
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public List<HistoryNoticeFileView> selectByNoticeId(Integer noticeId) {
+		return mapper.selectByNoticeId(noticeId);
+	}
+
 }
