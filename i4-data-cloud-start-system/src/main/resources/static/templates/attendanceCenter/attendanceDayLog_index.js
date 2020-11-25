@@ -150,9 +150,9 @@ function refresh(){
 }
 /******************************查看补卡记录******************************/
 function attendMendDetail(workDate,attendMendId){
-
+    Feng.loadWindow(workDate+"：补卡记录",BasePath+"/attendanceCenter/attendanceMend/where?id="+attendMendId)
 }
 /******************************查看请假记录******************************/
 function leaveDetail(workDate,leaveId){
-    Feng.loadWindow(workDate+"：请假记录",BasePath+"/leaveRout/leaveLog/where?id="+leaveId)
+    Feng.loadWindow(workDate+"：请假记录",BasePath+"/leaveRout/leaveApply/where?id="+leaveId)
 }

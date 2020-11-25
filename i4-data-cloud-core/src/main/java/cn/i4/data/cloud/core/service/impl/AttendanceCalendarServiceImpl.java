@@ -2,6 +2,8 @@ package cn.i4.data.cloud.core.service.impl;
 
 import java.util.List;
 import java.util.Date;
+
+import cn.i4.data.cloud.base.exception.CommonException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -29,5 +31,22 @@ public class AttendanceCalendarServiceImpl extends BaseServiceImpl<AttendanceCal
 	public IPage<AttendanceCalendarView> selectPage(AttendanceCalendarDto dto) {
     	return mapper.selectPage(dto);
     }
+
+	@Override
+	public Boolean insert(AttendanceCalendarDto dto) throws CommonException {
+		List<AttendanceCalendarModel> calendarList = dto.getCalendarList();
+		int insert = 0;
+
+		/** 遍历新增 */
+		for(AttendanceCalendarModel model:calendarList){
+			model.setCreateTime(System.currentTimeMillis()/1000L);
+			model.setCreateUserId(dto.getUserId());
+			insert += this.mapper.insert(model);
+		}
+		if(insert != calendarList.size()){
+			throw new CommonException("新增失败");
+		}
+		return true;
+	}
 
 }

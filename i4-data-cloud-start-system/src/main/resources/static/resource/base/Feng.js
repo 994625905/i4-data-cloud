@@ -120,7 +120,7 @@ var Feng = {
             diswidth=width;
         }
         layer.open({
-            skin: 'layer-title',
+            skin: 'defined-open-iframe', //加上边框
             type: 1,
             title:title,
             closeBtn: 1, //不显示关闭按钮

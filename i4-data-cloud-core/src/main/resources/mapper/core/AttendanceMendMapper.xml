@@ -30,6 +30,9 @@
         left join t_attendance_day d on d.id = t.attendance_day_id
         left join t_attendance_mend_process p on t.id = p.attendance_mend_id
         where 1=1
+        <if test="id != null">
+            and t.id = #{id}
+        </if>
         <if test="userId != null and userId != ''">
             and t.user_id = #{userId}
         </if>

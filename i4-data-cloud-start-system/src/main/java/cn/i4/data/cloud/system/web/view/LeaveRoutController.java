@@ -122,6 +122,19 @@ public class LeaveRoutController extends WebBaseController {
     }
 
     /**
+     * 加载请求记录的明确条件页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/leaveApply/where")
+    @RequestPermission(value = "leaveRout:leaveApply/where")
+    public ModelAndView leaveLogWhere(LeaveDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveApply_where", request);
+        view.addObject("param",dto);
+        return view;
+    }
+
+    /**
      * 加载请假流程日志的页面
      * @param dto
      * @param request
@@ -150,16 +163,4 @@ public class LeaveRoutController extends WebBaseController {
         return view;
     }
 
-    /**
-     * 加载请求记录的明确条件页
-     * @param request
-     * @return
-     */
-    @RequestMapping(value = "/leaveLog/where")
-    @RequestPermission(value = "leaveRout:leaveLog/where")
-    public ModelAndView leaveLogWhere(LeaveDto dto, HttpServletRequest request){
-        ModelAndView view = getModelAndView("/leaveRout/leaveLog_where", request);
-        view.addObject("param",dto);
-        return view;
-    }
 }

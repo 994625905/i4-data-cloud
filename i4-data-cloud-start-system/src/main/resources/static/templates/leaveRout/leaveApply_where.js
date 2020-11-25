@@ -45,7 +45,7 @@ function loadTable(){
         {field:"processStatus",title:"审批状态",toolbar:"#processStatusCols",width:TABLE_COL_WIDTH.one_Cols(4)},
         {fixed:"right",title:"操作",toolbar:"#operate",width:TABLE_COL_WIDTH.tool(2)},
     ]]
-    tableRender = Initlay.initTable("#leaveTable",BasePath+"/leaveRout/leaveLog/loadTable",tabCols,null,param)
+    tableRender = Initlay.initTable("#leaveTable",BasePath+"/leaveRout/leaveApply/loadWhereTable",tabCols,null,param)
 }
 /** 刷新 */
 function refresh(){
@@ -53,7 +53,7 @@ function refresh(){
 }
 /** 查看附件 */
 function showEnclosure(id,title){
-    Request.async(BasePath+"/leaveRout/leaveLog/getFileListByLeaveId",{id:id}).then(res=>{
+    Request.async(BasePath+"/leaveRout/leaveApply/getFileListByLeaveId",{id:id}).then(res=>{
         let content = template("fileList",{list:res})
         Feng.infoDetail("附件列表",content,()=>{
 

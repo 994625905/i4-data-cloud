@@ -253,7 +253,7 @@ var Initlay = {
      * @param type 类型，默认常规 yyyy-mm-dd
      * @param callback_done：选择完毕的回调
      */
-    loadLayDate:function(elem,callback_done,type,value){
+    loadLayDate:function(elem,callback_done,type,value,minValue,maxValue = BaseDate.rangeDate(0)){
         var date_left = elem.substring(1)+"_date_left"
         var date_right = elem.substring(1)+"_date_right"
         var disType,disValue;
@@ -271,11 +271,11 @@ var Initlay = {
             elem:elem,
             type:disType,
             value:disValue,
-            max:BaseDate.rangeDate(0),//设置最大时间为当天
+            max:maxValue,
             range: false,
             theme:"#007bff",
             done:function(value){
-                if(value == BaseDate.rangeDate(0)){
+                if(value == maxValue){
                     Feng.tip("数据统计日期截止到"+value,elem,2);
                 }
                 if(!BaseUtil.isEmpty(callback_done)){
@@ -283,10 +283,13 @@ var Initlay = {
                 }
             }
         };
+        if(minValue){
+            option.min = minValue
+        }
         laydate.render(option);
 
         /** 新增日期左右移控件,同时绑定事件 */
-        var html =  '<div class="layui-input-inline" style="margin-left: -4px">' +
+        var html =  '<div class="layui-input-inline" style="margin-left: -10px;width: 70px;">' +
                     '   <div class="layui-btn-group">' +
                     '       <button class="layui-btn-primary '+date_left+'" type="button" style="width: 30px;height:38px;text-align:center;font-size:14px;">' +
                     '           <strong><i class="layui-icon layui-icon-left font-weight-bolder"></i></strong>' +
@@ -307,9 +310,14 @@ var Initlay = {
             if(disType == "year"){
                 d = parseInt($(elem).val()) - 1 +"";
             }
-            $(elem).val(d);
-            if(!BaseUtil.isEmpty(callback_done)){
-                callback_done(d);
+
+            if(minValue && (new Date(d) < new Date(minValue))){
+                Feng.tip("时间不可小于"+minValue,elem,2);
+            }else{
+                $(elem).val(d);
+                if(!BaseUtil.isEmpty(callback_done)){
+                    callback_done(d);
+                }
             }
         });
         /** 右移 */
@@ -322,8 +330,8 @@ var Initlay = {
                 d = parseInt($(elem).val()) + 1 +"";
             }
 
-            if(new Date(d) > new Date(BaseDate.rangeDate(0))){
-                Feng.tip("时间不可超过当前",elem,2);
+            if(new Date(d) > new Date(maxValue)){
+                Feng.tip("时间不可超过"+maxValue,elem,2);
             }else{
                 $(elem).val(d);
                 if(!BaseUtil.isEmpty(callback_done)){

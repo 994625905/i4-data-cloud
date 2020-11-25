@@ -1,15 +1,13 @@
 package cn.i4.data.cloud.system.web.view;
 
 import cn.i4.data.cloud.base.annotation.RequestPermission;
+import cn.i4.data.cloud.core.entity.dto.AttendanceCalendarDto;
 import cn.i4.data.cloud.core.entity.dto.AttendanceDayDto;
 import cn.i4.data.cloud.core.entity.dto.AttendanceMendDto;
 import cn.i4.data.cloud.core.entity.model.AttendanceDayModel;
 import cn.i4.data.cloud.core.entity.model.UserModel;
 import cn.i4.data.cloud.core.entity.view.AttendanceDayView;
-import cn.i4.data.cloud.core.service.IAttendanceDayService;
-import cn.i4.data.cloud.core.service.IAttendanceMendProcessNodeService;
-import cn.i4.data.cloud.core.service.IAttendanceMendService;
-import cn.i4.data.cloud.core.service.IVActReDeployProcdefService;
+import cn.i4.data.cloud.core.service.*;
 import cn.i4.data.cloud.system.web.WebBaseController;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +38,8 @@ public class AttendanceCenterController extends WebBaseController {
     private IAttendanceMendProcessNodeService iAttendanceMendProcessNodeService;
     @Autowired
     private IVActReDeployProcdefService ivActReDeployProcdefService;
+    @Autowired
+    private IAttendanceCalendarService iAttendanceCalendarService;
 
     /**
      * 加载打卡记录首页
@@ -183,6 +183,21 @@ public class AttendanceCenterController extends WebBaseController {
     }
 
     /**
+     * 加载补卡申请的明确条件页面
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/attendanceMend/where")
+    @RequestPermission(value = "attendanceCenter:attendanceMend/where")
+    public ModelAndView attendanceMendWhere(AttendanceMendDto dto,HttpServletRequest request){
+        ModelAndView view = getModelAndView("/attendanceCenter/attendanceMend_where", request);
+
+        view.addObject("param",dto);
+        return view;
+    }
+
+    /**
      * 加载补卡申请汇总的首页
      * @param request
      * @return
@@ -196,7 +211,7 @@ public class AttendanceCenterController extends WebBaseController {
     }
 
     /**
-     * 加载补卡申请的流程日志
+     * 加载补卡申请汇总的流程日志
      * @param dto
      * @param request
      * @return
@@ -235,6 +250,29 @@ public class AttendanceCenterController extends WebBaseController {
         return view;
     }
 
+    /**
+     * 加载日历设置的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/attendanceCalendar/index")
+    @RequestPermission(value = "attendanceCenter:attendanceCalendar/index")
+    public ModelAndView attendanceCalendarIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/attendanceCenter/attendanceCalendar_index", request);
+        return view;
+    }
 
-
+    /**
+     * 加载日历设置的新增页
+     * @param dto
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/attendanceCalendar/addPage")
+    @RequestPermission(value = "attendanceCenter:attendanceCalendar/addPage")
+    public ModelAndView attendanceCalendarAddPage(AttendanceCalendarDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/attendanceCenter/attendanceCalendar_add", request);
+        view.addObject("param",dto);
+        return view;
+    }
 }

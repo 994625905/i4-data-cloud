@@ -494,7 +494,7 @@ var BaseDate = {
 		return this.rangeDate( 5 - curr);
 	},
 	/**
-	 * 根据事件获取周次
+	 * 根据时间获取周次
 	 * @param dateStr
 	 */
 	getWeekByDate(dateStr){

@@ -55,6 +55,21 @@ public class AttendanceMendController extends WebBaseController {
     }
 
     /**
+     * 加载明确条件页面的表格
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/loadWhereTable")
+    @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadWhereTable")
+    @RequestPermission(value = "attendanceCenter:attendanceMend/loadWhereTable")
+    public ActionResult<IPage<AttendanceMendView>> loadWhereTable(AttendanceMendDto dto, HttpServletRequest request){
+        IPage<AttendanceMendView> page = iAttendanceMendService.selectPage(dto);
+        return ActionResult.ok(page);
+    }
+
+
+    /**
      * 删除
      * @param dto
      * @return

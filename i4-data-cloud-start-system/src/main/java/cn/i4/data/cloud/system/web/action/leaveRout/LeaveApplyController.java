@@ -68,6 +68,20 @@ public class LeaveApplyController extends WebBaseController {
     }
 
     /**
+     * 加载明确条件页表格
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/loadWhereTable")
+    @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+    @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadWhereTable")
+    @RequestPermission(value = "leaveRout:leaveApply/loadWhereTable")
+    public ActionResult<IPage<LeaveView>> loadWhereTable(LeaveDto dto){
+        IPage<LeaveView> page = iLeaveService.selectPage(dto);
+        return ActionResult.ok(page);
+    }
+
+    /**
      * 新增请假
      * @param dto
      * @param request

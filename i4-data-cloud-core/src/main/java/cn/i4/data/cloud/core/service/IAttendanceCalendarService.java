@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.service;
 
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.core.entity.dto.AttendanceCalendarDto;
@@ -20,4 +21,10 @@ public interface IAttendanceCalendarService extends BaseService<AttendanceCalend
     */
     IPage<AttendanceCalendarView> selectPage(AttendanceCalendarDto dto);
 
+    /**
+     * 新增日志设置
+     * @param dto
+     * @return
+     */
+    Boolean insert(AttendanceCalendarDto dto) throws CommonException;
 }

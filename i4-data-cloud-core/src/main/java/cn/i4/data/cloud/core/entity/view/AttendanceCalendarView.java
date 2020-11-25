@@ -85,6 +85,8 @@ public class AttendanceCalendarView extends BaseView<AttendanceCalendarView> {
 	@TableField("create_user_id")
 	private Integer createUserId;
 
+	private String createTimeStr;
+	private String createUserName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -158,4 +160,19 @@ public class AttendanceCalendarView extends BaseView<AttendanceCalendarView> {
 		return this.createUserId;
 	}
 
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+
+	public String getCreateUserName() {
+		return createUserName;
+	}
+
+	public void setCreateUserName(String createUserName) {
+		this.createUserName = createUserName;
+	}
 }

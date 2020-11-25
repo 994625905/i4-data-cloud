@@ -21,6 +21,7 @@ public class AttendanceCalendarModel extends BaseModel<AttendanceCalendarModel> 
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

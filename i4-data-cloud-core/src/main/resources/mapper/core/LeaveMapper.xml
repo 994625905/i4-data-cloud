@@ -37,6 +37,9 @@
         left join t_leave_process p on t.id = p.leave_id
         left join t_leave_type y on t.type_id = y.id
         where 1=1
+        <if test="id != null">
+            and t.id = #{id}
+        </if>
         <if test="userId != null and userId != ''">
             and t.user_id = #{userId}
         </if>
