@@ -202,7 +202,7 @@ function setUserInfo(userId,userInfoId){
         elem:"#birthday",
         type:"date",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 头像上传 */

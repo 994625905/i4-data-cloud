@@ -13,7 +13,7 @@ layui.use(["layer","form","laydate"],()=>{
         elem:"#overTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 渲染下拉多选 */

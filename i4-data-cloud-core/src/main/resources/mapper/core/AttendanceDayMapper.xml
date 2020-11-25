@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceDayMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.attendance_id as attendanceId, 
+        t.attendance_stage as attendanceStage, 
+        t.attendance_status as attendanceStatus,
+        t.start_time as startTime,
+        t.end_time as endTime,
+        t.work_date as workDate, 
+        t.work_date_type as workDateType, 
+        t.work_hour as workHour,
+        t.work_hour_over as workHourOver,
+        t.update_status as updateStatus,
+        t.settle_status as settleStatus
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceDayDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceDayView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName,
+            FROM_UNIXTIME(a.create_time,'%T') as attendanceTimeStr,
+            m.id as attendMendId,
+            l.id as leaveId
+        FROM t_attendance_day AS t
+        left join t_user u on u.id = t.user_id
+        left join t_attendance a on t.attendance_id = a.id
+        left join (select m.id,m.attendance_day_id from t_attendance_mend m,t_attendance_mend_process p where m.id = p.attendance_mend_id and p.status = 1) m on t.id = m.attendance_day_id
+        left join (
+                select t.id,t.user_id,FROM_UNIXTIME(t.start_time, '%Y%m%d') AS startTimeStr,FROM_UNIXTIME(t.end_time, '%Y%m%d') AS endTimeStr from t_leave t,t_leave_process p where t.id = p.leave_id and p.status = 1
+            ) l on l.user_id = t.user_id and t.work_date between l.startTimeStr and l.endTimeStr
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.work_date between #{startDate} and #{endDate}
+        </if>
+        <if test="attendanceStage != null">
+            and t.attendance_stage = #{attendanceStage}
+        </if>
+        <if test="attendanceStatus != null">
+            and t.attendance_status = #{attendanceStatus}
+        </if>
+        <if test="workDateType != null">
+            and t.work_date_type = #{workDateType}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+    <select id="selectAll" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceDayDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceDayView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName,
+            FROM_UNIXTIME(a.create_time,'%T') as attendanceTimeStr,
+            m.id as attendMendId,
+            l.id as leaveId
+        FROM t_attendance_day AS t
+        left join t_user u on u.id = t.user_id
+        left join t_attendance a on t.attendance_id = a.id
+        left join (select m.id,m.attendance_day_id from t_attendance_mend m,t_attendance_mend_process p where m.id = p.attendance_mend_id and p.status = 1) m on t.id = m.attendance_day_id
+        left join (
+                select t.id,t.user_id,FROM_UNIXTIME(t.start_time, '%Y%m%d') AS startTimeStr,FROM_UNIXTIME(t.end_time, '%Y%m%d') AS endTimeStr from t_leave t,t_leave_process p where t.id = p.leave_id and p.status = 1
+            ) l on l.user_id = t.user_id and t.work_date between l.startTimeStr and l.endTimeStr
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.work_date between #{startDate} and #{endDate}
+        </if>
+        <if test="attendanceStage != null">
+            and t.attendance_stage = #{attendanceStage}
+        </if>
+        <if test="attendanceStatus != null">
+            and t.attendance_status = #{attendanceStatus}
+        </if>
+        <if test="workDateType != null">
+            and t.work_date_type = #{workDateType}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+</mapper>

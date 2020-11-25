@@ -18,7 +18,7 @@
                             <select class="layui-input" name="processDefId" lay-verify="required" lay-filter="processDefId">
                                 <#if processList??>
                                     <#list processList  as process>
-                                        <option value="${process.procdefId?c},${process.deploymentId?c}">${process.procdefName}</option>
+                                        <option value="${process.procdefId},${process.deploymentId}">${process.procdefName}</option>
                                     </#list>
                                 </#if>
                             </select>

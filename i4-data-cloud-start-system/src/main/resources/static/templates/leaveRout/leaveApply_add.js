@@ -14,13 +14,13 @@ layui.use(["layer","form","laydate"],()=>{
         elem:"#startTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#endTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 上传附件 */

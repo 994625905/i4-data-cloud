@@ -18,28 +18,28 @@ layui.use(["layer","form","laydate","upload"],()=>{
         value:BaseDate.timeStampToDate(startTime),
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#endTime",
         value:BaseDate.timeStampToDate(endTime),
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#signStartTime",
         value:signStartTime?BaseDate.timeStampToDate(signStartTime):"",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#signEndTime",
         value:signEndTime?BaseDate.timeStampToDate(signEndTime):"",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 渲染百度地图 */

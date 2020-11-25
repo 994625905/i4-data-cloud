@@ -17,25 +17,25 @@ layui.use(["layer","form","laydate","upload"],()=>{
         elem:"#startTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#endTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#signStartTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#signEndTime",
         type:"datetime",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 渲染百度地图 */

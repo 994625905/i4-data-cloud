@@ -3,8 +3,10 @@ package cn.i4.data.cloud.system.web.view;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.core.entity.dto.LeaveDto;
 import cn.i4.data.cloud.core.entity.model.LeaveTypeModel;
+import cn.i4.data.cloud.core.entity.model.UserModel;
 import cn.i4.data.cloud.core.service.*;
 import cn.i4.data.cloud.system.web.WebBaseController;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -111,9 +113,11 @@ public class LeaveRoutController extends WebBaseController {
     @RequestPermission(value = "leaveRout:leaveApply/applyPage")
     public ModelAndView leaveApplyApplyPage(LeaveDto dto,HttpServletRequest request){
         ModelAndView view = getModelAndView("/leaveRout/leaveApply_apply", request);
+        List<UserModel> userModelList = iUserService.selectListNotUserId(getUser(request).getId());
+
+        view.addObject("userList", JSONObject.toJSONString(userModelList));
         view.addObject("processList",ivActReDeployProcdefService.list());
         view.addObject("model",iLeaveService.getById(dto.getId()));
-        view.addObject("userList",iUserService.selectListNotUserId(getUser(request).getId()));
         return view;
     }
 
@@ -143,6 +147,19 @@ public class LeaveRoutController extends WebBaseController {
         ModelAndView view = getModelAndView("/leaveRout/leaveLog_index", request);
         view.addObject("typeList",iLeaveTypeService.list());
         view.addObject("userList",iUserService.list());
+        return view;
+    }
+
+    /**
+     * 加载请求记录的明确条件页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/leaveLog/where")
+    @RequestPermission(value = "leaveRout:leaveLog/where")
+    public ModelAndView leaveLogWhere(LeaveDto dto, HttpServletRequest request){
+        ModelAndView view = getModelAndView("/leaveRout/leaveLog_where", request);
+        view.addObject("param",dto);
         return view;
     }
 }

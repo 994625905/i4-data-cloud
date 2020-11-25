@@ -19,7 +19,7 @@ layui.use(["layer","form","laydate"],()=>{
         type:"datetime",
         value:BaseDate.rangeDate(0)+" 13:40:00",//默认当前13点40前
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 标题项的填充 */
@@ -39,7 +39,7 @@ layui.use(["layer","form","laydate"],()=>{
             elem:"#date"+addTemp,
             value:BaseDate.rangeDate(addDate),
             range: false,
-            theme:"#000000",
+            theme:"#007bff",
             done:value=>{
                 $("#week"+addTemp).text(BaseDate.getWeekByDate(value))
             }

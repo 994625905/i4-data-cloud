@@ -20,7 +20,7 @@ layui.use(["layer","form","laydate"],()=>{
         type:"datetime",
         value: BaseDate.timeStampToDate(modelEndTime),
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 渲染现有元素的事件 */
@@ -30,7 +30,7 @@ layui.use(["layer","form","laydate"],()=>{
         laydate.render({
             elem:"#date"+addTemp,
             range: false,
-            theme:"#000000",
+            theme:"#007bff",
             done:value=>{
                 $("#week"+addTemp).text(BaseDate.getWeekByDate(value))
             }
@@ -103,7 +103,7 @@ layui.use(["layer","form","laydate"],()=>{
             elem:"#date"+addTemp,
             value:BaseDate.rangeDate(addDate),
             range: false,
-            theme:"#000000",
+            theme:"#007bff",
             done:value=>{
                 $("#week"+addTemp).text(BaseDate.getWeekByDate(value))
             }

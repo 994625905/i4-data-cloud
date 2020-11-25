@@ -26,13 +26,6 @@ layui.use(["layer","table","form","laydate"],()=>{
     /** 初始化表格 */
     loadTable()
 
-    /** table的工具栏 */
-    table.on("toolbar(applyTable)",obj=>{
-        if(obj.event == "refresh"){
-            Initlay.reloadTable(tableRender,param)
-        }
-    })
-
     /** 查询按钮 */
     form.on("submit(search)",obj=>{
         param.userId = obj.field.userId

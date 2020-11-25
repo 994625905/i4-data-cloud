@@ -16,7 +16,7 @@ layui.use(["layer","form","laydate"],()=>{
         elem:"#year",
         type:"year",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 周次填充 */
@@ -26,12 +26,12 @@ layui.use(["layer","form","laydate"],()=>{
     laydate.render({
         elem:"#startDate",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#endDate",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 初始化富文本编辑器 */

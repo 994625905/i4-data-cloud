@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%T') as createTimeStr,
+        t.create_date as createDate
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName
+        FROM t_attendance AS t
+        left join t_user u on u.id = t.user_id
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.create_date between #{startDate} and #{endDate}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+    <select id="selectAll" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName
+        FROM t_attendance AS t
+        left join t_user u on u.id = t.user_id
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.create_date between #{startDate} and #{endDate}
+        </if>
+        <if test="workDate != null and workDate != ''">
+            and t.create_date = #{workDate}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+</mapper>

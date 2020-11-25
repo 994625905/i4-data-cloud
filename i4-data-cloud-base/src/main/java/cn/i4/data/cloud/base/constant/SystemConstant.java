@@ -57,4 +57,33 @@ public class SystemConstant {
         }
     }
 
+    /**
+     * 考勤相关的常量
+     */
+    public interface ATTENDANCE{
+
+        /** 核算状态 */
+        Integer SETTLE_STATUS_INVALID = 0;//无效
+        Integer SETTLE_STATUS_VALID = 1;//有效
+
+        /** 修改状态 */
+        Integer UPDATE_STATUS_AUTO = 0;//，自动统计
+        Integer UPDATE_STATUS_MANUAL = 1;//人为改动
+
+        /** 工作日类型 */
+        Integer WORK_DATE_TYPE_NORMAL = 0;//正常上班
+        Integer WORK_DATE_TYPE_WEEKEND = 1;//周末
+        Integer WORK_DATE_TYPE_HOLIDAY = 2;//法定节假日
+
+        /** 打卡状态 */
+        Integer ATTENDANCE_STATUS_NORMAL = 0;//正常
+        Integer ATTENDANCE_STATUS_WITHOUT = -2;//未打卡
+        Integer ATTENDANCE_STATUS_LATE = -1;//迟到
+        Integer ATTENDANCE_STATUS_EARLY_LEAVE = 1;//早退
+
+        /** 打卡时间段 */
+        Integer ATTENDANCE_STAGE_GO = 0;//上班
+        Integer ATTENDANCE_STAGE_LEAVE = 1;//下班
+    }
+
 }

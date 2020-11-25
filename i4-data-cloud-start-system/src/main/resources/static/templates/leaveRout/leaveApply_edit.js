@@ -15,14 +15,14 @@ layui.use(["layer","form","laydate"],()=>{
         type:"datetime",
         value:BaseDate.timeStampToDate(startTime),
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
     laydate.render({
         elem:"#endTime",
         type:"datetime",
         value:BaseDate.timeStampToDate(endTime),
         range: false,
-        theme:"#000000",
+        theme:"#007bff",
     })
 
     /** 附件类型替换文本 */

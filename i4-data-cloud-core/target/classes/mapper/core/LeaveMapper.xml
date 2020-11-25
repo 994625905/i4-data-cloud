@@ -66,13 +66,15 @@
             p.process_def_id as processDefId,
             p.deployment_id as deploymentId,
             p.process_instance_id as processInstanceId,
-            (select a.receive_user_id from t_leave_process_node a where a.leave_process_id = p.id order by a.deal_time desc
-            limit 1 ) as receiveUserId
+            (select a.receive_user_id from t_leave_process_node a where a.leave_process_id = p.id order by a.deal_time desc limit 1 ) as receiveUserId
             FROM t_leave AS t
             left join t_user u on t.user_id = u.id
             left join t_leave_process p on t.id = p.leave_id
             left join t_leave_type y on t.type_id = y.id
             where 1=1
+            <if test="id != null">
+                and t.id = #{id}
+            </if>
             <if test="userId != null and userId != ''">
                 and t.user_id = #{userId}
             </if>

@@ -270,7 +270,7 @@ var Initlay = {
             value:disValue,
             max:BaseDate.rangeDate(0),//设置最大时间为当天
             range: false,
-            theme:"#000000",
+            theme:"#007bff",
             done:function(value){
                 if(value == BaseDate.rangeDate(0)){
                     Feng.tip("数据统计日期截止到"+value,elem,2);
@@ -347,7 +347,7 @@ var Initlay = {
         laydate.render({
             elem: elem,
             range: true,
-            theme:"#000000",
+            theme:"#007bff",
             value: disDateRange,
             max:BaseDate.rangeDate(0),//设置最大时间为当天
             done: function (value) {
@@ -414,7 +414,7 @@ var Initlay = {
         laydate.render({
             elem: elem,
             range: true,
-            theme:"#000000",
+            theme:"#007bff",
             value: dateRange,
             done: function (value) {
                 if(!BaseUtil.isEmpty(callback_done)){

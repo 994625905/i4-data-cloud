@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceMonthMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId,
+        t.year as year,
+        t.month as month,
+        t.normal_days as normalDays, 
+        t.work_days as workDays, 
+        t.work_over_hour as workOverHour, 
+        t.late_count as lateCount, 
+        t.early_count as earlyCount, 
+        t.leave_count as leaveCount, 
+        t.leave_hour as leaveHour, 
+        t.normal_date as normalDate, 
+        t.attendance_day_ids as attendanceDayIds, 
+        t.update_status as updateStatus
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceMonthDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceMonthView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName
+        FROM t_attendance_month AS t
+        left join t_user u on t.user_id = u.id
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="year != null">
+            and t.year = #{year}
+        </if>
+        <if test="month != null">
+            and t.month = #{month}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.month DESC
+        </if>
+    </select>
+
+    <!--查询汇总-->
+    <select id="selectAllLog" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceMonthDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceMonthView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName
+        FROM t_attendance_month AS t
+        left join t_user u on t.user_id = u.id
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="year != null">
+            and t.year = #{year}
+        </if>
+        <if test="month != null">
+            and t.month = #{month}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.month DESC
+        </if>
+    </select>
+
+</mapper>

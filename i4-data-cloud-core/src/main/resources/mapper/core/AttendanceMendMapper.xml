@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceMendMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+        t.attendance_day_id as attendanceDayId, 
+        t.reason as reason
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceMendDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceMendView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName,
+            p.id as processId,
+            p.status as processStatus,
+            d.work_date as attendanceWorkDate,
+            d.attendance_stage as attendanceStage,
+            p.process_def_id as processDefId,
+            p.deployment_id as deploymentId,
+            p.process_instance_id as processInstanceId,
+            (select a.receive_user_id from t_attendance_mend_process_node a where a.mend_process_id = p.id order by a.deal_time desc limit 1 ) as receiveUserId
+        FROM t_attendance_mend AS t
+        left join t_user u on t.user_id = u.id
+        left join t_attendance_day d on d.id = t.attendance_day_id
+        left join t_attendance_mend_process p on t.id = p.attendance_mend_id
+        where 1=1
+        <if test="userId != null and userId != ''">
+            and t.user_id = #{userId}
+        </if>
+        <if test="attendanceStage != null">
+            and d.attendance_stage = #{attendanceStage}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+    <select id="selectAllLog" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceMendDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceMendView">
+        select t.* from (
+            SELECT
+                <include refid="Base_Column_List"/>,
+                u.realname as userName,
+                p.id as processId,
+                p.status as processStatus,
+                d.work_date as attendanceWorkDate,
+                d.attendance_stage as attendanceStage,
+                p.process_def_id as processDefId,
+                p.deployment_id as deploymentId,
+                p.process_instance_id as processInstanceId,
+                (select a.receive_user_id from t_attendance_mend_process_node a where a.mend_process_id = p.id order by a.deal_time desc limit 1 ) as receiveUserId
+            FROM t_attendance_mend AS t
+            left join t_user u on t.user_id = u.id
+            left join t_attendance_day d on d.id = t.attendance_day_id
+            left join t_attendance_mend_process p on t.id = p.attendance_mend_id
+            where 1=1
+            <if test="id != null">
+                and t.id = #{id}
+            </if>
+            <if test="userId != null and userId != ''">
+                and t.user_id = #{userId}
+            </if>
+            <if test="attendanceStage != null">
+                and d.attendance_stage = #{attendanceStage}
+            </if>
+            <if test="startDate != null and startDate != ''">
+                and t.create_time between #{startDate} and #{endDate}
+            </if>
+            <if test="field != null and field != ''">
+                order by ${field} ${sort}
+            </if>
+            <if test="field == null or field == ''">
+                ORDER BY t.create_time DESC
+            </if>
+        ) t where t.processId is not null
+    </select>
+
+    <!-- 根据id查询 -->
+    <select id="selectByMendId" resultType="cn.i4.data.cloud.core.entity.view.AttendanceMendView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName,
+            p.id as processId,
+            p.status as processStatus,
+            d.work_date as attendanceWorkDate,
+            d.attendance_stage as attendanceStage,
+            p.process_def_id as processDefId,
+            p.deployment_id as deploymentId,
+            p.process_instance_id as processInstanceId,
+            (select a.receive_user_id from t_attendance_mend_process_node a where a.mend_process_id = p.id order by a.deal_time desc limit 1 ) as receiveUserId
+        FROM t_attendance_mend AS t
+        left join t_user u on t.user_id = u.id
+        left join t_attendance_day d on d.id = t.attendance_day_id
+        left join t_attendance_mend_process p on t.id = p.attendance_mend_id
+        where t.id = #{id}
+    </select>
+
+
+</mapper>

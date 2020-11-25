@@ -23,7 +23,7 @@ layui.use(["layer","table"],()=>{
     /** table的操作列 */
     table.on("tool(applyTable)",obj=>{
         if(obj.event == "apply"){
-            Feng.loadWindow(obj.title+":发送申请",BasePath+"/leaveRout/leaveApply/applyPage?id="+obj.data.id,LAYOUT_SIZE.SM_HEIGHT(),LAYOUT_SIZE.SM_WIDTH())
+            Feng.loadWindow(obj.data.title+":发送申请",BasePath+"/leaveRout/leaveApply/applyPage?id="+obj.data.id,LAYOUT_SIZE.SM_HEIGHT(),LAYOUT_SIZE.SM_WIDTH())
         }
         if(obj.event == "edit"){
             Feng.loadWindow("修改请假申请",BasePath+"/leaveRout/leaveApply/editPage?id="+obj.data.id)

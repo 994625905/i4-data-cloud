@@ -43,7 +43,7 @@ var Initlay = {
             loading:true,
             limit:disLimit,
             limits:[10,15,25,35,50,100,150],
-            cellMinWidth:100,
+            cellMinWidth:130,
             title:"",
             even:true,//隔行色
             // size:"sm",//表格尺寸
@@ -417,7 +417,7 @@ var Initlay = {
         laydate.render({
             elem: elem,
             range: true,
-            theme:"#000000",
+            theme:"#007bff",
             value: dateRange,
             done: function (value) {
                 if(!BaseUtil.isEmpty(callback_done)){

@@ -17,7 +17,7 @@ layui.use(["layer","form","table","laydate"],()=>{
         elem:"#year",
         type:"year",
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 初始化表格 */

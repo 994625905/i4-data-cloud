@@ -17,7 +17,7 @@ layui.use(["layer","table","form","laydate"],()=>{
         type:"year",
         value:BaseDate.currYear(),
         range: false,
-        theme:"#000000"
+        theme:"#007bff"
     })
 
     /** 初始化表格 */
