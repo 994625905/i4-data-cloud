@@ -42,4 +42,4 @@ i4-data-cloud-start-eureka | 9001 | eureka注册中心
 i4-data-cloud-start-file | 9012 | 分布式FastDFS文件服务（上传/下载/删除）
 i4-data-cloud-start-gateway | 9002 | API网管服务
 i4-data-cloud-start-schedule | 9017 | 定时任务的集中处理
-i4-data-cloud-start-system | 9011 | 数据平台的管理系统
+i4-data-cloud-start-system | 9011 | 数据平台的管理系统，freemarker自定义权限控制标签控制按钮，后台自定义注解控制请求接口
