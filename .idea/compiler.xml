@@ -19,13 +19,14 @@
         <module name="i4-data-cloud-core" />
         <module name="i4-data-cloud-start-schedule" />
         <module name="i4-data-cloud-start-file" />
-        <module name="i4-data-cloud-start-aspect" />
         <module name="i4-data-cloud-mongo" />
+        <module name="i4-data-cloud-clickhouse" />
         <module name="i4-data-cloud-start-auth" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="i4-data-cloud-config" target="1.8" />
+      <module name="i4-data-cloud-start-aspect" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -33,6 +34,7 @@
       <module name="i4-data-cloud" options="-parameters" />
       <module name="i4-data-cloud-base" options="-parameters" />
       <module name="i4-data-cloud-cache" options="-parameters" />
+      <module name="i4-data-cloud-clickhouse" options="-parameters" />
       <module name="i4-data-cloud-config" options="-parameters" />
       <module name="i4-data-cloud-core" options="-parameters" />
       <module name="i4-data-cloud-mongo" options="-parameters" />
