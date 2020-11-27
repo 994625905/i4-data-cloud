@@ -1,4 +1,13 @@
-# 数据存储/中间件
+# i4-data-cloud 分布式微服务权限控制数据平台
+- **整合数据资源，重写代码架构，降低耦合度，服务功能做到热插拔，开箱即用；**
+- **底层代码分模块封装成至简化，职责明确，注释严谨，保障高可读性；**
+- **应用层相对独立，借助注册中心，通过openfeign相互调用，配置降级熔断机制；**
+- **应用/功能拓展简单，通过FreeMarker开发了一套基于当前平台的自动代码生成应用，且提供了web界面操作，只需依次填写配置表单即可；**
+- **数据存储方式的多元化决定可存储内容的丰富化，图片，图文内容，音视频等各类文件；**
+- **数据存储的各类组件，统一为高可用模式，master-slave节点，可用节点大于等于2；**
+- **流程引擎驱动事务办理，将线下的会签事项搬到线上，绘制相对应的流程图；**
+- **自定义权限控制，权限细化到按钮，操作拦截到具体的接口，保持公共数据的可阅读性与安全性；**
+## 数据存储/中间件
 | 名称  | 存储类型  | 作用  |
 | ------------ | ------------ | ------------ |
 | MySQL  | 核心业务数据  | 事务操作，数据的最终落地保存  |
@@ -17,7 +26,7 @@
 - fastDFS对比传统的容器文件上传（eg：Tomcat），保障文件的安全可靠性和可移植性；
 - clickHouse主要针对海量数据的存储，由于不支持事务的特性，没有隔离级别，使其查询非常快，再加上列式存储，在count()这类操作有天然有优势。
 
-# 架构拆分
+## 架构拆分
 模块 | 端口 | 说明
 ---|---|---
 i4-data-cloud-base |  | base模块，封装基类约束规范代码，自定义注解/枚举，Echart实体，工具类，相关常量类，返回结果集……
@@ -25,13 +34,12 @@ i4-data-cloud-cache |  | 缓存模块，此处主要是Redis，包括但不限�
 i4-data-cloud-core |  | MySQL的核心业务代码，entity（dto，model，view），service（impl），mapper……SQL日志拦截器……
 i4-data-cloud-mongo |  | 对MongoDB的一次半彻底封装，开发使用仅需少量的代码（提供集合的映射实体，相关service继承抽象类）
 i4-data-cloud-mq |  | 对rabbitMQ的一次半彻底封装，提供可供调用的produceService，必须被继承的consumer抽象类，加载即预热队列
+i4-data-cloud-start-activiti-design | 9016 | 集成activiti（5.22）流程设计器（maven依赖独立存在），提供流程处理的一系列接口
+i4-data-cloud-start-auth | 9010 | 统一认证中心：单点登录，注册，找回密码，提供验证码，提供token
+i4-data-cloud-start-autocode | 9015 | 采用freemarker封装的一套web界面自动代码生成服务（针对数据源做相关的处理）
+i4-data-cloud-start-consumer | 9014 | 消息消费者服务（集中处理rabbitmq消息），多节点部署即负载均衡
 i4-data-cloud-start-eureka | 9001 | eureka注册中心
-i4-data-cloud-start-eureka | 9001 | eureka注册中心
+i4-data-cloud-start-file | 9012 | 分布式FastDFS文件服务（上传/下载/删除）
 i4-data-cloud-start-gateway | 9002 | API网管服务
-i4-data-cloud-start-auth | 9010 | 统一认证中心
-i4-data-cloud-start-system | 9011 | 数据云平台的系统
-i4-data-cloud-start-file | 9012 | 文件服务（上传/下载/删除）
-i4-data-cloud-start-aspect | 9013 | 切面服务（切面日志的采集）
-i4-data-cloud-start-consumer | 9014 | 消息消费者服务（集中处理rabbitmq/redis中的消息）
-i4-data-cloud-start-autocode | 9015 | 自动代码生成服务（针对数据源做相关的处理）
-i4-data-cloud-start-activiti-design | 9016 | activiti（5.22）流程设计器（maven依赖独立存在）
+i4-data-cloud-start-schedule | 9017 | 定时任务的集中处理
+i4-data-cloud-start-system | 9011 | 数据平台的管理系统
