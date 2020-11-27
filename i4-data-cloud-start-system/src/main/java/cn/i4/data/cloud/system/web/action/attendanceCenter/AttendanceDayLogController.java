@@ -4,6 +4,7 @@ import cn.i4.data.cloud.base.annotation.RequestLimit;
 import cn.i4.data.cloud.base.annotation.RequestLog;
 import cn.i4.data.cloud.base.annotation.RequestPermission;
 import cn.i4.data.cloud.base.annotation.RequestType;
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.core.entity.dto.AttendanceDayDto;
 import cn.i4.data.cloud.core.entity.model.AttendanceDayModel;
@@ -86,4 +87,22 @@ public class AttendanceDayLogController extends WebBaseController {
         return ActionResult.error("调整修改失败");
     }
 
+    /**
+     * 统一校对核算
+     * @param dto
+     * @return
+     */
+    @PostMapping(value = "/changeStatusAll")
+    @RequestLog(module = MODULE_NAME,content = "统一校对核算",type = RequestType.UPDATE)
+    @RequestLimit(name = MODULE_NAME+"--统一校对核算",key = KEY_PREFIX+"/changeStatusAll")
+    @RequestPermission(value = "attendanceCenter:attendanceDayLog/changeStatusAll")
+    public ActionResult<Integer> changeStatusAll(AttendanceDayDto dto){
+        try {
+            Integer res = iAttendanceDayService.changeStatusAll(dto);
+            return ActionResult.ok(res);
+        } catch (CommonException e) {
+            e.printStackTrace();
+            return ActionResult.error("统一校对核算");
+        }
+    }
 }

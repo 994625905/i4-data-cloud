@@ -12,6 +12,7 @@
         t.attendance_status as attendanceStatus,
         t.start_time as startTime,
         t.end_time as endTime,
+        t.week as week,
         t.work_date as workDate, 
         t.work_date_type as workDateType, 
         t.work_hour as workHour,
@@ -54,7 +55,7 @@
             order by ${field} ${sort}
         </if>
         <if test="field == null or field == ''">
-            ORDER BY t.create_time DESC
+            ORDER BY u.job_number DESC
         </if>
     </select>
 
@@ -92,8 +93,75 @@
             order by ${field} ${sort}
         </if>
         <if test="field == null or field == ''">
-            ORDER BY t.create_time DESC
+            ORDER BY u.job_number DESC
         </if>
+    </select>
+
+    <!--统一校对核算-->
+    <update id="changeStatusAll" parameterType="org.springframework.cglib.beans.BeanMap">
+        update t_attendance_day t set t.settle_status = #{settleStatus}
+        where t.work_date = #{settleDate}
+        <if test="settleStage == 0">
+            and t.attendance_stage = #{settleStage}
+        </if>
+        <if test="settleStage == 1">
+            and t.attendance_stage = #{settleStage}
+        </if>
+    </update>
+
+    <!--根据年月查询，userId分组，核算有效，正常工作日/加班日-->
+    <select id="selectByYearMonthGroupUser" resultType="cn.i4.data.cloud.core.entity.model.AttendanceMonthModel">
+        select
+            t.userId,
+            t.normalDays,
+            t.normalDate,
+            t1.workDays,
+            t2.lateCount,
+            t3.earlyCount,
+            t4.mendCount,
+            t5.leaveCount,
+            t6.workOverHour,
+            t7.holidayOverHour
+        from (
+            select t.user_id as userId,count(t.id) as normalDays,group_concat(t.work_date) as normalDate from t_attendance_day t
+            where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_stage = '1'
+            group by t.user_id
+        ) t left join (
+            select t.userId,t.workDays from (
+                select t.user_id as userId,count(t.id) as workDays from t_attendance_day t
+                where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.attendance_stage = '1' and (t.work_hour > 0 or t.work_hour_over > 0) and t.attendance_id is not null
+                group by t.user_id
+            ) t
+        ) t1 on t.userId = t1.userId left join (
+            select t.user_id as userId,count(t.id) as lateCount from t_attendance_day t
+            where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_status = '-1'
+            group by t.user_id
+        ) t2 on t.userId = t2.userId left join (
+            select t.user_id as userId,count(t.id) as earlyCount from t_attendance_day t
+            where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_status = '1'
+            group by t.user_id
+        ) t3 on t.userId = t3.userId left join (
+            select t.userId,count(t.id) as mendCount from (
+                select t.id, t.user_id as userId from t_attendance_mend t left join t_attendance_mend_process p on p.attendance_mend_id = t.id left join t_attendance_day d on d.id = t.attendance_day_id
+                where d.work_date like concat(#{yearMonth},'%') and d.settle_status = '1' and p.id is not null
+            ) t group by t.userId
+        ) t4 on t.userId = t4.userId left join (
+            select t.userId,count(t.id) as leaveCount from (
+                select t.id,t.user_id as userId,FROM_UNIXTIME(t.start_time, '%Y%m') AS startTimeStr from t_leave t left join t_leave_process p on t.id=p.leave_id where p.id is not null
+            ) t where t.startTimeStr = #{yearMonth} group by t.userId
+        ) t5 on t.userId = t5.userId left join (
+            select t.userId,t.workOverHour from (
+                select t.user_id as userId,sum(t.work_hour_over) as workOverHour from t_attendance_day t
+                where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_id is not null
+                group by t.user_id
+            ) t
+        ) t6 on t.userId = t6.userId left join (
+            select t.userId,t.holidayOverHour from (
+                select t.user_id as userId,sum(t.work_hour_over) as holidayOverHour from t_attendance_day t
+                where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and (t.work_date_type = '1' or t.work_date_type = '2') and t.attendance_id is not null
+                group by t.user_id
+            ) t
+        ) t7 on t.userId = t7.userId
     </select>
 
 </mapper>

@@ -38,12 +38,13 @@ function loadTable(){
     let tabCols = [[
         {field:"userName",title:"用户名"},
         {field: "workDate",title:"日期",sort:true},
+        {field: "week",title: "周几"},
         {field: "workDateType",title:"日期类型",templet(d) {
             if(d.workDateType == 0){
                 return "<span class='text-success'>正常工作日</span>"
             }
             if(d.workDateType == 1){
-                return "<span class='text-warning'>周末</span>"
+                return "<span class='text-warning'>正常周末</span>"
             }
             if(d.workDateType == 2){
                 return "<span class='text-danger'>节假日</span>"
@@ -71,7 +72,7 @@ function loadTable(){
             }
         }},
         {field: "workHour",title:"工作时长（h）"},
-        {field: "workHourOver",title:"加班时长（h）"},
+        {field: "workHourOver",title:"加班核算（h）"},
         {field: "updateStatus",title:"数据状态",templet(d){
             if(d.updateStatus == 0){
                 return "<span class='text-success'>自动统计</span>"

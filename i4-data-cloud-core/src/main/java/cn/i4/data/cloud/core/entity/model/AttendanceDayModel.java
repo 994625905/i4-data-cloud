@@ -61,13 +61,19 @@ public class AttendanceDayModel extends BaseModel<AttendanceDayModel> {
     private Long endTime;
 
     /**
+     * 周几
+     */
+    @TableField("week")
+    private String week;
+
+    /**
     * 工作日期
     */
     @TableField("work_date")
     private String workDate;
 
     /**
-    * 0正常上班，1法定节假日
+    * 0正常上班，1正常周末，2法定节假日
     */
     @TableField("work_date_type")
     private Integer workDateType;
@@ -134,6 +140,14 @@ public class AttendanceDayModel extends BaseModel<AttendanceDayModel> {
 
     public Integer getAttendanceStatus() {
     return this.attendanceStatus;
+    }
+
+    public String getWeek() {
+        return week;
+    }
+
+    public void setWeek(String week) {
+        this.week = week;
     }
 
     public void setWorkDate(String workDate) {

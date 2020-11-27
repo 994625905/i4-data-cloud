@@ -29,4 +29,23 @@ public interface AttendanceMapper extends BaseIMapper<AttendanceModel> {
      */
     IPage<AttendanceView> selectAll(AttendanceDto dto);
 
+    /**
+     * 查询上班的打卡记录（每个用户取最早的一条）
+     * @param date
+     * @param start
+     * @param end
+     * @return
+     */
+    List<AttendanceView> selectByStartWork(@Param("date") String date, @Param("next") String next, @Param("start") Long start, @Param("end") Long end);
+
+    /**
+     * 查询下班的打卡记录（每个用户取最迟的一条）
+     * @param date
+     * @param next
+     * @param start
+     * @param end
+     * @return
+     */
+    List<AttendanceView> selectByEndWork(@Param("date") String date, @Param("next") String next, @Param("start") Long start, @Param("end") Long end);
+
 }

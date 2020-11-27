@@ -26,4 +26,13 @@ public interface IAttendanceMonthService extends BaseService<AttendanceMonthMode
      * @return
      */
     IPage<AttendanceMonthView> selectAllLog(AttendanceMonthDto dto);
+
+    /**
+     * 月考勤核算
+     * @param year
+     * @param month
+     * @return
+     */
+    Integer asyncMonth(int year,int month);
+
 }

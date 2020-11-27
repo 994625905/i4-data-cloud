@@ -275,4 +275,29 @@ public class AttendanceCenterController extends WebBaseController {
         view.addObject("param",dto);
         return view;
     }
+
+    /**
+     * 加载年总结的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/attendanceYear/index")
+    @RequestPermission(value = "attendanceCenter:attendanceYear/index")
+    public ModelAndView attendanceYearIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/attendanceCenter/attendanceYear_index", request);
+        return view;
+    }
+
+    /**
+     * 加载年总结汇总的首页
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/attendanceYearLog/index")
+    @RequestPermission(value = "attendanceCenter:attendanceYearLog/index")
+    public ModelAndView attendanceYearLogIndex(HttpServletRequest request){
+        ModelAndView view = getModelAndView("/attendanceCenter/attendanceYearLog_index", request);
+        view.addObject("userList",iUserService.list());
+        return view;
+    }
 }

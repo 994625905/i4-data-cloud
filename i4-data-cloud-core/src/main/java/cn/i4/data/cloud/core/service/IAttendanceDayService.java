@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.service;
 
+import cn.i4.data.cloud.base.exception.CommonException;
 import cn.i4.data.cloud.base.service.BaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.i4.data.cloud.core.entity.dto.AttendanceDayDto;
@@ -36,5 +37,20 @@ public interface IAttendanceDayService extends BaseService<AttendanceDayModel> {
      */
     List<AttendanceDayModel> selectMendList(Integer userId);
 
+    /**
+     * 统一校对核算
+     * @param dto
+     * @return
+     * @throws CommonException
+     */
+    Integer changeStatusAll(AttendanceDayDto dto) throws CommonException;
+
+    /**
+     * 同步考勤（正常为一天一次，考虑到日期区间的情况）
+     * @param startDate：开始时间
+     * @param endDate：结束时间
+     * @return
+     */
+    Integer asyncAttendanceDay(String startDate,String endDate);
 
 }

@@ -33,6 +33,12 @@ public class AttendanceDayDto extends BaseDto<AttendanceDayView> {
     private Integer workDateType;
 
     private AttendanceDayModel model;
+    /**
+     * 统一校对参数
+     */
+    private String settleDate;
+    private Integer settleStage;
+    private Integer settleStatus;
 
     public Integer getId() {
         return id;
@@ -80,5 +86,29 @@ public class AttendanceDayDto extends BaseDto<AttendanceDayView> {
 
     public void setModel(AttendanceDayModel model) {
         this.model = model;
+    }
+
+    public String getSettleDate() {
+        return settleDate;
+    }
+
+    public void setSettleDate(String settleDate) {
+        this.settleDate = settleDate;
+    }
+
+    public Integer getSettleStage() {
+        return settleStage;
+    }
+
+    public void setSettleStage(Integer settleStage) {
+        this.settleStage = settleStage;
+    }
+
+    public Integer getSettleStatus() {
+        return settleStatus;
+    }
+
+    public void setSettleStatus(Integer settleStatus) {
+        this.settleStatus = settleStatus;
     }
 }

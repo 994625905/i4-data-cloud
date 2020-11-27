@@ -45,6 +45,28 @@ layui.use(["layer","table","laydate","form"],()=>{
         if(obj.event == "refresh"){
             refresh()
         }
+        if(obj.event == "settleAll"){
+            Feng.infoDetail("统一校对核算",template("settleContent",{}),()=>{
+                form.render()
+
+                /** 计算最小日期，防止月初还未结算上个月 */
+                let firstDay = BaseDate.currMonthFirstDay();
+                if(BaseDate.getDiff(firstDay,BaseDate.rangeDate(0)) < 3){
+                    firstDay = BaseDate.rangeDateByOper(firstDay,-30)
+                }
+                Initlay.loadLayDate("#settleDate",null,"date",null,firstDay)
+            },Index=>{
+                Request.async(BasePath+"/attendanceCenter/attendanceDayLog/changeStatusAll",{
+                    settleDate:BaseUtil.replaceAll($("#settleDate").val(),"-",""),
+                    settleStage:$("#settleStage").val(),
+                    settleStatus:$("#settleStatus").val()
+                }).then(res=>{
+                    Feng.close(Index)
+                    Feng.success("统一核算完毕")
+                    refresh()
+                })
+            },"600px","400px")
+        }
     })
 
     /** table的操作列 */
@@ -88,6 +110,7 @@ function loadTable(){
     let tabCols = [[
         {field:"userName",title:"用户名"},
         {field: "workDate",title:"日期",sort:true},
+        {field: "week",title: "周几"},
         {field: "workDateType",title:"日期类型",templet(d) {
             if(d.workDateType == 0){
                 return "<span class='text-success'>正常工作日</span>"
@@ -121,7 +144,7 @@ function loadTable(){
             }
         }},
         {field: "workHour",title:"工作时长（h）"},
-        {field: "workHourOver",title:"加班时长（h）"},
+        {field: "workHourOver",title:"加班核算（h）"},
         {field: "updateStatus",title:"数据状态",templet(d){
             if(d.updateStatus == 0){
                 return "<span class='text-success'>自动统计</span>"
@@ -142,7 +165,7 @@ function loadTable(){
         }},
         {fixed:"right",title:"操作",toolbar:"#operate",width: TABLE_COL_WIDTH.tool(3)},
     ]]
-    tableRender = Initlay.initTable("#dayLogTable",BasePath+"/attendanceCenter/attendanceDayLog/loadTable",tabCols,null,param,null,null,30)
+    tableRender = Initlay.initTable("#dayLogTable",BasePath+"/attendanceCenter/attendanceDayLog/loadTable",tabCols,"#toolbar",param,null,null,30)
 }
 /** 刷新 */
 function refresh(){

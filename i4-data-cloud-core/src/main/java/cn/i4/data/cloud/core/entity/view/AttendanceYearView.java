@@ -18,9 +18,11 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 	public AttendanceYearView(AttendanceYearModel model) {
 		this.id = model.getId();
 		this.userId = model.getUserId();
+		this.year = model.getYear();
 		this.normalDays = model.getNormalDays();
 		this.workDays = model.getWorkDays();
 		this.workOverHour = model.getWorkOverHour();
+		this.holidayOverHour = model.getHolidayOverHour();
 		this.mendCount = model.getMendCount();
 		this.lateCount = model.getLateCount();
 		this.earlyCount = model.getEarlyCount();
@@ -47,6 +49,12 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 	private Integer userId;
 
 	/**
+	 * 年份
+	 */
+	@TableField("year")
+	private Integer year;
+
+	/**
 	 * 正常工作日数
 	 */
 	@TableField("normal_days")
@@ -63,6 +71,12 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 	 */
 	@TableField("work_over_hour")
 	private Float workOverHour;
+
+	/**
+	 * 假期加班时长
+	 */
+	@TableField("holiday_over_hour")
+	private Float holidayOverHour;
 
 	/**
 	 * 补卡次数
@@ -106,6 +120,8 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 	@TableField("attendance_month_ids")
 	private String attendanceMonthIds;
 
+	/** 补充字段 */
+	private String userName;
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -121,6 +137,14 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 
 	public Integer getUserId() {
 		return this.userId;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 	public void setNormalDays(Float normalDays) {
@@ -145,6 +169,14 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 
 	public Float getWorkOverHour() {
 		return this.workOverHour;
+	}
+
+	public Float getHolidayOverHour() {
+		return holidayOverHour;
+	}
+
+	public void setHolidayOverHour(Float holidayOverHour) {
+		this.holidayOverHour = holidayOverHour;
 	}
 
 	public void setMendCount(Integer mendCount) {
@@ -203,4 +235,11 @@ public class AttendanceYearView extends BaseView<AttendanceYearView> {
 		return this.attendanceMonthIds;
 	}
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 }

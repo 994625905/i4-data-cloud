@@ -23,12 +23,13 @@ public class AttendanceMonthView extends BaseView<AttendanceMonthView> {
 		this.normalDays = model.getNormalDays();
 		this.workDays = model.getWorkDays();
 		this.workOverHour = model.getWorkOverHour();
+		this.holidayOverHour = model.getHolidayOverHour();
+		this.mendCount = model.getMendCount();
 		this.lateCount = model.getLateCount();
 		this.earlyCount = model.getEarlyCount();
 		this.leaveCount = model.getLeaveCount();
 		this.leaveHour = model.getLeaveHour();
 		this.normalDate = model.getNormalDate();
-		this.attendanceDayIds = model.getAttendanceDayIds();
 		this.updateStatus = model.getUpdateStatus();
 	}
 
@@ -79,6 +80,18 @@ public class AttendanceMonthView extends BaseView<AttendanceMonthView> {
 	private Float workOverHour;
 
 	/**
+	 * 假期加班时长
+	 */
+	@TableField("holiday_over_hour")
+	private Float holidayOverHour;
+
+	/**
+	 * 补卡次数
+	 */
+	@TableField("mend_count")
+	private Integer mendCount;
+
+	/**
 	 * 迟到次数
 	 */
 	@TableField("late_count")
@@ -107,12 +120,6 @@ public class AttendanceMonthView extends BaseView<AttendanceMonthView> {
 	 */
 	@TableField("normal_date")
 	private String normalDate;
-
-	/**
-	 * 打卡日汇总，逗号隔开
-	 */
-	@TableField("attendance_day_ids")
-	private String attendanceDayIds;
 
 	/**
 	 * 0自动统计，1人为改动
@@ -179,6 +186,22 @@ public class AttendanceMonthView extends BaseView<AttendanceMonthView> {
 		return this.workOverHour;
 	}
 
+	public Float getHolidayOverHour() {
+		return holidayOverHour;
+	}
+
+	public void setHolidayOverHour(Float holidayOverHour) {
+		this.holidayOverHour = holidayOverHour;
+	}
+
+	public Integer getMendCount() {
+		return mendCount;
+	}
+
+	public void setMendCount(Integer mendCount) {
+		this.mendCount = mendCount;
+	}
+
 	public void setLateCount(Integer lateCount) {
 		this.lateCount = lateCount;
 	}
@@ -217,14 +240,6 @@ public class AttendanceMonthView extends BaseView<AttendanceMonthView> {
 
 	public String getNormalDate() {
 		return this.normalDate;
-	}
-
-	public void setAttendanceDayIds(String attendanceDayIds) {
-		this.attendanceDayIds = attendanceDayIds;
-	}
-
-	public String getAttendanceDayIds() {
-		return this.attendanceDayIds;
 	}
 
 	public void setUpdateStatus(Integer updateStatus) {

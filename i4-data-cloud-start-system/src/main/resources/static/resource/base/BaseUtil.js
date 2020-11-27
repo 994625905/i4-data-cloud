@@ -455,6 +455,22 @@ var BaseDate = {
 		return new Date().getMonth()+1
 	},
 	/**
+	 * 获取当前月的第一天
+	 */
+	currMonthFirstDay(){
+		var date = new Date();
+		date.setDate(1);
+		var month = parseInt(date.getMonth()+1);
+		var day = date.getDate();
+		if (month < 10) {
+			month = '0' + month
+		}
+		if (day < 10) {
+			day = '0' + day
+		}
+		return date.getFullYear() + '-' + month + '-' + day
+	},
+	/**
 	 * 获取当前周次
 	 */
 	currWeekNum(){

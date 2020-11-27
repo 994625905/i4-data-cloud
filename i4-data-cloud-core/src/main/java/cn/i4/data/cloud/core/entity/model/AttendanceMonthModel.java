@@ -21,6 +21,7 @@ public class AttendanceMonthModel extends BaseModel<AttendanceMonthModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -60,6 +61,18 @@ public class AttendanceMonthModel extends BaseModel<AttendanceMonthModel> {
     private Float workOverHour;
 
     /**
+     * 假期加班时长
+     */
+    @TableField("holiday_over_hour")
+    private Float holidayOverHour;
+
+    /**
+     * 补卡次数
+     */
+    @TableField("mend_count")
+    private Integer mendCount;
+
+    /**
     * 迟到次数
     */
     @TableField("late_count")
@@ -88,12 +101,6 @@ public class AttendanceMonthModel extends BaseModel<AttendanceMonthModel> {
     */
     @TableField("normal_date")
     private String normalDate;
-
-    /**
-    * 打卡日汇总，逗号隔开
-    */
-    @TableField("attendance_day_ids")
-    private String attendanceDayIds;
 
     /**
     * 0自动统计，1人为改动
@@ -158,6 +165,22 @@ public class AttendanceMonthModel extends BaseModel<AttendanceMonthModel> {
     return this.workOverHour;
     }
 
+    public Float getHolidayOverHour() {
+        return holidayOverHour;
+    }
+
+    public void setHolidayOverHour(Float holidayOverHour) {
+        this.holidayOverHour = holidayOverHour;
+    }
+
+    public Integer getMendCount() {
+        return mendCount;
+    }
+
+    public void setMendCount(Integer mendCount) {
+        this.mendCount = mendCount;
+    }
+
     public void setLateCount(Integer lateCount) {
     this.lateCount = lateCount;
     }
@@ -196,14 +219,6 @@ public class AttendanceMonthModel extends BaseModel<AttendanceMonthModel> {
 
     public String getNormalDate() {
     return this.normalDate;
-    }
-
-    public void setAttendanceDayIds(String attendanceDayIds) {
-    this.attendanceDayIds = attendanceDayIds;
-    }
-
-    public String getAttendanceDayIds() {
-    return this.attendanceDayIds;
     }
 
     public void setUpdateStatus(Integer updateStatus) {

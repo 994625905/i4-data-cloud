@@ -96,4 +96,27 @@
         ) t where t.processId is not null
     </select>
 
+    <!--核算有效的请假时间-->
+    <select id="selectByUserIdYearMonth" resultType="cn.i4.data.cloud.core.entity.view.LeaveView">
+        SELECT
+            t.id as id,
+            t.user_id as userId,
+            t.title as title,
+            t.type_id as typeId,
+            t.reason as reason,
+            t.start_time as startTime,
+            t.end_time as endTime,
+            FROM_UNIXTIME(t.start_time,'%Y-%m-%d %T') as startTimeStr,
+            FROM_UNIXTIME(t.end_time,'%Y-%m-%d %T') as endTimeStr,
+            t.create_time as createTime,
+            t.update_time as updateTime,
+            FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+            FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr
+        FROM t_leave AS t
+        left join t_leave_process p on t.id = p.leave_id
+        where p.id is not null
+        and t.user_id = #{userId}
+        and (FROM_UNIXTIME(t.start_time,'%Y%m') = #{yearMonth} or FROM_UNIXTIME(t.end_time,'%Y%m') = #{yearMonth})
+    </select>
+
 </mapper>

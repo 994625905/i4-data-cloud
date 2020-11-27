@@ -20,4 +20,11 @@ public interface IAttendanceYearService extends BaseService<AttendanceYearModel>
     */
     IPage<AttendanceYearView> selectPage(AttendanceYearDto dto);
 
+    /**
+     * 分页查询
+     * @param dto
+     * @return
+     */
+    IPage<AttendanceYearView> selectAllLog(AttendanceYearDto dto);
+
 }

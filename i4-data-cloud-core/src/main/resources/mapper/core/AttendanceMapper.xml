@@ -57,4 +57,50 @@
         </if>
     </select>
 
+    <!--查询早上的打卡记录（每个用户取最早的一条）-->
+    <select id="selectByStartWork" resultType="cn.i4.data.cloud.core.entity.view.AttendanceView">
+        select
+            t.id as id,
+            t.userId as userId,
+            min(t.createTime) as createTime,
+            t.createTimeStr as createTimeStr,
+            t.createDate as createDate
+        from (
+            select
+                t.id as id,
+                t.user_id as userId,
+                t.create_time as createTime,
+                FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+                t.create_date as createDate
+            from t_user u
+            left join t_attendance t on t.user_id = u.id
+            where u.status != 5
+            and t.create_date in (#{date},#{next})
+            and t.create_time between #{start} and #{end}
+        ) t group by t.user_id
+    </select>
+
+    <!--查询晚上的打卡记录（每个用户取最迟的一条，包括加班时长）-->
+    <select id="selectByEndWork" resultType="cn.i4.data.cloud.core.entity.view.AttendanceView">
+        select
+            t.id as id,
+            t.userId as userId,
+            max(t.createTime) as createTime,
+            t.createTimeStr as createTimeStr,
+            t.createDate as createDate
+        from (
+            select
+                t.id as id,
+                t.user_id as userId,
+                t.create_time as createTime,
+                FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+                t.create_date as createDate
+            from t_user u
+            left join t_attendance t on t.user_id = u.id
+            where u.status != 5
+            and t.create_date in (#{date},#{next})
+            and t.create_time between #{start} and #{end}
+        ) t group by t.user_id
+    </select>
+
 </mapper>

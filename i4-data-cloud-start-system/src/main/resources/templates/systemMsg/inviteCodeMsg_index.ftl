@@ -82,8 +82,8 @@
             {{/if}}
             <img src="data:image/png;base64,{{encode}}" style="max-width: 300px" title="{{code}}">
             <span class="font-weight-bold font">{{code}}</span>
-            <span class="text-light-muted my-2 font-smaller">所属部门：[{{departmentName}}]</span>
-            <span class="text-light-muted my-2 font-smaller">携带角色：[{{roleNames}}]</span>
+            <span class="text-light-muted my-1 font-smaller">所属部门：[{{departmentName}}]</span>
+            <span class="text-light-muted my-1 font-smaller">携带角色：[{{roleNames}}]</span>
         </div>
         <div class="layui-form-item">
             {{if status}}

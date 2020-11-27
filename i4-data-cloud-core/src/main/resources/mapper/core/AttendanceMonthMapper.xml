@@ -11,13 +11,14 @@
         t.month as month,
         t.normal_days as normalDays, 
         t.work_days as workDays, 
-        t.work_over_hour as workOverHour, 
+        t.work_over_hour as workOverHour,
+        t.holiday_over_hour as holidayOverHour,
+        t.mend_count as mendCount,
         t.late_count as lateCount, 
         t.early_count as earlyCount, 
         t.leave_count as leaveCount, 
         t.leave_hour as leaveHour, 
-        t.normal_date as normalDate, 
-        t.attendance_day_ids as attendanceDayIds, 
+        t.normal_date as normalDate,
         t.update_status as updateStatus
     </sql>
 
@@ -41,7 +42,7 @@
             order by ${field} ${sort}
         </if>
         <if test="field == null or field == ''">
-            ORDER BY t.month DESC
+            ORDER BY u.job_number DESC
         </if>
     </select>
 
@@ -66,7 +67,7 @@
             order by ${field} ${sort}
         </if>
         <if test="field == null or field == ''">
-            ORDER BY t.month DESC
+            ORDER BY u.job_number DESC
         </if>
     </select>
 

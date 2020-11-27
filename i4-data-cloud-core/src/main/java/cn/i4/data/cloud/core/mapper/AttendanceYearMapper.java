@@ -16,10 +16,17 @@ import cn.i4.data.cloud.core.entity.view.AttendanceYearView;
 public interface AttendanceYearMapper extends BaseIMapper<AttendanceYearModel> {
 
     /**
-    * 分页查询
-    * @param dto
-    * @return
-    */
+     * 分页查询
+     * @param dto
+     * @return
+     */
     IPage<AttendanceYearView> selectPage(AttendanceYearDto dto);
+
+    /**
+     * 分页查询
+     * @param dto
+     * @return
+     */
+    IPage<AttendanceYearView> selectAllLog(AttendanceYearDto dto);
 
 }

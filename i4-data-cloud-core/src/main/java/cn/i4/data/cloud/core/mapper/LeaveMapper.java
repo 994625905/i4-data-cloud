@@ -29,4 +29,11 @@ public interface LeaveMapper extends BaseIMapper<LeaveModel> {
      */
     IPage<LeaveView> selectAllLog(LeaveDto dto);
 
+    /**
+     * 核算请假的有效小时
+     * @param userId
+     * @param yearMonth
+     * @return
+     */
+    List<LeaveView> selectByUserIdYearMonth(@Param("userId") Integer userId, @Param("yearMonth") String yearMonth);
 }

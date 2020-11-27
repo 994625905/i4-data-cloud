@@ -73,7 +73,7 @@
     <span class="font-small my-1">{{name}}</span>
     <img src="data:image/png;base64,{{encode}}" style="max-width: 300px" title="{{code}} 角色：[{{roleNames}}]">
     <span class="font-weight-bold font">{{code}}</span>
-    <span class="text-light-muted my-2 font-smaller">角色：[{{roleNames}}]</span>
+    <span class="text-light-muted my-1 font-smaller">角色：[{{roleNames}}]</span>
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/systemMsg/inviteCodeMsg_add.js?v=1.0"></script>
 </@override>

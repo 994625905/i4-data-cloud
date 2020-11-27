@@ -75,6 +75,10 @@ public class SystemConstant {
         Integer WORK_DATE_TYPE_WEEKEND = 1;//周末
         Integer WORK_DATE_TYPE_HOLIDAY = 2;//法定节假日
 
+        /** 日历设置的类型 */
+        Integer CALENDAR_TYPE_HOLIDAY = 2;//法定节假日
+        Integer CALENDAR_TYPE_WORKDAY = 3;//法定工作日
+
         /** 打卡状态 */
         Integer ATTENDANCE_STATUS_NORMAL = 0;//正常
         Integer ATTENDANCE_STATUS_WITHOUT = -2;//未打卡

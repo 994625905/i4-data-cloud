@@ -30,4 +30,9 @@ public class AttendanceYearServiceImpl extends BaseServiceImpl<AttendanceYearMap
     	return mapper.selectPage(dto);
     }
 
+	@Override
+	public IPage<AttendanceYearView> selectAllLog(AttendanceYearDto dto) {
+		return mapper.selectAllLog(dto);
+	}
+
 }

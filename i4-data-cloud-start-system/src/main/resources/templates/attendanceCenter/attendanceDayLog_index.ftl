@@ -74,6 +74,14 @@
         </div>
     </div>
 </body>
+<!--table工具栏-->
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+        <@permission value="attendanceCenter:attendanceDayLog/changeStatusAll">
+            <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="settleAll">统一核算</button>
+        </@permission>
+    </div>
+</script>
 <script type="text/html" id="operate">
     <@permission value="attendanceCenter:attendanceDayLog/updatePage">
         <label class="layui-btn layui-btn-sm" lay-event="change">调整打卡</label>
@@ -85,6 +93,41 @@
             <label class="layui-btn layui-btn-sm layui-btn-primary" lay-event="resume">恢复核算</label>
         {{# }}}
     </@permission>
+</script>
+<script type="text/html" id="settleContent">
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">日期</label>
+                <div class="layui-input-inline">
+                    <input id="settleDate" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">时间段</label>
+                <div class="layui-input-inline">
+                    <select class="layui-input" id="settleStage">
+                        <option value="0">上班</option>
+                        <option value="1">下班</option>
+                        <option value="2">全天</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">操作</label>
+                <div class="layui-input-inline">
+                    <select class="layui-input" id="settleStatus">
+                        <option value="0">取消核算</option>
+                        <option value="1">恢复核算</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
 </script>
 <script type="text/javascript" src="${StaticServer}/templates/attendanceCenter/attendanceDayLog_index.js?v=1.1"></script>
 </@override>

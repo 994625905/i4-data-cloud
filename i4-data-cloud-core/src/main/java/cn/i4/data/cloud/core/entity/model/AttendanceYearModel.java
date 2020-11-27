@@ -21,6 +21,7 @@ public class AttendanceYearModel extends BaseModel<AttendanceYearModel> {
     * 
     */
     @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -28,6 +29,12 @@ public class AttendanceYearModel extends BaseModel<AttendanceYearModel> {
     */
     @TableField("user_id")
     private Integer userId;
+
+    /**
+     * 年份
+     */
+    @TableField("year")
+    private Integer year;
 
     /**
     * 正常工作日数
@@ -46,6 +53,12 @@ public class AttendanceYearModel extends BaseModel<AttendanceYearModel> {
     */
     @TableField("work_over_hour")
     private Float workOverHour;
+
+    /**
+     * 假期加班时长
+     */
+    @TableField("holiday_over_hour")
+    private Float holidayOverHour;
 
     /**
     * 补卡次数
@@ -106,6 +119,14 @@ public class AttendanceYearModel extends BaseModel<AttendanceYearModel> {
     return this.userId;
     }
 
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
     public void setNormalDays(Float normalDays) {
     this.normalDays = normalDays;
     }
@@ -128,6 +149,14 @@ public class AttendanceYearModel extends BaseModel<AttendanceYearModel> {
 
     public Float getWorkOverHour() {
     return this.workOverHour;
+    }
+
+    public Float getHolidayOverHour() {
+        return holidayOverHour;
+    }
+
+    public void setHolidayOverHour(Float holidayOverHour) {
+        this.holidayOverHour = holidayOverHour;
     }
 
     public void setMendCount(Integer mendCount) {
