@@ -16,5 +16,6 @@
     <file url="file://$PROJECT_DIR$/i4-data-cloud-start-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/i4-data-cloud-start-schedule/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/i4-data-cloud-start-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/i4-data-cloud-start-test/src/main/java" charset="UTF-8" />
   </component>
 </project>
