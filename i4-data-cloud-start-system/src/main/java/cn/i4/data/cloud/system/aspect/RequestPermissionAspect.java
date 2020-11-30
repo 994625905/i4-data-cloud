@@ -40,7 +40,7 @@ import java.util.List;
  */
 @Aspect
 @Component
-@Order(3)
+@Order(1)
 public class RequestPermissionAspect extends BaseAspectSupport {
 
     private final static Logger logger = LoggerFactory.getLogger(RequestPermissionAspect.class);
@@ -65,6 +65,7 @@ public class RequestPermissionAspect extends BaseAspectSupport {
      */
     @Around("logPointCut() && @annotation(requestPermission)")
     public Object around(ProceedingJoinPoint point, RequestPermission requestPermission){
+
         /** 获取请求方法的类型，ModelAndView/ActionResult */
         Method method = this.resolveMethod(point);
         String typeName = method.getReturnType().getSimpleName();

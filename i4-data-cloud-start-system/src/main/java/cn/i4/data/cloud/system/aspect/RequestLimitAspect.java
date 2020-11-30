@@ -73,6 +73,7 @@ public class RequestLimitAspect extends BaseAspectSupport{
      */
     @Around("logPointCut() && @annotation(requestLimit)")
     public Object around(ProceedingJoinPoint point, RequestLimit requestLimit){
+
         try {
             ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
             HttpServletRequest request = servletRequestAttributes.getRequest();

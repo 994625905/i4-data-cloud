@@ -37,7 +37,7 @@ import java.util.Map;
  */
 @Aspect
 @Component
-@Order(1)
+@Order(3)
 public class RequestLogAspect extends BaseAspectSupport{
 
     private static final Logger logger = LoggerFactory.getLogger(RequestLogAspect.class);
