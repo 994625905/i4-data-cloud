@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.HistoryNoticeMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.title as title, 
+        t.type_id as typeId, 
+        t.explain_info as explainInfo, 
+        t.mongo_id as mongoId, 
+        t.create_time as createTime, 
+        t.update_time as updateTime, 
+        t.deploy_time as deployTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+		FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr,
+		FROM_UNIXTIME(t.deploy_time,'%Y-%m-%d %T') as deployTimeStr,
+        t.create_user_id as createUserId, 
+        t.status as status
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.HistoryNoticeDto"
+            resultType="cn.i4.data.cloud.core.entity.view.HistoryNoticeView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as createUserName,
+            p.name as typeName
+        FROM t_history_notice AS t
+        left join t_user u on t.create_user_id = u.id
+        left join t_history_notice_type p on t.type_id = p.id
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+    <!--根据id查询-->
+    <select id="selectByNoticeId" resultType="cn.i4.data.cloud.core.entity.view.HistoryNoticeView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as createUserName,
+            p.name as typeName
+        FROM t_history_notice AS t
+        left join t_user u on t.create_user_id = u.id
+        left join t_history_notice_type p on t.type_id = p.id
+        where t.id = #{id}
+    </select>
+
+</mapper>

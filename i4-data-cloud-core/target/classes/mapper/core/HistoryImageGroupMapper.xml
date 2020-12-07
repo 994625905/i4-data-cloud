@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.HistoryImageGroupMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.create_user_id as createUserId, 
+        t.name as name, 
+        t.describe_info as describeInfo, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.HistoryImageGroupDto"
+            resultType="cn.i4.data.cloud.core.entity.view.HistoryImageGroupView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as createUserName,
+            b.url as imageCover,
+            ifnull((select count(a.id) from t_history_image a where a.group_id = t.id),0) as imageCount
+        FROM t_history_image_group AS t
+        left join t_user u on u.id = t.create_user_id
+        left join (
+            select max(a.count),a.url,a.group_id from (
+                select b.url,b.group_id,count(a.id) AS count from t_history_image b left join t_history_image_like a on b.id = a.image_id group by a.image_id order by count desc,a.create_time desc
+            ) a group by a.group_id
+        ) b on b.group_id = t.id
+        where 1=1
+        order by t.create_time desc
+    </select>
+
+    <!--新增后的查询-->
+    <select id="selectByGroupId" resultType="cn.i4.data.cloud.core.entity.view.HistoryImageGroupView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as createUserName,
+            b.url as imageCover,
+            ifnull((select count(a.id) from t_history_image a where a.group_id = t.id),0) as imageCount
+        FROM t_history_image_group AS t
+        left join t_user u on u.id = t.create_user_id
+        left join (
+            select max(a.count),a.url,a.group_id from (
+                select b.url,b.group_id,count(a.id) AS count from t_history_image b left join t_history_image_like a on b.id = a.image_id group by a.image_id order by count desc,a.create_time desc
+            ) a group by a.group_id
+        ) b on b.group_id = t.id
+        where t.id = #{id}
+        order by t.create_time desc
+    </select>
+
+</mapper>

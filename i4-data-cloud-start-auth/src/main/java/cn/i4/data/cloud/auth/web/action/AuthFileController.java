@@ -1,6 +1,7 @@
-package cn.i4.data.cloud.auth.web;
+package cn.i4.data.cloud.auth.web.action;
 
 import cn.i4.data.cloud.auth.microservice.FileMicroservice;
+import cn.i4.data.cloud.auth.web.WebBaseController;
 import cn.i4.data.cloud.base.result.ActionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "/auth/file")
-public class AuthFileController extends WebBaseController{
+public class AuthFileController extends WebBaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthFileController.class);
 

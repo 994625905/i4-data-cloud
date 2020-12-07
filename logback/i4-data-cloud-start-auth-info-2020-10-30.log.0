@@ -203,7 +203,7 @@
 2020-10-30 16:54:05,928 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 16:59:05,935 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 17:03:14,665 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.auth.help.AuthHelp 49 - redis已过期，需重新登录。
-2020-10-30 17:03:14,668 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.auth.web.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
+2020-10-30 17:03:14,668 [http-nio-9010-exec-7] DEBUG cn.i4.data.cloud.auth.web.view.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
 2020-10-30 17:04:05,950 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 17:09:05,968 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 17:14:05,976 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
@@ -221,7 +221,7 @@
 2020-10-30 18:14:06,060 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 18:17:17,606 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [33ms ] 
 2020-10-30 18:17:17,616 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [3ms ] 
-2020-10-30 18:17:17,626 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.auth.web.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
+2020-10-30 18:17:17,626 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.auth.web.action.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
 2020-10-30 18:19:06,062 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 18:24:06,068 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-30 18:29:06,082 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration

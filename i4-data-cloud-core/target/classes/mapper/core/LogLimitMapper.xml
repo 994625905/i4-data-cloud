@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.LogLimitMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.name as name, 
+        t.period as period, 
+        t.count as count, 
+        t.prefix as prefix, 
+        t.limit_key as limitKey,
+        t.request_path as requestPath,
+        t.type as type, 
+        t.type_content as typeContent, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.LogLimitDto"
+            resultType="cn.i4.data.cloud.core.entity.view.LogLimitView">
+        SELECT
+            <include refid="Base_Column_List" />
+        FROM t_log_limit AS t
+        where 1=1
+        <if test="startDate != null and startDate != ''">
+            and t.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="requestPath != null">
+            and t.request_path like concat('%',#{requestPath},'%')
+        </if>
+        <if test="type != null">
+            and t.type = #{type}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+
+    </select>
+
+</mapper>

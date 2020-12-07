@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceCalendarMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.year as year, 
+        t.month as month, 
+        t.week as week, 
+        t.holiday_name as holidayName, 
+        t.date as date, 
+        t.type as type, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+        t.create_user_id as createUserId
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceCalendarDto"
+            resultType="cn.i4.data.cloud.core.entity.view.AttendanceCalendarView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as createUserName
+        FROM t_attendance_calendar AS t
+        left join t_user u on u.id = t.create_user_id
+        where 1=1
+        <if test="year != null">
+            and t.year = #{year}
+        </if>
+        <if test="type != null">
+            and t.type = #{type}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.date
+        </if>
+    </select>
+
+</mapper>

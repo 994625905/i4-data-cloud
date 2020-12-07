@@ -73,11 +73,11 @@
 2020-10-29 14:04:55,792 [http-nio-9010-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 6 ms
 2020-10-29 14:04:56,210 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.auth.help.AuthHelp 49 - redis已过期，需重新登录。
 2020-10-29 14:04:56,320 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [27ms ] 
-2020-10-29 14:04:56,330 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.auth.web.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
+2020-10-29 14:04:56,330 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.auth.web.view.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
 2020-10-29 14:05:16,816 [http-nio-9010-exec-10] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [5ms ] 
 2020-10-29 14:05:21,383 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [3ms ] 
 2020-10-29 14:05:21,413 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [4ms ] 
-2020-10-29 14:05:21,428 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.auth.web.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
+2020-10-29 14:05:21,428 [http-nio-9010-exec-9] DEBUG cn.i4.data.cloud.auth.web.action.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
 2020-10-29 14:08:20,059 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 65 - Unregistering application I4-DATA-CLOUD-START-AUTH with eureka with status DOWN
 2020-10-29 14:08:20,060 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient 1351 - Saw local status change event StatusChangeEvent [timestamp=1603951700060, current=DOWN, previous=UP]
 2020-10-29 14:08:20,060 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient 870 - DiscoveryClient_I4-DATA-CLOUD-START-AUTH/localhost:9010: registering service...
@@ -238,12 +238,12 @@
 2020-10-29 14:12:34,402 [http-nio-9010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 9 ms
 2020-10-29 14:13:07,644 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.auth.help.AuthHelp 49 - redis已过期，需重新登录。
 2020-10-29 14:13:07,760 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [26ms ] 
-2020-10-29 14:13:07,770 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.auth.web.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
+2020-10-29 14:13:07,770 [http-nio-9010-exec-3] DEBUG cn.i4.data.cloud.auth.web.view.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
 2020-10-29 14:13:10,225 [http-nio-9010-exec-5] DEBUG cn.i4.data.cloud.auth.help.AuthHelp 49 - redis已过期，需重新登录。
-2020-10-29 14:13:10,238 [http-nio-9010-exec-5] DEBUG cn.i4.data.cloud.auth.web.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
+2020-10-29 14:13:10,238 [http-nio-9010-exec-5] DEBUG cn.i4.data.cloud.auth.web.view.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
 2020-10-29 14:13:15,864 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [5ms ] 
 2020-10-29 14:13:15,897 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [2ms ] 
-2020-10-29 14:13:15,914 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.auth.web.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
+2020-10-29 14:13:15,914 [http-nio-9010-exec-6] DEBUG cn.i4.data.cloud.auth.web.action.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
 2020-10-29 14:16:57,258 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-29 14:21:57,271 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-29 14:26:57,284 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
@@ -803,10 +803,10 @@
 2020-10-29 20:44:09,751 [http-nio-9010-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-10-29 20:44:09,751 [http-nio-9010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525 - Initializing Servlet 'dispatcherServlet'
 2020-10-29 20:44:09,757 [http-nio-9010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547 - Completed initialization in 5 ms
-2020-10-29 20:44:10,173 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.auth.web.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
+2020-10-29 20:44:10,173 [http-nio-9010-exec-1] DEBUG cn.i4.data.cloud.auth.web.view.AuthMainController 41 - 登录请求，站点[http://127.0.0.1:9011/i4-data-cloud-start-system/]
 2020-10-29 20:44:25,106 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [27ms ] 
 2020-10-29 20:44:25,155 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.core.interceptors.SqlCostInterceptor 34 - 执行耗时 : [5ms ] 
-2020-10-29 20:44:25,174 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.auth.web.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
+2020-10-29 20:44:25,174 [http-nio-9010-exec-2] DEBUG cn.i4.data.cloud.auth.web.action.AuthLoginController 82 - 登录成功，认证token[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbk5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MX0.ixoPkw_9u1QvjsqoJSXKdVq5u-nLM3FCUyyCVJbOkb0]
 2020-10-29 20:49:03,661 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-29 20:54:03,667 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration
 2020-10-29 20:59:03,679 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver 43 - Resolving eureka endpoints via configuration

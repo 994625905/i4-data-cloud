@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.PartyActivityTypeMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.name as name,
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+        t.create_user_id as createUserId
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.PartyActivityTypeDto"
+            resultType="cn.i4.data.cloud.core.entity.view.PartyActivityTypeView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as realName
+        FROM t_party_activity_type AS t
+        left join t_user u on u.id = t.create_user_id
+    </select>
+
+</mapper>

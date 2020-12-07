@@ -23,6 +23,7 @@
         <module name="i4-data-cloud-mongo" />
         <module name="i4-data-cloud-clickhouse" />
         <module name="i4-data-cloud-start-auth" />
+        <module name="i4-data-cloud-sms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,6 +41,7 @@
       <module name="i4-data-cloud-core" options="-parameters" />
       <module name="i4-data-cloud-mongo" options="-parameters" />
       <module name="i4-data-cloud-mq" options="-parameters" />
+      <module name="i4-data-cloud-sms" options="-parameters" />
       <module name="i4-data-cloud-start-activiti-design" options="-parameters" />
       <module name="i4-data-cloud-start-aspect" options="-parameters" />
       <module name="i4-data-cloud-start-auth" options="-parameters" />

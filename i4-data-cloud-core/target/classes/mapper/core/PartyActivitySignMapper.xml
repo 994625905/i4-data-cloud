@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.PartyActivitySignMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.activity_id as activityId, 
+        t.sign_user_id as signUserId, 
+        t.sign_time as signTime,
+        FROM_UNIXTIME(t.sign_time,'%Y-%m-%d %T') as signTimeStr,
+        t.sign_user_count as signUserCount, 
+        t.sign_describe_info as signDescribeInfo, 
+        t.sign_traffic as signTraffic
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.PartyActivitySignDto"
+            resultType="cn.i4.data.cloud.core.entity.view.PartyActivitySignView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as signRealName
+        FROM t_party_activity_sign AS t
+        left join t_user u on t.sign_user_id = u.id
+        where 1=1
+        <if test="userId != null">
+            and t.sign_user_id = #{userId}
+        </if>
+        <if test="signCount == 0">
+            and t.sign_user_count = 0
+        </if>
+        <if test="signCount == 1">
+            and t.sign_user_count = 1
+        </if>
+        <if test="signCount == 2">
+            and t.sign_user_count &gt; 1
+        </if>
+        <if test="signTraffic != null">
+            and t.sign_traffic = #{signTraffic}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY u.job_number asc
+        </if>
+    </select>
+
+    <!--签到的统计信息-->
+    <select id="signCount" resultType="java.util.Map">
+        SELECT
+            ifnull(a.count,0) AS signCount,
+            ifnull(b.count,0) AS refuseCount,
+            ifnull(c.count,0) AS userCount,
+            ifnull(d.count,0) AS traffic0,
+            ifnull(e.count,0) AS traffic1,
+            ifnull(f.count,0) AS noCount
+        FROM
+            (SELECT sum(t.sign_user_count) AS count FROM t_party_activity_sign t WHERE t.activity_id = #{activityId}) a
+        LEFT JOIN (SELECT count(t.id) AS count FROM t_party_activity_sign t WHERE t.activity_id = #{activityId} AND t.sign_user_count = 0 ) b ON 1 = 1
+        LEFT JOIN (SELECT count(t.id) AS count FROM t_party_activity_sign t WHERE t.activity_id = #{activityId} AND t.sign_user_count = 1 ) c ON 1 = 1
+        LEFT JOIN (SELECT sum(t.sign_user_count) AS count FROM t_party_activity_sign t WHERE t.activity_id = #{activityId} AND t.sign_traffic = 0 and t.sign_user_count > 0 ) d ON 1 = 1
+        LEFT JOIN (SELECT sum(t.sign_user_count) AS count FROM t_party_activity_sign t WHERE t.activity_id = #{activityId} AND t.sign_traffic = 1 and t.sign_user_count > 0 ) e ON 1 = 1
+        LEFT JOIN (SELECT count(t.id) AS count FROM t_user t WHERE t.status != 5 AND t.id not in (SELECT a.sign_user_id FROM t_party_activity_sign a WHERE a.activity_id = #{activityId} )) f ON 1 = 1
+    </select>
+
+</mapper>

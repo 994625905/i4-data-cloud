@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.LogRequestMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.login_name as loginName, 
+        t.request_ip as requestIp, 
+        t.week as week, 
+        t.create_time as createTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+        t.module_name as moduleName, 
+        t.action_content as actionContent, 
+        t.action_method as actionMethod, 
+        t.action_type as actionType, 
+        t.action_name as actionName, 
+        t.action_exception as actionException, 
+        t.action_time as actionTime, 
+        t.action_result as actionResult
+    </sql>
+
+    <!--加载表格-->
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.LogRequestDto"
+            resultType="cn.i4.data.cloud.core.entity.view.LogRequestView">
+        SELECT
+            <include refid="Base_Column_List" />
+        FROM t_log_request AS t
+        where 1=1
+        <if test="userId != null and userId != ''">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="moduleName != null and moduleName != ''">
+            and t.module_name like concat('%',#{moduleName},'%')
+        </if>
+        <if test="actionContent != null and actionContent != ''">
+            and t.action_content like concat('%',#{actionContent},'%')
+        </if>
+        <if test="actionType != null ">
+            and t.action_type = #{actionType}
+        </if>
+        <if test="actionResult != null ">
+            and t.action_result = #{actionResult}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+    <!--根据日期分组查-->
+    <select id="selectGroupByDate" parameterType="org.springframework.cglib.beans.BeanMap" resultType="java.util.Map">
+        select a.date,a.week
+        from (
+            select t.week,t.create_time,FROM_UNIXTIME(t.create_time, '%Y-%m-%d') as date
+            from t_log_request t
+            where t.user_id = #{userId}
+            <if test="startDate != null and startDate != ''">
+                and t.create_time between #{startDate} and #{endDate}
+            </if>
+            <if test="moduleName != null and moduleName != ''">
+                and t.module_name like concat('%',#{moduleName},'%')
+            </if>
+            <if test="actionContent != null and actionContent != ''">
+                and t.action_content like concat('%',#{actionContent},'%')
+            </if>
+            <if test="actionType != null ">
+                and t.action_type = #{actionType}
+            </if>
+            <if test="actionResult != null ">
+                and t.action_result = #{actionResult}
+            </if>
+        ) a group by a.date order by a.create_time desc
+    </select>
+
+    <!--查询个人日志-->
+    <select id="selectByUserId" parameterType="org.springframework.cglib.beans.BeanMap" resultType="cn.i4.data.cloud.core.entity.view.LogRequestView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            FROM_UNIXTIME(t.create_time, '%Y-%m-%d') as date,
+            FROM_UNIXTIME(t.create_time, '%T') as time
+        FROM t_log_request AS t
+        where t.user_id = #{userId}
+        <if test="startDate != null and startDate != ''">
+            and t.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="moduleName != null and moduleName != ''">
+            and t.module_name like concat('%',#{moduleName},'%')
+        </if>
+        <if test="actionContent != null and actionContent != ''">
+            and t.action_content like concat('%',#{actionContent},'%')
+        </if>
+        <if test="actionType != null ">
+            and t.action_type = #{actionType}
+        </if>
+        <if test="actionResult != null ">
+            and t.action_result = #{actionResult}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY t.create_time DESC
+        </if>
+    </select>
+
+</mapper>

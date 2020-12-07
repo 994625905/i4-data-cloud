@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.MenuButtonMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.parent_id as parentId, 
+        t.name as name, 
+        t.icon as icon, 
+        t.url as url, 
+        t.permission as permission, 
+        t.sort as sort, 
+        t.type as type,
+        t.status as status,
+        t.create_time as createTime, 
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+		FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.MenuButtonDto"
+            resultType="cn.i4.data.cloud.core.entity.view.MenuButtonView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_menu_button AS t
+        where t.parent_id = #{pid}
+        order by t.parent_id,t.sort
+    </select>
+
+    <!--根据userId获取权限下的菜单-->
+    <select id="getMenuButtonTreeByUserId" resultType="cn.i4.data.cloud.core.entity.view.MenuButtonView">
+        select
+        <include refid="Base_Column_List" />
+        from t_menu_button t
+        where t.status = #{status} and t.id in (select a.menu_button_id from t_role_menu a where a.role_id in (select b.role_id from t_user_role b where b.user_id=#{userId}))
+        order by t.parent_id,t.sort
+    </select>
+
+    <!--获取所有菜单的树结构-->
+    <select id="getMenuButtonTree" resultType="cn.i4.data.cloud.core.entity.view.MenuButtonView">
+        select
+        <include refid="Base_Column_List" />
+        from t_menu_button t
+        where t.status = #{status}
+        order by t.parent_id,t.sort
+    </select>
+
+    <!--获取最大的排序-->
+    <select id="getMaxSortByPid" resultType="java.lang.Integer">
+        select ifnull(max(t.sort),0) as sort from t_menu_button t where t.parent_id = #{pid}
+    </select>
+
+    <!--根据pid获取菜单列表-->
+    <select id="getMenuButtonsByPid" resultType="cn.i4.data.cloud.core.entity.view.MenuButtonView">
+        select
+        <include refid="Base_Column_List" />
+        from t_menu_button t where t.parent_id = #{pid}
+        order by t.parent_id,t.sort
+    </select>
+
+    <!--根据角色ID获取权限菜单列表-->
+    <select id="getMenuButtonByRoleId" resultType="cn.i4.data.cloud.core.entity.view.MenuButtonView">
+        select
+        <include refid="Base_Column_List" />
+        from t_menu_button t
+        where t.status = #{status} and t.id in (select a.menu_button_id from t_role_menu a where a.role_id=#{roleId} )
+        order by t.parent_id,t.sort
+    </select>
+
+</mapper>

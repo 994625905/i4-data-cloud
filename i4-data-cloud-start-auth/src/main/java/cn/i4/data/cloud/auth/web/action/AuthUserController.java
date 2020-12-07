@@ -1,5 +1,6 @@
-package cn.i4.data.cloud.auth.web;
+package cn.i4.data.cloud.auth.web.action;
 
+import cn.i4.data.cloud.auth.web.WebBaseController;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.MD5Util;
@@ -33,7 +34,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "/auth/user")
-public class AuthUserController extends WebBaseController{
+public class AuthUserController extends WebBaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthUserController.class);
 

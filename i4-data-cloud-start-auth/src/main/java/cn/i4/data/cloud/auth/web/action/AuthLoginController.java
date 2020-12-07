@@ -1,5 +1,6 @@
-package cn.i4.data.cloud.auth.web;
+package cn.i4.data.cloud.auth.web.action;
 
+import cn.i4.data.cloud.auth.web.WebBaseController;
 import cn.i4.data.cloud.core.entity.dto.UserDto;
 import cn.i4.data.cloud.core.entity.model.UserInfoModel;
 import cn.i4.data.cloud.core.entity.model.UserModel;

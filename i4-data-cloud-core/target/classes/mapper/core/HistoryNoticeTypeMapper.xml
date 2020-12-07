@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.HistoryNoticeTypeMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.name as name, 
+        t.describe_info as describeInfo
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.HistoryNoticeTypeDto"
+            resultType="cn.i4.data.cloud.core.entity.view.HistoryNoticeTypeView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_history_notice_type AS t
+
+    </select>
+
+</mapper>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.UserMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id,
+        t.loginname as loginname,
+        t.realname as realname,
+        t.job_number as jobNumber,
+        t.phone as phone, 
+        t.email as email, 
+        t.password as password, 
+        t.create_time as createTime, 
+        t.update_time as updateTime,
+        FROM_UNIXTIME(t.create_time,'%Y-%m-%d %T') as createTimeStr,
+		FROM_UNIXTIME(t.update_time,'%Y-%m-%d %T') as updateTimeStr,
+        t.status as status,
+        t.first_login as firstLogin
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.UserDto"
+            resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.gender as gender,
+            u.birthday as birthday,
+            u.signature as signature,
+            u.headimage as headimage,
+            u.country as country,
+            u.province as province,
+            u.city as city,
+            u.area as area,
+            u.detail_address as detailAddress,
+            FROM_UNIXTIME(u.create_time,'%Y-%m-%d %T') as createTimeStrInfo,
+            FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo,
+            c.name as departmentName
+        FROM t_user AS t
+        left join t_user_info u on t.id = u.user_id
+        left join (select a.user_id,b.name,b.id from t_user_department a,t_department b where a.department_id = b.id) c on t.id = c.user_id
+        where 1=1
+        <if test="loginName != null and loginName != ''">
+            and (t.loginname = #{loginName} or t.realname = #{loginName})
+        </if>
+        <if test="departmentId != null">
+            and c.id = #{departmentId}
+        </if>
+        <if test="gender != null">
+            and u.gender = #{gender}
+        </if>
+        order by t.create_time
+    </select>
+
+    <!--根据id查询详情-->
+    <select id="selectUserViewById" resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.gender as gender,
+            u.birthday as birthday,
+            u.signature as signature,
+            u.headimage as headimage,
+            u.country as country,
+            u.province as province,
+            u.city as city,
+            u.area as area,
+            u.detail_address as detailAddress,
+            FROM_UNIXTIME(u.create_time,'%Y-%m-%d %T') as createTimeStrInfo,
+            FROM_UNIXTIME(u.update_time,'%Y-%m-%d %T') as updateTimeStrInfo
+        FROM t_user AS t
+        left join t_user_info u on t.id = u.user_id
+        where t.id = #{userId}
+    </select>
+
+    <select id="login" resultType="cn.i4.data.cloud.core.entity.model.UserModel">
+        select
+        <include refid="Base_Column_List" />
+        FROM t_user AS t
+        where t.loginname = #{loginName} and t.password = #{password}
+    </select>
+
+    <!--加载活动未签到列表-->
+    <select id="selectActivityNoSignList" resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        select
+            <include refid="Base_Column_List" />
+        from t_user as t
+        where t.status != 5
+        <if test="activityId != null">
+            and t.id not in (SELECT a.sign_user_id FROM t_party_activity_sign a WHERE a.activity_id = #{activityId})
+        </if>
+        order by t.job_number asc
+    </select>
+
+    <!--查询历史公告已读列表-->
+    <select id="selectByHistoryNoticeId" resultType="cn.i4.data.cloud.core.entity.view.UserView">
+        select
+        <include refid="Base_Column_List" />
+        from t_user as t
+        where t.status != 5
+        <if test="historyNoticeId != null">
+            and t.id in (SELECT a.create_user_id FROM t_history_notice_read a WHERE a.notice_id = #{historyNoticeId})
+        </if>
+        <if test="userIdList != null">
+            or t.id in
+            <foreach collection="userIdList" item="userId" open="(" separator="," close=")">
+                #{userId}
+            </foreach>
+        </if>
+        order by t.job_number asc
+    </select>
+
+</mapper>

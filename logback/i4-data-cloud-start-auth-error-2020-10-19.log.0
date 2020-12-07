@@ -199,5 +199,5 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2020-10-19 19:14:28,181 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
 2020-10-19 19:23:07,764 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
 2020-10-19 19:31:00,535 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
-2020-10-19 19:34:33,199 [http-nio-9010-exec-2] ERROR cn.i4.data.cloud.auth.web.AuthUserController 227 - null
-2020-10-19 19:43:14,155 [http-nio-9010-exec-4] ERROR cn.i4.data.cloud.auth.web.AuthUserController 227 - null
+2020-10-19 19:34:33,199 [http-nio-9010-exec-2] ERROR cn.i4.data.cloud.auth.web.action.AuthUserController 227 - null
+2020-10-19 19:43:14,155 [http-nio-9010-exec-4] ERROR cn.i4.data.cloud.auth.web.action.AuthUserController 227 - null

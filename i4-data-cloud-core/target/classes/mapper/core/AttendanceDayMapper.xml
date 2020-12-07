@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceDayMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId, 
+        t.attendance_id as attendanceId, 
+        t.attendance_stage as attendanceStage, 
+        t.attendance_status as attendanceStatus,
+        t.start_time as startTime,
+        t.end_time as endTime,
+        t.week as week,
+        t.work_date as workDate, 
+        t.work_date_type as workDateType, 
+        t.work_hour as workHour,
+        t.work_hour_over as workHourOver,
+        t.update_status as updateStatus,
+        t.settle_status as settleStatus
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceDayDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceDayView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName,
+            FROM_UNIXTIME(a.create_time,'%T') as attendanceTimeStr,
+            m.id as attendMendId,
+            l.id as leaveId
+        FROM t_attendance_day AS t
+        left join t_user u on u.id = t.user_id
+        left join t_attendance a on t.attendance_id = a.id
+        left join (select m.id,m.attendance_day_id from t_attendance_mend m,t_attendance_mend_process p where m.id = p.attendance_mend_id and p.status = 1) m on t.id = m.attendance_day_id
+        left join (
+                select t.id,t.user_id,FROM_UNIXTIME(t.start_time, '%Y%m%d') AS startTimeStr,FROM_UNIXTIME(t.end_time, '%Y%m%d') AS endTimeStr from t_leave t,t_leave_process p where t.id = p.leave_id and p.status = 1
+            ) l on l.user_id = t.user_id and t.work_date between l.startTimeStr and l.endTimeStr
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.work_date between #{startDate} and #{endDate}
+        </if>
+        <if test="attendanceStage != null">
+            and t.attendance_stage = #{attendanceStage}
+        </if>
+        <if test="attendanceStatus != null">
+            and t.attendance_status = #{attendanceStatus}
+        </if>
+        <if test="workDateType != null">
+            and t.work_date_type = #{workDateType}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY u.job_number DESC
+        </if>
+    </select>
+
+    <select id="selectAll" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceDayDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceDayView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName,
+            FROM_UNIXTIME(a.create_time,'%T') as attendanceTimeStr,
+            m.id as attendMendId,
+            l.id as leaveId
+        FROM t_attendance_day AS t
+        left join t_user u on u.id = t.user_id
+        left join t_attendance a on t.attendance_id = a.id
+        left join (select m.id,m.attendance_day_id from t_attendance_mend m,t_attendance_mend_process p where m.id = p.attendance_mend_id and p.status = 1) m on t.id = m.attendance_day_id
+        left join (
+                select t.id,t.user_id,FROM_UNIXTIME(t.start_time, '%Y%m%d') AS startTimeStr,FROM_UNIXTIME(t.end_time, '%Y%m%d') AS endTimeStr from t_leave t,t_leave_process p where t.id = p.leave_id and p.status = 1
+            ) l on l.user_id = t.user_id and t.work_date between l.startTimeStr and l.endTimeStr
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and t.work_date between #{startDate} and #{endDate}
+        </if>
+        <if test="attendanceStage != null">
+            and t.attendance_stage = #{attendanceStage}
+        </if>
+        <if test="attendanceStatus != null">
+            and t.attendance_status = #{attendanceStatus}
+        </if>
+        <if test="workDateType != null">
+            and t.work_date_type = #{workDateType}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY u.job_number DESC
+        </if>
+    </select>
+
+    <!--统一校对核算-->
+    <update id="changeStatusAll" parameterType="org.springframework.cglib.beans.BeanMap">
+        update t_attendance_day t set t.settle_status = #{settleStatus}
+        where t.work_date = #{settleDate}
+        <if test="settleStage == 0">
+            and t.attendance_stage = #{settleStage}
+        </if>
+        <if test="settleStage == 1">
+            and t.attendance_stage = #{settleStage}
+        </if>
+    </update>
+
+    <!--根据年月查询，userId分组，核算有效，正常工作日/加班日-->
+    <select id="selectByYearMonthGroupUser" resultType="cn.i4.data.cloud.core.entity.model.AttendanceMonthModel">
+        select
+            t.userId,
+            t.normalDays,
+            t.normalDate,
+            t1.workDays,
+            t2.lateCount,
+            t3.earlyCount,
+            t4.mendCount,
+            t5.leaveCount,
+            t6.workOverHour,
+            t7.holidayOverHour
+        from (
+            select t.user_id as userId,count(t.id) as normalDays,group_concat(t.work_date) as normalDate from t_attendance_day t
+            where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_stage = '1'
+            group by t.user_id
+        ) t left join (
+            select t.userId,t.workDays from (
+                select t.user_id as userId,count(t.id) as workDays from t_attendance_day t
+                where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.attendance_stage = '1' and (t.work_hour > 0 or t.work_hour_over > 0) and t.attendance_id is not null
+                group by t.user_id
+            ) t
+        ) t1 on t.userId = t1.userId left join (
+            select t.user_id as userId,count(t.id) as lateCount from t_attendance_day t
+            where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_status = '-1'
+            group by t.user_id
+        ) t2 on t.userId = t2.userId left join (
+            select t.user_id as userId,count(t.id) as earlyCount from t_attendance_day t
+            where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_status = '1'
+            group by t.user_id
+        ) t3 on t.userId = t3.userId left join (
+            select t.userId,count(t.id) as mendCount from (
+                select t.id, t.user_id as userId from t_attendance_mend t left join t_attendance_mend_process p on p.attendance_mend_id = t.id left join t_attendance_day d on d.id = t.attendance_day_id
+                where d.work_date like concat(#{yearMonth},'%') and d.settle_status = '1' and p.id is not null
+            ) t group by t.userId
+        ) t4 on t.userId = t4.userId left join (
+            select t.userId,count(t.id) as leaveCount from (
+                select t.id,t.user_id as userId,FROM_UNIXTIME(t.start_time, '%Y%m') AS startTimeStr from t_leave t left join t_leave_process p on t.id=p.leave_id where p.id is not null
+            ) t where t.startTimeStr = #{yearMonth} group by t.userId
+        ) t5 on t.userId = t5.userId left join (
+            select t.userId,t.workOverHour from (
+                select t.user_id as userId,sum(t.work_hour_over) as workOverHour from t_attendance_day t
+                where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and t.work_date_type = '0' and t.attendance_id is not null
+                group by t.user_id
+            ) t
+        ) t6 on t.userId = t6.userId left join (
+            select t.userId,t.holidayOverHour from (
+                select t.user_id as userId,sum(t.work_hour_over) as holidayOverHour from t_attendance_day t
+                where t.work_date like concat(#{yearMonth},'%') and t.settle_status = '1' and (t.work_date_type = '1' or t.work_date_type = '2') and t.attendance_id is not null
+                group by t.user_id
+            ) t
+        ) t7 on t.userId = t7.userId
+    </select>
+
+</mapper>

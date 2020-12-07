@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AttendanceYearMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.user_id as userId,
+        t.year as year,
+        t.normal_days as normalDays, 
+        t.work_days as workDays, 
+        t.work_over_hour as workOverHour,
+        t.holiday_over_hour as holidayOverHour,
+        t.mend_count as mendCount, 
+        t.late_count as lateCount, 
+        t.early_count as earlyCount, 
+        t.leave_count as leaveCount, 
+        t.leave_hour as leaveHour, 
+        t.normal_month as normalMonth, 
+        t.attendance_month_ids as attendanceMonthIds
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceYearDto"
+            resultType="cn.i4.data.cloud.core.entity.view.AttendanceYearView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName
+        FROM t_attendance_year AS t
+        left join t_user u on t.user_id = u.id
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="year != null">
+            and t.year = #{year}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY u.job_number DESC
+        </if>
+    </select>
+
+    <select id="selectAllLog" parameterType="cn.i4.data.cloud.core.entity.dto.AttendanceYearDto" resultType="cn.i4.data.cloud.core.entity.view.AttendanceYearView">
+        SELECT
+            <include refid="Base_Column_List" />,
+            u.realname as userName
+        FROM t_attendance_year AS t
+        left join t_user u on t.user_id = u.id
+        where 1=1
+        <if test="userId != null">
+            and t.user_id = #{userId}
+        </if>
+        <if test="year != null">
+            and t.year = #{year}
+        </if>
+        <if test="field != null and field != ''">
+            order by ${field} ${sort}
+        </if>
+        <if test="field == null or field == ''">
+            ORDER BY u.job_number DESC
+        </if>
+    </select>
+
+</mapper>

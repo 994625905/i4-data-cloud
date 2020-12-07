@@ -6,7 +6,7 @@ com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 pa
 	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
 	at com.auth0.jwt.JWT.decode(JWT.java:21)
 	at cn.i4.data.cloud.auth.help.AuthHelp.loginCheck(AuthHelp.java:42)
-	at cn.i4.data.cloud.auth.web.AuthLoginController.index(AuthLoginController.java:71)
+	at cn.i4.data.cloud.auth.web.action.AuthLoginController.index(AuthLoginController.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -95,7 +95,7 @@ com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 pa
 	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
 	at com.auth0.jwt.JWT.decode(JWT.java:21)
 	at cn.i4.data.cloud.auth.help.AuthHelp.loginCheck(AuthHelp.java:42)
-	at cn.i4.data.cloud.auth.web.AuthLoginController.index(AuthLoginController.java:71)
+	at cn.i4.data.cloud.auth.web.action.AuthLoginController.index(AuthLoginController.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -184,7 +184,7 @@ com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 pa
 	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
 	at com.auth0.jwt.JWT.decode(JWT.java:21)
 	at cn.i4.data.cloud.auth.help.AuthHelp.loginCheck(AuthHelp.java:42)
-	at cn.i4.data.cloud.auth.web.AuthLoginController.index(AuthLoginController.java:71)
+	at cn.i4.data.cloud.auth.web.action.AuthLoginController.index(AuthLoginController.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -273,7 +273,7 @@ com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 pa
 	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
 	at com.auth0.jwt.JWT.decode(JWT.java:21)
 	at cn.i4.data.cloud.auth.help.AuthHelp.loginCheck(AuthHelp.java:42)
-	at cn.i4.data.cloud.auth.web.AuthLoginController.index(AuthLoginController.java:71)
+	at cn.i4.data.cloud.auth.web.action.AuthLoginController.index(AuthLoginController.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2486,7 +2486,7 @@ Caused by: java.lang.NoClassDefFoundError: cn/i4/data/cloud/auth/web/AuthLoginCo
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
 	... 23 common frames omitted
-Caused by: java.lang.ClassNotFoundException: cn.i4.data.cloud.auth.web.AuthLoginController
+Caused by: java.lang.ClassNotFoundException: cn.i4.data.cloud.auth.web.action.AuthLoginController
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
@@ -2499,7 +2499,7 @@ Caused by: java.lang.ClassNotFoundException: cn.i4.data.cloud.auth.web.AuthLogin
 2020-10-17 17:48:29,303 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
 2020-10-17 17:51:26,414 [http-nio-9010-exec-8] ERROR o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth].[dispatcherServlet] 175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/i4-data-cloud-start-auth] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String] with root cause
 java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
-	at cn.i4.data.cloud.auth.web.AuthCodeController.checkPhoneCode(AuthCodeController.java:178)
+	at cn.i4.data.cloud.auth.web.action.AuthCodeController.checkPhoneCode(AuthCodeController.java:178)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2557,7 +2557,7 @@ java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Stri
 2020-10-17 17:57:29,601 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
 2020-10-17 18:00:43,949 [http-nio-9010-exec-2] ERROR o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth].[dispatcherServlet] 175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/i4-data-cloud-start-auth] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String] with root cause
 java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
-	at cn.i4.data.cloud.auth.web.AuthCodeController.checkPhoneCode(AuthCodeController.java:178)
+	at cn.i4.data.cloud.auth.web.action.AuthCodeController.checkPhoneCode(AuthCodeController.java:178)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2616,7 +2616,7 @@ java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Stri
 2020-10-17 18:11:16,757 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
 2020-10-17 18:13:37,405 [http-nio-9010-exec-3] ERROR o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/i4-data-cloud-start-auth].[dispatcherServlet] 175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/i4-data-cloud-start-auth] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at cn.i4.data.cloud.auth.web.AuthCodeController.checkPhoneCode(AuthCodeController.java:178)
+	at cn.i4.data.cloud.auth.web.action.AuthCodeController.checkPhoneCode(AuthCodeController.java:178)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

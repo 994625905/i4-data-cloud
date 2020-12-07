@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.i4.data.cloud.core.mapper.AutocodeDatasourceMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        t.id as id, 
+        t.datasource_name as datasourceName,
+        t.dataSource_cover as dataSourceCover,
+        t.datasource_url as datasourceUrl, 
+        t.database_name as databaseName, 
+        t.driverclass_name as driverclassName, 
+        t.driverclass_type as driverclassType, 
+        t.auth_user as authUser, 
+        t.auth_password as authPassword, 
+        t.default_author as defaultAuthor, 
+        t.default_package_prefix as defaultPackagePrefix, 
+        t.default_local as defaultLocal,
+        t.user_id as userId,
+        t.create_time as createTime, 
+        t.update_time as updateTime
+    </sql>
+
+    <select id="selectPage" parameterType="cn.i4.data.cloud.core.entity.dto.AutocodeDatasourceDto"
+            resultType="cn.i4.data.cloud.core.entity.view.AutocodeDatasourceView">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM t_autocode_datasource AS t
+
+    </select>
+
+</mapper>

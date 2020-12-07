@@ -1,5 +1,6 @@
-package cn.i4.data.cloud.auth.web;
+package cn.i4.data.cloud.auth.web.action;
 
+import cn.i4.data.cloud.auth.web.WebBaseController;
 import cn.i4.data.cloud.base.constant.RedisConstant;
 import cn.i4.data.cloud.base.result.ActionResult;
 import cn.i4.data.cloud.base.util.RandomUtil;
@@ -30,7 +31,7 @@ import java.util.UUID;
  */
 @Controller
 @RequestMapping(value = "/auth/code")
-public class AuthCodeController extends WebBaseController{
+public class AuthCodeController extends WebBaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthCodeController.class);
 

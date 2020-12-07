@@ -1,7 +1,8 @@
-package cn.i4.data.cloud.auth.web;
+package cn.i4.data.cloud.auth.web.view;
 
 import cn.hutool.core.convert.Convert;
 import cn.i4.data.cloud.auth.help.AuthHelp;
+import cn.i4.data.cloud.auth.web.WebBaseController;
 import cn.i4.data.cloud.core.entity.model.UserModel;
 import cn.i4.data.cloud.mongo.core.entity.MongoSystemConstant;
 import cn.i4.data.cloud.mongo.core.service.MongoSystemConstantService;
@@ -24,7 +25,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 @RequestMapping(value = "/auth/page")
-public class AuthMainController extends WebBaseController{
+public class AuthMainController extends WebBaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthMainController.class);
     @Autowired
