@@ -1,4 +1,0 @@
-2020-10-25 14:18:00,408 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
-2020-10-25 14:52:34,029 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
-2020-10-25 14:53:32,894 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
-2020-10-25 16:48:40,868 [restartedMain] ERROR com.alibaba.druid.pool.DruidAbstractDataSource 1004 - maxIdle is deprecated
