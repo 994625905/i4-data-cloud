@@ -9,8 +9,9 @@ import com.alibaba.fastjson.JSON;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
-import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -30,7 +31,7 @@ import java.nio.charset.StandardCharsets;
  * @date 2020/9/2920:36
  */
 @Component
-public class AuthorizeFilter implements GlobalFilter {
+public class AuthorizeFilter implements GatewayFilter, Ordered {
 
     @Autowired
     private RedisService redisService;
@@ -90,5 +91,10 @@ public class AuthorizeFilter implements GlobalFilter {
         response.setStatusCode(HttpStatus.UNAUTHORIZED);
         response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
         return response.writeWith(Mono.just(dataBuffer));
+    }
+
+    @Override
+    public int getOrder() {
+        return 1;
     }
 }
