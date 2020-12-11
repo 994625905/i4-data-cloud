@@ -64,7 +64,7 @@ public class ClickHouseConfig {
      */
     public static DataSource getDataSource(){
         if(dataSource == null){
-            logger.error("获取数据源失败，dataSource：[{}]",dataSource);
+            logger.error("获取数据源失败，dataSource：[{null}]");
             throw new RuntimeException(" clickHouseDataSource is null ");
         }
         return dataSource;
