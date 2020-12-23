@@ -1,5 +1,6 @@
 package cn.i4.data.cloud.core.config;
 
+import cn.hutool.core.util.RandomUtil;
 import cn.i4.data.cloud.base.constant.DataSourceConstant;
 import cn.i4.data.cloud.core.interceptors.SqlCostInterceptor;
 import com.alibaba.druid.pool.DruidDataSource;
@@ -42,6 +43,9 @@ public class DataSourceConfig {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource dataSource) throws Exception {
         MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
         bean.setDataSource(dataSource);
+
+        RandomUtil.randomInt(1,10);
+
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/*/*.xml"));
         bean.setPlugins(new Interceptor[]{paginationInterceptor(),new SqlCostInterceptor()});//加载自定义的插件：分页插件,SQL执行耗时插件
         return bean.getObject();

@@ -27,7 +27,7 @@ public class FileServiceImpl extends BaseServiceImpl<FileMapper,FileModel> imple
 
 	@Override
 	public IPage<FileView> selectPage(FileDto dto) {
-    	return mapper.selectPage(dto);
+		return mapper.selectPage(dto);
     }
 
 	@Override

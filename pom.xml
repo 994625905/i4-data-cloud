@@ -29,7 +29,6 @@
         <module>i4-data-cloud-start-gateway</module>
         <module>i4-data-cloud-start-schedule</module>
         <module>i4-data-cloud-start-system</module>
-        <module>i4-data-cloud-start-test</module>
     </modules>
 
     <groupId>cn.i4.data.cloud</groupId>
