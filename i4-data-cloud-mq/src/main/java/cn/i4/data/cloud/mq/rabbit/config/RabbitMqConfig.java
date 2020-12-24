@@ -47,6 +47,7 @@ public class RabbitMqConfig {
          */
         template.setConfirmCallback(msgSendConfirmCallBack());
         template.setReturnCallback(msgSendReturnCallback());
+
         /**
          * 使用return-callback时必须设置mandatory为true，或者在配置中设置mandatory-expression的值为true，
          * 可针对每次请求的消息去确定’mandatory’的boolean值，
