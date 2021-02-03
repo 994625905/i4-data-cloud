@@ -48,6 +48,7 @@ public class SystemInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        String path = request.getServletPath();
         String authorization = CookieUtil.getCookieValue(request, "authorization");
         if(StringUtil.isNullOrEmpty(authorization)){
             response.sendRedirect(this.loginURL+"?redirect="+this.redirectServer);
