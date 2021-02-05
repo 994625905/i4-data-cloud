@@ -1,8 +1,8 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: system
-          uri: http://localhost:9011/i4-data-cloud-start-system
-          predicates:
-            - Method=POST
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: system
+#          uri: http://localhost:9011/i4-data-cloud-start-system/autoCode/codeLog/loadTable
+#          predicates:
+#            - Path=/autoCode/codeLog/loadTable

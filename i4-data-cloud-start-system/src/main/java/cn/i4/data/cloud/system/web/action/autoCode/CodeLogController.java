@@ -43,9 +43,9 @@ public class CodeLogController extends WebBaseController {
      * @return
      */
     @PostMapping(value = "/loadTable")
-    @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
-    @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
-    @RequestPermission(value = "autoCode:codeLog/loadTable")
+//    @RequestLog(module = MODULE_NAME,content = "加载表格",type = RequestType.SELECT)
+//    @RequestLimit(name = MODULE_NAME+"--加载表格",key = KEY_PREFIX+"/loadTable")
+//    @RequestPermission(value = "autoCode:codeLog/loadTable")
     public ActionResult<IPage<LogAutocodeView>> loadTable(LogAutocodeDto dto){
         IPage<LogAutocodeView> page = iLogAutocodeService.selectPage(dto);
         return ActionResult.ok(page);

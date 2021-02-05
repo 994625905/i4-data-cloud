@@ -18,11 +18,19 @@ public class GatewayConfig {
 
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes().route(predicateSpec ->
-                predicateSpec.path("/i4-data-cloud-start-system/**")
-                        .filters(gatewayFilterSpec -> gatewayFilterSpec.stripPrefix(1).filter(new AuthorizeFilter()))
-                        .uri("http://localhost:9011/i4-data-cloud-start-system").id("system")
-        ).build();
+//        return builder.routes().route(predicateSpec ->
+//                predicateSpec.path("/i4-data-cloud-start-system/autoCode/codeLog/**")
+//                        .filters(gatewayFilterSpec -> gatewayFilterSpec.stripPrefix(1).filter(new AuthorizeFilter()))
+//                        .uri("http://localhost:9011/").id("system")
+//        ).build();
+
+        return builder.routes()
+                .route(r -> r.path("/i4-data-cloud-start-system/autoCode/codeLog/**")
+                        .filters(f -> f.filter(new AuthorizeFilter()))
+                        .uri("http://localhost:9011")
+                        .order(0)
+                        .id("system")
+                ).build();
     }
 
 }
